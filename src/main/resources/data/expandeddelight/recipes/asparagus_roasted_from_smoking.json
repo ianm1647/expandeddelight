@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "expandeddelight:asparagus_chopped"
+  },
+  "result": "expandeddelight:asparagus_roasted",
+  "experience": 0.35,
+  "cookingtime": 100
+}
