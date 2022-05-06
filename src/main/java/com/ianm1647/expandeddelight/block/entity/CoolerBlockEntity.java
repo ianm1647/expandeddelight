@@ -26,6 +26,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Util;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -35,9 +36,13 @@ import java.util.Optional;
 public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
+    private static final int[] INGREDIENT = new int[]{1};
+    private static final int[] OUTPUT = new int[]{2};
+    private static final int[] FUEL = new int[]{0};
+
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 76;
+    private int maxProgress = 2800;
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
@@ -187,6 +192,28 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
 
             entity.resetProgress();
         }
+    }
+
+    @Override
+    public int[] getAvailableSlots(Direction side) {
+        if (side == Direction.DOWN) {
+            return OUTPUT;
+        } else {
+            return side == Direction.UP ? INGREDIENT : FUEL;
+        }
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir) {
+        return this.isValid(slot, stack);
+    }
+
+    @Override
+    public ItemStack removeStack(int slot) {
+        if (slot == 2) {
+            return Inventories.removeStack(this.inventory, slot);
+        }
+        return null;
     }
 
     private static void addFuel(Map<Item, Integer> fuelTimes, ItemConvertible item, int fuelTime) {
