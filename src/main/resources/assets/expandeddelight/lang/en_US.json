@@ -7,7 +7,12 @@
   "item.expandeddelight.asparagus_and_bacon_cheesy": "Cheesy Asparagus and Bacon",
   "item.expandeddelight.asparagus_seeds": "Asparagus Seeds",
 
+  "item.expandeddelight.cheese_wheel": "Cheese Wheel",
+  "item.expandeddelight.cheese_slice": "Cheese Slice",
+
   "block.expandeddelight.asparagus_crate": "Asparagus Crate",
   "block.expandeddelight.wild_asparagus": "Wild Asparagus",
-  "block.expandeddelight.asparagus_crop": "Asparagus"
+  "block.expandeddelight.asparagus_crop": "Asparagus",
+
+  "block.expandeddelight.cooler": "Cooler"
 }

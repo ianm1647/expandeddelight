@@ -5,7 +5,6 @@ import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -18,7 +17,8 @@ public class ItemRegistry {
     public static final Item ASPARAGUS_SEEDS = seed("asparagus_seeds", BlockRegistry.ASPARAGUS_CROP);
 
     //foods
-    public static final Item CHEESE = food("cheese", 2, 0.5f);
+    public static final Item CHEESE_WHEEL = food("cheese_wheel", 4, 0.7f);
+    public static final Item CHEESE_SLICE = food("cheese_slice", 1, 0.3f);
 
     //crops
     public static final Item ASPARAGUS = food("asparagus", 2, 0.3f);

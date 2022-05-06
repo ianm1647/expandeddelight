@@ -2,6 +2,7 @@ package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.AsparagusCropBlock;
+import com.ianm1647.expandeddelight.block.CoolerBlock;
 import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.nhoryzon.mc.farmersdelight.block.WildPatchBlock;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -10,7 +11,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.RenderLayers;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -24,9 +24,13 @@ public class BlockRegistry {
     public static final Block WILD_ASPARAGUS = block("wild_asparagus", new WildPatchBlock());
     public static final Block ASPARAGUS_CROP = withoutBlockItem("asparagus_crop", new AsparagusCropBlock(cropSettings()));
 
+    public static final Block COOLER = block("cooler",
+            new CoolerBlock(blockSettings(Material.STONE, 3.0f, 4.0f, BlockSoundGroup.STONE).nonOpaque()));
+
     public static void registerRenderLayer() {
         renderLayer(WILD_ASPARAGUS, RenderLayer.getCutout());
         renderLayer(ASPARAGUS_CROP, RenderLayer.getCutout());
+        renderLayer(COOLER, RenderLayer.getCutout());
     }
 
     private static FabricBlockSettings blockSettings(Material material, float hardness, float resistance, BlockSoundGroup sound) {

@@ -1,8 +1,6 @@
 package com.ianm1647.expandeddelight;
 
-import com.ianm1647.expandeddelight.registry.BlockRegistry;
-import com.ianm1647.expandeddelight.registry.FeatureRegistry;
-import com.ianm1647.expandeddelight.registry.ItemRegistry;
+import com.ianm1647.expandeddelight.registry.*;
 import com.ianm1647.expandeddelight.util.LootTableUtil;
 import com.ianm1647.expandeddelight.world.FeatureGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -23,5 +21,9 @@ public class ExpandedDelight implements ModInitializer {
 
         LootTableUtil.modifyLootTables();
         FeatureGeneration.generateFeature();
+
+        BlockEntityRegistry.registerBlockEntity();
+
+        RecipeRegistry.registerRecipes();
     }
 }
