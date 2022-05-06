@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "expandeddelight",
+  "version": "${version}",
+
+  "name": "Expanded Delight",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "ianm1647"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/expandeddelight/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ianm1647.expandeddelight.ExpandedDelight"
+    ],
+    "client": [
+      "com.ianm1647.expandeddelight.ExpandedDelightClient"
+    ]
+  },
+  "mixins": [
+    "expandeddelight.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "~1.18.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
