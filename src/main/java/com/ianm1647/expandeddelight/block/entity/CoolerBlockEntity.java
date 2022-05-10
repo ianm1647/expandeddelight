@@ -1,12 +1,11 @@
 package com.ianm1647.expandeddelight.block.entity;
 
 import com.google.common.collect.Maps;
+import com.ianm1647.expandeddelight.block.BlockEntityList;
 import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
 import com.ianm1647.expandeddelight.util.inventory.ImplementedInventory;
 import com.ianm1647.expandeddelight.util.inventory.screen.CoolerScreenHandler;
 import com.ianm1647.expandeddelight.util.recipe.CoolerRecipe;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.SharedConstants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,7 +22,6 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.util.Util;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -47,25 +45,25 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
     private int maxFuelTime = 0;
 
     public CoolerBlockEntity(BlockPos pos, BlockState state) {
-        super(BlockEntityRegistry.COOLER, pos, state);
+        super(BlockEntityList.COOLER, pos, state);
 
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
-                switch (index) {
-                    case 0: return CoolerBlockEntity.this.progress;
-                    case 1: return CoolerBlockEntity.this.maxProgress;
-                    case 2: return CoolerBlockEntity.this.fuelTime;
-                    case 3: return CoolerBlockEntity.this.maxFuelTime;
-                    default: return 0;
-                }
+                return switch (index) {
+                    case 0 -> CoolerBlockEntity.this.progress;
+                    case 1 -> CoolerBlockEntity.this.maxProgress;
+                    case 2 -> CoolerBlockEntity.this.fuelTime;
+                    case 3 -> CoolerBlockEntity.this.maxFuelTime;
+                    default -> 0;
+                };
             }
 
             public void set(int index, int value) {
-                switch(index) {
-                    case 0: CoolerBlockEntity.this.progress = value; break;
-                    case 1: CoolerBlockEntity.this.maxProgress = value; break;
-                    case 2: CoolerBlockEntity.this.fuelTime = value; break;
-                    case 3: CoolerBlockEntity.this.maxFuelTime = value; break;
+                switch (index) {
+                    case 0 -> CoolerBlockEntity.this.progress = value;
+                    case 1 -> CoolerBlockEntity.this.maxProgress = value;
+                    case 2 -> CoolerBlockEntity.this.fuelTime = value;
+                    case 3 -> CoolerBlockEntity.this.maxFuelTime = value;
                 }
             }
 
@@ -127,7 +125,7 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
 
     private void consumeFuel() {
         if(!getStack(0).isEmpty()) {
-            this.fuelTime = (Integer)createFuelTimeMap().getOrDefault(this.removeStack(0, 1).getItem(), 0);
+            this.fuelTime = createFuelTimeMap().getOrDefault(this.removeStack(0, 1).getItem(), 0);
             this.maxFuelTime = this.fuelTime;
         }
     }

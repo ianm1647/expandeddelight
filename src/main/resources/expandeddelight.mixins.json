@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "ExpandedDelightMixin"
+    "InitializeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,5 +1,6 @@
 package com.ianm1647.expandeddelight.util;
 
+import com.ianm1647.expandeddelight.item.ItemList;
 import com.ianm1647.expandeddelight.registry.ItemRegistry;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
@@ -19,8 +20,8 @@ public class LootTableUtil {
     private static final Identifier TAIGA_HOUSE = table(villageHouse("taiga_house"));
 
     public static void modifyLootTables() {
-        lootTable(PLAINS_HOUSE, ItemRegistry.ASPARAGUS_SEEDS, 0.5f, 1.0f, 3.0f);
-        lootTable(PLAINS_HOUSE, ItemRegistry.ASPARAGUS, 0.2f, 1.0f, 2.0f);
+        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS_SEEDS, 0.5f, 1.0f, 3.0f);
+        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS, 0.2f, 1.0f, 2.0f);
     }
 
     private static void lootTable(Identifier identifier, Item item, float chance, float min, float max) {

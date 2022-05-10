@@ -8,9 +8,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(TitleScreen.class)
-public class ExpandedDelightMixin {
+public class InitializeMixin {
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-        ExpandedDelight.LOGGER.info("Expanded Delight Mixins!");
+        ExpandedDelight.LOGGER.info("This makes sure Expanded Delight mixins are loaded");
     }
 }

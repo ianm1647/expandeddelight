@@ -1,8 +1,8 @@
-package com.ianm1647.expandeddelight.block;
+package com.ianm1647.expandeddelight.block.custom;
 
+import com.ianm1647.expandeddelight.block.BlockEntityList;
 import com.ianm1647.expandeddelight.block.entity.CoolerBlockEntity;
 import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
-import com.ianm1647.expandeddelight.registry.BlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -59,18 +59,13 @@ public class CoolerBlock extends BlockWithEntity implements BlockEntityProvider 
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        switch(state.get(FACING)) {
-            case NORTH:
-                return SHAPE_NORTH;
-            case SOUTH:
-                return SHAPE_SOUTH;
-            case WEST:
-                return SHAPE_WEST;
-            case EAST:
-                return SHAPE_EAST;
-            default:
-                return SHAPE_NORTH;
-        }
+        return switch (state.get(FACING)) {
+            case NORTH -> SHAPE_NORTH;
+            case SOUTH -> SHAPE_SOUTH;
+            case WEST -> SHAPE_WEST;
+            case EAST -> SHAPE_EAST;
+            default -> SHAPE_NORTH;
+        };
     }
 
     @Nullable
@@ -144,6 +139,6 @@ public class CoolerBlock extends BlockWithEntity implements BlockEntityProvider 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, BlockEntityRegistry.COOLER, CoolerBlockEntity::tick);
+        return checkType(type, BlockEntityList.COOLER, CoolerBlockEntity::tick);
     }
 }

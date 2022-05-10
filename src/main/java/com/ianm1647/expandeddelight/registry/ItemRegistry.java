@@ -1,6 +1,7 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
+import com.ianm1647.expandeddelight.item.ItemList;
 import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -11,26 +12,24 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ItemRegistry {
-    //items
 
-    //seeds
-    public static final Item ASPARAGUS_SEEDS = seed("asparagus_seeds", BlockRegistry.ASPARAGUS_CROP);
+    public static void registerItems() {
+        ItemList.ASPARAGUS_SEEDS = seed("asparagus_seeds", BlockRegistry.ASPARAGUS_CROP);
 
-    //foods
-    public static final Item CHEESE_WHEEL = food("cheese_wheel", 4, 0.7f);
-    public static final Item CHEESE_SLICE = food("cheese_slice", 1, 0.3f);
+        ItemList.CHEESE_WHEEL = food("cheese_wheel", 4, 0.7f);
+        ItemList.CHEESE_SLICE = food("cheese_slice", 1, 0.3f);
 
-    //crops
-    public static final Item ASPARAGUS = food("asparagus", 2, 0.3f);
-    public static final Item ASPARAGUS_CHOPPED = food("asparagus_chopped", 1, 0.2f);
-    public static final Item ASPARAGUS_ROASTED = food("asparagus_roasted", 4, 0.3f);
+        ItemList.ASPARAGUS = food("asparagus", 2, 0.3f);
+        ItemList.ASPARAGUS_CHOPPED = food("asparagus_chopped", 1, 0.2f);
+        ItemList.ASPARAGUS_ROASTED = food("asparagus_roasted", 4, 0.3f);
 
-    //soups
-    public static final Item ASPARAGUS_SOUP = stew("asparagus_soup", 5, 0.8f);
-    public static final Item ASPARAGUS_SOUP_CREAMY = stew("asparagus_soup_creamy", 6, 0.9f);
+        ItemList.ASPARAGUS_SOUP = stew("asparagus_soup", 5, 0.8f);
+        ItemList.ASPARAGUS_SOUP_CREAMY = stew("asparagus_soup_creamy", 6, 0.9f);
 
-    //meals
-    public static final Item ASPARAGUS_AND_BACON_CHEESY = meal("asparagus_and_bacon_cheesy", 9, 3.0f);
+        ItemList.ASPARAGUS_AND_BACON_CHEESY = meal("asparagus_and_bacon_cheesy", 9, 3.0f);
+
+        //ExpandedDelight.LOGGER.info("ExpandedDelight items loaded");
+    }
 
     private static Item item(String name) {
         return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
@@ -60,9 +59,5 @@ public class ItemRegistry {
                 new Item(new FabricItemSettings().group(FarmersDelightMod.ITEM_GROUP)
                         .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
                                 .statusEffect(new StatusEffectInstance(EffectsRegistry.NOURISHED.get(), 3600, 0), 1.0f).build())));
-    }
-
-    public static void registerItems() {
-        ExpandedDelight.LOGGER.info("Registering items for Expanded Delight!");
     }
 }

@@ -11,10 +11,13 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 
 public class ScreenHandlersRegistry {
-    public static ScreenHandlerType<CoolerScreenHandler> COOLER_HANDLER =
-            ScreenHandlerRegistry.registerSimple(new Identifier(ExpandedDelight.MOD_ID, "cooler"), CoolerScreenHandler::new);
+    public static ScreenHandlerType<CoolerScreenHandler> COOLER_HANDLER;
 
     public static void registerScreens() {
         ScreenRegistry.register(COOLER_HANDLER, CoolerScreen::new);
+    }
+
+    public static void registerHandlers() {
+        COOLER_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(ExpandedDelight.MOD_ID, "cooler"), CoolerScreenHandler::new);
     }
 }

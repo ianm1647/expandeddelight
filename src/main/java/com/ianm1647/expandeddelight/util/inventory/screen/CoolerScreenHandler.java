@@ -81,14 +81,18 @@ public class CoolerScreenHandler extends ScreenHandler {
             } else if (!this.insertItem(originalStack, 0, this.inventory.size(), false)) {
                 return ItemStack.EMPTY;
             }
-
             if (originalStack.isEmpty()) {
                 slot.setStack(ItemStack.EMPTY);
             } else {
                 slot.markDirty();
             }
+            if (originalStack.getCount() == newStack.getCount()) {
+                return ItemStack.EMPTY;
+            } else {
+                slot.onTakeItem(player, originalStack);
+                return newStack;
+            }
         }
-
         return newStack;
     }
 
