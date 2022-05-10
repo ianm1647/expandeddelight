@@ -1,7 +1,6 @@
 package com.ianm1647.expandeddelight.block.custom;
 
 import com.ianm1647.expandeddelight.item.ItemList;
-import com.ianm1647.expandeddelight.registry.ItemRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
@@ -23,6 +22,6 @@ public class AsparagusCropBlock extends CropBlock {
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE_BY_AGE[(Integer)state.get(this.getAgeProperty())];
+        return SHAPE_BY_AGE[state.get(this.getAgeProperty())];
     }
 }

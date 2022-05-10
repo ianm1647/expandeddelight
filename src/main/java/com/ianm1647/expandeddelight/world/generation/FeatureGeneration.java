@@ -1,6 +1,5 @@
 package com.ianm1647.expandeddelight.world.generation;
 
-import com.ianm1647.expandeddelight.registry.FeatureRegistry;
 import com.ianm1647.expandeddelight.world.feature.FeatureList;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
