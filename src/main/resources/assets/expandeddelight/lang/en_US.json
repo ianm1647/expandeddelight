@@ -7,6 +7,8 @@
   "item.expandeddelight.asparagus_and_bacon_cheesy": "Cheesy Asparagus and Bacon",
   "item.expandeddelight.asparagus_seeds": "Asparagus Seeds",
 
+  "item.expandeddelight.raw_cinnamon": "Raw Cinnamon",
+
   "item.expandeddelight.cheese_wheel": "Cheese Wheel",
   "item.expandeddelight.cheese_slice": "Cheese Slice",
 
@@ -14,5 +16,9 @@
   "block.expandeddelight.wild_asparagus": "Wild Asparagus",
   "block.expandeddelight.asparagus_crop": "Asparagus",
 
-  "block.expandeddelight.cooler": "Cooler"
+  "block.expandeddelight.cinnamon_log": "Cinnamon Log",
+
+  "block.expandeddelight.cooler": "Cooler",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight"
 }

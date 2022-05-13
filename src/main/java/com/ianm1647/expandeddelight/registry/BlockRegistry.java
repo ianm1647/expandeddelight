@@ -3,8 +3,8 @@ package com.ianm1647.expandeddelight.registry;
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.custom.AsparagusCropBlock;
+import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
 import com.ianm1647.expandeddelight.block.custom.CoolerBlock;
-import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.nhoryzon.mc.farmersdelight.block.WildPatchBlock;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -24,12 +24,21 @@ public class BlockRegistry {
     public static final Block ASPARAGUS_CROP = withoutBlockItem("asparagus_crop", new AsparagusCropBlock(cropSettings()));
 
     public static void registerBlocks() {
+        //blocks
+        BlockList.CINNAMON_LOG = block("cinnamon_log",
+                new CinnamonLogBlock(blockSettings(Material.WOOD, 2.0f, 2.0f, BlockSoundGroup.WOOD)));
+
+        //crates
         BlockList.ASPARAGUS_CRATE = block("asparagus_crate",
                 new Block(blockSettings(Material.WOOD, 2.0f, 3.0f, BlockSoundGroup.WOOD)));
 
-        BlockList.WILD_ASPARAGUS = block("wild_asparagus", new WildPatchBlock());
+        //crops
+        BlockList.WILD_ASPARAGUS = block("wild_asparagus",
+                new WildPatchBlock());
 
-        BlockList.COOLER = block("cooler", new CoolerBlock(blockSettings(Material.STONE, 3.0f, 4.0f, BlockSoundGroup.STONE).nonOpaque()));
+        //entities
+        BlockList.COOLER = block("cooler",
+                new CoolerBlock(blockSettings(Material.STONE, 3.0f, 4.0f, BlockSoundGroup.STONE).nonOpaque()));
 
         //ExpandedDelight.LOGGER.info("ExpandedDelight blocks loaded");
     }
@@ -56,7 +65,7 @@ public class BlockRegistry {
 
     private static Item blockItem(String name, Block block) {
         return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(FarmersDelightMod.ITEM_GROUP)));
+                new BlockItem(block, new FabricItemSettings().group(ExpandedDelight.GROUP)));
     }
 
     private static Block withoutBlockItem(String name, Block block) {

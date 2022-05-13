@@ -2,7 +2,6 @@ package com.ianm1647.expandeddelight.block.custom;
 
 import com.ianm1647.expandeddelight.block.BlockEntityList;
 import com.ianm1647.expandeddelight.block.entity.CoolerBlockEntity;
-import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -60,11 +59,10 @@ public class CoolerBlock extends BlockWithEntity implements BlockEntityProvider 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return switch (state.get(FACING)) {
-            case NORTH -> SHAPE_NORTH;
+            default -> SHAPE_NORTH;
             case SOUTH -> SHAPE_SOUTH;
             case WEST -> SHAPE_WEST;
             case EAST -> SHAPE_EAST;
-            default -> SHAPE_NORTH;
         };
     }
 

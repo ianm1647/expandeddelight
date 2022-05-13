@@ -1,7 +1,6 @@
 package com.ianm1647.expandeddelight.util.inventory.screen.slot;
 
 import com.ianm1647.expandeddelight.block.entity.CoolerBlockEntity;
-import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;

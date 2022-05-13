@@ -14,12 +14,12 @@ import net.minecraft.world.World;
 public class CoolerRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;
     private final ItemStack output;
-    private final DefaultedList<Ingredient> recipeItems;
+    private final DefaultedList<Ingredient> input;
 
-    public CoolerRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
+    public CoolerRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> input) {
         this.id = id;
         this.output = output;
-        this.recipeItems = recipeItems;
+        this.input = input;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class CoolerRecipe implements Recipe<SimpleInventory> {
         if(world.isClient()) {
             return false;
         }
-        if(recipeItems.get(0).test(inventory.getStack(1))) {
+        if(input.get(0).test(inventory.getStack(1))) {
             return true;
         }
         return false;
@@ -83,7 +83,7 @@ public class CoolerRecipe implements Recipe<SimpleInventory> {
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
-            
+
             return new CoolerRecipe(id, output, inputs);
         }
 
@@ -96,6 +96,7 @@ public class CoolerRecipe implements Recipe<SimpleInventory> {
             }
 
             ItemStack output = buf.readItemStack();
+
             return new CoolerRecipe(id, output, inputs);
         }
 

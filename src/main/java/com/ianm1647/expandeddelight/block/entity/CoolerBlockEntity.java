@@ -2,7 +2,6 @@ package com.ianm1647.expandeddelight.block.entity;
 
 import com.google.common.collect.Maps;
 import com.ianm1647.expandeddelight.block.BlockEntityList;
-import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
 import com.ianm1647.expandeddelight.util.inventory.ImplementedInventory;
 import com.ianm1647.expandeddelight.util.inventory.screen.CoolerScreenHandler;
 import com.ianm1647.expandeddelight.util.recipe.CoolerRecipe;
@@ -17,6 +16,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -30,6 +30,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
 
 public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
@@ -75,12 +76,12 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
 
     public static Map<Item, Integer> createFuelTimeMap() {
         Map<Item, Integer> map = Maps.newLinkedHashMap();
-        addFuel(map, (ItemConvertible) Items.SNOWBALL, 800);
-        addFuel(map, (ItemConvertible) Items.SNOW_BLOCK, 1200);
-        addFuel(map, (ItemConvertible) Items.POWDER_SNOW_BUCKET, 2200);
-        addFuel(map, (ItemConvertible) Items.ICE, 2400);
-        addFuel(map, (ItemConvertible) Items.PACKED_ICE, 3600);
-        addFuel(map, (ItemConvertible) Items.BLUE_ICE, 4800);
+        addFuel(map, Items.SNOWBALL, 800);
+        addFuel(map, Items.SNOW_BLOCK, 1200);
+        addFuel(map, Items.POWDER_SNOW_BUCKET, 2200);
+        addFuel(map, Items.ICE, 2400);
+        addFuel(map, Items.PACKED_ICE, 3600);
+        addFuel(map, Items.BLUE_ICE, 4800);
 
         return map;
     }

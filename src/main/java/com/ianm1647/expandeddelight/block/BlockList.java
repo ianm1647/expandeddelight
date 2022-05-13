@@ -3,6 +3,9 @@ package com.ianm1647.expandeddelight.block;
 import net.minecraft.block.Block;
 
 public class BlockList {
+    //blocks
+    public static Block CINNAMON_LOG;
+
     //crates
     public static Block ASPARAGUS_CRATE;
     public static Block SWEET_POTATO_CRATE;
