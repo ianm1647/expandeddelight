@@ -8,19 +8,14 @@ import com.ianm1647.expandeddelight.block.custom.CoolerBlock;
 import com.ianm1647.expandeddelight.block.custom.PeanutCropBlock;
 import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
 import com.nhoryzon.mc.farmersdelight.block.WildPatchBlock;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
-import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.sapling.OakSaplingGenerator;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 
 public class BlockRegistry {
@@ -31,6 +26,10 @@ public class BlockRegistry {
                 new SaplingBlock(new CinnamonSaplingGenerator(), blockSettings(Material.PLANT, 0f, 0f, BlockSoundGroup.GRASS)));
         BlockList.CINNAMON_LOG = block("cinnamon_log",
                 new CinnamonLogBlock(blockSettings(Material.WOOD, 2.0f, 2.0f, BlockSoundGroup.WOOD)));
+        BlockList.SALT_ORE = block("salt_ore",
+                new OreBlock(blockSettings(Material.STONE, 3.0f, 3.0f, BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(0, 2)));
+        BlockList.DEEPSLATE_SALT_ORE = block("deepslate_salt_ore",
+                new OreBlock(blockSettings(Material.STONE, 4.5f, 3.0f, BlockSoundGroup.DEEPSLATE).requiresTool(), UniformIntProvider.create(0, 2)));
 
         //crates
         BlockList.ASPARAGUS_CRATE = block("asparagus_crate",
@@ -56,7 +55,7 @@ public class BlockRegistry {
             new PeanutCropBlock(cropSettings()));
 
     private static FabricBlockSettings blockSettings(Material material, float hardness, float resistance, BlockSoundGroup sound) {
-        return FabricBlockSettings.of(material).hardness(hardness).resistance(resistance).sounds(sound);
+        return FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sound);
     }
 
     private static FabricBlockSettings cropSettings() {

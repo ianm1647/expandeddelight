@@ -1,8 +1,9 @@
 package com.ianm1647.expandeddelight.world.feature;
 
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
+
+import java.util.List;
 
 public class FeatureList {
     //configured features
@@ -12,6 +13,11 @@ public class FeatureList {
     //placed features
     public static RegistryEntry<PlacedFeature> WILD_ASPARAGUS_PLACED;
     public static RegistryEntry<PlacedFeature> WILD_PEANUTS_PLACED;
+
+    //ores
+    public static List<OreFeatureConfig.Target> SALT_ORE_LIST;
+    public static RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SALT_ORE;
+    public static RegistryEntry<PlacedFeature> SALT_ORE_PLACED;
 
     //trees
         //cinnamon

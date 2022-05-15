@@ -1,7 +1,6 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.block.BlockEntityList;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.entity.CoolerBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -13,8 +12,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BlockEntityRegistry {
+    public static BlockEntityType<CoolerBlockEntity> COOLER;
+
     public static void registerBlockEntity() {
-        BlockEntityList.COOLER = entity("cooler", CoolerBlockEntity::new, BlockList.COOLER);
+        COOLER = entity("cooler", CoolerBlockEntity::new, BlockList.COOLER);
     }
 
     private static BlockEntityType entity(String name, Factory<? extends BlockEntity> entity, Block block) {

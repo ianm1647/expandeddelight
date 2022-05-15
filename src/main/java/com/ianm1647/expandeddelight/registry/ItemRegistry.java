@@ -3,6 +3,7 @@ package com.ianm1647.expandeddelight.registry;
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.item.custom.CookBookItem;
 import com.ianm1647.expandeddelight.item.custom.MortarPestleItem;
 import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -15,6 +16,10 @@ import net.minecraft.util.registry.Registry;
 public class ItemRegistry {
 
     public static void registerItems() {
+        //book
+        ItemList.COOK_BOOK = customItem("cook_book",
+                new CookBookItem(new FabricItemSettings().group(ExpandedDelight.GROUP)));
+
         //items
         ItemList.RAW_CINNAMON = item("raw_cinnamon");
         ItemList.GROUND_CINNAMON = item("ground_cinnamon");

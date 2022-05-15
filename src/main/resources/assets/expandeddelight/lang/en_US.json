@@ -33,10 +33,17 @@
 
   "block.expandeddelight.cinnamon_sapling": "Cinnamon Sapling",
   "block.expandeddelight.cinnamon_log": "Cinnamon Log",
+  "block.expandeddelight.salt_ore": "Salt Ore",
+  "block.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
 
   "block.expandeddelight.cooler": "Cooler",
 
   "container.expandeddelight.cooler": "Cooler",
 
-  "itemGroup.expandeddelight.group": "Expanded Delight"
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "book.expandeddelight.cook_book": "Expander's Cook Book",
+  "item.expandeddelight.cook_book": "Expander's Cook Book",
+  "text.expandeddelight.landing": "Book has no current function"
+
 }

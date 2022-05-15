@@ -3,6 +3,9 @@ package com.ianm1647.expandeddelight.item;
 import net.minecraft.item.Item;
 
 public class ItemList {
+    //book
+    public static Item COOK_BOOK;
+
     //items
     public static Item MORTAR_AND_PESTLE;
 
@@ -16,7 +19,6 @@ public class ItemList {
     public static Item ASPARAGUS_SEEDS;
     public static Item BROCCOLI_SEEDS;
     public static Item ZUCCHINI_SEEDS;
-    public static Item CORN_SEEDS;
     public static Item BELL_PEPPER_SEEDS;
 
     //foods
@@ -44,8 +46,6 @@ public class ItemList {
     public static Item BROCCOLI;
 
     public static Item ZUCCHINI;
-
-    public static Item CORN;
 
     public static Item BELL_PEPPER;
 

@@ -1,14 +1,11 @@
 package com.ianm1647.expandeddelight.block.entity;
 
 import com.google.common.collect.Maps;
-import com.ianm1647.expandeddelight.block.BlockEntityList;
-import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
 import com.ianm1647.expandeddelight.util.inventory.ImplementedInventory;
 import com.ianm1647.expandeddelight.util.inventory.screen.CoolerScreenHandler;
 import com.ianm1647.expandeddelight.util.recipe.CoolerRecipe;
-import com.nhoryzon.mc.farmersdelight.registry.ItemsRegistry;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,8 +20,6 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.tag.Tag;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
@@ -50,7 +45,7 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
     private int maxFuelTime = 0;
 
     public CoolerBlockEntity(BlockPos pos, BlockState state) {
-        super(BlockEntityList.COOLER, pos, state);
+        super(BlockEntityRegistry.COOLER, pos, state);
 
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {

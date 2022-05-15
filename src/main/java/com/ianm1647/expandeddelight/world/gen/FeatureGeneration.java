@@ -15,10 +15,17 @@ public class FeatureGeneration {
         generatePlant(Biome.Category.SAVANNA, FeatureList.WILD_PEANUTS_PLACED.getKey().get());
 
         generatePlant(Biome.Category.JUNGLE, FeatureList.CINNAMON_TREE_PLACED.getKey().get());
+
+        generateOre(Biome.Category.OCEAN, FeatureList.SALT_ORE_PLACED.getKey().get());
     }
 
     private static void generatePlant(Biome.Category biome, RegistryKey<PlacedFeature> feature) {
         BiomeModifications.addFeature(BiomeSelectors.categories(biome),
                 GenerationStep.Feature.VEGETAL_DECORATION, feature);
+    }
+
+    private static void generateOre(Biome.Category biome, RegistryKey<PlacedFeature> feature) {
+        BiomeModifications.addFeature(BiomeSelectors.categories(biome),
+                GenerationStep.Feature.UNDERGROUND_ORES, feature);
     }
 }

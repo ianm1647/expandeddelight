@@ -22,6 +22,9 @@ repositories {
 	maven { //CurseForge
 		url "https://www.cursemaven.com"
 	}
+	maven { //Patchouli
+		url 'https://maven.blamejared.com'
+	}
 }
 
 dependencies {
@@ -34,6 +37,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "curse.maven:farmersdelightfabric-482834:${project.delight_version}"
+	modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}"
 
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"

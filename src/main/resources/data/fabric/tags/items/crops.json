@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#fabric:crops/asparagus"
+    "#fabric:crops/asparagus",
+    "#fabric:crops/peanut"
   ]
 }

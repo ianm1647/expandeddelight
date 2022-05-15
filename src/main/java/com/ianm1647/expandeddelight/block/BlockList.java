@@ -7,6 +7,8 @@ public class BlockList {
     //blocks
     public static Block CINNAMON_SAPLING;
     public static Block CINNAMON_LOG;
+    public static Block SALT_ORE;
+    public static Block DEEPSLATE_SALT_ORE;
 
     //crates
     public static Block ASPARAGUS_CRATE;
