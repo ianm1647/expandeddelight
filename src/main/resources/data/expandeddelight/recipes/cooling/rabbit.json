@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_rabbit"
+    }
+  ],
+  "output": {
+    "item": "minecraft:rabbit"
+  }
+}

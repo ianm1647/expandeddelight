@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xsx",
+    " x "
+  ],
+  "key": {
+    "x": {
+      "tag": "minecraft:stone_crafting_materials"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "expandeddelight:mortar_and_pestle"
+  }
+}

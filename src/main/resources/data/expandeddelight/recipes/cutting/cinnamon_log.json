@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "expandeddelight:cinnamon_log"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool",
+    "item": "minecraft:shears"
+  },
+  "result": [
+    {
+      "item": "minecraft:oak_log"
+    },
+    {
+      "item": "expandeddelight:raw_cinnamon",
+      "count": 3
+    }
+  ],
+  "sound": "minecraft:item.axe.strip"
+}

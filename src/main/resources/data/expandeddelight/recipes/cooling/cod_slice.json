@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cooked_cod_slice"
+    }
+  ],
+  "output": {
+    "item": "farmersdelight:cod_slice"
+  }
+}

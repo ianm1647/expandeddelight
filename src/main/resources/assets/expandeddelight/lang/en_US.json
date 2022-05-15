@@ -8,17 +8,35 @@
   "item.expandeddelight.asparagus_seeds": "Asparagus Seeds",
 
   "item.expandeddelight.raw_cinnamon": "Raw Cinnamon",
+  "item.expandeddelight.ground_cinnamon": "Ground Cinnamon",
+  "item.expandeddelight.salt_rock": "Salt Rock",
+  "item.expandeddelight.ground_salt": "Ground Salt",
 
   "item.expandeddelight.cheese_wheel": "Cheese Wheel",
   "item.expandeddelight.cheese_slice": "Cheese Slice",
+  "item.expandeddelight.cheese_sandwich": "Cheese Sandwich",
+  "item.expandeddelight.grilled_cheese": "Grilled Cheese",
+  "item.expandeddelight.peanut": "Peanut",
+  "item.expandeddelight.peanut_butter": "Peanut Butter",
+  "item.expandeddelight.peanut_butter_sandwich": "Peanut Butter Sandwich",
+  "item.expandeddelight.peanut_butter_jelly_sandwich": "Peanut Butter and Jelly Sandwich",
+
+  "item.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
+  "item.expandeddelight.mortar_and_pestle.tooltip": "Right click item in main hand with ingredient in other hand to grind items",
 
   "block.expandeddelight.asparagus_crate": "Asparagus Crate",
   "block.expandeddelight.wild_asparagus": "Wild Asparagus",
   "block.expandeddelight.asparagus_crop": "Asparagus",
 
+  "block.expandeddelight.wild_peanuts": "Wild Peanuts",
+  "block.expandeddelight.peanut_crop": "Peanuts",
+
+  "block.expandeddelight.cinnamon_sapling": "Cinnamon Sapling",
   "block.expandeddelight.cinnamon_log": "Cinnamon Log",
 
   "block.expandeddelight.cooler": "Cooler",
+
+  "container.expandeddelight.cooler": "Cooler",
 
   "itemGroup.expandeddelight.group": "Expanded Delight"
 }

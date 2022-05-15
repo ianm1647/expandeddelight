@@ -4,6 +4,8 @@ import net.minecraft.item.Item;
 
 public class ItemList {
     //items
+    public static Item MORTAR_AND_PESTLE;
+
     public static Item RAW_CINNAMON;
     public static Item GROUND_CINNAMON;
 
@@ -20,9 +22,13 @@ public class ItemList {
     //foods
     public static Item CHEESE_WHEEL;
     public static Item CHEESE_SLICE;
+    public static Item CHEESE_SANDWICH;
+    public static Item GRILLED_CHEESE;
 
     public static Item PEANUT;
     public static Item PEANUT_BUTTER;
+    public static Item PEANUT_BUTTER_SANDWICH;
+    public static Item PEANUT_BUTTER_JELLY_SANDWICH;
 
     public static Item PEACH;
     public static Item PEAR;

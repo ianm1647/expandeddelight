@@ -6,7 +6,6 @@ import net.minecraft.block.entity.BlockEntityType;
 
 public class BlockEntityList {
     public static BlockEntityType<CoolerBlockEntity> COOLER;
-    public static BlockEntityType<BlockEntity> SPICE_MILL;
     public static BlockEntityType<BlockEntity> JUICER;
     public static BlockEntityType<BlockEntity> GRILL;
 }

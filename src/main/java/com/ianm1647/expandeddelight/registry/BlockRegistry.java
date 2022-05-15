@@ -5,6 +5,8 @@ import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.custom.AsparagusCropBlock;
 import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
 import com.ianm1647.expandeddelight.block.custom.CoolerBlock;
+import com.ianm1647.expandeddelight.block.custom.PeanutCropBlock;
+import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
 import com.nhoryzon.mc.farmersdelight.block.WildPatchBlock;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -12,6 +14,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.sapling.OakSaplingGenerator;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -21,10 +25,10 @@ import net.minecraft.util.registry.Registry;
 
 public class BlockRegistry {
 
-    public static final Block ASPARAGUS_CROP = withoutBlockItem("asparagus_crop", new AsparagusCropBlock(cropSettings()));
-
     public static void registerBlocks() {
         //blocks
+        BlockList.CINNAMON_SAPLING = block("cinnamon_sapling",
+                new SaplingBlock(new CinnamonSaplingGenerator(), blockSettings(Material.PLANT, 0f, 0f, BlockSoundGroup.GRASS)));
         BlockList.CINNAMON_LOG = block("cinnamon_log",
                 new CinnamonLogBlock(blockSettings(Material.WOOD, 2.0f, 2.0f, BlockSoundGroup.WOOD)));
 
@@ -35,6 +39,8 @@ public class BlockRegistry {
         //crops
         BlockList.WILD_ASPARAGUS = block("wild_asparagus",
                 new WildPatchBlock());
+        BlockList.WILD_PEANUTS = block("wild_peanuts",
+                new WildPatchBlock());
 
         //entities
         BlockList.COOLER = block("cooler",
@@ -43,12 +49,11 @@ public class BlockRegistry {
         //ExpandedDelight.LOGGER.info("ExpandedDelight blocks loaded");
     }
 
-    public static void registerRenderLayer() {
-        renderLayer(ASPARAGUS_CROP, RenderLayer.getCutout());
-        renderLayer(BlockList.WILD_ASPARAGUS, RenderLayer.getCutout());
+    public static final Block ASPARAGUS_CROP = withoutBlockItem("asparagus_crop",
+            new AsparagusCropBlock(cropSettings()));
 
-        renderLayer(BlockList.COOLER, RenderLayer.getCutout());
-    }
+    public static final Block PEANUT_CROP = withoutBlockItem("peanut_crop",
+            new PeanutCropBlock(cropSettings()));
 
     private static FabricBlockSettings blockSettings(Material material, float hardness, float resistance, BlockSoundGroup sound) {
         return FabricBlockSettings.of(material).hardness(hardness).resistance(resistance).sounds(sound);
@@ -70,9 +75,5 @@ public class BlockRegistry {
 
     private static Block withoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(ExpandedDelight.MOD_ID, name), block);
-    }
-
-    private static void renderLayer(Block block, RenderLayer layer) {
-        BlockRenderLayerMap.INSTANCE.putBlock(block, layer);
     }
 }

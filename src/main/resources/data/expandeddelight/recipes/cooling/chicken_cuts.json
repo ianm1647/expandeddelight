@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cooked_chicken_cuts"
+    }
+  ],
+  "output": {
+    "item": "farmersdelight:chicken_cuts"
+  }
+}

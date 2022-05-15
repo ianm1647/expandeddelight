@@ -2,9 +2,13 @@ package com.ianm1647.expandeddelight.block.entity;
 
 import com.google.common.collect.Maps;
 import com.ianm1647.expandeddelight.block.BlockEntityList;
+import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.registry.RecipeRegistry;
 import com.ianm1647.expandeddelight.util.inventory.ImplementedInventory;
 import com.ianm1647.expandeddelight.util.inventory.screen.CoolerScreenHandler;
 import com.ianm1647.expandeddelight.util.recipe.CoolerRecipe;
+import com.nhoryzon.mc.farmersdelight.registry.ItemsRegistry;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,12 +20,13 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.tag.Tag;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -30,7 +35,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 import java.util.Optional;
-import java.util.Random;
 
 public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
@@ -41,7 +45,7 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 2800;
+    private int maxProgress = 800;
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
@@ -97,7 +101,7 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
 
     @Override
     public Text getDisplayName() {
-        return new LiteralText("Cooler");
+        return new TranslatableText("container.expandeddelight.cooler");
     }
 
     @Nullable
@@ -167,7 +171,7 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
         }
 
         Optional<CoolerRecipe> match = world.getRecipeManager()
-                .getFirstMatch(CoolerRecipe.Type.INSTANCE, inventory, world);
+                .getFirstMatch(RecipeRegistry.COOLER_TYPE, inventory, world);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
                 && canInsertItemIntoOutputSlot(inventory, match.get().getOutput());
@@ -181,7 +185,7 @@ public class CoolerBlockEntity extends BlockEntity implements NamedScreenHandler
         }
 
         Optional<CoolerRecipe> match = world.getRecipeManager()
-                .getFirstMatch(CoolerRecipe.Type.INSTANCE, inventory, world);
+                .getFirstMatch(RecipeRegistry.COOLER_TYPE, inventory, world);
 
         if(match.isPresent()) {
             entity.removeStack(1,1);

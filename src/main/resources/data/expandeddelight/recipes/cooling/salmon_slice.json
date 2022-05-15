@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cooked_salmon_slice"
+    }
+  ],
+  "output": {
+    "item": "farmersdelight:salmon_slice"
+  }
+}

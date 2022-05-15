@@ -2,6 +2,7 @@ package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.util.recipe.CoolerRecipe;
+import com.ianm1647.expandeddelight.util.recipe.CoolerRecipeSerializer;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.util.Identifier;
@@ -12,13 +13,8 @@ public class RecipeRegistry {
     public static RecipeType<CoolerRecipe> COOLER_TYPE;
 
     public static void registerRecipes() {
-        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(ExpandedDelight.MOD_ID, CoolerRecipe.Serializer.ID),
-                CoolerRecipe.Serializer.INSTANCE);
-        Registry.register(Registry.RECIPE_TYPE, new Identifier(ExpandedDelight.MOD_ID, CoolerRecipe.Type.ID),
-                CoolerRecipe.Type.INSTANCE);
-
-        /* COOLER_SERIALIZER = serializer("cooling", new CoolerRecipeSerializer());
-        COOLER_TYPE = type("cooling", new CoolerRecipeType()); */
+        COOLER_SERIALIZER = serializer("cooling", new CoolerRecipeSerializer());
+        COOLER_TYPE = type("cooling", new CoolerRecipeSerializer.CoolerRecipeType());
     }
 
     public static RecipeType type(String name, RecipeType recipe) {

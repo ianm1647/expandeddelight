@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "expandeddelight:peanut_butter"
+    },
+    {
+      "item": "expandeddelight:peanut_butter"
+    }
+  ],
+  "result": {
+    "item": "expandeddelight:peanut_butter_sandwich"
+  }
+}

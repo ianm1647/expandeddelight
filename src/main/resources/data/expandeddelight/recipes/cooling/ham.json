@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "farmersdelight:smoked_ham"
+    }
+  ],
+  "output": {
+    "item": "farmersdelight:ham"
+  }
+}

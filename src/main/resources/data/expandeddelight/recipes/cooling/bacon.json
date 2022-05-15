@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cooked_bacon"
+    }
+  ],
+  "output": {
+    "item": "farmersdelight:bacon"
+  }
+}

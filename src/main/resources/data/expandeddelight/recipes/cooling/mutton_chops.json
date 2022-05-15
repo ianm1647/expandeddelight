@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cooked_mutton_chops"
+    }
+  ],
+  "output": {
+    "item": "farmersdelight:mutton_chops"
+  }
+}

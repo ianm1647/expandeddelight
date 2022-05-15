@@ -4,13 +4,35 @@
       "rolls": 1,
       "entries": [
         {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": 1
+                      }
+                    ]
+                  }
+                }
+              ],
+              "name": "expandeddelight:cinnamon_log"
+            }
+          ]
+        },
+        {
           "type": "minecraft:item",
+          "name": "minecraft:oak_log",
           "conditions": [
             {
               "condition": "minecraft:survives_explosion"
             }
-          ],
-          "name": "minecraft:oak_log"
+          ]
         }
       ]
     },
@@ -19,6 +41,7 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "expandeddelight:raw_cinnamon",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -28,8 +51,7 @@
             {
               "function": "minecraft:explosion_decay"
             }
-          ],
-          "name": "expandeddelight:raw_cinnamon"
+          ]
         }
       ]
     }

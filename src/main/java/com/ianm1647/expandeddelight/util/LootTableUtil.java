@@ -13,11 +13,11 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
 public class LootTableUtil {
-    private static Identifier DESERT_HOUSE = table(villageHouse("desert_house"));
-    private static Identifier PLAINS_HOUSE = table(villageHouse("plains_house"));
-    private static Identifier SAVANNA_HOUSE = table(villageHouse("savanna_house"));
-    private static Identifier SNOWY_HOUSE = table(villageHouse("snowy_house"));
-    private static Identifier TAIGA_HOUSE = table(villageHouse("taiga_house"));
+    private static final Identifier DESERT_HOUSE = table(villageHouse("desert_house"));
+    private static final Identifier PLAINS_HOUSE = table(villageHouse("plains_house"));
+    private static final Identifier SAVANNA_HOUSE = table(villageHouse("savanna_house"));
+    private static final Identifier SNOWY_HOUSE = table(villageHouse("snowy_house"));
+    private static final Identifier TAIGA_HOUSE = table(villageHouse("taiga_house"));
 
     public static void modifyLootTables() {
         lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS_SEEDS, 1f, 1.0f, 3.0f); //0.5f

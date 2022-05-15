@@ -2,10 +2,10 @@ package com.ianm1647.expandeddelight;
 
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.registry.*;
-import com.ianm1647.expandeddelight.util.CompostablesUtil;
 import com.ianm1647.expandeddelight.util.LootTableUtil;
+import com.ianm1647.expandeddelight.util.UtilRegistries;
 import com.ianm1647.expandeddelight.util.VillageTradeUtil;
-import com.ianm1647.expandeddelight.world.generation.FeatureGeneration;
+import com.ianm1647.expandeddelight.world.gen.FeatureGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -33,8 +33,10 @@ public class ExpandedDelight implements ModInitializer {
         ScreenHandlersRegistry.registerHandlers();
 
         LootTableUtil.modifyLootTables();
-        CompostablesUtil.registerCompostables();
         VillageTradeUtil.registerTrades();
+
+        UtilRegistries.registerCompostables();
+        UtilRegistries.registerFlammables();
     }
 
     /*if(FabricLoader.getInstance().isModLoaded("string")) {

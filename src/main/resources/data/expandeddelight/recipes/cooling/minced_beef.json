@@ -1,0 +1,11 @@
+{
+  "type": "expandeddelight:cooling",
+  "ingredients": [
+    {
+      "item": "farmersdelight:beef_patty"
+    }
+  ],
+  "output": {
+    "item": "farmersdelight:minced_beef"
+  }
+}
