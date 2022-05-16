@@ -1,0 +1,49 @@
+{
+  "item.expandeddelight.asparagus": "芦笋",
+  "item.expandeddelight.asparagus_chopped": "芦笋条",
+  "item.expandeddelight.asparagus_roasted": "烤芦笋",
+  "item.expandeddelight.asparagus_soup": "芦笋汤",
+  "item.expandeddelight.asparagus_soup_creamy": "奶油芦笋汤",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "蘸奶酪的芦笋培根",
+  "item.expandeddelight.asparagus_seeds": "芦笋种子",
+
+  "item.expandeddelight.raw_cinnamon": "生肉桂",
+  "item.expandeddelight.ground_cinnamon": "肉桂粉",
+  "item.expandeddelight.salt_rock": "碎岩盐块",
+  "item.expandeddelight.ground_salt": "盐",
+
+  "item.expandeddelight.cheese_wheel": "奶酪轮",
+  "item.expandeddelight.cheese_slice": "奶酪片",
+  "item.expandeddelight.cheese_sandwich": "奶酪三明治",
+  "item.expandeddelight.grilled_cheese": "烤奶酪三明治",
+  "item.expandeddelight.peanut": "花生",
+  "item.expandeddelight.peanut_butter": "花生酱",
+  "item.expandeddelight.peanut_butter_sandwich": "花生酱三明治",
+  "item.expandeddelight.peanut_butter_jelly_sandwich": "花生酱夹果冻三明治",
+
+  "item.expandeddelight.mortar_and_pestle": "杵臼",
+  "item.expandeddelight.mortar_and_pestle.tooltip": "将此物品放于主手，要加工的物品放于副手并按下使用键以捣碎物品",
+
+  "block.expandeddelight.asparagus_crate": "箱装芦笋",
+  "block.expandeddelight.wild_asparagus": "野生芦笋",
+  "block.expandeddelight.asparagus_crop": "芦笋",
+
+  "block.expandeddelight.wild_peanuts": "野生花生",
+  "block.expandeddelight.peanut_crop": "花生",
+
+  "block.expandeddelight.cinnamon_sapling": "肉桂树苗",
+  "block.expandeddelight.cinnamon_log": "肉桂原木",
+  "block.expandeddelight.salt_ore": "盐矿石",
+  "block.expandeddelight.deepslate_salt_ore": "深层盐矿石",
+
+  "block.expandeddelight.cooler": "冷却盒",
+
+  "container.expandeddelight.cooler": "冷却盒",
+
+  "itemGroup.expandeddelight.group": "扩充乐事",
+
+  "book.expandeddelight.cook_book": "扩充者的烹饪书",
+  "item.expandeddelight.cook_book": "扩充者的烹饪书",
+  "text.expandeddelight.landing": "烹饪书暂无内容"
+
+}
