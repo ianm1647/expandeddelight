@@ -44,6 +44,7 @@ public class ItemRegistry {
         ItemList.PEANUT_BUTTER = food("peanut_butter", Items.BOWL,2, 0.3f);
         ItemList.PEANUT_BUTTER_SANDWICH = food("peanut_butter_sandwich", null,4, 0.4f);
         ItemList.PEANUT_BUTTER_JELLY_SANDWICH = food("peanut_butter_jelly_sandwich", null, 5, 0.5f);
+        ItemList.SWEET_ROLL = food("sweet_roll", null, 4, 0.3f);
 
         //soups
         ItemList.ASPARAGUS_SOUP = stew("asparagus_soup", 5, 0.8f);

@@ -32,6 +32,8 @@ public class ItemList {
     public static Item PEANUT_BUTTER_SANDWICH;
     public static Item PEANUT_BUTTER_JELLY_SANDWICH;
 
+    public static Item SWEET_ROLL;
+
     public static Item PEACH;
     public static Item PEAR;
     public static Item CHERRIES;
