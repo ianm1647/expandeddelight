@@ -19,7 +19,9 @@
   "item.expandeddelight.peanut": "花生",
   "item.expandeddelight.peanut_butter": "花生酱",
   "item.expandeddelight.peanut_butter_sandwich": "花生酱三明治",
-  "item.expandeddelight.peanut_butter_jelly_sandwich": "花生酱夹果冻三明治",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "花生酱夹果冻三明治",
+  "item.expandeddelight.sweet_roll": "麵包卷",
+  "item.expandeddelight.berry_sweet_roll": "漿果甜卷",
 
   "item.expandeddelight.mortar_and_pestle": "杵臼",
   "item.expandeddelight.mortar_and_pestle.tooltip": "将此物品放于主手，要加工的物品放于副手并按下使用键以捣碎物品",

@@ -7,6 +7,15 @@
   "item.expandeddelight.asparagus_and_bacon_cheesy": "Cheesy Asparagus and Bacon",
   "item.expandeddelight.asparagus_seeds": "Asparagus Seeds",
 
+  "item.expandeddelight.peanut": "Peanut",
+  "item.expandeddelight.peanut_butter": "Peanut Butter",
+  "item.expandeddelight.peanut_butter_sandwich": "Peanut Butter Sandwich",
+  "item.expandeddelight.peanut_salad": "Peanut Salad",
+  "item.expandeddelight.peanut_honey_soup": "Honey Peanut Soup",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Peanut Butter and Sweet Berry Jelly Sandwich",
+
+
+  "item.expandeddelight.glass_jar": "Glass Jar",
   "item.expandeddelight.raw_cinnamon": "Raw Cinnamon",
   "item.expandeddelight.ground_cinnamon": "Ground Cinnamon",
   "item.expandeddelight.salt_rock": "Salt Rock",
@@ -16,11 +25,11 @@
   "item.expandeddelight.cheese_slice": "Cheese Slice",
   "item.expandeddelight.cheese_sandwich": "Cheese Sandwich",
   "item.expandeddelight.grilled_cheese": "Grilled Cheese",
-  "item.expandeddelight.peanut": "Peanut",
-  "item.expandeddelight.peanut_butter": "Peanut Butter",
-  "item.expandeddelight.peanut_butter_sandwich": "Peanut Butter Sandwich",
-  "item.expandeddelight.peanut_butter_jelly_sandwich": "Peanut Butter and Jelly Sandwich",
   "item.expandeddelight.sweet_roll": "Sweet Roll",
+  "item.expandeddelight.berry_sweet_roll": "Berry Sweet Roll",
+  "item.expandeddelight.cinnamon_rice": "Cinnamon Rice",
+
+  "item.expandeddelight.sweet_berry_jelly": "Sweet Berry Jelly",
 
   "item.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
   "item.expandeddelight.mortar_and_pestle.tooltip": "Right click item in main hand with ingredient in other hand to grind items",

@@ -9,6 +9,8 @@ public class ItemList {
     //items
     public static Item MORTAR_AND_PESTLE;
 
+    public static Item GLASS_JAR;
+
     public static Item RAW_CINNAMON;
     public static Item GROUND_CINNAMON;
 
@@ -30,12 +32,18 @@ public class ItemList {
     public static Item PEANUT;
     public static Item PEANUT_BUTTER;
     public static Item PEANUT_BUTTER_SANDWICH;
-    public static Item PEANUT_BUTTER_JELLY_SANDWICH;
+    public static Item SWEET_BERRY_JELLY_SANDWICH;
 
     public static Item SWEET_ROLL;
+    public static Item BERRY_SWEET_ROLL;
+    public static Item CINNAMON_RICE;
+    public static Item CINNAMON_APPLES;
 
-    public static Item PEACH;
-    public static Item PEAR;
+    public static Item GRAPES;
+    public static Item BLUEBERRIES;
+    public static Item STRAWBERRY;
+
+    public static Item ORANGE;
     public static Item CHERRIES;
 
     //crops
@@ -53,9 +61,16 @@ public class ItemList {
 
     //juices
 
+    //jellies
+    public static Item SWEET_BERRY_JELLY;
+
+    //salads
+    public static Item PEANUT_SALAD;
+
     //soups
     public static Item ASPARAGUS_SOUP;
     public static Item ASPARAGUS_SOUP_CREAMY;
+    public static Item PEANUT_HONEY_SOUP;
 
     //meals
     public static Item ASPARAGUS_AND_BACON_CHEESY;
