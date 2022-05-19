@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "expandeddelight:cheese"
+    },
+    {
+      "item": "expandeddelight:cheese"
+    }
+  ],
+  "result": {
+    "item": "expandeddelight:cheese_sandwich"
+  }
+}

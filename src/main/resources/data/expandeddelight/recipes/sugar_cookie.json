@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cwc"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:wheat"
+    },
+    "w": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "expandeddelight:sugar_cookie"
+  }
+}

@@ -2,10 +2,7 @@ package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
-import com.ianm1647.expandeddelight.block.custom.AsparagusCropBlock;
-import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
-import com.ianm1647.expandeddelight.block.custom.CoolerBlock;
-import com.ianm1647.expandeddelight.block.custom.PeanutCropBlock;
+import com.ianm1647.expandeddelight.block.custom.*;
 import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
 import com.nhoryzon.mc.farmersdelight.block.WildPatchBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -53,6 +50,9 @@ public class BlockRegistry {
 
     public static final Block PEANUT_CROP = withoutBlockItem("peanut_crop",
             new PeanutCropBlock(cropSettings()));
+
+    public static final Block JUICER = withoutBlockItem("juicer",
+            new JuicerBlock(blockSettings(Material.WOOD, 2.0f, 3.0f, BlockSoundGroup.WOOD).nonOpaque()));
 
     private static FabricBlockSettings blockSettings(Material material, float hardness, float resistance, BlockSoundGroup sound) {
         return FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sound);

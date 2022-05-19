@@ -4,6 +4,7 @@ import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.item.ItemList;
 import com.ianm1647.expandeddelight.item.custom.CookBookItem;
+import com.ianm1647.expandeddelight.item.custom.JuiceItem;
 import com.ianm1647.expandeddelight.item.custom.MortarPestleItem;
 import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -46,12 +47,15 @@ public class ItemRegistry {
         ItemList.GRILLED_CHEESE = food("grilled_cheese", null, 5, 0.5f);
         ItemList.PEANUT_BUTTER = food("peanut_butter", Items.BOWL,2, 0.3f);
         ItemList.PEANUT_BUTTER_SANDWICH = food("peanut_butter_sandwich", null,4, 0.4f);
-        ItemList.SWEET_BERRY_JELLY_SANDWICH = food("sweet_berry_jelly_sandwich", null, 5, 0.5f);
+        ItemList.SWEET_BERRY_JELLY_SANDWICH = food("sweet_berry_jelly_sandwich", null, 6, 0.5f);
         ItemList.SWEET_ROLL = food("sweet_roll", null, 4, 0.3f);
         ItemList.BERRY_SWEET_ROLL = food("berry_sweet_roll", null, 5, 0.4f);
         ItemList.CINNAMON_RICE = food("cinnamon_rice", Items.BOWL, 7, 0.5f);
+        ItemList.CHOCOLATE_COOKIE = food("chocolate_cookie", null, 2, 0.3f);
+        ItemList.SUGAR_COOKIE = food("sugar_cookie", null, 1, 0.3f);
 
         //juices
+        ItemList.APPLE_JUICE = juice("apple_juice", 2, 1.2f);
 
         //jellies
         ItemList.SWEET_BERRY_JELLY = jelly("sweet_berry_jelly", 4, 0.6f);
@@ -69,7 +73,11 @@ public class ItemRegistry {
 
         //functional items
         ItemList.MORTAR_AND_PESTLE = customItem("mortar_and_pestle",
-                new MortarPestleItem(new FabricItemSettings().group(ExpandedDelight.GROUP).maxDamage(64)));
+                new MortarPestleItem(new FabricItemSettings().group(ExpandedDelight.GROUP).maxDamage(32)));
+
+
+        ItemList.JUICER_ITEM = customItem("juicer_item",
+                new AliasedBlockItem(BlockList.JUICER, new FabricItemSettings().group(ExpandedDelight.GROUP)));
 
         //ExpandedDelight.LOGGER.info("ExpandedDelight items loaded");
     }
@@ -98,6 +106,12 @@ public class ItemRegistry {
         return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
                 new AliasedBlockItem(block, new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(remainder)
                         .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).build())));
+    }
+
+    private static Item juice(String name, int hunger, float saturation) {
+        return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
+                new JuiceItem(new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)
+                        .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).alwaysEdible().build())));
     }
 
     private static Item jelly(String name, int hunger, float saturation) {

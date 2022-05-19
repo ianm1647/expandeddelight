@@ -28,11 +28,18 @@
   "item.expandeddelight.sweet_roll": "Sweet Roll",
   "item.expandeddelight.berry_sweet_roll": "Berry Sweet Roll",
   "item.expandeddelight.cinnamon_rice": "Cinnamon Rice",
+  "item.expandeddelight.chocolate_cookie": "Chocolate Cookie",
+  "item.expandeddelight.sugar_cookie": "Sugar Cookie",
+
+  "item.expandeddelight.apple_juice": "Apple Juice",
 
   "item.expandeddelight.sweet_berry_jelly": "Sweet Berry Jelly",
 
   "item.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
   "item.expandeddelight.mortar_and_pestle.tooltip": "Right click item in main hand with ingredient in other hand to grind items",
+  "item.expandeddelight.mortar_and_pestle.fail": "You need an item in your opposite hand to use this",
+
+  "item.expandeddelight.juicer_item": "Juicer",
 
   "block.expandeddelight.asparagus_crate": "Asparagus Crate",
   "block.expandeddelight.wild_asparagus": "Wild Asparagus",
@@ -47,6 +54,8 @@
   "block.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
 
   "block.expandeddelight.cooler": "Cooler",
+  "block.expandeddelight.juicer": "Juicer",
+  "block.expandeddelight.juicer.pass": "You need a glass bottle and a fruit in your hands to use this",
 
   "container.expandeddelight.cooler": "Cooler",
 

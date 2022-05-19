@@ -34,7 +34,6 @@ public class BlockList {
 
     //entities
     public static Block COOLER;
-    public static Block JUICER;
-    public static Block GRILL;
+    public static Block JUICER = BlockRegistry.JUICER;
 
 }

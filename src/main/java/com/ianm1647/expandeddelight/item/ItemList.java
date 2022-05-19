@@ -39,6 +39,9 @@ public class ItemList {
     public static Item CINNAMON_RICE;
     public static Item CINNAMON_APPLES;
 
+    public static Item CHOCOLATE_COOKIE;
+    public static Item SUGAR_COOKIE;
+
     public static Item GRAPES;
     public static Item BLUEBERRIES;
     public static Item STRAWBERRY;
@@ -60,6 +63,7 @@ public class ItemList {
     public static Item BELL_PEPPER;
 
     //juices
+    public static Item APPLE_JUICE;
 
     //jellies
     public static Item SWEET_BERRY_JELLY;
@@ -74,4 +78,7 @@ public class ItemList {
 
     //meals
     public static Item ASPARAGUS_AND_BACON_CHEESY;
+
+    //functionals
+    public static Item JUICER_ITEM;
 }

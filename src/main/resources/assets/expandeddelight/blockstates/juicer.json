@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model":  "expandeddelight:block/juicer" },
+    "facing=east": { "model":  "expandeddelight:block/juicer", "y":  90 },
+    "facing=south": { "model":  "expandeddelight:block/juicer", "y": 180 },
+    "facing=west": { "model":  "expandeddelight:block/juicer", "y": 270 }
+  }
+}
