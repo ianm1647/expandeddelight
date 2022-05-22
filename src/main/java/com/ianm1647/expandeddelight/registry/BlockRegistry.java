@@ -40,17 +40,18 @@ public class BlockRegistry {
 
         //entities
         BlockList.COOLER = block("cooler",
-                new CoolerBlock(blockSettings(Material.STONE, 3.0f, 4.0f, BlockSoundGroup.STONE).nonOpaque()));
+                new CoolerBlock(blockSettings(Material.STONE, 2.0f, 3.0f, BlockSoundGroup.STONE).nonOpaque()));
 
         //ExpandedDelight.LOGGER.info("ExpandedDelight blocks loaded");
     }
 
+    //crops
     public static final Block ASPARAGUS_CROP = withoutBlockItem("asparagus_crop",
             new AsparagusCropBlock(cropSettings()));
-
     public static final Block PEANUT_CROP = withoutBlockItem("peanut_crop",
             new PeanutCropBlock(cropSettings()));
 
+    //entities
     public static final Block JUICER = withoutBlockItem("juicer",
             new JuicerBlock(blockSettings(Material.WOOD, 2.0f, 3.0f, BlockSoundGroup.WOOD).nonOpaque()));
 

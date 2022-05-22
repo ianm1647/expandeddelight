@@ -7,8 +7,6 @@ public class ItemList {
     public static Item COOK_BOOK;
 
     //items
-    public static Item MORTAR_AND_PESTLE;
-
     public static Item GLASS_JAR;
 
     public static Item RAW_CINNAMON;
@@ -32,15 +30,19 @@ public class ItemList {
     public static Item PEANUT;
     public static Item PEANUT_BUTTER;
     public static Item PEANUT_BUTTER_SANDWICH;
+    public static Item PEANUT_BUTTER_HONEY_SANDWICH;
     public static Item SWEET_BERRY_JELLY_SANDWICH;
+    public static Item GLOW_BERRY_JELLY_SANDWICH;
 
     public static Item SWEET_ROLL;
     public static Item BERRY_SWEET_ROLL;
+    public static Item GLOW_BERRY_SWEET_ROLL;
     public static Item CINNAMON_RICE;
     public static Item CINNAMON_APPLES;
 
     public static Item CHOCOLATE_COOKIE;
     public static Item SUGAR_COOKIE;
+    public static Item SNICKERDOODLE;
 
     public static Item GRAPES;
     public static Item BLUEBERRIES;
@@ -51,8 +53,6 @@ public class ItemList {
 
     //crops
     public static Item ASPARAGUS;
-    public static Item ASPARAGUS_CHOPPED;
-    public static Item ASPARAGUS_ROASTED;
 
     public static Item SWEET_POTATO;
 
@@ -67,6 +67,7 @@ public class ItemList {
 
     //jellies
     public static Item SWEET_BERRY_JELLY;
+    public static Item GLOW_BERRY_JELLY;
 
     //salads
     public static Item PEANUT_SALAD;
@@ -77,8 +78,12 @@ public class ItemList {
     public static Item PEANUT_HONEY_SOUP;
 
     //meals
+    public static Item MAC_AND_CHEESE;
+
     public static Item ASPARAGUS_AND_BACON_CHEESY;
 
     //functionals
+    public static Item MORTAR_AND_PESTLE;
+
     public static Item JUICER_ITEM;
 }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cwc"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:wheat"
+    },
+    "w": {
+      "item": "expandeddelight:ground_cinnamon"
+    }
+  },
+  "result": {
+    "item": "expandeddelight:snickerdoodle",
+    "count": 8
+  }
+}

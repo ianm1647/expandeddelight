@@ -13,7 +13,6 @@ public class UtilRegistries {
     public static void registerCompostables() {
         CompostingChanceRegistry.INSTANCE.add(ItemList.ASPARAGUS_SEEDS, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(ItemList.ASPARAGUS, 0.65F);
-        CompostingChanceRegistry.INSTANCE.add(ItemList.ASPARAGUS_CHOPPED, 0.325F);
 
         CompostingChanceRegistry.INSTANCE.add(ItemList.RAW_CINNAMON, 0.4F);
         CompostingChanceRegistry.INSTANCE.add(ItemList.PEANUT, 0.3F);
@@ -39,6 +38,7 @@ public class UtilRegistries {
         renderLayer(BlockList.WILD_PEANUTS, RenderLayer.getCutout());
 
         renderLayer(BlockList.COOLER, RenderLayer.getCutout());
+        renderLayer(BlockList.JUICER, RenderLayer.getCutout());
     }
 
     private static void renderLayer(Block block, RenderLayer layer) {

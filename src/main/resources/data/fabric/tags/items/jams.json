@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#fabric:jams/sweet_berry",
+    "#fabric:jams/glow_berry"
   ]
 }
