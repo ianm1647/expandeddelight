@@ -7,11 +7,11 @@
   ],
   "tool": {
     "type": "farmersdelight:tool",
-    "item": "minecraft:shears"
+    "tag": "fabric:tools/axes"
   },
   "result": [
     {
-      "item": "minecraft:oak_log"
+      "item": "minecraft:stripped_oak_log"
     },
     {
       "item": "expandeddelight:raw_cinnamon",

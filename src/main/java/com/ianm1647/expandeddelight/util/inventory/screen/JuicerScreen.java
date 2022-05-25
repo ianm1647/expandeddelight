@@ -9,11 +9,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class CoolerScreen extends HandledScreen<CoolerScreenHandler> {
+public class JuicerScreen extends HandledScreen<JuicerScreenHandler>  {
     private static final Identifier TEXTURE =
-            new Identifier(ExpandedDelight.MOD_ID, "textures/gui/cooler_gui.png");
+            new Identifier(ExpandedDelight.MOD_ID, "textures/gui/juicer_gui.png");
 
-    public CoolerScreen(CoolerScreenHandler handler, PlayerInventory inventory, Text title) {
+    public JuicerScreen(JuicerScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 
@@ -33,12 +33,7 @@ public class CoolerScreen extends HandledScreen<CoolerScreenHandler> {
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 80, y + 34, 177, 14, handler.getScaledProgress(), 17);
-        }
-
-        if(handler.hasFuel()) {
-            drawTexture(matrices, x + 18, y + 33 + 14 - handler.getScaledFuelProgress(), 176,
-                    14 - handler.getScaledFuelProgress(), 14, handler.getScaledFuelProgress());
+            drawTexture(matrices, x + 79, y + 35, 177, 0, handler.getScaledProgress(), 17);
         }
     }
 

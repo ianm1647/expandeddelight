@@ -35,8 +35,7 @@ public class ExpandedDelight implements ModInitializer {
         LootTableUtil.modifyLootTables();
         VillageTradeUtil.registerTrades();
 
-        UtilRegistries.registerCompostables();
-        UtilRegistries.registerFlammables();
+        UtilRegistries.registerUtil();
     }
 
     /*if(FabricLoader.getInstance().isModLoaded("string")) {

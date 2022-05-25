@@ -49,6 +49,7 @@ public class ItemRegistry {
         ItemList.BERRY_SWEET_ROLL = food("berry_sweet_roll", null, 5, 0.4f);
         ItemList.GLOW_BERRY_SWEET_ROLL = food("glow_berry_sweet_roll", null, 5, 0.4f);
         ItemList.CINNAMON_RICE = food("cinnamon_rice", Items.BOWL, 7, 0.5f);
+        ItemList.CINNAMON_APPLES = food("cinnamon_apples", Items.BOWL, 6, 0.6f);
         ItemList.CHOCOLATE_COOKIE = food("chocolate_cookie", null, 2, 0.3f);
         ItemList.SUGAR_COOKIE = food("sugar_cookie", null, 1, 0.3f);
         ItemList.SNICKERDOODLE = food("snickerdoodle", null, 2, 0.3f);

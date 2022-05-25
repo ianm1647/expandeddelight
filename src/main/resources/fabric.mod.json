@@ -20,6 +20,9 @@
     ],
     "client": [
       "com.ianm1647.expandeddelight.ExpandedDelightClient"
+    ],
+    "rei_plugins": [
+      "com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREI"
     ]
   },
   "mixins": [

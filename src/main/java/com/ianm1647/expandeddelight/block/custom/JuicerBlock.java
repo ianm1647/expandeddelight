@@ -1,22 +1,21 @@
 package com.ianm1647.expandeddelight.block.custom;
 
-import com.ianm1647.expandeddelight.item.ItemList;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
+import com.ianm1647.expandeddelight.block.entity.JuicerBlockEntity;
+import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
+import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.TranslatableText;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Hand;
+import net.minecraft.util.*;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -28,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class JuicerBlock extends Block {
+public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider{
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     public JuicerBlock(Settings settings) {
@@ -128,32 +127,56 @@ public class JuicerBlock extends Block {
         builder.add(FACING);
     }
 
+    // block entity
+
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack stack = player.getStackInHand(hand);
-        ItemStack offHand = player.getOffHandStack();
-        if(stack.isOf(Items.APPLE) && offHand.isOf(Items.GLASS_BOTTLE)) {
-            if(!player.isCreative()) {
-                stack.decrement(1);
-                offHand.decrement(1);
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof JuicerBlockEntity) {
+                ItemScatterer.spawn(world, pos, ((JuicerBlockEntity) blockEntity).getDroppableInventory());
+                world.updateComparators(pos,this);
             }
-            player.giveItemStack(new ItemStack(ItemList.APPLE_JUICE));
-            return ActionResult.SUCCESS;
-        } else if(stack.isOf(Items.GLASS_BOTTLE) && offHand.isOf(Items.APPLE)) {
-            if(!player.isCreative()) {
-                stack.decrement(1);
-                offHand.decrement(1);
-            }
-            player.giveItemStack(new ItemStack(ItemList.APPLE_JUICE));
-            return ActionResult.SUCCESS;
+            super.onStateReplaced(state, world, pos, newState, moved);
         }
-        player.sendMessage(new TranslatableText("block.expandeddelight.juicer.pass"), true);
-        return ActionResult.PASS;
     }
 
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!world.isClient) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof JuicerBlockEntity) {
+                JuicerBlockEntity juicerBlockEntity = (JuicerBlockEntity) blockEntity;
+                ItemStack stack = juicerBlockEntity.useBottleOnJuice(player.getStackInHand(hand));
+                if (stack != ItemStack.EMPTY) {
+                    if (!player.getInventory().insertStack(stack)) {
+                        player.dropItem(stack, false);
+                    }
+                    world.playSound(player, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                } else {
+                    NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+                    if (screenHandlerFactory != null) {
+                        player.openHandledScreen(screenHandlerFactory);
+                    }
+                }
+            }
+        }
+        return ActionResult.SUCCESS;
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new JuicerBlockEntity(pos, state);
+    }
+
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, BlockEntityRegistry.JUICER, JuicerBlockEntity::tick);
+    }
 }

@@ -1,0 +1,14 @@
+{
+  "type": "expandeddelight:juicing",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "output": {
+    "item": "expandeddelight:apple_juice"
+  }
+}

@@ -3,7 +3,6 @@ package com.ianm1647.expandeddelight.util;
 import com.ianm1647.expandeddelight.item.ItemList;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -20,8 +19,8 @@ public class LootTableUtil {
     private static final Identifier TAIGA_HOUSE = table(villageHouse("taiga_house"));
 
     public static void modifyLootTables() {
-        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS_SEEDS, 1f, 1.0f, 3.0f); //0.5f
-        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS, 1f, 1.0f, 2.0f); //0.25f
+        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS_SEEDS, 0.5f, 1.0f, 3.0f); //0.5f
+        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS, 0.25f, 1.0f, 2.0f); //0.25f
     }
 
     private static void lootTable(Identifier identifier, Item item, float chance, float min, float max) {

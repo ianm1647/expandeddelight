@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "farmersdelight:milk_bottle",
+    "farmersdelight:hot_cocoa",
     "expandeddelight:apple_juice"
   ]
 }

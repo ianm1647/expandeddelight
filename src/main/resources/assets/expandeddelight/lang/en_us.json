@@ -30,6 +30,7 @@
   "item.expandeddelight.berry_sweet_roll": "Berry Sweet Roll",
   "item.expandeddelight.glow_berry_sweet_roll": "Glow Berry Sweet Roll",
   "item.expandeddelight.cinnamon_rice": "Cinnamon Rice",
+  "item.expandeddelight.cinnamon_apples": "Cinnamon Apples",
   "item.expandeddelight.chocolate_cookie": "Chocolate Cookie",
   "item.expandeddelight.sugar_cookie": "Sugar Cookie",
   "item.expandeddelight.snickerdoodle": "Snickerdoodle",
@@ -65,6 +66,9 @@
   "block.expandeddelight.juicer.pass": "You need a glass bottle and a fruit in your hands to use this",
 
   "container.expandeddelight.cooler": "Cooler",
+  "container.expandeddelight.juicer": "Juicer",
 
-  "itemGroup.expandeddelight.group": "Expanded Delight"
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Juicing"
 }
