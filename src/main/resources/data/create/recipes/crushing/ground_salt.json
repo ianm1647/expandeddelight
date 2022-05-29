@@ -1,0 +1,1 @@
+{"type":"create:crushing","ingredients":[{"item":"expandeddelight:salt_rock"}],"results":[{"item":"expandeddelight:ground_salt","count":2},{"item":"expandeddelight:ground_salt","chance":0.25}],"processingTime":100}

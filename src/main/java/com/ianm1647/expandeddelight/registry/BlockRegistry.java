@@ -23,6 +23,8 @@ public class BlockRegistry {
                 new SaplingBlock(new CinnamonSaplingGenerator(), blockSettings(Material.PLANT, 0f, 0f, BlockSoundGroup.GRASS)));
         BlockList.CINNAMON_LOG = block("cinnamon_log",
                 new CinnamonLogBlock(blockSettings(Material.WOOD, 2.0f, 2.0f, BlockSoundGroup.WOOD)));
+        BlockList.CINNAMON_PLANKS = block("cinnamon_planks",
+                new Block(AbstractBlock.Settings.of(Material.WOOD, MapColor.OAK_TAN).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
         BlockList.SALT_ORE = block("salt_ore",
                 new OreBlock(blockSettings(Material.STONE, 3.0f, 3.0f, BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(0, 2)));
         BlockList.DEEPSLATE_SALT_ORE = block("deepslate_salt_ore",
