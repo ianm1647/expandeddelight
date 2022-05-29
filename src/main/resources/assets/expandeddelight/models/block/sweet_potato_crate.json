@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "expandeddelight:block/sweet_potato_crate_side",
+    "bottom": "farmersdelight:block/crate_bottom",
+    "top": "expandeddelight:block/sweet_potato_crate_top"
+  }
+}

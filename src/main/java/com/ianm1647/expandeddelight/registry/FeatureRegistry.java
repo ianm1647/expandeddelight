@@ -26,10 +26,14 @@ public class FeatureRegistry {
     public static void registerFeatures() {
         //configured features
         FeatureList.PATCH_WILD_ASPARAGUS = featurePatch("wild_asparagus_feature", BlockList.WILD_ASPARAGUS);
+        FeatureList.PATCH_WILD_SWEET_POTATO = featurePatch("wild_sweet_potatoes_feature", BlockList.WILD_SWEET_POTATO);
+        FeatureList.PATCH_WILD_CHILI_PEPPER = featurePatch("wild_chili_pepper_feature", BlockList.WILD_CHILI_PEPPER);
         FeatureList.PATCH_WILD_PEANUTS = featurePatch("wild_peanuts_feature", BlockList.WILD_PEANUTS);
 
         //placed features
         FeatureList.WILD_ASPARAGUS_PLACED = placedPatch("wild_asparagus_placed", FeatureList.PATCH_WILD_ASPARAGUS);
+        FeatureList.WILD_SWEET_POTATO_PLACED = placedPatch("wild_sweet_potatoes_placed", FeatureList.PATCH_WILD_SWEET_POTATO);
+        FeatureList.WILD_CHILI_PEPPER_PLACED = placedPatch("wild_chili_pepper_placed", FeatureList.PATCH_WILD_CHILI_PEPPER);
         FeatureList.WILD_PEANUTS_PLACED = placedPatch("wild_peanuts_placed", FeatureList.PATCH_WILD_PEANUTS);
 
         //ores

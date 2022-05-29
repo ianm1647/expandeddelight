@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "expandeddelight:block/wild_chili_pepper"
+  }
+}

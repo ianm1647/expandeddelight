@@ -31,9 +31,17 @@ public class BlockRegistry {
         //crates
         BlockList.ASPARAGUS_CRATE = block("asparagus_crate",
                 new Block(blockSettings(Material.WOOD, 2.0f, 3.0f, BlockSoundGroup.WOOD)));
+        BlockList.SWEET_POTATO_CRATE = block("sweet_potato_crate",
+                new Block(blockSettings(Material.WOOD, 2.0f, 3.0f, BlockSoundGroup.WOOD)));
+        BlockList.CHILI_PEPPER_CRATE = block("chili_pepper_crate",
+                new Block(blockSettings(Material.WOOD, 2.0f, 3.0f, BlockSoundGroup.WOOD)));
 
         //crops
         BlockList.WILD_ASPARAGUS = block("wild_asparagus",
+                new WildPatchBlock());
+        BlockList.WILD_SWEET_POTATO = block("wild_sweet_potatoes",
+                new WildPatchBlock());
+        BlockList.WILD_CHILI_PEPPER = block("wild_chili_pepper",
                 new WildPatchBlock());
         BlockList.WILD_PEANUTS = block("wild_peanuts",
                 new WildPatchBlock());
@@ -47,9 +55,13 @@ public class BlockRegistry {
 
     //crops
     public static final Block ASPARAGUS_CROP = withoutBlockItem("asparagus_crop",
-            new AsparagusCropBlock(cropSettings()));
+            new DelightCropBlock(cropSettings()));
+    public static final Block SWEET_POTATO_CROP = withoutBlockItem("sweet_potatoes_crop",
+            new DelightCropBlock(cropSettings()));
+    public static final Block CHILI_PEPPER_CROP = withoutBlockItem("chili_pepper_crop",
+            new DelightCropBlock(cropSettings()));
     public static final Block PEANUT_CROP = withoutBlockItem("peanut_crop",
-            new PeanutCropBlock(cropSettings()));
+            new DelightCropBlock(cropSettings()));
 
     //entities
     public static final Block JUICER = withoutBlockItem("juicer",

@@ -1,7 +1,7 @@
 package com.ianm1647.expandeddelight.util.recipe;
 
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
-import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public class JuicerRecipe implements Recipe<SimpleInventory> {
+public class JuicerRecipe implements Recipe<Inventory> {
     private final Identifier id;
     private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
@@ -24,7 +24,7 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public boolean matches(SimpleInventory inventory, World world) {
+    public boolean matches(Inventory inventory, World world) {
         boolean firstSlot = recipeItems.get(0).test(inventory.getStack(0));
         boolean secondSlot = recipeItems.get(1).test(inventory.getStack(1));
         if(firstSlot && secondSlot) {
@@ -35,7 +35,7 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public ItemStack craft(SimpleInventory inventory) {
+    public ItemStack craft(Inventory inventory) {
         return output;
     }
 

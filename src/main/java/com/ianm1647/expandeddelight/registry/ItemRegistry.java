@@ -29,27 +29,35 @@ public class ItemRegistry {
 
         //seeds
         ItemList.ASPARAGUS_SEEDS = itemBlock("asparagus_seeds", BlockList.ASPARAGUS_CROP);
+        ItemList.CHILI_PEPPER_SEEDS = itemBlock("chili_pepper_seeds", BlockList.CHILI_PEPPER_CROP);
 
         //crops
         ItemList.ASPARAGUS = food("asparagus", null,2, 0.3f);
+        ItemList.SWEET_POTATO = foodSeed("sweet_potato", BlockList.SWEET_POTATO_CROP, null, 2, 0.4f);
+        ItemList.CHILI_PEPPER = food("chili_pepper", null, 2, 0.3f);
 
         ItemList.PEANUT = foodSeed("peanut", BlockList.PEANUT_CROP, null, 1, 0.2f);
 
         //foods
+        ItemList.BAKED_SWEET_POTATO = food("baked_sweet_potato", null, 5, 0.5f);
+
         ItemList.CHEESE_WHEEL = food("cheese_wheel", null, 8, 0.5f);
         ItemList.CHEESE_SLICE = food("cheese_slice", null,2, 0.2f);
         ItemList.CHEESE_SANDWICH = food("cheese_sandwich", null, 3, 0.3f);
         ItemList.GRILLED_CHEESE = food("grilled_cheese", null, 5, 0.5f);
+
         ItemList.PEANUT_BUTTER = food("peanut_butter", Items.BOWL,2, 0.3f);
         ItemList.PEANUT_BUTTER_SANDWICH = food("peanut_butter_sandwich", null,4, 0.4f);
         ItemList.PEANUT_BUTTER_HONEY_SANDWICH = food("peanut_butter_honey_sandwich", null, 5, 0.5f);
         ItemList.SWEET_BERRY_JELLY_SANDWICH = food("sweet_berry_jelly_sandwich", null, 6, 0.5f);
         ItemList.GLOW_BERRY_JELLY_SANDWICH = food("glow_berry_jelly_sandwich", null, 6, 0.5f);
+
         ItemList.SWEET_ROLL = food("sweet_roll", null, 4, 0.3f);
         ItemList.BERRY_SWEET_ROLL = food("berry_sweet_roll", null, 5, 0.4f);
         ItemList.GLOW_BERRY_SWEET_ROLL = food("glow_berry_sweet_roll", null, 5, 0.4f);
         ItemList.CINNAMON_RICE = food("cinnamon_rice", Items.BOWL, 7, 0.5f);
         ItemList.CINNAMON_APPLES = food("cinnamon_apples", Items.BOWL, 6, 0.6f);
+
         ItemList.CHOCOLATE_COOKIE = food("chocolate_cookie", null, 2, 0.3f);
         ItemList.SUGAR_COOKIE = food("sugar_cookie", null, 1, 0.3f);
         ItemList.SNICKERDOODLE = food("snickerdoodle", null, 2, 0.3f);

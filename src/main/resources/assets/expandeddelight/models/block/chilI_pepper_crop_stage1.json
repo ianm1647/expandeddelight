@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "expandeddelight:block/chili_pepper_crop_stage1"
+  }
+}

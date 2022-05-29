@@ -1,0 +1,10 @@
+{
+  "type": "expandeddelight:mortar_pestle",
+  "ingredient": {
+    "item": "expandeddelight:raw_cinnamon"
+  },
+  "result": {
+    "item": "expandeddelight:ground_cinnamon",
+    "count": 2
+  }
+}

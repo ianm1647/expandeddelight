@@ -15,12 +15,6 @@ public class ItemList {
     public static Item SALT_ROCK;
     public static Item GROUND_SALT;
 
-    //seeds
-    public static Item ASPARAGUS_SEEDS;
-    public static Item BROCCOLI_SEEDS;
-    public static Item ZUCCHINI_SEEDS;
-    public static Item BELL_PEPPER_SEEDS;
-
     //foods
     public static Item CHEESE_WHEEL;
     public static Item CHEESE_SLICE;
@@ -44,23 +38,15 @@ public class ItemList {
     public static Item SUGAR_COOKIE;
     public static Item SNICKERDOODLE;
 
-    public static Item GRAPES;
-    public static Item BLUEBERRIES;
-    public static Item STRAWBERRY;
-
-    public static Item ORANGE;
-    public static Item CHERRIES;
-
     //crops
     public static Item ASPARAGUS;
+    public static Item ASPARAGUS_SEEDS;
 
     public static Item SWEET_POTATO;
+    public static Item BAKED_SWEET_POTATO;
 
-    public static Item BROCCOLI;
-
-    public static Item ZUCCHINI;
-
-    public static Item BELL_PEPPER;
+    public static Item CHILI_PEPPER;
+    public static Item CHILI_PEPPER_SEEDS;
 
     //juices
     public static Item APPLE_JUICE;

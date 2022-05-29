@@ -8,10 +8,14 @@ import java.util.List;
 public class FeatureList {
     //configured features
     public static RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PATCH_WILD_ASPARAGUS;
+    public static RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PATCH_WILD_SWEET_POTATO;
+    public static RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PATCH_WILD_CHILI_PEPPER;
     public static RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PATCH_WILD_PEANUTS;
 
     //placed features
     public static RegistryEntry<PlacedFeature> WILD_ASPARAGUS_PLACED;
+    public static RegistryEntry<PlacedFeature> WILD_SWEET_POTATO_PLACED;
+    public static RegistryEntry<PlacedFeature> WILD_CHILI_PEPPER_PLACED;
     public static RegistryEntry<PlacedFeature> WILD_PEANUTS_PLACED;
 
     //ores

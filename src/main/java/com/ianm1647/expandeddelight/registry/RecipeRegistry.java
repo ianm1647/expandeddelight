@@ -1,10 +1,7 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.util.recipe.CoolerRecipe;
-import com.ianm1647.expandeddelight.util.recipe.CoolerRecipeSerializer;
-import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
-import com.ianm1647.expandeddelight.util.recipe.JuicerRecipeSerializer;
+import com.ianm1647.expandeddelight.util.recipe.*;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.util.Identifier;
@@ -16,6 +13,7 @@ public class RecipeRegistry {
 
     public static RecipeSerializer<JuicerRecipe> JUICER_SERIALIZER;
     public static RecipeType<JuicerRecipe> JUICER_TYPE;
+
 
     public static void registerRecipes() {
         COOLER_SERIALIZER = serializer("cooling", new CoolerRecipeSerializer());

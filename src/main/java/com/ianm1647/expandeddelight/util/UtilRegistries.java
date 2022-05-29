@@ -20,13 +20,20 @@ public class UtilRegistries {
     public static void registerCompostables() {
         CompostingChanceRegistry.INSTANCE.add(ItemList.ASPARAGUS_SEEDS, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(ItemList.ASPARAGUS, 0.65F);
-
-        CompostingChanceRegistry.INSTANCE.add(ItemList.RAW_CINNAMON, 0.4F);
+        CompostingChanceRegistry.INSTANCE.add(ItemList.SWEET_POTATO, 0.65F);
+        CompostingChanceRegistry.INSTANCE.add(ItemList.CHILI_PEPPER, 0.65F);
+        CompostingChanceRegistry.INSTANCE.add(ItemList.CHILI_PEPPER_SEEDS, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(ItemList.PEANUT, 0.3F);
+        CompostingChanceRegistry.INSTANCE.add(ItemList.RAW_CINNAMON, 0.4F);
+        CompostingChanceRegistry.INSTANCE.add(ItemList.CHOCOLATE_COOKIE, 0.85F);
+        CompostingChanceRegistry.INSTANCE.add(ItemList.SUGAR_COOKIE, 0.85F);
+        CompostingChanceRegistry.INSTANCE.add(ItemList.SNICKERDOODLE, 0.85F);
 
         CompostingChanceRegistry.INSTANCE.add(BlockList.CINNAMON_SAPLING, 0.3F);
 
         CompostingChanceRegistry.INSTANCE.add(BlockList.WILD_ASPARAGUS, 0.65F);
+        CompostingChanceRegistry.INSTANCE.add(BlockList.WILD_SWEET_POTATO, 0.65F);
+        CompostingChanceRegistry.INSTANCE.add(BlockList.WILD_CHILI_PEPPER, 0.65F);
         CompostingChanceRegistry.INSTANCE.add(BlockList.WILD_PEANUTS, 0.65F);
     }
 
@@ -45,6 +52,10 @@ public class UtilRegistries {
 
         renderLayer(BlockList.ASPARAGUS_CROP, RenderLayer.getCutout());
         renderLayer(BlockList.WILD_ASPARAGUS, RenderLayer.getCutout());
+        renderLayer(BlockList.SWEET_POTATO_CROP, RenderLayer.getCutout());
+        renderLayer(BlockList.WILD_SWEET_POTATO, RenderLayer.getCutout());
+        renderLayer(BlockList.CHILI_PEPPER_CROP, RenderLayer.getCutout());
+        renderLayer(BlockList.WILD_CHILI_PEPPER, RenderLayer.getCutout());
         renderLayer(BlockList.PEANUT_CROP, RenderLayer.getCutout());
         renderLayer(BlockList.WILD_PEANUTS, RenderLayer.getCutout());
 

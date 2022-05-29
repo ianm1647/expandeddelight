@@ -4,15 +4,13 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.recipe.RecipeType;
-import net.minecraft.recipe.ShapedRecipe;
+import net.minecraft.recipe.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 
 public class JuicerRecipeSerializer implements RecipeSerializer<JuicerRecipe>  {
+
     @Override
     public JuicerRecipe read(Identifier id, JsonObject json) {
         ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
@@ -46,6 +44,7 @@ public class JuicerRecipeSerializer implements RecipeSerializer<JuicerRecipe>  {
             ing.write(buf);
         }
         buf.writeItemStack(recipe.getOutput());
+        buf.writeVarInt(recipe.getCookTime());
     }
 
     public static class JuicerRecipeType implements RecipeType<JuicerRecipe> {

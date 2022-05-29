@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "#fabric:vegetables/asparagus"
+    "#fabric:vegetables/asparagus",
+    "#fabric:vegetables/sweet_potato",
+    "#fabric:vegetables/chili_pepper"
   ]
 }

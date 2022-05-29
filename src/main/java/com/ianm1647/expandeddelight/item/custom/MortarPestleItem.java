@@ -29,32 +29,38 @@ public class MortarPestleItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         ItemStack offHand = user.getOffHandStack();
-        if(stack.isOf(this) && offHand.isEmpty()) {
-            user.sendMessage(new TranslatableText("item.expandeddelight.mortar_and_pestle.fail"), true);
-        }
-        if(stack.isOf(this) && offHand.isOf(Items.SUGAR_CANE)) {
-            if (!user.isCreative()) {
-                stack.damage(1, user, (playerx) -> playerx.sendToolBreakStatus(hand));
-                offHand.decrement(1);
+
+        if(stack.isOf(this)) {
+            if(offHand.isEmpty()) {
+                user.sendMessage(new TranslatableText("item.expandeddelight.mortar_and_pestle.fail"), true);
             }
-            user.giveItemStack(new ItemStack(Items.SUGAR, 2));
-            return TypedActionResult.success(stack);
-        }
-        if(stack.isOf(this) && offHand.isOf(ItemList.RAW_CINNAMON)) {
-            if (!user.isCreative()) {
-                stack.damage(1, user, (playerx) -> playerx.sendToolBreakStatus(hand));
-                offHand.decrement(1);
+            if(offHand.isOf(Items.SUGAR_CANE)) {
+                if (!user.isCreative()) {
+                    stack.damage(1, user, (playerx) -> playerx.sendToolBreakStatus(hand));
+                    offHand.decrement(1);
+                }
+                user.giveItemStack(new ItemStack(Items.SUGAR));
+                user.getItemCooldownManager().set(this, 40);
+                return TypedActionResult.success(stack);
             }
-            user.giveItemStack(new ItemStack(ItemList.GROUND_CINNAMON, 2));
-            return TypedActionResult.success(stack);
-        }
-        if(stack.isOf(this) && offHand.isOf(ItemList.SALT_ROCK)) {
-            if(!user.isCreative()) {
-                stack.damage(1, user, (playerx) -> playerx.sendToolBreakStatus(hand));
-                offHand.decrement(1);
+            if(offHand.isOf(ItemList.RAW_CINNAMON)) {
+                if (!user.isCreative()) {
+                    stack.damage(1, user, (playerx) -> playerx.sendToolBreakStatus(hand));
+                    offHand.decrement(1);
+                }
+                user.giveItemStack(new ItemStack(ItemList.GROUND_CINNAMON, 2));
+                user.getItemCooldownManager().set(this, 40);
+                return TypedActionResult.success(stack);
             }
-            user.giveItemStack(new ItemStack(ItemList.GROUND_SALT, 2));
-            return TypedActionResult.success(stack);
+            if(offHand.isOf(ItemList.SALT_ROCK)) {
+                if(!user.isCreative()) {
+                    stack.damage(1, user, (playerx) -> playerx.sendToolBreakStatus(hand));
+                    offHand.decrement(1);
+                }
+                user.giveItemStack(new ItemStack(ItemList.GROUND_SALT, 2));
+                user.getItemCooldownManager().set(this, 40);
+                return TypedActionResult.success(stack);
+            }
         }
         return TypedActionResult.pass(stack);
     }

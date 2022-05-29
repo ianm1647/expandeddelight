@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "expandeddelight:sweet_potato"
+  },
+  "result": "expandeddelight:baked_sweet_potato",
+  "experience": 0.35,
+  "cookingtime": 100
+}

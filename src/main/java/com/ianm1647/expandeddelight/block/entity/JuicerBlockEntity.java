@@ -14,6 +14,7 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -32,6 +33,7 @@ public class JuicerBlockEntity extends BlockEntity implements NamedScreenHandler
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 200;
+    private RecipeType<? extends JuicerRecipe> recipeType;
 
     public JuicerBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(BlockEntityRegistry.JUICER, blockPos, blockState);
@@ -78,14 +80,14 @@ public class JuicerBlockEntity extends BlockEntity implements NamedScreenHandler
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("cooler.progress", progress);
+        nbt.putInt("juicer.progress", progress);
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
         Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
-        progress = nbt.getInt("cooler.progress");
+        progress = nbt.getInt("juicer.progress");
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, JuicerBlockEntity entity) {
@@ -185,11 +187,9 @@ public class JuicerBlockEntity extends BlockEntity implements NamedScreenHandler
 
     public DefaultedList<ItemStack> getDroppableInventory() {
         DefaultedList<ItemStack> drops = DefaultedList.of();
-
         for (int i = 0; i < 5; ++i) {
             drops.add(i == 3 ? ItemStack.EMPTY : this.getStack(i));
         }
-
         return drops;
     }
 }
