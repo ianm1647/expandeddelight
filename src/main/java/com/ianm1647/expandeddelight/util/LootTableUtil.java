@@ -19,8 +19,11 @@ public class LootTableUtil {
     private static final Identifier TAIGA_HOUSE = table(villageHouse("taiga_house"));
 
     public static void modifyLootTables() {
-        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS_SEEDS, 0.5f, 1.0f, 3.0f); //0.5f
-        lootTable(PLAINS_HOUSE, ItemList.ASPARAGUS, 0.25f, 1.0f, 2.0f); //0.25f
+        lootTable(DESERT_HOUSE, ItemList.ASPARAGUS_SEEDS, 0.5f, 1.0f, 3.0f);
+        lootTable(DESERT_HOUSE, ItemList.ASPARAGUS, 0.25f, 1.0f, 2.0f);
+        lootTable(SAVANNA_HOUSE, ItemList.SWEET_POTATO, 0.5f, 1.0f, 3.0f);
+        lootTable(SNOWY_HOUSE, ItemList.CHILI_PEPPER, 0.5f, 1.0f, 3.0f);
+        lootTable(SNOWY_HOUSE, ItemList.CHILI_PEPPER_SEEDS, 0.25f, 1.0f, 2.0f);
     }
 
     private static void lootTable(Identifier identifier, Item item, float chance, float min, float max) {

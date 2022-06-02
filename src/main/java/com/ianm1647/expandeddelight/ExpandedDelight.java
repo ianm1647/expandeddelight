@@ -2,9 +2,7 @@ package com.ianm1647.expandeddelight;
 
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.registry.*;
-import com.ianm1647.expandeddelight.util.LootTableUtil;
 import com.ianm1647.expandeddelight.util.UtilRegistries;
-import com.ianm1647.expandeddelight.util.VillageTradeUtil;
 import com.ianm1647.expandeddelight.world.gen.FeatureGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -32,13 +30,6 @@ public class ExpandedDelight implements ModInitializer {
         RecipeRegistry.registerRecipes();
         ScreenHandlersRegistry.registerHandlers();
 
-        LootTableUtil.modifyLootTables();
-        VillageTradeUtil.registerTrades();
-
         UtilRegistries.registerUtil();
     }
-
-    /*if(FabricLoader.getInstance().isModLoaded("string")) {
-            ready for mod implementation with any aspect
-    }*/
 }

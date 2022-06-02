@@ -3,9 +3,9 @@ package com.ianm1647.expandeddelight.registry;
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.item.custom.JellyItem;
 import com.ianm1647.expandeddelight.item.custom.JuiceItem;
 import com.ianm1647.expandeddelight.item.custom.MortarPestleItem;
-import com.ianm1647.expandeddelight.item.custom.JellyItem;
 import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
@@ -41,8 +41,8 @@ public class ItemRegistry {
         //foods
         ItemList.BAKED_SWEET_POTATO = food("baked_sweet_potato", null, 5, 0.5f);
 
-        ItemList.CHEESE_WHEEL = food("cheese_wheel", null, 8, 0.5f);
-        ItemList.CHEESE_SLICE = food("cheese_slice", null,2, 0.2f);
+        ItemList.CHEESE_WHEEL = foodSeed("cheese_wheel", BlockList.CHEESE_WHEEL,null, 8, 0.5f);
+        ItemList.CHEESE_SLICE = food("cheese_slice",null, 2, 0.2f);
         ItemList.CHEESE_SANDWICH = food("cheese_sandwich", null, 3, 0.3f);
         ItemList.GRILLED_CHEESE = food("grilled_cheese", null, 5, 0.5f);
 
@@ -71,6 +71,7 @@ public class ItemRegistry {
 
         //salads
         ItemList.PEANUT_SALAD = salad("peanut_salad", 6, 0.6f);
+        ItemList.SWEET_POTATO_SALAD = salad("sweet_potato_salad", 6, 0.6f);
 
         //soups
         ItemList.ASPARAGUS_SOUP = stew("asparagus_soup", 7, 0.8f);
@@ -80,6 +81,7 @@ public class ItemRegistry {
         //meals
         ItemList.MAC_AND_CHEESE = meal("mac_and_cheese", 8, 0.8f);
         ItemList.ASPARAGUS_AND_BACON_CHEESY = meal("asparagus_and_bacon_cheesy", 10, 0.9f);
+        ItemList.PEPERONATA = meal("peperonata", 10, 0.9f);
 
         //functional items
         ItemList.MORTAR_AND_PESTLE = customItem("mortar_and_pestle",

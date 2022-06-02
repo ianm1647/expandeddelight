@@ -22,9 +22,6 @@ repositories {
 	maven { //CurseForge
 		url "https://www.cursemaven.com"
 	}
-	maven { //Patchouli
-		url 'https://maven.blamejared.com'
-	}
 }
 
 dependencies {

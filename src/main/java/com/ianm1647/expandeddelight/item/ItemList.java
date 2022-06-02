@@ -57,6 +57,7 @@ public class ItemList {
 
     //salads
     public static Item PEANUT_SALAD;
+    public static Item SWEET_POTATO_SALAD;
 
     //soups
     public static Item ASPARAGUS_SOUP;
@@ -65,11 +66,15 @@ public class ItemList {
 
     //meals
     public static Item MAC_AND_CHEESE;
-
     public static Item ASPARAGUS_AND_BACON_CHEESY;
+    public static Item PEPERONATA;
 
     //functionals
     public static Item MORTAR_AND_PESTLE;
 
     public static Item JUICER_ITEM;
+
+    //mod compat items
+    public static Item COPPER_KNIFE;
+    public static Item ROSE_GOLD_KNIFE;
 }

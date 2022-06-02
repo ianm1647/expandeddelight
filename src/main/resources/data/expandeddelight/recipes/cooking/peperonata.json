@@ -2,20 +2,23 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "fabric:raw_pork"
+      "tag": "fabric:vegetables"
     },
     {
-      "tag": "fabric:crops/asparagus"
+      "tag": "fabric:crops/chili_pepper"
     },
     {
       "tag": "fabric:crops/onion"
     },
     {
-      "item": "expandeddelight:cheese_slice"
+      "tag": "fabric:crops/tomato"
+    },
+    {
+      "tag": "fabric:pasta"
     }
   ],
   "result": {
-    "item": "expandeddelight:asparagus_and_bacon_cheesy"
+    "item": "expandeddelight:peperonata"
   },
   "container": {
     "item": "minecraft:bowl"

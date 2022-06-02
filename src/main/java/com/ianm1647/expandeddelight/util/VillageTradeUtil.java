@@ -11,10 +11,16 @@ public class VillageTradeUtil {
 
     public static void registerTrades() {
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> { factories.add((entity, random) ->
-            new TradeOffer(new ItemStack(ItemList.ASPARAGUS, 28), new ItemStack(Items.EMERALD), 16, 2, 0.05F));
+            new TradeOffer(new ItemStack(ItemList.ASPARAGUS, 27), new ItemStack(Items.EMERALD), 16, 2, 0.05F));
         });
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> { factories.add((entity, random) ->
-                new TradeOffer(new ItemStack(ItemList.PEANUT, 24), new ItemStack(Items.EMERALD), 16, 2, 0.05F));
+                new TradeOffer(new ItemStack(ItemList.SWEET_POTATO, 22), new ItemStack(Items.EMERALD), 16, 2, 0.05F));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> { factories.add((entity, random) ->
+                new TradeOffer(new ItemStack(ItemList.CHILI_PEPPER, 24), new ItemStack(Items.EMERALD), 16, 2, 0.05F));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> { factories.add((entity, random) ->
+                new TradeOffer(new ItemStack(ItemList.PEANUT, 30), new ItemStack(Items.EMERALD), 16, 2, 0.05F));
         });
     }
 }
