@@ -44,7 +44,6 @@ public class JuicerRecipeSerializer implements RecipeSerializer<JuicerRecipe>  {
             ing.write(buf);
         }
         buf.writeItemStack(recipe.getOutput());
-        buf.writeVarInt(recipe.getCookTime());
     }
 
     public static class JuicerRecipeType implements RecipeType<JuicerRecipe> {

@@ -30,7 +30,7 @@ public class MortarPestleItem extends Item {
         ItemStack stack = user.getStackInHand(hand);
         ItemStack offHand = user.getOffHandStack();
 
-        if(stack.isOf(this)) {
+        if(stack.isOf(ItemList.MORTAR_AND_PESTLE)) {
             if(offHand.isEmpty()) {
                 user.sendMessage(new TranslatableText("item.expandeddelight.mortar_and_pestle.fail"), true);
             }
