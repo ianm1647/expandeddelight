@@ -135,14 +135,14 @@ public class ItemRegistry {
 
     private static Item salad(String name, int hunger, float saturation) {
         return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
-                new StewItem(new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(Items.BOWL).maxCount(16)
+                new Item(new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(Items.BOWL).maxCount(16)
                         .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
                                 .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 0), 1.0f).build())));
     }
 
     private static Item stew(String name, int hunger, float saturation) {
         return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
-                new StewItem(new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(Items.BOWL).maxCount(16)
+                new Item(new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(Items.BOWL).maxCount(16)
                         .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
                                 .statusEffect(new StatusEffectInstance(EffectsRegistry.COMFORT.get(), 2400, 0), 1.0f).build())));
     }
