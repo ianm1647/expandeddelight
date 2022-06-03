@@ -41,7 +41,7 @@ public class ItemRegistry {
         //foods
         ItemList.BAKED_SWEET_POTATO = food("baked_sweet_potato", null, 5, 0.5f);
 
-        ItemList.CHEESE_WHEEL = foodSeed("cheese_wheel", BlockList.CHEESE_WHEEL,null, 8, 0.5f);
+        ItemList.CHEESE_WHEEL = food("cheese_wheel",null, 8, 0.5f);
         ItemList.CHEESE_SLICE = food("cheese_slice",null, 2, 0.2f);
         ItemList.CHEESE_SANDWICH = food("cheese_sandwich", null, 3, 0.3f);
         ItemList.GRILLED_CHEESE = food("grilled_cheese", null, 5, 0.5f);

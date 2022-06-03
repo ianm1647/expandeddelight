@@ -2,10 +2,11 @@ package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
-import com.ianm1647.expandeddelight.block.custom.*;
-import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
+import com.ianm1647.expandeddelight.block.custom.CoolerBlock;
+import com.ianm1647.expandeddelight.block.custom.DelightCropBlock;
+import com.ianm1647.expandeddelight.block.custom.JuicerBlock;
 import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
-import com.nhoryzon.mc.farmersdelight.block.PieBlock;
 import com.nhoryzon.mc.farmersdelight.block.WildPatchBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -64,9 +65,6 @@ public class BlockRegistry {
             new DelightCropBlock(cropSettings()));
     public static final Block PEANUT_CROP = withoutBlockItem("peanut_crop",
             new DelightCropBlock(cropSettings()));
-
-    public static final Block CHEESE_WHEEL = withoutBlockItem("cheese_wheel",
-            new PieBlock(ItemList.CHEESE_SLICE));
 
     //entities
     public static final Block JUICER = withoutBlockItem("juicer",

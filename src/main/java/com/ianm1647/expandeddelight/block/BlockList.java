@@ -26,9 +26,6 @@ public class BlockList {
     public static Block WILD_CHILI_PEPPER;
     public static Block WILD_PEANUTS;
 
-    //pies
-    public static Block CHEESE_WHEEL = BlockRegistry.CHEESE_WHEEL;
-
     //entities
     public static Block COOLER;
     public static Block JUICER = BlockRegistry.JUICER;
