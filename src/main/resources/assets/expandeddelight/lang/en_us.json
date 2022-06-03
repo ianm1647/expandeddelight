@@ -77,11 +77,9 @@
   "block.expandeddelight.salt_ore": "Salt Ore",
   "block.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
 
-  "block.expandeddelight.cooler": "Cooler",
   "block.expandeddelight.juicer": "Juicer",
   "block.expandeddelight.juicer.pass": "You need a glass bottle and a fruit in your hands to use this",
 
-  "container.expandeddelight.cooler": "Cooler",
   "container.expandeddelight.juicer": "Juicer",
 
   "itemGroup.expandeddelight.group": "Expanded Delight",

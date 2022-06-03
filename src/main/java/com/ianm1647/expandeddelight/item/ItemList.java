@@ -3,9 +3,6 @@ package com.ianm1647.expandeddelight.item;
 import net.minecraft.item.Item;
 
 public class ItemList {
-    //book
-    public static Item COOK_BOOK;
-
     //items
     public static Item GLASS_JAR;
 

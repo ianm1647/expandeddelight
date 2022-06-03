@@ -8,17 +8,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class RecipeRegistry {
-    public static RecipeSerializer<CoolerRecipe> COOLER_SERIALIZER;
-    public static RecipeType<CoolerRecipe> COOLER_TYPE;
-
     public static RecipeSerializer<JuicerRecipe> JUICER_SERIALIZER;
     public static RecipeType<JuicerRecipe> JUICER_TYPE;
 
-
     public static void registerRecipes() {
-        COOLER_SERIALIZER = serializer("cooling", new CoolerRecipeSerializer());
-        COOLER_TYPE = type("cooling", new CoolerRecipeSerializer.CoolerRecipeType());
-
         JUICER_SERIALIZER = serializer("juicing", new JuicerRecipeSerializer());
         JUICER_TYPE = type("juicing", new JuicerRecipeSerializer.JuicerRecipeType());
     }

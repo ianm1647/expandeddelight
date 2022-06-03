@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model":  "expandeddelight:block/cooler" },
-    "facing=east": { "model":  "expandeddelight:block/cooler", "y":  90 },
-    "facing=south": { "model":  "expandeddelight:block/cooler", "y": 180 },
-    "facing=west": { "model":  "expandeddelight:block/cooler", "y": 270 }
-  }
-}

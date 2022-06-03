@@ -3,7 +3,6 @@ package com.ianm1647.expandeddelight.registry;
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
-import com.ianm1647.expandeddelight.block.custom.CoolerBlock;
 import com.ianm1647.expandeddelight.block.custom.DelightCropBlock;
 import com.ianm1647.expandeddelight.block.custom.JuicerBlock;
 import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
@@ -48,10 +47,6 @@ public class BlockRegistry {
                 new WildPatchBlock());
         BlockList.WILD_PEANUTS = block("wild_peanuts",
                 new WildPatchBlock());
-
-        //entities
-        BlockList.COOLER = block("cooler",
-                new CoolerBlock(blockSettings(Material.STONE, 2.0f, 3.0f, BlockSoundGroup.STONE).nonOpaque()));
 
         //ExpandedDelight.LOGGER.info("ExpandedDelight blocks loaded");
     }

@@ -1,9 +1,9 @@
 package com.ianm1647.expandeddelight.integration.rei;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
+import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.integration.rei.juicing.JuicingRecipeCategory;
 import com.ianm1647.expandeddelight.integration.rei.juicing.JuicingRecipeDisplay;
-import com.ianm1647.expandeddelight.registry.BlockRegistry;
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
 import com.ianm1647.expandeddelight.util.inventory.screen.JuicerScreen;
 import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
@@ -22,7 +22,7 @@ public class ExpandedDelightREI implements REIClientPlugin {
 
     public void registerCategories(CategoryRegistry registry) {
         registry.add(new DisplayCategory[]{new JuicingRecipeCategory()});
-        registry.addWorkstations(JUICING, new EntryStack[]{EntryStacks.of(BlockRegistry.JUICER)});
+        registry.addWorkstations(JUICING, new EntryStack[]{EntryStacks.of(BlockList.JUICER)});
         registry.removePlusButton(JUICING);
     }
 

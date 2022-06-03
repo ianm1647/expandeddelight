@@ -27,7 +27,6 @@ public class BlockList {
     public static Block WILD_PEANUTS;
 
     //entities
-    public static Block COOLER;
     public static Block JUICER = BlockRegistry.JUICER;
 
 }

@@ -22,5 +22,9 @@ public class VillageTradeUtil {
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> { factories.add((entity, random) ->
                 new TradeOffer(new ItemStack(ItemList.PEANUT, 30), new ItemStack(Items.EMERALD), 16, 2, 0.05F));
         });
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> { factories.add((entity, random) ->
+                new TradeOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(ItemList.CHEESE_WHEEL, 2), 16, 12, 0.02F));
+        });
     }
 }

@@ -1,6 +1,6 @@
 package com.ianm1647.expandeddelight;
 
-import com.ianm1647.expandeddelight.block.BlockList;
+import com.ianm1647.expandeddelight.item.ItemList;
 import com.ianm1647.expandeddelight.registry.*;
 import com.ianm1647.expandeddelight.util.UtilRegistries;
 import com.ianm1647.expandeddelight.world.gen.FeatureGeneration;
@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 public class ExpandedDelight implements ModInitializer {
     public static final String MOD_ID = "expandeddelight";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "group"), () -> new ItemStack(BlockList.COOLER));
+    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "group"), () -> new ItemStack(ItemList.PEPERONATA));
 
     @Override
     public void onInitialize() {
