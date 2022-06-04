@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#c:crops/asparagus",
+    "#c:crops/sweet_potato",
+    "#c:crops/chili_pepper",
+    "#c:crops/peanut"
+  ]
+}

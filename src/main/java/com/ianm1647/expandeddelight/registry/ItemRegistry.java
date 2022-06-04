@@ -5,7 +5,6 @@ import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.item.ItemList;
 import com.ianm1647.expandeddelight.item.custom.JellyItem;
 import com.ianm1647.expandeddelight.item.custom.JuiceItem;
-import com.ianm1647.expandeddelight.item.custom.MortarPestleItem;
 import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
@@ -83,11 +82,8 @@ public class ItemRegistry {
         ItemList.ASPARAGUS_AND_BACON_CHEESY = meal("asparagus_and_bacon_cheesy", 10, 0.9f);
         ItemList.PEPERONATA = meal("peperonata", 10, 0.9f);
 
-        //functional items
-        ItemList.MORTAR_AND_PESTLE = customItem("mortar_and_pestle",
-                new MortarPestleItem(new FabricItemSettings().group(ExpandedDelight.GROUP).maxDamage(32)));
-
-
+        //block items
+        ItemList.MORTAR_AND_PESTLE = itemBlock("mortar_and_pestle_item", BlockList.MORTAR_AND_PESTLE);
         ItemList.JUICER_ITEM = itemBlock("juicer_item", BlockList.JUICER);
 
         //ExpandedDelight.LOGGER.info("ExpandedDelight items loaded");

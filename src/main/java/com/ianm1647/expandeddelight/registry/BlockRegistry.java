@@ -5,6 +5,7 @@ import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
 import com.ianm1647.expandeddelight.block.custom.DelightCropBlock;
 import com.ianm1647.expandeddelight.block.custom.JuicerBlock;
+import com.ianm1647.expandeddelight.block.custom.MortarPestleBlock;
 import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
 import com.nhoryzon.mc.farmersdelight.block.WildPatchBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -62,8 +63,10 @@ public class BlockRegistry {
             new DelightCropBlock(cropSettings()));
 
     //entities
+    public static final Block MORTAR_AND_PESTLE = withoutBlockItem("mortar_and_pestle",
+            new MortarPestleBlock(blockSettings(Material.STONE, 2.0f, 3.0f, BlockSoundGroup.STONE).nonOpaque()));
     public static final Block JUICER = withoutBlockItem("juicer",
-            new JuicerBlock(blockSettings(Material.WOOD, 2.0f, 3.0f, BlockSoundGroup.WOOD).nonOpaque()));
+            new JuicerBlock(blockSettings(Material.WOOD, 1.0f, 2.0f, BlockSoundGroup.WOOD).nonOpaque()));
 
     private static FabricBlockSettings blockSettings(Material material, float hardness, float resistance, BlockSoundGroup sound) {
         return FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sound);

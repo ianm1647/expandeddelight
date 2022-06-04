@@ -68,7 +68,6 @@ public class ItemList {
 
     //functionals
     public static Item MORTAR_AND_PESTLE;
-
     public static Item JUICER_ITEM;
 
     //mod compat items

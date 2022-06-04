@@ -27,6 +27,7 @@ public class BlockList {
     public static Block WILD_PEANUTS;
 
     //entities
+    public static Block MORTAR_AND_PESTLE = BlockRegistry.MORTAR_AND_PESTLE;
     public static Block JUICER = BlockRegistry.JUICER;
 
 }

@@ -51,9 +51,7 @@
   "item.expandeddelight.glow_berry_jelly": "Glow Berry Jelly",
   "item.expandeddelight.glow_berry_jelly.tooltip": "Night Vision (0:10)",
 
-  "item.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
-  "item.expandeddelight.mortar_and_pestle.tooltip": "Right click item in main hand with ingredient in other hand to grind items",
-  "item.expandeddelight.mortar_and_pestle.fail": "You need an item in your opposite hand to use this",
+  "item.expandeddelight.mortar_and_pestle_item": "Mortar and Pestle",
 
   "item.expandeddelight.juicer_item": "Juicer",
 
@@ -78,7 +76,9 @@
   "block.expandeddelight.deepslate_salt_ore": "Deepslate Salt Ore",
 
   "block.expandeddelight.juicer": "Juicer",
-  "block.expandeddelight.juicer.pass": "You need a glass bottle and a fruit in your hands to use this",
+
+  "block.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
+  "block.expandeddelight.mortar_and_pestle.pass": "That isn't something you can crush...",
 
   "container.expandeddelight.juicer": "Juicer",
 

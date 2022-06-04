@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "expandeddelight:raw_cinnamon"
+    }
+  ],
+  "results": [
+    {
+      "item": "expandeddelight:ground_cinnamon",
+      "count": 2
+    }
+  ],
+  "processingTime": 50,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ]
+}

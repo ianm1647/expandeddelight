@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model":  "expandeddelight:block/mortar_and_pestle" },
+    "facing=east": { "model":  "expandeddelight:block/mortar_and_pestle", "y":  90 },
+    "facing=south": { "model":  "expandeddelight:block/mortar_and_pestle", "y": 180 },
+    "facing=west": { "model":  "expandeddelight:block/mortar_and_pestle", "y": 270 }
+  }
+}

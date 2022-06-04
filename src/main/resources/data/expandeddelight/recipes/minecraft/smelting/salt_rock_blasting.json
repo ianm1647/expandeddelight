@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "expandeddelight:salt_ore"
+  },
+  "result": "expandeddelight:salt_rock",
+  "experience": 0.1,
+  "cookingtime": 100
+}

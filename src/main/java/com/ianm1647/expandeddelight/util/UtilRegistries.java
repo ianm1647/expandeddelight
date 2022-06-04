@@ -62,6 +62,7 @@ public class UtilRegistries {
         renderLayer(BlockList.PEANUT_CROP, RenderLayer.getCutout());
         renderLayer(BlockList.WILD_PEANUTS, RenderLayer.getCutout());
 
+        renderLayer(BlockList.MORTAR_AND_PESTLE, RenderLayer.getCutout());
         renderLayer(BlockList.JUICER, RenderLayer.getCutout());
     }
 

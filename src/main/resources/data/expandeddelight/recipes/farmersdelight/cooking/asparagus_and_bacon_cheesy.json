@@ -1,9 +1,14 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    {
-      "tag": "fabric:raw_pork"
-    },
+    [
+      {
+        "tag": "fabric:raw_pork"
+      },
+      {
+        "tag": "c:raw_pork"
+      }
+    ],
     {
       "tag": "fabric:crops/asparagus"
     },
