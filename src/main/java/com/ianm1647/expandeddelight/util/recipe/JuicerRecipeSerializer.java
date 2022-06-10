@@ -4,7 +4,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.recipe.*;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.RecipeType;
+import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
@@ -48,7 +51,7 @@ public class JuicerRecipeSerializer implements RecipeSerializer<JuicerRecipe>  {
 
     public static class JuicerRecipeType implements RecipeType<JuicerRecipe> {
         public JuicerRecipeType() { }
-        public static final JuicerRecipeSerializer.JuicerRecipeType INSTANCE = new JuicerRecipeSerializer.JuicerRecipeType();
+        public static final JuicerRecipeType INSTANCE = new JuicerRecipeType();
         public static final String ID = "juicing";
     }
 }

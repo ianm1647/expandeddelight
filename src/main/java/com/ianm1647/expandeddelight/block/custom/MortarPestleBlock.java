@@ -13,7 +13,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
@@ -130,7 +130,7 @@ public class MortarPestleBlock extends Block {
             world.playSound(player, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             return ActionResult.SUCCESS;
         }
-        player.sendMessage(new TranslatableText("block.expandeddelight.mortar_and_pestle.pass"), true);
+        player.sendMessage(Text.translatable("block.expandeddelight.mortar_and_pestle.pass"), true);
         return ActionResult.PASS;
     }
 

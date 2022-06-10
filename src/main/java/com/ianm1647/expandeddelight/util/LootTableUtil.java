@@ -1,9 +1,10 @@
 package com.ianm1647.expandeddelight.util;
 
 import com.ianm1647.expandeddelight.item.ItemList;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.item.Item;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -27,14 +28,14 @@ public class LootTableUtil {
     }
 
     private static void lootTable(Identifier identifier, Item item, float chance, float min, float max) {
-        LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
+        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
             if (identifier.equals(id)) {
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance))
                         .with(ItemEntry.builder(item))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(min, max)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(min, max)).build());
+                supplier.pool(poolBuilder.build());
             }
         }));
     }

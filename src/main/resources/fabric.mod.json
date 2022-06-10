@@ -12,7 +12,7 @@
     "sources": "https://github.com/ianm1647/expandeddelight"
   },
   "license": "MIT",
-  "icon": "assets/expandeddelight/icon.png",
+  "icon": "assets/expandeddelight/logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -21,7 +21,7 @@
     "client": [
       "com.ianm1647.expandeddelight.ExpandedDelightClient"
     ],
-    "rei_plugins": [
+    "rei_common": [
       "com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREI"
     ]
   },
@@ -30,9 +30,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "~1.18.2",
+    "minecraft": "~1.19",
     "java": ">=17",
     "farmersdelight": "*"
   },

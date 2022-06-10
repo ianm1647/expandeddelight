@@ -1,7 +1,8 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.util.recipe.*;
+import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
+import com.ianm1647.expandeddelight.util.recipe.JuicerRecipeSerializer;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.util.Identifier;

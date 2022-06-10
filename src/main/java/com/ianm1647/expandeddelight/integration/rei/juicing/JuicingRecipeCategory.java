@@ -15,9 +15,7 @@ import me.shedaniel.rei.api.common.entry.EntryIngredient;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
@@ -37,7 +35,7 @@ public class JuicingRecipeCategory implements DisplayCategory<JuicingRecipeDispl
     }
 
     public Text getTitle() {
-        return new TranslatableText(ExpandedDelight.MOD_ID + ".rei.juicing");
+        return Text.translatable(ExpandedDelight.MOD_ID + ".rei.juicing");
     }
 
     public CategoryIdentifier<? extends JuicingRecipeDisplay> getCategoryIdentifier() {
@@ -47,8 +45,8 @@ public class JuicingRecipeCategory implements DisplayCategory<JuicingRecipeDispl
     public List<Widget> setupDisplay(JuicingRecipeDisplay display, Rectangle bounds) {
         Point origin = bounds.getLocation();
         List<Widget> widgets = new ArrayList();
-        widgets.add(Widgets.createRecipeBase(new Rectangle(origin.x - 10, origin.y, 170, 85)));
-        Rectangle bgBounds = new Rectangle(origin.x - 5, origin.y + 5, 160, 75);
+        widgets.add(Widgets.createRecipeBase(new Rectangle(origin.x - 10, origin.y, 160, 85)));
+        Rectangle bgBounds = new Rectangle(origin.x - 5, origin.y + 5, 150, 75);
         widgets.add(Widgets.createTexturedWidget(GUI_TEXTURE, bgBounds, 10f, 4f));
         List<EntryIngredient> ingredientEntries = display.getIngredientEntries();
 
@@ -74,8 +72,8 @@ public class JuicingRecipeCategory implements DisplayCategory<JuicingRecipeDispl
         widgets.add(cookArrow);
 
         widgets.add(Widgets.createLabel(new Point(cookArrow.getBounds().x + cookArrow.getBounds().width / 2,
-                cookArrow.getBounds().y - 8), new LiteralText(display.getCookTime() + " t")).noShadow().centered()
-                .tooltip("Ticks").color(Formatting.DARK_GRAY.getColorValue(), Formatting.GRAY.getColorValue()));
+                cookArrow.getBounds().y - 8), Text.literal(display.getCookTime() + " t")).noShadow().centered()
+                .tooltip(Text.of("Ticks")).color(Formatting.DARK_GRAY.getColorValue(), Formatting.GRAY.getColorValue()));
 
         return widgets;
     }

@@ -2,9 +2,9 @@ package com.ianm1647.expandeddelight.item.custom;
 
 import com.nhoryzon.mc.farmersdelight.item.ConsumableItem;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
@@ -21,6 +21,6 @@ public class JuiceItem extends ConsumableItem {
     }
 
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("item.expandeddelight.juice.tooltip").formatted(Formatting.BLUE));
+        tooltip.add(Text.translatable("item.expandeddelight.juice.tooltip").formatted(Formatting.BLUE));
     }
 }

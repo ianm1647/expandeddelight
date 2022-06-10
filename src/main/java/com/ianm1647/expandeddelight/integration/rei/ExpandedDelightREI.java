@@ -23,7 +23,6 @@ public class ExpandedDelightREI implements REIClientPlugin {
     public void registerCategories(CategoryRegistry registry) {
         registry.add(new DisplayCategory[]{new JuicingRecipeCategory()});
         registry.addWorkstations(JUICING, new EntryStack[]{EntryStacks.of(BlockList.JUICER)});
-        registry.removePlusButton(JUICING);
     }
 
     public void registerDisplays(DisplayRegistry registry) {
