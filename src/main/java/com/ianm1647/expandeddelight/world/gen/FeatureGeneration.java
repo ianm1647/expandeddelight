@@ -13,22 +13,16 @@ import java.util.Collection;
 import java.util.List;
 
 public class FeatureGeneration {
-    private static Collection<RegistryKey<Biome>> PLAINS = List.of(new RegistryKey[]{BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.SNOWY_PLAINS});
-    private static Collection<RegistryKey<Biome>> JUNGLE = List.of(new RegistryKey[]{BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.SPARSE_JUNGLE});
-    private static Collection<RegistryKey<Biome>> DESERT = List.of(new RegistryKey[]{BiomeKeys.DESERT});
-    private static Collection<RegistryKey<Biome>> SAVANNA = List.of(new RegistryKey[]{BiomeKeys.SAVANNA, BiomeKeys.SAVANNA_PLATEAU});
-    private static Collection<RegistryKey<Biome>> OCEAN = List.of(new RegistryKey[]{BiomeKeys.OCEAN, BiomeKeys.COLD_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.DEEP_OCEAN,
-            BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.FROZEN_OCEAN, BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.WARM_OCEAN});
 
     public static void generateFeature() {
-        generatePlantCategory(PLAINS, FeatureList.WILD_ASPARAGUS_PLACED.getKey().get());
-        generatePlantCategory(JUNGLE, FeatureList.WILD_SWEET_POTATO_PLACED.getKey().get());
-        generatePlantCategory(DESERT, FeatureList.WILD_CHILI_PEPPER_PLACED.getKey().get());
-        generatePlantCategory(SAVANNA, FeatureList.WILD_PEANUTS_PLACED.getKey().get());
+        generatePlantCategory(BiomeCategories.PLAINS, FeatureList.WILD_ASPARAGUS_PLACED.getKey().get());
+        generatePlantCategory(BiomeCategories.JUNGLE, FeatureList.WILD_SWEET_POTATO_PLACED.getKey().get());
+        generatePlantCategory(BiomeCategories.DESERT, FeatureList.WILD_CHILI_PEPPER_PLACED.getKey().get());
+        generatePlantCategory(BiomeCategories.SAVANNA, FeatureList.WILD_PEANUTS_PLACED.getKey().get());
 
-        generatePlantCategory(JUNGLE, FeatureList.CINNAMON_TREE_PLACED.getKey().get());
+        generatePlantCategory(BiomeCategories.JUNGLE, FeatureList.CINNAMON_TREE_PLACED.getKey().get());
 
-        generateOre(OCEAN, FeatureList.SALT_ORE_PLACED.getKey().get());
+        generateOre(BiomeCategories.OCEAN, FeatureList.SALT_ORE_PLACED.getKey().get());
     }
 
     private static void generatePlantCategory(Collection<RegistryKey<Biome>> biome, RegistryKey<PlacedFeature> feature) {

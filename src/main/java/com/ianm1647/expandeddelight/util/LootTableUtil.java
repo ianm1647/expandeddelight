@@ -1,7 +1,6 @@
 package com.ianm1647.expandeddelight.util;
 
 import com.ianm1647.expandeddelight.item.ItemList;
-import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.item.Item;
 import net.minecraft.loot.LootPool;
