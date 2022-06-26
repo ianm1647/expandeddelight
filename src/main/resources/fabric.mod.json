@@ -21,7 +21,7 @@
     "client": [
       "com.ianm1647.expandeddelight.ExpandedDelightClient"
     ],
-    "rei_common": [
+    "rei_client": [
       "com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREI"
     ]
   },
