@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "fabric:crops/peanut"
+      "tag": "c:crops/peanut"
     },
     {
-      "tag": "fabric:crops/peanut"
+      "tag": "c:crops/peanut"
     },
     {
-      "tag": "fabric:milk"
+      "tag": "c:milk"
     },
     {
       "item": "minecraft:bowl"

@@ -2,19 +2,19 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "fabric:vegetables"
+      "tag": "c:vegetables"
     },
     {
-      "tag": "fabric:crops/chili_pepper"
+      "tag": "c:crops/chili_pepper"
     },
     {
-      "tag": "fabric:crops/onion"
+      "tag": "c:crops/onion"
     },
     {
-      "tag": "fabric:crops/tomato"
+      "tag": "c:crops/tomato"
     },
     {
-      "tag": "fabric:pasta"
+      "tag": "c:pasta"
     }
   ],
   "result": {

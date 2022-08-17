@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#fabric:crops/asparagus",
-    "#fabric:crops/sweet_potato",
-    "#fabric:crops/chili_pepper",
-    "#fabric:crops/peanut"
-  ]
-}
