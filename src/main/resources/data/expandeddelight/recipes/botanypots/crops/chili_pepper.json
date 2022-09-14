@@ -1,0 +1,33 @@
+{
+  "type": "botanypots:crop",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "seed": {
+    "item": "expandeddelight:chili_pepper_seeds"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "expandeddelight:chili_pepper_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "expandeddelight:chili_pepper"
+      },
+      "minRolls": 2,
+      "maxRolls": 3
+    }
+  ]
+}

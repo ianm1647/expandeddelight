@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "expandeddelight:wild_sweet_potatoes"
+    }
+  ],
+  "result": [
+    {
+      "item": "expandeddelight:sweet_potato"
+    },
+    {
+      "chance": 0.25,
+      "count": 2,
+      "item": "green_dye"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}

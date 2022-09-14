@@ -2,13 +2,13 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "fabric:milk"
+      "tag": "c:milk"
     },
     {
-      "tag": "fabric:crops/peanut"
+      "tag": "c:crops/peanut"
     },
     {
-      "tag": "fabric:crops/peanut"
+      "tag": "c:crops/peanut"
     },
     {
       "item": "minecraft:honey_bottle"

@@ -5,10 +5,10 @@
       "item": "minecraft:water_bucket"
     },
     {
-      "tag": "fabric:crops/asparagus"
+      "tag": "c:crops/asparagus"
     },
     {
-      "tag": "fabric:salad_ingredients"
+      "tag": "c:salad_ingredients"
     }
   ],
   "result": {

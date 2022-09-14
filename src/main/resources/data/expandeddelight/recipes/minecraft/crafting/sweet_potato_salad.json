@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "fabric:salad_ingredients"
+      "tag": "c:salad_ingredients"
     },
     {
-      "tag": "fabric:crops/onion"
+      "tag": "c:crops/onion"
     },
     {
-      "tag": "fabric:crops/sweet_potato"
+      "tag": "c:crops/sweet_potato"
     },
     {
-      "item": "expandeddelight:raw_cinnamon"
+      "tag": "c:crops/cinnamon"
     },
     {
       "item": "minecraft:bowl"

@@ -1,0 +1,24 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["create"]
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "expandeddelight:wild_chili_pepper"
+    }
+  ],
+  "results": [
+    {
+      "item": "expandeddelight:chili_pepper_seeds"
+    },
+    {
+      "count": 1,
+      "item": "white_dye"
+    }
+  ],
+  "processingTime": 50
+}

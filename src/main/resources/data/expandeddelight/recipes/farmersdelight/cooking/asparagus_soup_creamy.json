@@ -2,13 +2,13 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "fabric:milk"
+      "tag": "c:milk"
     },
     {
-      "tag": "fabric:crops/asparagus"
+      "tag": "c:crops/asparagus"
     },
     {
-      "tag": "fabric:salad_ingredients"
+      "tag": "c:salad_ingredients"
     }
   ],
   "result": {
