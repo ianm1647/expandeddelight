@@ -1,5 +1,6 @@
 package com.ianm1647.expandeddelight.item.custom;
 
+import com.ianm1647.expandeddelight.item.ItemList;
 import com.nhoryzon.mc.farmersdelight.item.ConsumableItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
@@ -21,6 +22,14 @@ public class JuiceItem extends ConsumableItem {
     }
 
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(Text.translatable("item.expandeddelight.juice.tooltip").formatted(Formatting.BLUE));
+        if (itemStack.isOf(ItemList.APPLE_JUICE)) {
+            tooltip.add(Text.translatable("item.expandeddelight.apple_juice.tooltip").formatted(Formatting.BLUE));
+        }
+        if (itemStack.isOf(ItemList.SWEET_BERRY_JUICE)) {
+            tooltip.add(Text.translatable("item.expandeddelight.sweet_berry_juice.tooltip").formatted(Formatting.BLUE));
+        }
+        if (itemStack.isOf(ItemList.GLOW_BERRY_JUICE)) {
+            tooltip.add(Text.translatable("item.expandeddelight.glow_berry_juice.tooltip").formatted(Formatting.BLUE));
+        }
     }
 }

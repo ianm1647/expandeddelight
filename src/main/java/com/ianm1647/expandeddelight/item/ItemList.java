@@ -47,6 +47,8 @@ public class ItemList {
 
     //juices
     public static Item APPLE_JUICE;
+    public static Item SWEET_BERRY_JUICE;
+    public static Item GLOW_BERRY_JUICE;
 
     //jellies
     public static Item SWEET_BERRY_JELLY;

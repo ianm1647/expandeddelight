@@ -43,13 +43,17 @@
   "item.expandeddelight.sugar_cookie": "Sugar Cookie",
   "item.expandeddelight.snickerdoodle": "Snickerdoodle",
 
-  "item.expandeddelight.juice.tooltip": "Speed (0:10)",
   "item.expandeddelight.apple_juice": "Apple Juice",
+  "item.expandeddelight.apple_juice.tooltip": "Speed (0:10)",
+  "item.expandeddelight.sweet_berry_juice": "Sweet Berry Juice",
+  "item.expandeddelight.sweet_berry_juice.tooltip": "Health Boost (0:10)",
+  "item.expandeddelight.glow_berry_juice": "Glow Berry Juice",
+  "item.expandeddelight.glow_berry_juice.tooltip": "Night Vision (0:10)",
 
   "item.expandeddelight.sweet_berry_jelly": "Sweet Berry Jelly",
-  "item.expandeddelight.sweet_berry_jelly.tooltip": "Health Boost (0:10)",
+  "item.expandeddelight.sweet_berry_jelly.tooltip": "Health Boost (0:20)",
   "item.expandeddelight.glow_berry_jelly": "Glow Berry Jelly",
-  "item.expandeddelight.glow_berry_jelly.tooltip": "Night Vision (0:10)",
+  "item.expandeddelight.glow_berry_jelly.tooltip": "Night Vision (0:20)",
 
   "item.expandeddelight.mortar_and_pestle_item": "Mortar and Pestle",
 

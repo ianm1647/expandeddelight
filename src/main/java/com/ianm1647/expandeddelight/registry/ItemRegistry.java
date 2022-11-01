@@ -65,7 +65,9 @@ public class ItemRegistry {
         ItemList.SNICKERDOODLE = food("snickerdoodle", null, 2, 0.3f);
 
         //juices
-        ItemList.APPLE_JUICE = juice("apple_juice", 1, 1.2f);
+        ItemList.APPLE_JUICE = juice("apple_juice", 1, 1.2f, StatusEffects.SPEED);
+        ItemList.SWEET_BERRY_JUICE = juice("sweet_berry_juice", 1, 1.2f, StatusEffects.HEALTH_BOOST);
+        ItemList.GLOW_BERRY_JUICE = juice("glow_berry_juice", 1, 1.2f, StatusEffects.NIGHT_VISION);
 
         //jellies
         ItemList.SWEET_BERRY_JELLY = jelly("sweet_berry_jelly", 3, 0.6f, StatusEffects.HEALTH_BOOST);
@@ -118,18 +120,18 @@ public class ItemRegistry {
                         .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).build())));
     }
 
-    private static Item juice(String name, int hunger, float saturation) {
+    private static Item juice(String name, int hunger, float saturation, StatusEffect effect) {
         return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
                 new JuiceItem(new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)
                         .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).alwaysEdible()
-                                .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200, 0), 1.0f).build())));
+                                .statusEffect(new StatusEffectInstance(effect, 200, 0), 1.0f).build())));
     }
 
     private static Item jelly(String name, int hunger, float saturation, StatusEffect effect) {
         return Registry.register(Registry.ITEM, new Identifier(ExpandedDelight.MOD_ID, name),
                 new JellyItem(new FabricItemSettings().group(ExpandedDelight.GROUP).recipeRemainder(ItemList.GLASS_JAR).maxCount(16)
                         .food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation)
-                                .statusEffect(new StatusEffectInstance(effect, 200, 0), 1.0f).build())));
+                                .statusEffect(new StatusEffectInstance(effect, 400, 0), 1.0f).build())));
     }
 
     private static Item salad(String name, int hunger, float saturation) {
