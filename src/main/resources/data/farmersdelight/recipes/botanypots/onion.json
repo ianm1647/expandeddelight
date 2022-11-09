@@ -1,0 +1,33 @@
+{
+  "type": "botanypots:crop",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "seed": {
+    "item": "farmersdelight:onion"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "farmersdelight:onions"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "farmersdelight:onion"
+      },
+      "minRolls": 2,
+      "maxRolls": 3
+    }
+  ]
+}

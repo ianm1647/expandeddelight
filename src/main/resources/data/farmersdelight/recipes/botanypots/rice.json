@@ -1,0 +1,30 @@
+{
+  "type": "botanypots:crop",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "seed": {
+    "item": "farmersdelight:rice"
+  },
+  "categories": [
+    "water"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "farmersdelight:rice_upper_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "farmersdelight:rice_panicle"
+      }
+    }
+  ]
+}

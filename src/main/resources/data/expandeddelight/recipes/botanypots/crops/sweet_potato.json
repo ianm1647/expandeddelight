@@ -1,0 +1,33 @@
+{
+  "type": "botanypots:crop",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "seed": {
+    "item": "expandeddelight:sweet_potato"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "expandeddelight:sweet_potatoes_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "expandeddelight:sweet_potato"
+      },
+      "minRolls": 2,
+      "maxRolls": 3
+    }
+  ]
+}
