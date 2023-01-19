@@ -1,11 +1,11 @@
 {
   "fabric:load_conditions":[
-	{
-	  "condition": "fabric:not",
-	  "values": [
-		"expandeddelight"
-	  ]
-	}
+    {
+      "condition": "fabric:not",
+      "values": [
+        "expandeddelight"
+      ]
+    }
   ],
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
