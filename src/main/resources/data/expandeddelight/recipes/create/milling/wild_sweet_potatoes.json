@@ -1,0 +1,24 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["create"]
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "expandeddelight:wild_sweet_potatoes"
+    }
+  ],
+  "results": [
+    {
+      "item": "expandeddelight:sweet_potato"
+    },
+    {
+      "count": 2,
+      "item": "green_dye"
+    }
+  ],
+  "processingTime": 50
+}
