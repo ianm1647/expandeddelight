@@ -1,0 +1,18 @@
+{
+	"type":"create:cutting",
+	"ingredients":[
+		{
+			"item":"expandeddelight:cinnamon_log"
+		}
+	],
+	"processingTime":50,
+	"results":[
+		{
+			"item":"stripped_oak_log"
+		},
+		{
+			"item":"expandeddelight:raw_cinnamon",
+			"count": 4
+		}
+	]
+}
