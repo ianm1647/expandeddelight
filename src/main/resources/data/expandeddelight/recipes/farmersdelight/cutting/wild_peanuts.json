@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "expandeddelight:wild_peanuts"
+    }
+  ],
+  "result": [
+    {
+      "item": "expandeddelight:peanut"
+    },
+    {
+      "chance": 0.25,
+      "count": 2,
+      "item": "yellow_dye"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}

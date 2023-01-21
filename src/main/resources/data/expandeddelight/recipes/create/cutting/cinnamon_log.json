@@ -1,0 +1,24 @@
+{
+	"fabric:load_conditions": [
+		{
+			"condition": "fabric:all_mods_loaded",
+			"values": ["create"]
+		}
+	],
+	"type":"create:cutting",
+	"ingredients":[
+		{
+			"item":"expandeddelight:cinnamon_log"
+		}
+	],
+	"processingTime":50,
+	"results":[
+		{
+			"item":"stripped_oak_log"
+		},
+		{
+			"item":"expandeddelight:raw_cinnamon",
+			"count": 4
+		}
+	]
+}

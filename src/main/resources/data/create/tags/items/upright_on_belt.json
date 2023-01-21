@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"expandeddelight:apple_juice",
+	"expandeddelight:sweet_berry_juice",
+	"expandeddelight:glow_berry_juice",
+	"expandeddelight:sweet_berry_jelly",
+	"expandeddelight:glow_berry_jelly",
+	"expandeddelight:glass_jar"
+  ]
+}

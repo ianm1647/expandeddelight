@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"expandeddelight:asparagus_crop",
+	"expandeddelight:chili_pepper_crop",
+	"expandeddelight:peanut_crop",
+	"expandeddelight:sweet_potatoes_crop"
+  ]
+}
