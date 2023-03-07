@@ -1,0 +1,92 @@
+{
+  "item.expandeddelight.asparagus": "Спаржа",
+  "item.expandeddelight.asparagus_seeds": "Семена спаржи",
+  "item.expandeddelight.asparagus_soup": "Спаржевый суп",
+  "item.expandeddelight.asparagus_soup_creamy": "Спаржевый крем суп",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Сырная спаржа с беконом",
+
+  "item.expandeddelight.sweet_potato": "Сладкий картофель",
+  "item.expandeddelight.baked_sweet_potato": "Печёный сладкий картофель",
+  "item.expandeddelight.sweet_potato_salad": "Салат со сладким картофелем",
+
+  "item.expandeddelight.chili_pepper": "Перец чили",
+  "item.expandeddelight.chili_pepper_seeds": "Семена перца чили",
+  "item.expandeddelight.peperonata": "Чили",
+
+  "item.expandeddelight.peanut": "Арахис",
+  "item.expandeddelight.peanut_butter": "Арахисовая паста",
+  "item.expandeddelight.peanut_butter_sandwich": "Сєндвич с арахисовой пастой",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Сендвич с арахисовой пастой и мёдом",
+  "item.expandeddelight.peanut_salad": "Салат с арахисом",
+  "item.expandeddelight.peanut_honey_soup": "Медовый суп с арахисом",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Сендвич с арахисовой пастой и ягодным джемом",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Сендвич с арахисовой пастой и джемом из светящихся ягод",
+
+
+  "item.expandeddelight.glass_jar": "Банка",
+  "item.expandeddelight.raw_cinnamon": "Палочка корицы",
+  "item.expandeddelight.ground_cinnamon": "Корица",
+  "item.expandeddelight.salt_rock": "Каменная соль",
+  "item.expandeddelight.ground_salt": "Соль",
+
+  "item.expandeddelight.cheese_wheel": "Сырная голова",
+  "item.expandeddelight.cheese_slice": "Ломтик сыра",
+  "item.expandeddelight.cheese_sandwich": "Сырный сендвич",
+  "item.expandeddelight.grilled_cheese": "Жареный сыр",
+  "item.expandeddelight.mac_and_cheese": "Макароны с сыром",
+  "item.expandeddelight.sweet_roll": "Сладкий ролл",
+  "item.expandeddelight.berry_sweet_roll": "Ягодный ролл",
+  "item.expandeddelight.glow_berry_sweet_roll": "Ролл из светящимися ягодами",
+  "item.expandeddelight.cinnamon_rice": "Рис с корицей",
+  "item.expandeddelight.cinnamon_apples": "Яблоко с корицей",
+  "item.expandeddelight.chocolate_cookie": "Шоколадное печенье",
+  "item.expandeddelight.sugar_cookie": "Сахарное печенье",
+  "item.expandeddelight.snickerdoodle": "Сникердудл",
+
+  "item.expandeddelight.apple_juice": "Яблочный сок",
+  "item.expandeddelight.apple_juice.tooltip": "Скорость (0:10)",
+  "item.expandeddelight.sweet_berry_juice": "Сок из сладких ягод",
+  "item.expandeddelight.sweet_berry_juice.tooltip": "Поглощение (0:10)",
+  "item.expandeddelight.glow_berry_juice": "Сок из светящихся ягод",
+  "item.expandeddelight.glow_berry_juice.tooltip": "Ночное зрение (0:10)",
+
+  "item.expandeddelight.sweet_berry_jelly": "Ягодное желе",
+  "item.expandeddelight.sweet_berry_jelly.tooltip": "Поглощение (0:20)",
+  "item.expandeddelight.glow_berry_jelly": "Желе из сладких ягод",
+  "item.expandeddelight.glow_berry_jelly.tooltip": "Ночное зрение (0:20)",
+
+  "item.expandeddelight.mortar_and_pestle_item": "Ступа",
+
+  "item.expandeddelight.juicer_item": "Соковыжималка",
+
+  "block.expandeddelight.asparagus_crate": "Ящик спаржи",
+  "block.expandeddelight.wild_asparagus": "Дикая спаржа",
+  "block.expandeddelight.asparagus_crop": "Спаржа",
+
+  "block.expandeddelight.sweet_potato_crate": "Ящик сладкого картофеля",
+  "block.expandeddelight.wild_sweet_potatoes": "Дикий сладкий картофель",
+  "block.expandeddelight.sweet_potatoes_crop": "Сладкий картофель",
+
+  "block.expandeddelight.chili_pepper_crate": "Ящик перца чили",
+  "block.expandeddelight.wild_chili_pepper": "Дикий перец чили",
+  "block.expandeddelight.chili_pepper_crop": "Перец чили",
+
+  "block.expandeddelight.wild_peanuts": "Дикий арахис",
+  "block.expandeddelight.peanut_crop": "Арахис",
+
+  "block.expandeddelight.cinnamon_sapling": "Саженец корицы",
+  "block.expandeddelight.cinnamon_log": "Бревной корицы",
+  "block.expandeddelight.salt_ore": "Соляная руда",
+  "block.expandeddelight.deepslate_salt_ore": "Соленосный глубинный сланец",
+
+  "block.expandeddelight.juicer": "Соковыжималка",
+
+  "block.expandeddelight.mortar_and_pestle": "Ступа",
+  "block.expandeddelight.mortar_and_pestle.pass": "Это не то, что можно раздавить...",
+
+  "container.expandeddelight.juicer": "Соковыжималка",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Вижимание сока"
+}
