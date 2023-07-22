@@ -3,8 +3,6 @@ package com.ianm1647.expandeddelight.registry;
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.item.ItemList;
-import com.ianm1647.expandeddelight.item.custom.JellyItem;
-import com.ianm1647.expandeddelight.item.custom.JuiceItem;
 import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -63,13 +61,13 @@ public class ItemRegistry {
         ItemList.SNICKERDOODLE = item("snickerdoodle", new Item(food(null, 2, 0.3f)));
 
         //juices
-        ItemList.APPLE_JUICE = item("apple_juice", new JuiceItem(juice(1, 1.2f, StatusEffects.SPEED)));
-        ItemList.SWEET_BERRY_JUICE = item("sweet_berry_juice", new JuiceItem(juice(1, 1.2f, StatusEffects.HEALTH_BOOST)));
-        ItemList.GLOW_BERRY_JUICE = item("glow_berry_juice", new JuiceItem(juice(1, 1.2f, StatusEffects.NIGHT_VISION)));
+        ItemList.APPLE_JUICE = item("apple_juice", new Item(juice(1, 1.2f, StatusEffects.SPEED)));
+        ItemList.SWEET_BERRY_JUICE = item("sweet_berry_juice", new Item(juice(1, 1.2f, StatusEffects.HEALTH_BOOST)));
+        ItemList.GLOW_BERRY_JUICE = item("glow_berry_juice", new Item(juice(1, 1.2f, StatusEffects.NIGHT_VISION)));
 
         //jellies
-        ItemList.SWEET_BERRY_JELLY = item("sweet_berry_jelly", new JellyItem(jelly(3, 0.6f, StatusEffects.HEALTH_BOOST)));
-        ItemList.GLOW_BERRY_JELLY = item("glow_berry_jelly", new JellyItem(jelly(3, 0.6f, StatusEffects.NIGHT_VISION)));
+        ItemList.SWEET_BERRY_JELLY = item("sweet_berry_jelly", new Item(jelly(3, 0.6f, StatusEffects.HEALTH_BOOST)));
+        ItemList.GLOW_BERRY_JELLY = item("glow_berry_jelly", new Item(jelly(3, 0.6f, StatusEffects.NIGHT_VISION)));
 
         //salads
         ItemList.PEANUT_SALAD = item("peanut_salad", new Item(salad(6, 0.6f)));
