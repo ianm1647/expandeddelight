@@ -1,0 +1,92 @@
+{
+  "item.expandeddelight.asparagus": "Спаржа",
+  "item.expandeddelight.asparagus_seeds": "Насіння спаржі",
+  "item.expandeddelight.asparagus_soup": "Суп зі спаржею",
+  "item.expandeddelight.asparagus_soup_creamy": "Вершковий суп зі спаржею",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Сирна спаржа з беконом",
+
+  "item.expandeddelight.sweet_potato": "Батат",
+  "item.expandeddelight.baked_sweet_potato": "Запечений батат",
+  "item.expandeddelight.sweet_potato_salad": "Салат з бататом",
+
+  "item.expandeddelight.chili_pepper": "Перець чилі",
+  "item.expandeddelight.chili_pepper_seeds": "Насіння перцю чилі",
+  "item.expandeddelight.peperonata": "Пепероната",
+
+  "item.expandeddelight.peanut": "Арахіс",
+  "item.expandeddelight.peanut_butter": "Арахісове масло",
+  "item.expandeddelight.peanut_butter_sandwich": "Сендвіч з арахісовим маслом",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Сендвіч з арахісовим маслом та медом",
+  "item.expandeddelight.peanut_salad": "Салат з арахісом",
+  "item.expandeddelight.peanut_honey_soup": "Суп з арахісом та медом",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Сендвіч з арахісовим маслом та солодким ягідним желе",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Сендвіч з арахісовим маслом та сяючим ягідним желе",
+
+
+  "item.expandeddelight.glass_jar": "Скляна банка",
+  "item.expandeddelight.raw_cinnamon": "Паличка кориці",
+  "item.expandeddelight.ground_cinnamon": "Кориця",
+  "item.expandeddelight.salt_rock": "Кам'яна сіль",
+  "item.expandeddelight.ground_salt": "Сіль",
+
+  "item.expandeddelight.cheese_wheel": "Головка сиру",
+  "item.expandeddelight.cheese_slice": "Шматочок сиру",
+  "item.expandeddelight.cheese_sandwich": "Сендвіч з сиром",
+  "item.expandeddelight.grilled_cheese": "Сендвіч з сиром на грилі",
+  "item.expandeddelight.mac_and_cheese": "Макарони з сиром",
+  "item.expandeddelight.sweet_roll": "Солодка булочка",
+  "item.expandeddelight.berry_sweet_roll": "Солодка булочка з ягодами",
+  "item.expandeddelight.glow_berry_sweet_roll": "Солодка булочка з сяючими ягодами",
+  "item.expandeddelight.cinnamon_rice": "Рис с корицею",
+  "item.expandeddelight.cinnamon_apples": "Яблуко з корицею",
+  "item.expandeddelight.chocolate_cookie": "Шоколадне печиво",
+  "item.expandeddelight.sugar_cookie": "Цукрове печиво",
+  "item.expandeddelight.snickerdoodle": "Печиво з корицею",
+
+  "item.expandeddelight.apple_juice": "Яблучний сік",
+  "item.expandeddelight.apple_juice.tooltip": "Швидкість (0:10)",
+  "item.expandeddelight.sweet_berry_juice": "Сік з солодких ягід",
+  "item.expandeddelight.sweet_berry_juice.tooltip": "Приплив здоров'я (0:10)",
+  "item.expandeddelight.glow_berry_juice": "Сік з сяючих солодких ягід",
+  "item.expandeddelight.glow_berry_juice.tooltip": "Нічне бачення (0:10)",
+
+  "item.expandeddelight.sweet_berry_jelly": "Желе з солодких ягід",
+  "item.expandeddelight.sweet_berry_jelly.tooltip": "Приплив здоров'я (0:20)",
+  "item.expandeddelight.glow_berry_jelly": "Желе з сяючих солодких ягід",
+  "item.expandeddelight.glow_berry_jelly.tooltip": "Нічне бачення (0:20)",
+
+  "item.expandeddelight.mortar_and_pestle_item": "Ступка і товкачик",
+
+  "item.expandeddelight.juicer_item": "Соковижималка",
+
+  "block.expandeddelight.asparagus_crate": "Ящик зі спаржею",
+  "block.expandeddelight.wild_asparagus": "Дика спаржа",
+  "block.expandeddelight.asparagus_crop": "Спаржа",
+
+  "block.expandeddelight.sweet_potato_crate": "Ящик з бататом",
+  "block.expandeddelight.wild_sweet_potatoes": "Дикий батат",
+  "block.expandeddelight.sweet_potatoes_crop": "Батат",
+
+  "block.expandeddelight.chili_pepper_crate": "Ящик з перцем чилі",
+  "block.expandeddelight.wild_chili_pepper": "Дикий перець чилі",
+  "block.expandeddelight.chili_pepper_crop": "Перець чилі",
+
+  "block.expandeddelight.wild_peanuts": "Дикий арахіс",
+  "block.expandeddelight.peanut_crop": "Арахіс",
+
+  "block.expandeddelight.cinnamon_sapling": "Паросток кориці",
+  "block.expandeddelight.cinnamon_log": "Колода дерева кориці",
+  "block.expandeddelight.salt_ore": "Залежі кам'яної солі",
+  "block.expandeddelight.deepslate_salt_ore": "Глибосланцеві залежі кам'яної солі",
+
+  "block.expandeddelight.juicer": "Соковижималка",
+
+  "block.expandeddelight.mortar_and_pestle": "Ступка і товкачик",
+  "block.expandeddelight.mortar_and_pestle.pass": "Це не те, що ви можете розтовкти...",
+
+  "container.expandeddelight.juicer": "Соковижималка",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Соковижимання"
+}
