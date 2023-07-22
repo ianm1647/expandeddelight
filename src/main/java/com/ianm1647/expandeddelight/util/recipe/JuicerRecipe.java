@@ -8,6 +8,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
+import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
@@ -35,9 +36,7 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public ItemStack craft(SimpleInventory inventory) {
-        return output;
-    }
+    public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) { return output; }
 
     @Override
     public boolean fits(int width, int height) {
@@ -45,6 +44,10 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
+    public ItemStack getOutput(DynamicRegistryManager registryManager) {
+        return null;
+    }
+
     public ItemStack getOutput() {
         return output.copy();
     }

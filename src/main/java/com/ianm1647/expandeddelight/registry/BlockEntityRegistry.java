@@ -8,8 +8,9 @@ import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityT
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class BlockEntityRegistry {
     public static BlockEntityType<JuicerBlockEntity> JUICER;
@@ -19,7 +20,7 @@ public class BlockEntityRegistry {
     }
 
     private static BlockEntityType entity(String name, Factory<? extends BlockEntity> entity, Block block) {
-        return Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(ExpandedDelight.MOD_ID, name),
+        return Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(ExpandedDelight.MODID, name),
                 FabricBlockEntityTypeBuilder.create(entity, block).build(null));
     }
 }

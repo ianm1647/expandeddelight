@@ -1,5 +1,6 @@
 package com.ianm1647.expandeddelight.item;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.minecraft.item.Item;
 
 public class ItemList {
@@ -72,7 +73,4 @@ public class ItemList {
     public static Item MORTAR_AND_PESTLE;
     public static Item JUICER_ITEM;
 
-    //mod compat items
-    public static Item COPPER_KNIFE;
-    public static Item ROSE_GOLD_KNIFE;
 }

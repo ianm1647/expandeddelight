@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "expandeddelight:salt_ore",
+    "expandeddelight:deepslate_salt_ore",
 	"expandeddelight:mortar_and_pestle"
   ]
 }

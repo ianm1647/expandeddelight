@@ -15,6 +15,7 @@ public class UtilRegistries {
         registerCompostables();
         registerFuels();
         registerCompostables();
+        registerFlammables();
 
         LootTableUtil.modifyLootTables();
         VillageTradeUtil.registerTrades();

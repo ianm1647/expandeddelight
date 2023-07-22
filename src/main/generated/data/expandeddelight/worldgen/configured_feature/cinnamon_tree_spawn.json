@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "expandeddelight:cinnamon_tree_placed",
+    "features": [
+      {
+        "chance": 0.25,
+        "feature": "expandeddelight:cinnamon_tree_placed"
+      }
+    ]
+  }
+}

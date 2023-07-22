@@ -1,0 +1,41 @@
+{
+  "type": "botanypots:crop",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "seed": {
+    "item": "expandeddelight:cinnamon_sapling"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "expandeddelight:cinnamon_sapling"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "expandeddelight:cinnamon_stick"
+      },
+      "minRolls": 2,
+      "maxRolls": 3
+    },
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "minecraft:oak_log"
+      },
+      "minRolls": 1,
+      "maxRolls": 1
+    }
+  ]
+}

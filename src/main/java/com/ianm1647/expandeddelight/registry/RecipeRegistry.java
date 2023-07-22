@@ -5,8 +5,9 @@ import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
 import com.ianm1647.expandeddelight.util.recipe.JuicerRecipeSerializer;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class RecipeRegistry {
     public static RecipeSerializer<JuicerRecipe> JUICER_SERIALIZER;
@@ -18,10 +19,10 @@ public class RecipeRegistry {
     }
 
     public static RecipeType type(String name, RecipeType recipe) {
-        return Registry.register(Registry.RECIPE_TYPE, new Identifier(ExpandedDelight.MOD_ID, name), recipe);
+        return Registry.register(Registries.RECIPE_TYPE, new Identifier(ExpandedDelight.MODID, name), recipe);
     }
 
     public static RecipeSerializer serializer(String name, RecipeSerializer recipe) {
-        return Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(ExpandedDelight.MOD_ID, name), recipe);
+        return Registry.register(Registries.RECIPE_SERIALIZER, new Identifier(ExpandedDelight.MODID, name), recipe);
     }
 }

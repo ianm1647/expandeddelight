@@ -21,22 +21,19 @@
     "client": [
       "com.ianm1647.expandeddelight.ExpandedDelightClient"
     ],
+    "fabric-datagen": [
+      "com.ianm1647.expandeddelight.ExpandedDelightDataGen"
+    ],
     "rei_client": [
       "com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREI"
     ]
   },
-  "mixins": [
-    "expandeddelight.mixins.json"
-  ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.21",
     "fabric": "*",
-    "minecraft": "~1.19",
+    "minecraft": "~1.20.1",
     "java": ">=17",
     "farmersdelight": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

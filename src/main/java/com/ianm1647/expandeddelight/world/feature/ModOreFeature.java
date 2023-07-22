@@ -1,10 +1,10 @@
-package com.ianm1647.expandeddelight.world.feature.ore;
+package com.ianm1647.expandeddelight.world.feature;
 
 import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
-public class OrePlacedFeature {
+public class ModOreFeature {
     public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
     }

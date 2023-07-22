@@ -18,7 +18,7 @@ import me.shedaniel.rei.api.common.entry.EntryStack;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 
 public class ExpandedDelightREI implements REIClientPlugin {
-    public static final CategoryIdentifier<JuicingRecipeDisplay> JUICING = CategoryIdentifier.of(ExpandedDelight.MOD_ID, "juicing");
+    public static final CategoryIdentifier<JuicingRecipeDisplay> JUICING = CategoryIdentifier.of(ExpandedDelight.MODID, "juicing");
 
     public void registerCategories(CategoryRegistry registry) {
         registry.add(new DisplayCategory[]{new JuicingRecipeCategory()});
