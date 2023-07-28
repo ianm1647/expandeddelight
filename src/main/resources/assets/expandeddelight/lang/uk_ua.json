@@ -1,0 +1,86 @@
+{
+  "item.expandeddelight.asparagus": "Спаржа",
+  "item.expandeddelight.asparagus_seeds": "Насіння спаржі",
+  "item.expandeddelight.asparagus_soup": "Спаржевий суп",
+  "item.expandeddelight.asparagus_soup_creamy": "Спаржевий крем-суп",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Сирна спаржа з беконом",
+
+  "item.expandeddelight.sweet_potato": "Батат",
+  "item.expandeddelight.baked_sweet_potato": "Запечений батат",
+  "item.expandeddelight.sweet_potato_salad": "Салат з бататом",
+
+  "item.expandeddelight.chili_pepper": "Перець чилі",
+  "item.expandeddelight.chili_pepper_seeds": "Насіння перцю чилі",
+  "item.expandeddelight.peperonata": "Пепероната",
+
+  "item.expandeddelight.peanut": "Арахіс",
+  "item.expandeddelight.peanut_butter": "Арахісове масло",
+  "item.expandeddelight.peanut_butter_sandwich": "Сендвіч з арахісовим маслом",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Сендвіч з арахісовим маслом та медом",
+  "item.expandeddelight.peanut_salad": "Арахісовий салат",
+  "item.expandeddelight.peanut_honey_soup": "Медово-арахісовий салат",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Сендвіч з арахісовим маслом та солодко-ягідним желе",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Сендвіч з арахісовим маслом та сяйно-ягідним желе",
+
+  "item.expandeddelight.glass_jar": "Скляна банка",
+  "item.expandeddelight.raw_cinnamon": "Паличка кориці",
+  "item.expandeddelight.ground_cinnamon": "Кориця",
+  "item.expandeddelight.salt_rock": "Кам'яна сіль",
+  "item.expandeddelight.ground_salt": "Сіль",
+
+  "item.expandeddelight.cheese_wheel": "Сирне колесо",
+  "item.expandeddelight.cheese_slice": "Шматок сиру",
+  "item.expandeddelight.cheese_sandwich": "Сирний сендвіч",
+  "item.expandeddelight.grilled_cheese": "Грильований сирний сендвіч",
+  "item.expandeddelight.mac_and_cheese": "Макарони з сиром",
+  "item.expandeddelight.sweet_roll": "Солодка булочка",
+  "item.expandeddelight.berry_sweet_roll": "Солодка булочка з ягодами",
+  "item.expandeddelight.glow_berry_sweet_roll": "Солодка булочка із сяйними ягодами",
+  "item.expandeddelight.cinnamon_rice": "Рис с корицею",
+  "item.expandeddelight.cinnamon_apples": "Яблуко з корицею",
+  "item.expandeddelight.chocolate_cookie": "Шоколадне печиво",
+  "item.expandeddelight.sugar_cookie": "Цукрове печиво",
+  "item.expandeddelight.snickerdoodle": "Печиво з корицею",
+
+  "item.expandeddelight.apple_juice": "Яблучний сік",
+  "item.expandeddelight.sweet_berry_juice": "Сік із солодких ягід",
+  "item.expandeddelight.glow_berry_juice": "Сік із сяйних ягід",
+
+  "item.expandeddelight.sweet_berry_jelly": "Желе із солодких ягід",
+  "item.expandeddelight.glow_berry_jelly": "Желе із сяйних ягід",
+
+  "item.expandeddelight.mortar_and_pestle_item": "Ступка і товкачик",
+
+  "item.expandeddelight.juicer_item": "Соківниця",
+
+  "block.expandeddelight.asparagus_crate": "Ящик спаржі",
+  "block.expandeddelight.wild_asparagus": "Дика спаржа",
+  "block.expandeddelight.asparagus_crop": "Спаржа",
+
+  "block.expandeddelight.sweet_potato_crate": "Ящик батату",
+  "block.expandeddelight.wild_sweet_potatoes": "Дикий батат",
+  "block.expandeddelight.sweet_potatoes_crop": "Батат",
+
+  "block.expandeddelight.chili_pepper_crate": "Ящик перцю чилі",
+  "block.expandeddelight.wild_chili_pepper": "Дикий перець чилі",
+  "block.expandeddelight.chili_pepper_crop": "Перець чилі",
+
+  "block.expandeddelight.wild_peanuts": "Дикий арахіс",
+  "block.expandeddelight.peanut_crop": "Арахіс",
+
+  "block.expandeddelight.cinnamon_sapling": "Паросток кориці",
+  "block.expandeddelight.cinnamon_log": "Корицева колода",
+  "block.expandeddelight.salt_ore": "Соляна руда",
+  "block.expandeddelight.deepslate_salt_ore": "Глибосланцева соляна руда",
+
+  "block.expandeddelight.juicer": "Соківниця",
+
+  "block.expandeddelight.mortar_and_pestle": "Ступка і товкачик",
+  "block.expandeddelight.mortar_and_pestle.pass": "Це не те, що ви можете розтовкти...",
+
+  "container.expandeddelight.juicer": "Соківниця",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Вичавлення"
+}
