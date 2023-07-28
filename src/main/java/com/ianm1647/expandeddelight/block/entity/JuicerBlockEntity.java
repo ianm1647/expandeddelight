@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.RecipeType;
+import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -121,7 +122,7 @@ public class JuicerBlockEntity extends BlockEntity implements NamedScreenHandler
             entity.removeStack(0,1);
             entity.removeStack(1, 1);
 
-            entity.setStack(3, new ItemStack(match.get().getOutput().getItem(),
+            entity.setStack(3, new ItemStack(match.get().getOutput(null).getItem(),
                     entity.getStack(3).getCount() + 1));
 
             entity.resetProgress();
@@ -139,7 +140,7 @@ public class JuicerBlockEntity extends BlockEntity implements NamedScreenHandler
                 .getFirstMatch(RecipeRegistry.JUICER_TYPE, inventory, world);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput());
+                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput(null));
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, ItemStack output) {

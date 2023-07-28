@@ -1,33 +1,38 @@
 {
-  "type": "botanypots:crop",
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:any_mod_loaded",
       "values": [
         "botanypots"
       ]
     }
   ],
-  "seed": {
-    "item": "expandeddelight:chili_pepper_seeds"
+  "type":"botanypots:crop",
+  "seed":  {
+    "item":"expandeddelight:chili_pepper_seeds"
   },
-  "categories": [
-    "dirt",
-    "farmland"
-  ],
-  "growthTicks": 1200,
+  "categories": ["dirt","farmland"],
+  "growthTicks":1200,
   "display": {
-    "type": "botanypots:aging",
-    "block": "expandeddelight:chili_pepper_crop"
+    "type":"botanypots:aging",
+    "block":"expandeddelight:chili_pepper_crop"
   },
   "drops": [
     {
-      "chance": 1.0,
+      "chance":1.00,
       "output": {
-        "item": "expandeddelight:chili_pepper"
+        "item":"expandeddelight:chili_pepper"
       },
-      "minRolls": 2,
-      "maxRolls": 3
+      "minRolls":2,
+      "maxRolls":3
+    },
+    {
+      "chance":0.05,
+      "output": {
+        "item":"expandeddelight:chili_pepper_seeds"
+      },
+      "minRolls":1,
+      "maxRolls":2
     }
   ]
 }

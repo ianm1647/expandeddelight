@@ -1,33 +1,30 @@
 {
-  "type": "botanypots:crop",
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:any_mod_loaded",
       "values": [
         "botanypots"
       ]
     }
   ],
-  "seed": {
-    "item": "expandeddelight:peanut"
+  "type":"botanypots:crop",
+  "seed":  {
+    "item":"expandeddelight:peanut"
   },
-  "categories": [
-    "dirt",
-    "farmland"
-  ],
-  "growthTicks": 1200,
+  "categories": ["dirt","farmland"],
+  "growthTicks":1200,
   "display": {
-    "type": "botanypots:aging",
-    "block": "expandeddelight:peanut_crop"
+    "type":"botanypots:aging",
+    "block":"expandeddelight:peanut_crop"
   },
   "drops": [
     {
-      "chance": 1.0,
+      "chance":1.00,
       "output": {
-        "item": "expandeddelight:peanut"
+        "item":"expandeddelight:peanut"
       },
-      "minRolls": 2,
-      "maxRolls": 3
+      "minRolls":2,
+      "maxRolls":3
     }
   ]
 }

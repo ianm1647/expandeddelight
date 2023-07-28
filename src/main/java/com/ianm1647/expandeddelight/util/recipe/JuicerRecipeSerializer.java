@@ -8,6 +8,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.recipe.ShapedRecipe;
+import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
@@ -46,7 +47,7 @@ public class JuicerRecipeSerializer implements RecipeSerializer<JuicerRecipe>  {
         for (Ingredient ing : recipe.getIngredients()) {
             ing.write(buf);
         }
-        buf.writeItemStack(recipe.getOutput());
+        buf.writeItemStack(recipe.getOutput(null));
     }
 
     public static class JuicerRecipeType implements RecipeType<JuicerRecipe> {

@@ -45,11 +45,7 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public ItemStack getOutput(DynamicRegistryManager registryManager) {
-        return null;
-    }
-
-    public ItemStack getOutput() {
-        return output.copy();
+        return this.output.copy();
     }
 
     public ItemStack getBottle() {

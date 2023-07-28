@@ -1,33 +1,38 @@
 {
-  "type": "botanypots:crop",
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:any_mod_loaded",
       "values": [
         "botanypots"
       ]
     }
   ],
-  "seed": {
-    "item": "expandeddelight:asparagus_seeds"
+  "type":"botanypots:crop",
+  "seed":  {
+    "item":"expandeddelight:asparagus_seeds"
   },
-  "categories": [
-    "dirt",
-    "farmland"
-  ],
-  "growthTicks": 1200,
+  "categories": ["dirt","farmland"],
+  "growthTicks":1200,
   "display": {
-    "type": "botanypots:aging",
-    "block": "expandeddelight:asparagus_crop"
+    "type":"botanypots:aging",
+    "block":"expandeddelight:asparagus_crop"
   },
   "drops": [
     {
-      "chance": 1.0,
+      "chance":1.00,
       "output": {
-        "item": "expandeddelight:asparagus"
+        "item":"expandeddelight:asparagus"
       },
-      "minRolls": 2,
-      "maxRolls": 3
+      "minRolls":2,
+      "maxRolls":3
+    },
+    {
+      "chance":0.05,
+      "output": {
+        "item":"expandeddelight:asparagus_seeds"
+      },
+      "minRolls":1,
+      "maxRolls":2
     }
   ]
 }
