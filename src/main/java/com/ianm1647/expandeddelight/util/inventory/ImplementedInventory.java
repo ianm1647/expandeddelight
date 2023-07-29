@@ -1,5 +1,6 @@
 package com.ianm1647.expandeddelight.util.inventory;
 
+import com.nhoryzon.mc.farmersdelight.entity.block.inventory.ItemStackInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SidedInventory;
@@ -9,7 +10,7 @@ import net.minecraft.util.math.Direction;
 import org.jetbrains.annotations.Nullable;
 
 @FunctionalInterface
-public interface ImplementedInventory extends SidedInventory {
+public interface ImplementedInventory extends SidedInventory, ItemStackInventory {
     DefaultedList<ItemStack> getItems();
 
     static ImplementedInventory of(DefaultedList<ItemStack> items) {

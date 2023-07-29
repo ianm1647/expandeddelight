@@ -1,0 +1,91 @@
+{
+  "item.expandeddelight.asparagus": "Asparagi",
+  "item.expandeddelight.asparagus_seeds": "Semi di asparagi",
+  "item.expandeddelight.asparagus_soup": "Zuppa di asparagi",
+  "item.expandeddelight.asparagus_soup_creamy": "Zuppa cremosa di asparagi",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Asparagi al Formaggio e Pancetta",
+
+  "item.expandeddelight.sweet_potato": "Patata dolce",
+  "item.expandeddelight.baked_sweet_potato": "Patate dolci al forno",
+  "item.expandeddelight.sweet_potato_salad": "insalata di patate dolci",
+
+  "item.expandeddelight.chili_pepper": "Peperoncino",
+  "item.expandeddelight.chili_pepper_seeds": "Semi di peperoncino",
+  "item.expandeddelight.peperonata": "Peperonata",
+
+  "item.expandeddelight.peanut": "Arachidi",
+  "item.expandeddelight.peanut_butter": "Burro di arachidi",
+  "item.expandeddelight.peanut_butter_sandwich": "Panino al burro di arachidi",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Panino al burro di arachidi e miele",
+  "item.expandeddelight.peanut_salad": "Insalata Di Arachidi",
+  "item.expandeddelight.peanut_honey_soup": "Zuppa di arachidi al miele",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Panino con gelatina di burro di arachidi e bacche dolci",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Panino con gelatina al burro di arachidi e bacche luminose",
+
+  "item.expandeddelight.glass_jar": "Barattolo di vetro",
+  "item.expandeddelight.raw_cinnamon": "Bastoncino di cannella",
+  "item.expandeddelight.ground_cinnamon": "Cannella",
+  "item.expandeddelight.salt_rock": "Roccia di sale",
+  "item.expandeddelight.ground_salt": "Sale",
+
+  "item.expandeddelight.cheese_wheel": "Ruota di formaggio",
+  "item.expandeddelight.cheese_slice": "Fetta di formaggio",
+  "item.expandeddelight.cheese_sandwich": "Panino al formaggio",
+  "item.expandeddelight.grilled_cheese": "Formaggio alla griglia",
+  "item.expandeddelight.mac_and_cheese": "Mac and Cheese",
+  "item.expandeddelight.sweet_roll": "Rotolo dolce",
+  "item.expandeddelight.berry_sweet_roll": "Rotolo dolce alla bacca",
+  "item.expandeddelight.glow_berry_sweet_roll": "Rotolo dolce alla bacca luminosa",
+  "item.expandeddelight.cinnamon_rice": "Riso alla cannella",
+  "item.expandeddelight.cinnamon_apples": "Mele alla cannella",
+  "item.expandeddelight.chocolate_cookie": "Biscotto Al Cioccolato",
+  "item.expandeddelight.sugar_cookie": "Biscotto Di Zucchero",
+  "item.expandeddelight.snickerdoodle": "Snickerdoodle",
+
+  "item.expandeddelight.apple_juice": "Succo di mela",
+  "item.expandeddelight.apple_juice.tooltip": "Velocità (0:10)",
+  "item.expandeddelight.sweet_berry_juice": "Succo di bacche dolci",
+  "item.expandeddelight.sweet_berry_juice.tooltip": "Aumento della salute (0:10)",
+  "item.expandeddelight.glow_berry_juice": "Succo di bacche luminose",
+  "item.expandeddelight.glow_berry_juice.tooltip": "Visione notturna (0:10)",
+
+  "item.expandeddelight.sweet_berry_jelly": "Gelatina di bacche dolci",
+  "item.expandeddelight.sweet_berry_jelly.tooltip": "Aumento della salute (0:20)",
+  "item.expandeddelight.glow_berry_jelly": "Gelatina di bacche luminose",
+  "item.expandeddelight.glow_berry_jelly.tooltip": "Visione notturna (0:20)",
+
+  "item.expandeddelight.mortar_and_pestle_item": "Mortaio e pestello",
+
+  "item.expandeddelight.juicer_item": "Spremiagrumi",
+
+  "block.expandeddelight.asparagus_crate": "Cassetta Di Asparagi",
+  "block.expandeddelight.wild_asparagus": "Asparagi Selvatici",
+  "block.expandeddelight.asparagus_crop": "Asparagi",
+
+  "block.expandeddelight.sweet_potato_crate": "Cassa Di Patate Dolci",
+  "block.expandeddelight.wild_sweet_potatoes": "Patate dolci selvatiche",
+  "block.expandeddelight.sweet_potatoes_crop": "Patate dolci",
+
+  "block.expandeddelight.chili_pepper_crate": "Cassa di peperoncino",
+  "block.expandeddelight.wild_chili_pepper": "Peperoncino Selvatico",
+  "block.expandeddelight.chili_pepper_crop": "Peperoncini",
+
+  "block.expandeddelight.wild_peanuts": "Arachidi selvatiche",
+  "block.expandeddelight.peanut_crop": "Arachidi",
+
+  "block.expandeddelight.cinnamon_sapling": "Alberello Di Cannella",
+  "block.expandeddelight.cinnamon_log": "Tronco di cannella",
+  "block.expandeddelight.salt_ore": "Minerale di sale",
+  "block.expandeddelight.deepslate_salt_ore": "Minerale di sale dell'ardesia profonda",
+
+  "block.expandeddelight.juicer": "Spremiagrumi",
+
+  "block.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
+  "block.expandeddelight.mortar_and_pestle.pass": "That isn't something you can crush...",
+
+  "container.expandeddelight.juicer": "Juicer",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Spremitura"
+}

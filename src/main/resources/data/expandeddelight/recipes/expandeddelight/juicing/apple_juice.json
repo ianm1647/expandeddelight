@@ -10,5 +10,9 @@
   ],
   "output": {
     "item": "expandeddelight:apple_juice"
-  }
+  },
+  "container": {
+    "item": "expandeddelight:glass_jar"
+  },
+  "juiceTime": 400
 }

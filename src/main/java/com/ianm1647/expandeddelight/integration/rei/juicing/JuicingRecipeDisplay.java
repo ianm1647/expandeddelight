@@ -19,8 +19,8 @@ public class JuicingRecipeDisplay extends BasicDisplay {
 
     public JuicingRecipeDisplay(JuicerRecipe recipe) {
         super(EntryIngredients.ofIngredients(recipe.getIngredients()), Collections.singletonList(EntryIngredients.of(recipe.getOutput(null))), Optional.ofNullable(recipe.getId()));
-        this.bottleOutput = EntryIngredients.of(recipe.getBottle());
-        this.cookTime = recipe.getCookTime();
+        this.bottleOutput = EntryIngredients.of(recipe.getContainer());
+        this.cookTime = recipe.getJuiceTime();
     }
 
     public CategoryIdentifier<?> getCategoryIdentifier() {

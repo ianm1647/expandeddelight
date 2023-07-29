@@ -2,11 +2,15 @@ package com.ianm1647.expandeddelight.block.custom;
 
 import com.ianm1647.expandeddelight.block.entity.JuicerBlockEntityUpdated;
 import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
+import com.nhoryzon.mc.farmersdelight.block.state.CookingPotSupport;
+import com.nhoryzon.mc.farmersdelight.entity.block.CookingPotBlockEntity;
+import com.nhoryzon.mc.farmersdelight.util.MathUtils;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
@@ -19,18 +23,20 @@ import net.minecraft.util.*;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider {
+public class JuicerBlockUpdated extends BlockWithEntity implements BlockEntityProvider {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
-    public JuicerBlock(Settings settings) {
+    public JuicerBlockUpdated(AbstractBlock.Settings settings) {
         super(settings);
     }
 
@@ -127,46 +133,9 @@ public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider 
         builder.add(FACING);
     }
 
-    // block entity
-
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
-    }
-
-    @Override
-    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        if (state.getBlock() != newState.getBlock()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof JuicerBlockEntityUpdated) {
-                ItemScatterer.spawn(world, pos, ((JuicerBlockEntityUpdated) blockEntity).getDroppableInventory());
-                world.updateComparators(pos,this);
-            }
-            super.onStateReplaced(state, world, pos, newState, moved);
-        }
-    }
-
-    @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof JuicerBlockEntityUpdated) {
-                JuicerBlockEntityUpdated juicerBlockEntity = (JuicerBlockEntityUpdated) blockEntity;
-                ItemStack stack = juicerBlockEntity.useContainerOnJuicer(player.getStackInHand(hand));
-                if (stack != ItemStack.EMPTY) {
-                    if (!player.getInventory().insertStack(stack)) {
-                        player.dropItem(stack, false);
-                    }
-                    world.playSound(player, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                } else {
-                    NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
-                    if (screenHandlerFactory != null) {
-                        player.openHandledScreen(screenHandlerFactory);
-                    }
-                }
-            }
-        }
-        return ActionResult.SUCCESS;
     }
 
     @Nullable
@@ -179,4 +148,64 @@ public class JuicerBlock extends BlockWithEntity implements BlockEntityProvider 
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         return checkType(type, BlockEntityRegistry.JUICER, JuicerBlockEntityUpdated::tick);
     }
+
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        ItemStack heldStack = player.getStackInHand(hand);
+        if (!world.isClient) {
+            BlockEntity entity = world.getBlockEntity(pos);
+            if (entity instanceof JuicerBlockEntityUpdated) {
+                JuicerBlockEntityUpdated juicerBlockEntity = (JuicerBlockEntityUpdated)entity;
+                ItemStack serving = juicerBlockEntity.useContainerOnJuicer(heldStack);
+                if (serving != ItemStack.EMPTY) {
+                    if (!player.getInventory().insertStack(serving)) {
+                        player.dropItem(serving, false);
+                    }
+                    world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                } else {
+                    NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+                    if (screenHandlerFactory != null) {
+                        player.openHandledScreen(screenHandlerFactory);
+                    }
+                }
+            }
+        }
+
+        return ActionResult.SUCCESS;
+    }
+
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (!state.isOf(newState.getBlock())) {
+            BlockEntity var7 = world.getBlockEntity(pos);
+            if (var7 instanceof JuicerBlockEntityUpdated) {
+                JuicerBlockEntityUpdated juicerBlockEntity = (JuicerBlockEntityUpdated) var7;
+                ItemScatterer.spawn(world, pos, juicerBlockEntity.getDroppableInventory());
+                world.updateNeighbors(pos, this);
+            }
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
+
+    public SidedInventory getInventory(BlockState state, WorldAccess world, BlockPos pos) {
+        BlockEntity var5 = world.getBlockEntity(pos);
+        if (var5 instanceof JuicerBlockEntityUpdated juicerBlockEntity) {
+            return juicerBlockEntity;
+        } else {
+            return null;
+        }
+    }
+
+    public boolean hasComparatorOutput(BlockState state) {
+        return true;
+    }
+
+    public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof JuicerBlockEntityUpdated juicerBlockEntity) {
+            return MathUtils.calcRedstoneFromItemHandler(juicerBlockEntity);
+        } else {
+            return 0;
+        }
+    }
+
 }

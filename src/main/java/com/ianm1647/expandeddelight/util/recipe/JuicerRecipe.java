@@ -1,6 +1,8 @@
 package com.ianm1647.expandeddelight.util.recipe;
 
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
+import com.nhoryzon.mc.farmersdelight.util.RecipeMatcher;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -13,56 +15,71 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public class JuicerRecipe implements Recipe<SimpleInventory> {
+import java.util.ArrayList;
+import java.util.List;
+
+public class JuicerRecipe implements Recipe<Inventory> {
+    public static final int SLOTS = 2;
     private final Identifier id;
+    private final DefaultedList<Ingredient> ingredients;
     private final ItemStack output;
-    private final DefaultedList<Ingredient> recipeItems;
+    private final ItemStack container;
+    private final int juiceTime;
 
-    public JuicerRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
+    public JuicerRecipe(Identifier id, DefaultedList<Ingredient> ingredients, ItemStack output, ItemStack container, int juiceTime) {
         this.id = id;
+        this.ingredients = ingredients;
         this.output = output;
-        this.recipeItems = recipeItems;
-    }
-
-    @Override
-    public boolean matches(SimpleInventory inventory, World world) {
-        boolean firstSlot = recipeItems.get(0).test(inventory.getStack(0));
-        boolean secondSlot = recipeItems.get(1).test(inventory.getStack(1));
-        if(firstSlot && secondSlot) {
-            return true;
+        if (!container.isEmpty()) {
+            this.container = container;
+        } else if (output.getItem().getRecipeRemainder() != null) {
+            this.container = new ItemStack(output.getItem().getRecipeRemainder());
+        } else {
+            this.container = ItemStack.EMPTY;
         }
-
-        return false;
+        this.juiceTime = juiceTime;
     }
 
     @Override
-    public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) { return output; }
+    public DefaultedList<Ingredient> getIngredients() {
+        DefaultedList<Ingredient> ingredients = DefaultedList.of();
+        ingredients.addAll(this.ingredients);
+        return ingredients;
+    }
+
+    @Override
+    public boolean matches(Inventory inventory, World world) {
+        List<ItemStack> inputs = new ArrayList();
+        int i = 0;
+
+        for (int j = 0; j < 4; ++j) {
+            ItemStack itemstack = inventory.getStack(j);
+            if (!itemstack.isEmpty()) {
+                ++i;
+                inputs.add(itemstack);
+            }
+        }
+        return i == this.ingredients.size() && RecipeMatcher.findMatches(inputs, this.ingredients) != null;
+    }
+
+    @Override
+    public ItemStack craft(Inventory inventory, DynamicRegistryManager registryManager) {
+        return output.copy();
+    }
 
     @Override
     public boolean fits(int width, int height) {
-        return true;
+        return width * height >= ingredients.size();
     }
 
     @Override
     public ItemStack getOutput(DynamicRegistryManager registryManager) {
-        return this.output.copy();
-    }
-
-    public ItemStack getBottle() {
-        return Items.GLASS_BOTTLE.getDefaultStack();
-    }
-
-    public int getCookTime() {
-        return 200;
-    }
-
-    public DefaultedList<Ingredient> getIngredients() {
-        return this.recipeItems;
+        return this.output;
     }
 
     @Override
     public Identifier getId() {
-        return id;
+        return this.id;
     }
 
     @Override
@@ -73,5 +90,13 @@ public class JuicerRecipe implements Recipe<SimpleInventory> {
     @Override
     public RecipeType<?> getType() {
         return RecipeRegistry.JUICER_TYPE;
+    }
+
+    public int getJuiceTime() {
+        return this.juiceTime;
+    }
+
+    public ItemStack getContainer() {
+        return this.container;
     }
 }

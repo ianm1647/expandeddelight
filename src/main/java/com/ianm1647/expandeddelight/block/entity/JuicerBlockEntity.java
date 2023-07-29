@@ -31,8 +31,8 @@ public class JuicerBlockEntity extends BlockEntity implements NamedScreenHandler
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(5, ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate;
-    private int progress = 0;
-    private int maxProgress = 200;
+    private int progress;
+    private int maxProgress;
     private RecipeType<? extends JuicerRecipe> recipeType;
 
     public JuicerBlockEntity(BlockPos blockPos, BlockState blockState) {

@@ -3,6 +3,7 @@ package com.ianm1647.expandeddelight.registry;
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.entity.JuicerBlockEntity;
+import com.ianm1647.expandeddelight.block.entity.JuicerBlockEntityUpdated;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder.Factory;
 import net.minecraft.block.Block;
@@ -13,10 +14,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class BlockEntityRegistry {
-    public static BlockEntityType<JuicerBlockEntity> JUICER;
+    public static BlockEntityType<JuicerBlockEntityUpdated> JUICER;
 
     public static void registerBlockEntity() {
-        JUICER = entity("juicer", JuicerBlockEntity::new, BlockList.JUICER);
+        JUICER = entity("juicer", JuicerBlockEntityUpdated::new, BlockList.JUICER);
     }
 
     private static BlockEntityType entity(String name, Factory<? extends BlockEntity> entity, Block block) {

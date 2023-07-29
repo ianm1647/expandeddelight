@@ -26,3 +26,4 @@ public class ScreenHandlersRegistry {
         return ScreenHandlerRegistry.registerSimple(new Identifier(ExpandedDelight.MODID, name), handler);
     }
 }
+

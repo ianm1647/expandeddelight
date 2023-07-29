@@ -1,25 +1,28 @@
 package com.ianm1647.expandeddelight.util.inventory.screen;
 
+import com.ianm1647.expandeddelight.block.entity.JuicerBlockEntityUpdated;
+import com.ianm1647.expandeddelight.registry.RecipeRegistry;
 import com.ianm1647.expandeddelight.registry.ScreenHandlersRegistry;
 import com.ianm1647.expandeddelight.util.inventory.screen.slot.LockedSlot;
 import com.ianm1647.expandeddelight.util.inventory.screen.slot.ResultSlot;
+import com.nhoryzon.mc.farmersdelight.entity.block.CookingPotBlockEntity;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
+import java.util.Objects;
+
 public class JuicerScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-
-    public JuicerScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(5), new ArrayPropertyDelegate(2));
-    }
 
     public JuicerScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
         super(ScreenHandlersRegistry.JUICER_HANDLER, syncId);
@@ -38,6 +41,10 @@ public class JuicerScreenHandler extends ScreenHandler {
         addPlayerHotbar(playerInventory);
 
         addProperties(delegate);
+    }
+
+    public JuicerScreenHandler(int syncId, PlayerInventory playerInventory) {
+        this(syncId, playerInventory, new SimpleInventory(5), new ArrayPropertyDelegate(2));
     }
 
     public boolean isCrafting() {
