@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "expandeddelight:cheese_slice",
+    {
+      "id": "garnished:almond_cheese",
+      "required": false
+    }
+  ]
+}
