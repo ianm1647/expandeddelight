@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "#c:salt_dusts",
-    
     {
       "id": "garnished:salt_compound",
       "required": false
