@@ -5,13 +5,13 @@
       "tag": "c:milk"
     },
     {
-      "item": "expandeddelight:cheese_slice"
+      "tag": "expandeddelight:cheese"
     },
     {
       "tag": "c:pasta"
     },
     {
-      "tag": "c:salt_dusts"
+      "tag": "expandeddelgiht:salt"
     }
   ],
   "result": {
