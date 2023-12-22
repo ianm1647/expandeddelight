@@ -45,6 +45,8 @@
 
   "item.expandeddelight.juice.tooltip": "速度（0:10）",
   "item.expandeddelight.apple_juice": "苹果汁",
+  "item.expandeddelight.sweet_berry_juice": "甜浆果汁",
+  "item.expandeddelight.glow_berry_juice": "发光浆果汁",
 
   "item.expandeddelight.sweet_berry_jelly": "甜浆果酱",
   "item.expandeddelight.sweet_berry_jelly.tooltip": "生命恢复（0:10）",
