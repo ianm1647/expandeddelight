@@ -4,15 +4,12 @@
   "item.expandeddelight.asparagus_soup": "芦笋汤",
   "item.expandeddelight.asparagus_soup_creamy": "奶油芦笋汤",
   "item.expandeddelight.asparagus_and_bacon_cheesy": "芝士培根芦笋卷",
-
   "item.expandeddelight.sweet_potato": "红薯",
   "item.expandeddelight.baked_sweet_potato": "烤红薯",
   "item.expandeddelight.sweet_potato_salad": "红薯沙拉",
-
   "item.expandeddelight.chili_pepper": "辣椒",
   "item.expandeddelight.chili_pepper_seeds": "辣椒种子",
   "item.expandeddelight.peperonata": "番茄甜椒意面",
-
   "item.expandeddelight.peanut": "花生",
   "item.expandeddelight.peanut_butter": "花生酱",
   "item.expandeddelight.peanut_butter_sandwich": "花生酱三明治",
@@ -21,14 +18,11 @@
   "item.expandeddelight.peanut_honey_soup": "蜂蜜花生汤",
   "item.expandeddelight.sweet_berry_jelly_sandwich": "花生酱甜浆果三明治",
   "item.expandeddelight.glow_berry_jelly_sandwich": "花生酱发光浆果三明治",
-
-
   "item.expandeddelight.glass_jar": "玻璃罐",
   "item.expandeddelight.raw_cinnamon": "肉桂皮",
   "item.expandeddelight.ground_cinnamon": "肉桂",
   "item.expandeddelight.salt_rock": "岩盐",
   "item.expandeddelight.ground_salt": "盐",
-
   "item.expandeddelight.cheese_wheel": "芝士轮",
   "item.expandeddelight.cheese_slice": "芝士片",
   "item.expandeddelight.cheese_sandwich": "芝士三明治",
@@ -42,47 +36,35 @@
   "item.expandeddelight.chocolate_cookie": "巧克力曲奇",
   "item.expandeddelight.sugar_cookie": "甜曲奇",
   "item.expandeddelight.snickerdoodle": "肉桂曲奇",
-
-  "item.expandeddelight.juice.tooltip": "速度（0:10）",
   "item.expandeddelight.apple_juice": "苹果汁",
-
+  "item.expandeddelight.sweet_berry_juice": "甜浆果汁",
+  "item.expandeddelight.glow_berry_juice": "发光浆果汁",
   "item.expandeddelight.sweet_berry_jelly": "甜浆果酱",
-  "item.expandeddelight.sweet_berry_jelly.tooltip": "生命恢复（0:10）",
   "item.expandeddelight.glow_berry_jelly": "发光浆果酱",
-  "item.expandeddelight.glow_berry_jelly.tooltip": "夜视（0:10）",
-
   "item.expandeddelight.mortar_and_pestle_item": "杵臼",
-
   "item.expandeddelight.juicer_item": "榨汁机",
-
   "block.expandeddelight.asparagus_crate": "箱装芦笋",
   "block.expandeddelight.wild_asparagus": "野生芦笋",
   "block.expandeddelight.asparagus_crop": "芦笋",
-
   "block.expandeddelight.sweet_potato_crate": "箱装红薯",
   "block.expandeddelight.wild_sweet_potatoes": "野生红薯",
   "block.expandeddelight.sweet_potatoes_crop": "红薯",
-
   "block.expandeddelight.chili_pepper_crate": "箱装辣椒",
   "block.expandeddelight.wild_chili_pepper": "野生辣椒",
   "block.expandeddelight.chili_pepper_crop": "辣椒",
-
   "block.expandeddelight.wild_peanuts": "野生花生",
   "block.expandeddelight.peanut_crop": "花生",
-
   "block.expandeddelight.cinnamon_sapling": "肉桂树苗",
   "block.expandeddelight.cinnamon_log": "肉桂原木",
   "block.expandeddelight.salt_ore": "盐矿石",
   "block.expandeddelight.deepslate_salt_ore": "深层盐矿石",
-
   "block.expandeddelight.juicer": "榨汁机",
-
   "block.expandeddelight.mortar_and_pestle": "杵臼",
   "block.expandeddelight.mortar_and_pestle.pass": "你无法捣碎这东西...",
-
   "container.expandeddelight.juicer": "榨汁机",
-
   "itemGroup.expandeddelight.group": "扩展农夫乐事",
-
-  "expandeddelight.rei.juicing": "榨取"
+  "expandeddelight.rei.juicing": "榨取",
+  "item.expandeddelight.juice.tooltip": "速度（0:10）",
+  "item.expandeddelight.sweet_berry_jelly.tooltip": "生命恢复（0:10）",
+  "item.expandeddelight.glow_berry_jelly.tooltip": "夜视（0:10）"
 }
