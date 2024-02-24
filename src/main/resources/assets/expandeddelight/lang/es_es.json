@@ -73,10 +73,10 @@
   "block.expandeddelight.salt_ore": "Mena de sal",
   "block.expandeddelight.deepslate_salt_ore": "Mena de sal de pizarra profunda",
 
-  "block.expandeddelight.juicer": "Juicer",
+  "block.expandeddelight.juicer": "Exprimidor",
 
-  "block.expandeddelight.mortar_and_pestle": "Mortar and Pestle",
-  "block.expandeddelight.mortar_and_pestle.pass": "That isn't something you can crush...",
+  "block.expandeddelight.mortar_and_pestle": "Mortero",
+  "block.expandeddelight.mortar_and_pestle.pass": "Eso no es algo que puedas aplastar...",
 
   "container.expandeddelight.juicer": "Exprimidor",
 
