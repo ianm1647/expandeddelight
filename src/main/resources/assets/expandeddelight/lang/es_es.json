@@ -1,0 +1,86 @@
+{
+  "item.expandeddelight.asparagus": "Espárragos",
+  "item.expandeddelight.asparagus_seeds": "Semillas de espárragos",
+  "item.expandeddelight.asparagus_soup": "Sopa de espárragos",
+  "item.expandeddelight.asparagus_soup_creamy": "Crema de espárragos",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Espárragos con queso y tocino",
+
+  "item.expandeddelight.sweet_potato": "Boniato",
+  "item.expandeddelight.baked_sweet_potato": "Boniato cocido",
+  "item.expandeddelight.sweet_potato_salad": "Ensalada de boniato",
+
+  "item.expandeddelight.chili_pepper": "Guindilla",
+  "item.expandeddelight.chili_pepper_seeds": "Semillas de guindilla",
+  "item.expandeddelight.peperonata": "Pasta con peperonata",
+
+  "item.expandeddelight.peanut": "Cacahuete",
+  "item.expandeddelight.peanut_butter": "Mantequilla de cacahuete",
+  "item.expandeddelight.peanut_butter_sandwich": "Sándwich de mantequilla de cacahuete",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Sándwich de mantequilla de cacahuete con miel",
+  "item.expandeddelight.peanut_salad": "Ensalada con cacahuete",
+  "item.expandeddelight.peanut_honey_soup": "Sopa de cacahuete y miel",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Sándwich de mantequilla de cacahuete con mermelada de bayas dulces",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Sándwich de mantequilla de cacahuete con mermelada de bayas luminosas",
+
+  "item.expandeddelight.glass_jar": "Tarro de cristal",
+  "item.expandeddelight.raw_cinnamon": "Canela en rama",
+  "item.expandeddelight.ground_cinnamon": "Canela en polvo",
+  "item.expandeddelight.salt_rock": "Roca de sal",
+  "item.expandeddelight.ground_salt": "Sal molida",
+
+  "item.expandeddelight.cheese_wheel": "Rueda de queso",
+  "item.expandeddelight.cheese_slice": "Trozo de queso",
+  "item.expandeddelight.cheese_sandwich": "Sándwich de queso",
+  "item.expandeddelight.grilled_cheese": "Sándwich de queso fundido",
+  "item.expandeddelight.mac_and_cheese": "Macarrones con queso",
+  "item.expandeddelight.sweet_roll": "Rollito de canela",
+  "item.expandeddelight.berry_sweet_roll": "Rollito de bayas dulces",
+  "item.expandeddelight.glow_berry_sweet_roll": "Rollito de bayas luminosas",
+  "item.expandeddelight.cinnamon_rice": "Arroz con canela",
+  "item.expandeddelight.cinnamon_apples": "Manzanas con canela",
+  "item.expandeddelight.chocolate_cookie": "Galleta de chocolate",
+  "item.expandeddelight.sugar_cookie": "Galleta de azúcar",
+  "item.expandeddelight.snickerdoodle": "Snickerdoodle",
+
+  "item.expandeddelight.apple_juice": "Zumo de manzana",
+  "item.expandeddelight.sweet_berry_juice": "Zumo de bayas dulces",
+  "item.expandeddelight.glow_berry_juice": "Zumo de bayas luminosas",
+
+  "item.expandeddelight.sweet_berry_jelly": "Mermelada de bayas dulces",
+  "item.expandeddelight.glow_berry_jelly": "Mermelada de bayas luminosas",
+
+  "item.expandeddelight.mortar_and_pestle_item": "Mortero",
+
+  "item.expandeddelight.juicer_item": "Exprimidor",
+
+  "block.expandeddelight.asparagus_crate": "Caja de espárragos",
+  "block.expandeddelight.wild_asparagus": "Esparraguera silvestre",
+  "block.expandeddelight.asparagus_crop": "Esparraguera",
+
+  "block.expandeddelight.sweet_potato_crate": "Caja de boniatos",
+  "block.expandeddelight.wild_sweet_potatoes": "Boniato silvestre",
+  "block.expandeddelight.sweet_potatoes_crop": "Boniatos",
+
+  "block.expandeddelight.chili_pepper_crate": "Caja de guindillas",
+  "block.expandeddelight.wild_chili_pepper": "Guindilla silvestre",
+  "block.expandeddelight.chili_pepper_crop": "Guindillas",
+
+  "block.expandeddelight.wild_peanuts": "Cacahuete silvestre",
+  "block.expandeddelight.peanut_crop": "Cacahuetes",
+
+  "block.expandeddelight.cinnamon_sapling": "Brote de canela",
+  "block.expandeddelight.cinnamon_log": "Tronco de canela",
+  "block.expandeddelight.salt_ore": "Mena de sal",
+  "block.expandeddelight.deepslate_salt_ore": "Mena de sal de pizarra profunda",
+
+  "block.expandeddelight.juicer": "Exprimidor",
+
+  "block.expandeddelight.mortar_and_pestle": "Mortero",
+  "block.expandeddelight.mortar_and_pestle.pass": "Eso no es algo que puedas aplastar...",
+
+  "container.expandeddelight.juicer": "Exprimidor",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Exprimiendo"
+}
