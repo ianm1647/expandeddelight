@@ -1,0 +1,84 @@
+{
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "item.expandeddelight.asparagus": "アスパラガス",
+  "item.expandeddelight.asparagus_seeds": "アスパラガスの種",
+  "item.expandeddelight.asparagus_soup": "アスパラガススープ",
+  "item.expandeddelight.asparagus_soup_creamy": "アスパラガスのクリームスープ",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "アスパラガスとベーコンのチーズ和え",
+
+  "item.expandeddelight.sweet_potato": "サツマイモ",
+  "item.expandeddelight.baked_sweet_potato": "焼き芋",
+  "item.expandeddelight.sweet_potato_salad": "サツマイモサラダ",
+
+  "item.expandeddelight.chili_pepper": "唐辛子",
+  "item.expandeddelight.chili_pepper_seeds": "唐辛子の種",
+  "item.expandeddelight.peperonata": "唐辛子の煮込み",
+
+  "item.expandeddelight.peanut": "落花生",
+  "item.expandeddelight.peanut_butter": "ピーナッツバター",
+  "item.expandeddelight.peanut_butter_sandwich": "ピーナッツバターサンド",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "蜂蜜入りピーナッツバターサンド",
+  "item.expandeddelight.peanut_salad": "落花生入りサラダ",
+  "item.expandeddelight.peanut_honey_soup": "落花生の蜂蜜煮",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "ストロベリー入りピーナッツバターとジェリーのサンド",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "グロウベリー入りピーナッツバターとジェリーのサンド",
+
+  "item.expandeddelight.glass_jar": "広口ガラス瓶",
+  "item.expandeddelight.raw_cinnamon": "シナモン棒",
+  "item.expandeddelight.ground_cinnamon": "シナモン",
+  "item.expandeddelight.salt_rock": "岩塩",
+  "item.expandeddelight.ground_salt": "塩",
+
+  "item.expandeddelight.cheese_wheel": "ホールチーズ",
+  "item.expandeddelight.cheese_slice": "スライスチーズ",
+  "item.expandeddelight.cheese_sandwich": "チーズサンド",
+  "item.expandeddelight.grilled_cheese": "焼きチーズ",
+  "item.expandeddelight.mac_and_cheese": "マカロニ・アンド・チーズ",
+  "item.expandeddelight.sweet_roll": "菓子パン",
+  "item.expandeddelight.berry_sweet_roll": "スイートベリーの菓子パン",
+  "item.expandeddelight.glow_berry_sweet_roll": "グロウベリーの菓子パン",
+  "item.expandeddelight.cinnamon_rice": "シナモンライス",
+  "item.expandeddelight.cinnamon_apples": "シナモンアップル",
+  "item.expandeddelight.chocolate_cookie": "チョコクッキー",
+  "item.expandeddelight.sugar_cookie": "シュガークッキー",
+  "item.expandeddelight.snickerdoodle": "シナモンクッキー",
+
+  "item.expandeddelight.apple_juice": "リンゴジュース",
+  "item.expandeddelight.sweet_berry_juice": "スイートベリージュース",
+  "item.expandeddelight.glow_berry_juice": "グロウベリージュース",
+
+  "item.expandeddelight.sweet_berry_jelly": "スイートベリージェリー",
+  "item.expandeddelight.glow_berry_jelly": "グロウベリージェリー",
+
+  "item.expandeddelight.mortar_and_pestle_item": "乳鉢と乳棒",
+
+  "item.expandeddelight.juicer_item": "圧搾機",
+
+  "block.expandeddelight.asparagus_crate": "アスパラガス入り木箱",
+  "block.expandeddelight.wild_asparagus": "野生のアスパラガス",
+  "block.expandeddelight.asparagus_crop": "アスパラガス",
+
+  "block.expandeddelight.sweet_potato_crate": "薩摩芋入り木箱",
+  "block.expandeddelight.wild_sweet_potatoes": "野生の薩摩芋",
+  "block.expandeddelight.sweet_potatoes_crop": "薩摩芋",
+
+  "block.expandeddelight.chili_pepper_crate": "唐辛子入り木箱",
+  "block.expandeddelight.wild_chili_pepper": "野生の唐辛子",
+  "block.expandeddelight.chili_pepper_crop": "唐辛子",
+
+  "block.expandeddelight.wild_peanuts": "落花生の低木",
+  "block.expandeddelight.peanut_crop": "落花生",
+
+  "block.expandeddelight.cinnamon_sapling": "シナモンの苗木",
+  "block.expandeddelight.cinnamon_log": "シナモンの原木",
+  "block.expandeddelight.salt_ore": "岩塩",
+  "block.expandeddelight.deepslate_salt_ore": "ディープスレートの岩塩",
+
+  "block.expandeddelight.mortar_and_pestle": "乳鉢と乳棒",
+  "block.expandeddelight.mortar_and_pestle.pass": "これは挽けない...",
+
+  "block.expandeddelight.juicer": "圧搾機",
+  "container.expandeddelight.juicer": "圧搾機",
+  "expandeddelight.rei.juicing": "圧搾"
+}
