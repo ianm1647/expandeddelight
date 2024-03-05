@@ -20,7 +20,7 @@
   "item.expandeddelight.peanut_salad": "Sałatka z orzechami",
   "item.expandeddelight.peanut_honey_soup": "Zupa orzechowo miodowa",
   "item.expandeddelight.sweet_berry_jelly_sandwich": "Kanapka z masłem orzechowym i słodkim dżemem",
-  "item.expandeddelight.glow_berry_jelly_sandwich": "Kanapka z masłem orzechowym i świecącym dżemem",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Kanapka z masłem orzechowym i dżemem ze świecących jagód",
 
   "item.expandeddelight.glass_jar": "Słoik",
   "item.expandeddelight.raw_cinnamon": "Pałka cynamonowa",
@@ -44,10 +44,10 @@
 
   "item.expandeddelight.apple_juice": "Sok jabłkowy",
   "item.expandeddelight.sweet_berry_juice": "Sok z jagód",
-  "item.expandeddelight.glow_berry_juice": "Świecący sok z jagód",
+  "item.expandeddelight.glow_berry_juice": "Sok ze świecących jagód",
 
   "item.expandeddelight.sweet_berry_jelly": "Dżem z jagód",
-  "item.expandeddelight.glow_berry_jelly": "Świecący dżem z jagód",
+  "item.expandeddelight.glow_berry_jelly": "Dżem ze świecących jagód",
 
   "item.expandeddelight.mortar_and_pestle_item": "Moździerz i tłuczek",
 
