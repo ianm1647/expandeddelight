@@ -1,0 +1,86 @@
+{
+  "item.expandeddelight.asparagus": "Szparagi",
+  "item.expandeddelight.asparagus_seeds": "Nasiona szparagów",
+  "item.expandeddelight.asparagus_soup": "Zupa szparagowa",
+  "item.expandeddelight.asparagus_soup_creamy": "Kremowa zupa szparagowa",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Serowe szparagi z bekonem",
+
+  "item.expandeddelight.sweet_potato": "Batat",
+  "item.expandeddelight.baked_sweet_potato": "Pieczony batat",
+  "item.expandeddelight.sweet_potato_salad": "Sałatka z batatów",
+
+  "item.expandeddelight.chili_pepper": "Papryczka chili",
+  "item.expandeddelight.chili_pepper_seeds": "Nasiona papryczki chili",
+  "item.expandeddelight.peperonata": "Peperonata",
+
+  "item.expandeddelight.peanut": "Orzech ziemny",
+  "item.expandeddelight.peanut_butter": "Masło orzechowe",
+  "item.expandeddelight.peanut_butter_sandwich": "Kanapka z masłem orzechowym",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Kanapka z masłem orzechowym i miodem",
+  "item.expandeddelight.peanut_salad": "Sałatka z orzechami",
+  "item.expandeddelight.peanut_honey_soup": "Zupa orzechowo miodowa",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Kanapka z masłem orzechowym i słodkim dżemem",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Kanapka z masłem orzechowym i świecącym dżemem",
+
+  "item.expandeddelight.glass_jar": "Słoik",
+  "item.expandeddelight.raw_cinnamon": "Pałka cynamonowa",
+  "item.expandeddelight.ground_cinnamon": "Cynamon",
+  "item.expandeddelight.salt_rock": "Słona skała",
+  "item.expandeddelight.ground_salt": "Sól",
+
+  "item.expandeddelight.cheese_wheel": "Koło serowe",
+  "item.expandeddelight.cheese_slice": "Wycinek koła sera",
+  "item.expandeddelight.cheese_sandwich": "Kanapka z serem",
+  "item.expandeddelight.grilled_cheese": "Grillowany ser",
+  "item.expandeddelight.mac_and_cheese": "Makaron z serem",
+  "item.expandeddelight.sweet_roll": "Słodka bułka",
+  "item.expandeddelight.berry_sweet_roll": "Jagodzianka",
+  "item.expandeddelight.glow_berry_sweet_roll": "Świecąca jagodzianka",
+  "item.expandeddelight.cinnamon_rice": "Ryż z cynamonem",
+  "item.expandeddelight.cinnamon_apples": "Jabłka z cynamonem",
+  "item.expandeddelight.chocolate_cookie": "Ciasteczka czekoladowe",
+  "item.expandeddelight.sugar_cookie": "Ciasteczka z cukrem",
+  "item.expandeddelight.snickerdoodle": "Ciasteczka cynamonowe",
+
+  "item.expandeddelight.apple_juice": "Sok jabłkowy",
+  "item.expandeddelight.sweet_berry_juice": "Sok z jagód",
+  "item.expandeddelight.glow_berry_juice": "Świecący sok z jagód",
+
+  "item.expandeddelight.sweet_berry_jelly": "Dżem z jagód",
+  "item.expandeddelight.glow_berry_jelly": "Świecący dżem z jagód",
+
+  "item.expandeddelight.mortar_and_pestle_item": "Moździerz i tłuczek",
+
+  "item.expandeddelight.juicer_item": "Wyciskarka do soków",
+
+  "block.expandeddelight.asparagus_crate": "Skrzynka szparagów",
+  "block.expandeddelight.wild_asparagus": "Dzikie szparagi",
+  "block.expandeddelight.asparagus_crop": "Szparagi",
+
+  "block.expandeddelight.sweet_potato_crate": "Skrzynka batatów",
+  "block.expandeddelight.wild_sweet_potatoes": "Dzikie bataty",
+  "block.expandeddelight.sweet_potatoes_crop": "Bataty",
+
+  "block.expandeddelight.chili_pepper_crate": "Skrzynka papryczki chili",
+  "block.expandeddelight.wild_chili_pepper": "Dzika papryczka chili",
+  "block.expandeddelight.chili_pepper_crop": "Papryczka chili",
+
+  "block.expandeddelight.wild_peanuts": "Dzikie orzechy ziemne",
+  "block.expandeddelight.peanut_crop": "Orzechy ziemne",
+
+  "block.expandeddelight.cinnamon_sapling": "Sadzonka cynamonowca",
+  "block.expandeddelight.cinnamon_log": "Kłoda cynamonowca",
+  "block.expandeddelight.salt_ore": "Sól kamienna",
+  "block.expandeddelight.deepslate_salt_ore": "Łupkowa sól kamienna",
+
+  "block.expandeddelight.juicer": "Wyciskarka do soków",
+
+  "block.expandeddelight.mortar_and_pestle": "Moździerz i tłuczek",
+  "block.expandeddelight.mortar_and_pestle.pass": "Tego nie można skruszyć...",
+
+  "container.expandeddelight.juicer": "Wyciskarka do soków",
+
+  "itemGroup.expandeddelight.group": "Expanded Delight",
+
+  "expandeddelight.rei.juicing": "Wyciskanie soku"
+}
