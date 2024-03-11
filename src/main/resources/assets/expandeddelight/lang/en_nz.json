@@ -1,0 +1,31 @@
+{
+  "item.expandeddelight.sweet_potato": "Kumara",
+  "item.expandeddelight.baked_sweet_potato": "Baked Kumara",
+  "item.expandeddelight.sweet_potato_salad": "Kumara Salad",
+  
+  "item.expandeddelight.grilled_cheese": "Cheese Toastie",
+  
+  "item.expandeddelight.chocolate_cookie": "Chocolate Biscuit",
+  "item.expandeddelight.sugar_cookie": "Sugary Biscuit",
+  "item.expandeddelight.snickerdoodle": "Cinnamon Biscuit",
+
+  "item.expandeddelight.mac_and_cheese": "Macaroni and Cheese",
+
+  "item.expandeddelight.chili_pepper": "Chilli",
+  "item.expandeddelight.chili_pepper_seeds": "Chilli Seeds",
+
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Peanut Butter and Sweet Berry Jam Sandwich",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Peanut Butter and Glow Berry Jam Sandwich",
+  
+  "item.expandeddelight.sweet_berry_jelly": "Sweet Berry Jam",
+  "item.expandeddelight.glow_berry_jelly": "Glow Berry Jam",
+
+  "block.expandeddelight.sweet_potato_crate": "Kumara Crate",
+  "block.expandeddelight.wild_sweet_potatoes": "Wild Kumara",
+  "block.expandeddelight.sweet_potatoes_crop": "Kumara",
+
+  "block.expandeddelight.chili_pepper_crate": "Chilli Crate",
+  "block.expandeddelight.wild_chili_pepper": "Wild Chilli",
+  "block.expandeddelight.chili_pepper_crop": "Chilli"
+
+}
