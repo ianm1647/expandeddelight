@@ -4,6 +4,7 @@ import com.ianm1647.expandeddelight.item.ItemList;
 import com.ianm1647.expandeddelight.registry.*;
 import com.ianm1647.expandeddelight.util.UtilRegistries;
 import com.ianm1647.expandeddelight.world.ModFeatureGeneration;
+import draylar.omegaconfig.OmegaConfig;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -21,6 +22,8 @@ public class ExpandedDelight implements ModInitializer {
     public static final String MODID = "expandeddelight";
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
     public static final RegistryKey<ItemGroup> GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MODID, "group"));
+
+    public static ExpandedDelightConfig CONFIG = OmegaConfig.register(ExpandedDelightConfig.class);
 
     @Override
     public void onInitialize() {

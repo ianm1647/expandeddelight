@@ -25,7 +25,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
@@ -82,7 +81,6 @@ public class MortarPestleBlock extends Block {
         };
     }
 
-    @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
         return this.getDefaultState().with(FACING, context.getHorizontalPlayerFacing().getOpposite());
