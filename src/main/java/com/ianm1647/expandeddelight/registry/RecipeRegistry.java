@@ -1,14 +1,16 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
-import com.ianm1647.expandeddelight.util.recipe.JuicerRecipeSerializer;
+import com.ianm1647.expandeddelight.recipe.JuicerRecipe;
+import com.ianm1647.expandeddelight.recipe.JuicerRecipeSerializer;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+
+import java.util.function.Supplier;
 
 public class RecipeRegistry {
     public static RecipeSerializer<JuicerRecipe> JUICER_SERIALIZER;

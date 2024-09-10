@@ -7,9 +7,14 @@
     {
       "tag": "c:crops/peanut"
     },
-    {
-      "tag": "c:milk"
-    },
+    [
+      {
+        "tag": "c:milk/milk"
+      },
+      {
+        "tag": "c:milk/milk_bottle"
+      }
+    ],
     {
       "item": "minecraft:bowl"
     }

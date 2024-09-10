@@ -13,6 +13,19 @@ group = project.maven_group
 repositories {
 	maven { url 'https://maven.draylar.dev/releases/' }
 	maven { url 'https://maven.greenhouseteam.dev/releases/' }
+	maven { url "https://mvn.devos.one/releases/" } // Porting Lib
+	maven {
+		url "https://maven.jamieswhiteshirt.com/libs-release" // Reach Entity Attributes (Required by Porting Lib)
+		content {
+			includeGroup "com.jamieswhiteshirt"
+		}
+	}
+	maven {
+		url "https://jitpack.io/" // Fabric ASM
+		content {
+			excludeGroup "io.github.fabricators_of_create"
+		}
+	}
 	maven { url 'https://maven.jamieswhiteshirt.com/libs-release' }
 	maven { url 'https://maven.shedaniel.me/' }
 	maven { url 'https://maven.terraformersmc.com/' }
@@ -36,8 +49,15 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "vectorwing:FarmersDelight-Refabricated:${project.delight_version}"
+	modImplementation("vectorwing:FarmersDelight:${project.delight_version}") {
+		exclude(group: "net.fabricmc")
+	}
 	modImplementation include("dev.draylar.omega-config:omega-config-base:${project.omega_version}")
+	include(modImplementation("com.github.Chocohead:Fabric-ASM:${fabric_asm_version}")) {
+		exclude (group: "net.fabricmc.fabric-api")
+	}
+
+	modImplementation("curse.maven:frights-delight-927591:5262828")
 
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"

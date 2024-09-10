@@ -1,14 +1,19 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "c:milk"
-    },
+    [
+      {
+        "tag": "c:milk/milk"
+      },
+      {
+        "tag": "c:milk/milk_bottle"
+      }
+    ],
     {
       "item": "farmersdelight:wheat_dough"
     },
     {
-      "item": "expandeddelight:ground_cinnamon"
+      "tag": "c:dusts/cinnamon"
     },
     {
       "item": "minecraft:sugar"

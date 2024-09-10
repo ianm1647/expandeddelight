@@ -1,7 +1,7 @@
 package com.ianm1647.expandeddelight.world.feature;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.block.BlockList;
+import com.ianm1647.expandeddelight.registry.BlockRegistry;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -27,9 +27,9 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, CINNAMON_TREE_CHECKED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CINNAMON_TREE),
-                List.of(PlacedFeatures.wouldSurvive(BlockList.CINNAMON_SAPLING)));
+                List.of(PlacedFeatures.wouldSurvive(BlockRegistry.CINNAMON_SAPLING)));
         register(context, CINNAMON_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CINNAMON_TREE),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.025f, 1), BlockList.CINNAMON_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.025f, 1), BlockRegistry.CINNAMON_SAPLING));
 
         register(context, SALT_ORE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SALT_ORE),
                 ModOreFeature.modifiersWithCount(6, HeightRangePlacementModifier.uniform(YOffset.fixed(-20), YOffset.fixed(60))));

@@ -1,10 +1,10 @@
 package com.ianm1647.expandeddelight.block.entity;
 
+import com.ianm1647.expandeddelight.block.entity.inventory.ImplementedInventory;
+import com.ianm1647.expandeddelight.block.entity.inventory.screen.JuicerScreenHandler;
+import com.ianm1647.expandeddelight.recipe.JuicerRecipe;
 import com.ianm1647.expandeddelight.registry.BlockEntityRegistry;
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
-import com.ianm1647.expandeddelight.util.inventory.ImplementedInventory;
-import com.ianm1647.expandeddelight.util.inventory.screen.JuicerScreenHandler;
-import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;

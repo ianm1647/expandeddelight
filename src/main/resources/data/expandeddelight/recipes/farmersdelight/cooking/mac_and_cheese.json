@@ -1,9 +1,14 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    {
-      "tag": "c:milk"
-    },
+    [
+      {
+        "tag": "c:milk/milk"
+      },
+      {
+        "tag": "c:milk/milk_bottle"
+      }
+    ],
     {
       "tag": "c:cheese"
     },

@@ -1,4 +1,4 @@
-package com.ianm1647.expandeddelight.util.recipe;
+package com.ianm1647.expandeddelight.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

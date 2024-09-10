@@ -2,7 +2,7 @@ package com.ianm1647.expandeddelight.integration.rei.juicing;
 
 import com.google.common.collect.ImmutableList;
 import com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREI;
-import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
+import com.ianm1647.expandeddelight.recipe.JuicerRecipe;
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
 import me.shedaniel.rei.api.common.entry.EntryIngredient;

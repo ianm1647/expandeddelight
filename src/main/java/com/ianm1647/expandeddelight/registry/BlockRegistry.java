@@ -1,12 +1,13 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.custom.CinnamonLogBlock;
 import com.ianm1647.expandeddelight.block.custom.DelightCropBlock;
 import com.ianm1647.expandeddelight.block.custom.JuicerBlock;
 import com.ianm1647.expandeddelight.block.custom.MortarPestleBlock;
 import com.ianm1647.expandeddelight.world.feature.tree.CinnamonSaplingGenerator;
+import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
+import io.github.fabricators_of_create.porting_lib.util.LazySoundType;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -17,40 +18,58 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
+
+import java.util.function.Supplier;
 
 public class BlockRegistry {
 
+    public static Block CINNAMON_SAPLING;
+    public static Block CINNAMON_LOG;
+    public static Block SALT_ORE;
+    public static Block DEEPSLATE_SALT_ORE;
+
+    public static Block ASPARAGUS_CRATE;
+    public static Block SWEET_POTATO_CRATE;
+    public static Block CHILI_PEPPER_CRATE;
+
+    public static Block WILD_ASPARAGUS;
+    public static Block WILD_SWEET_POTATO;
+    public static Block WILD_CHILI_PEPPER;
+    public static Block WILD_PEANUTS;
+
     public static void registerBlocks() {
         //blocks
-        BlockList.CINNAMON_SAPLING = block("cinnamon_sapling",
+        CINNAMON_SAPLING = block("cinnamon_sapling",
                 new SaplingBlock(new CinnamonSaplingGenerator(), blockSettings(0f, 0f, BlockSoundGroup.GRASS)));
-        BlockList.CINNAMON_LOG = block("cinnamon_log",
+        CINNAMON_LOG = block("cinnamon_log",
                 new CinnamonLogBlock(blockSettings(2.0f, 2.0f, BlockSoundGroup.WOOD)));
-        BlockList.SALT_ORE = block("salt_ore",
+        SALT_ORE = block("salt_ore",
                 new ExperienceDroppingBlock(blockSettings(3.0f, 3.0f, BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(0, 2)));
-        BlockList.DEEPSLATE_SALT_ORE = block("deepslate_salt_ore",
+        DEEPSLATE_SALT_ORE = block("deepslate_salt_ore",
                 new ExperienceDroppingBlock(blockSettings(4.5f, 3.0f, BlockSoundGroup.DEEPSLATE).requiresTool(), UniformIntProvider.create(0, 2)));
 
         //crates
-        BlockList.ASPARAGUS_CRATE = block("asparagus_crate",
+        ASPARAGUS_CRATE = block("asparagus_crate",
                 new Block(blockSettings(2.0f, 3.0f, BlockSoundGroup.WOOD)));
-        BlockList.SWEET_POTATO_CRATE = block("sweet_potato_crate",
+        SWEET_POTATO_CRATE = block("sweet_potato_crate",
                 new Block(blockSettings(2.0f, 3.0f, BlockSoundGroup.WOOD)));
-        BlockList.CHILI_PEPPER_CRATE = block("chili_pepper_crate",
+        CHILI_PEPPER_CRATE = block("chili_pepper_crate",
                 new Block(blockSettings(2.0f, 3.0f, BlockSoundGroup.WOOD)));
 
         //crops
         //TODO: Fix status effects
-        BlockList.WILD_ASPARAGUS = block("wild_asparagus",
+        WILD_ASPARAGUS = block("wild_asparagus",
                 new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
-        BlockList.WILD_SWEET_POTATO = block("wild_sweet_potatoes",
+        WILD_SWEET_POTATO = block("wild_sweet_potatoes",
                 new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
-        BlockList.WILD_CHILI_PEPPER = block("wild_chili_pepper",
+        WILD_CHILI_PEPPER = block("wild_chili_pepper",
                 new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
-        BlockList.WILD_PEANUTS = block("wild_peanuts",
+        WILD_PEANUTS = block("wild_peanuts",
                 new WildCropBlock(StatusEffects.ABSORPTION, 0, FabricBlockSettings.copyOf(Blocks.TALL_GRASS)));
 
         //ExpandedDelight.LOGGER.info("ExpandedDelight blocks loaded");

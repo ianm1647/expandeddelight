@@ -1,12 +1,12 @@
 package com.ianm1647.expandeddelight.integration.rei;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.integration.rei.juicing.JuicingRecipeCategory;
 import com.ianm1647.expandeddelight.integration.rei.juicing.JuicingRecipeDisplay;
+import com.ianm1647.expandeddelight.recipe.JuicerRecipe;
+import com.ianm1647.expandeddelight.block.entity.inventory.screen.JuicerScreen;
+import com.ianm1647.expandeddelight.registry.BlockRegistry;
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
-import com.ianm1647.expandeddelight.util.inventory.screen.JuicerScreen;
-import com.ianm1647.expandeddelight.util.recipe.JuicerRecipe;
 import me.shedaniel.math.Rectangle;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
 import me.shedaniel.rei.api.client.registry.category.CategoryRegistry;
@@ -20,7 +20,7 @@ public class ExpandedDelightREI implements REIClientPlugin {
 
     public void registerCategories(CategoryRegistry registry) {
         registry.add(new JuicingRecipeCategory());
-        registry.addWorkstations(JUICING, EntryStacks.of(BlockList.JUICER));
+        registry.addWorkstations(JUICING, EntryStacks.of(BlockRegistry.JUICER));
     }
 
     public void registerDisplays(DisplayRegistry registry) {

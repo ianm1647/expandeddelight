@@ -1,7 +1,6 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.block.BlockList;
 import com.ianm1647.expandeddelight.block.entity.JuicerBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder.Factory;
@@ -16,7 +15,7 @@ public class BlockEntityRegistry {
     public static BlockEntityType<JuicerBlockEntity> JUICER;
 
     public static void registerBlockEntity() {
-        JUICER = entity("juicer", JuicerBlockEntity::new, BlockList.JUICER);
+        JUICER = entity("juicer", JuicerBlockEntity::new, BlockRegistry.JUICER);
     }
 
     private static <T extends BlockEntity> BlockEntityType<T> entity(String name, Factory<T> entity, Block block) {

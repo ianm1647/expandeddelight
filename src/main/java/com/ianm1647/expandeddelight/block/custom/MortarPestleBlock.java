@@ -1,6 +1,6 @@
 package com.ianm1647.expandeddelight.block.custom;
 
-import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.registry.ItemRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -112,19 +112,19 @@ public class MortarPestleBlock extends Block {
             world.playSound(player, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             return ActionResult.SUCCESS;
         }
-        if(stack.isOf(ItemList.RAW_CINNAMON)) {
+        if(stack.isOf(ItemRegistry.RAW_CINNAMON)) {
             if (!player.isCreative()) {
                 stack.decrement(1);
             }
-            dropStack(world, pos, new ItemStack(ItemList.GROUND_CINNAMON, 2));
+            dropStack(world, pos, new ItemStack(ItemRegistry.GROUND_CINNAMON, 2));
             world.playSound(player, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             return ActionResult.SUCCESS;
         }
-        if(stack.isOf(ItemList.SALT_ROCK)) {
+        if(stack.isOf(ItemRegistry.SALT_ROCK)) {
             if(!player.isCreative()) {
                 stack.decrement(1);
             }
-            dropStack(world, pos, new ItemStack(ItemList.GROUND_SALT, 2));
+            dropStack(world, pos, new ItemStack(ItemRegistry.GROUND_SALT, 2));
             world.playSound(player, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             return ActionResult.SUCCESS;
         }

@@ -1,7 +1,7 @@
 package com.ianm1647.expandeddelight.world.feature;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.block.BlockList;
+import com.ianm1647.expandeddelight.registry.BlockRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -39,13 +39,13 @@ public class ModConfiguredFeatures {
         RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> saltOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, BlockList.SALT_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, BlockList.DEEPSLATE_SALT_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, BlockRegistry.SALT_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, BlockRegistry.DEEPSLATE_SALT_ORE.getDefaultState()));
 
         register(context, SALT_ORE, Feature.ORE, new OreFeatureConfig(saltOres, 8));
 
         register(context, CINNAMON_TREE, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(BlockList.CINNAMON_LOG),
+                BlockStateProvider.of(BlockRegistry.CINNAMON_LOG),
                 new StraightTrunkPlacer(6, 2, 0),
                 BlockStateProvider.of(Blocks.OAK_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
@@ -57,16 +57,16 @@ public class ModConfiguredFeatures {
 
         register(context, WILD_ASPARAGUS, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockList.WILD_ASPARAGUS)))));
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockRegistry.WILD_ASPARAGUS)))));
         register(context, WILD_SWEET_POTATO, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockList.WILD_SWEET_POTATO)))));
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockRegistry.WILD_SWEET_POTATO)))));
         register(context, WILD_CHILI_PEPPER, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockList.WILD_CHILI_PEPPER)))));
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockRegistry.WILD_CHILI_PEPPER)))));
         register(context, WILD_PEANUTS, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockList.WILD_PEANUTS)))));
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockRegistry.WILD_PEANUTS)))));
 
     }
     public static RegistryKey<ConfiguredFeature<?, ?>> registerConfiguredKey(String name) {

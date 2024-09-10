@@ -1,6 +1,5 @@
 package com.ianm1647.expandeddelight;
 
-import com.ianm1647.expandeddelight.item.ItemList;
 import com.ianm1647.expandeddelight.registry.*;
 import com.ianm1647.expandeddelight.util.UtilRegistries;
 import com.ianm1647.expandeddelight.world.ModFeatureGeneration;
@@ -29,7 +28,7 @@ public class ExpandedDelight implements ModInitializer {
     public void onInitialize() {
         Registry.register(Registries.ITEM_GROUP, GROUP, FabricItemGroup.builder()
                 .displayName(Text.translatable("itemGroup.expandeddelight.group"))
-                .icon(() -> new ItemStack(ItemList.PEPERONATA))
+                .icon(() -> new ItemStack(ItemRegistry.PEPERONATA))
                 .build());
 
         ItemRegistry.registerItems();

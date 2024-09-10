@@ -1,11 +1,9 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    [
-      {
-        "tag": "c:raw_pork"
-      }
-    ],
+    {
+      "tag": "c:foods/raw_meats/raw_bacon"
+    },
     {
       "tag": "c:foods/vegetables/asparagus"
     },

@@ -1,4 +1,4 @@
-package com.ianm1647.expandeddelight.util.inventory.screen;
+package com.ianm1647.expandeddelight.block.entity.inventory.screen;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.mojang.blaze3d.systems.RenderSystem;

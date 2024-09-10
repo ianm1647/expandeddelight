@@ -1,4 +1,4 @@
-package com.ianm1647.expandeddelight.util.inventory;
+package com.ianm1647.expandeddelight.block.entity.inventory;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;

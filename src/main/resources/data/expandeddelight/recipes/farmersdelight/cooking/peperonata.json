@@ -16,10 +16,9 @@
       "tag": "c:crops/onion"
     },
     {
-      "item": "c:foods/vegetables/chili_pepper"
+      "tag": "c:foods/vegetables/chili_pepper"
     }
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "item": "expandeddelight:peperonata"
   },

@@ -8,7 +8,7 @@
       "item": "minecraft:wheat"
     },
     "w": {
-      "item": "expandeddelight:ground_cinnamon"
+      "tag": "c:dusts/cinnamon"
     }
   },
   "result": {

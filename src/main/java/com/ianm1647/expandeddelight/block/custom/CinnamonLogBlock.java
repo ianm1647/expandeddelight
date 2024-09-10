@@ -1,6 +1,6 @@
 package com.ianm1647.expandeddelight.block.custom;
 
-import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.registry.ItemRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.PillarBlock;
@@ -28,7 +28,7 @@ public class CinnamonLogBlock extends PillarBlock {
             if(!player.isCreative()) {
                 stack.damage(1, player, (playerx) -> playerx.sendToolBreakStatus(hand));
             }
-            dropStack(world, pos, new ItemStack(ItemList.RAW_CINNAMON, 2));
+            dropStack(world, pos, new ItemStack(ItemRegistry.RAW_CINNAMON, 2));
             world.playSound(player, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
             world.setBlockState(pos, Blocks.STRIPPED_OAK_LOG.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS)));
             return ActionResult.SUCCESS;

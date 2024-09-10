@@ -8,7 +8,7 @@
       "item": "minecraft:apple"
     },
     {
-      "item": "expandeddelight:ground_cinnamon"
+      "tag": "c:dusts/cinnamon"
     },
     {
       "item": "minecraft:sugar"

@@ -1,7 +1,8 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "end": "expandeddelight:block/cinnamon_log_top",
-    "side": "expandeddelight:block/cinnamon_log"
+    "side": "expandeddelight:block/cinnamon_log",
+    "bottom": "farmersdelight:block/cinnamon_log_bottom",
+    "top": "expandeddelight:block/cinnamon_log_top"
   }
 }

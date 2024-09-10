@@ -1,8 +1,8 @@
 package com.ianm1647.expandeddelight.registry;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
-import com.ianm1647.expandeddelight.util.inventory.screen.JuicerScreen;
-import com.ianm1647.expandeddelight.util.inventory.screen.JuicerScreenHandler;
+import com.ianm1647.expandeddelight.block.entity.inventory.screen.JuicerScreenHandler;
+import com.ianm1647.expandeddelight.block.entity.inventory.screen.JuicerScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -10,6 +10,7 @@ import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
+
 
 public class ScreenHandlersRegistry {
     public static ScreenHandlerType<JuicerScreenHandler> JUICER_HANDLER;

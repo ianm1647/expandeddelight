@@ -2,7 +2,7 @@ package com.ianm1647.expandeddelight.integration.rei.juicing;
 
 import com.ianm1647.expandeddelight.ExpandedDelight;
 import com.ianm1647.expandeddelight.integration.rei.ExpandedDelightREI;
-import com.ianm1647.expandeddelight.item.ItemList;
+import com.ianm1647.expandeddelight.registry.ItemRegistry;
 import me.shedaniel.math.Point;
 import me.shedaniel.math.Rectangle;
 import me.shedaniel.rei.api.client.gui.Renderer;
@@ -30,7 +30,7 @@ public class JuicingRecipeCategory implements DisplayCategory<JuicingRecipeDispl
     }
 
     public Renderer getIcon() {
-        return EntryStacks.of(ItemList.JUICER_ITEM);
+        return EntryStacks.of(ItemRegistry.JUICER_ITEM);
     }
 
     public Text getTitle() {

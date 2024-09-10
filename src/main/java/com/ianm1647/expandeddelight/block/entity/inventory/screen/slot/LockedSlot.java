@@ -1,4 +1,4 @@
-package com.ianm1647.expandeddelight.util.inventory.screen.slot;
+package com.ianm1647.expandeddelight.block.entity.inventory.screen.slot;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;

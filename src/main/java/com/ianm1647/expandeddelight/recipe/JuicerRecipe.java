@@ -1,4 +1,4 @@
-package com.ianm1647.expandeddelight.util.recipe;
+package com.ianm1647.expandeddelight.recipe;
 
 import com.ianm1647.expandeddelight.registry.RecipeRegistry;
 import net.minecraft.inventory.SimpleInventory;

@@ -1,8 +1,8 @@
-package com.ianm1647.expandeddelight.util.inventory.screen;
+package com.ianm1647.expandeddelight.block.entity.inventory.screen;
 
+import com.ianm1647.expandeddelight.block.entity.inventory.screen.slot.LockedSlot;
+import com.ianm1647.expandeddelight.block.entity.inventory.screen.slot.ResultSlot;
 import com.ianm1647.expandeddelight.registry.ScreenHandlersRegistry;
-import com.ianm1647.expandeddelight.util.inventory.screen.slot.LockedSlot;
-import com.ianm1647.expandeddelight.util.inventory.screen.slot.ResultSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
