@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cheese_sandwich": {
+    "has_planks": {
       "conditions": {
         "items": [
           {
-            "items": "expandeddelight:cheese_sandwich"
+            "items": "expandeddelight:cinnamon_planks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "expandeddelight:grilled_cheese"
+        "recipe": "expandeddelight:cinnamon_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cheese_sandwich"
+      "has_planks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "expandeddelight:grilled_cheese"
+      "expandeddelight:cinnamon_slab"
     ]
   }
 }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "boat",
+  "key": {
+    "i": {
+      "item": "expandeddelight:cinnamon_planks"
+    }
+  },
+  "pattern": [
+    "i i",
+    "iii"
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:cinnamon_boat"
+  }
+}

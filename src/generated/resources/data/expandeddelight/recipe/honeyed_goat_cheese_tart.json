@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "c": {
+      "item": "expandeddelight:goat_cheese_slice"
+    },
+    "e": {
+      "tag": "c:eggs"
+    },
+    "h": {
+      "item": "minecraft:honey_bottle"
+    },
+    "m": {
+      "tag": "c:foods/milk"
+    }
+  },
+  "pattern": [
+    "ccc",
+    "ehe",
+    "mOm"
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:honeyed_goat_cheese_tart"
+  }
+}

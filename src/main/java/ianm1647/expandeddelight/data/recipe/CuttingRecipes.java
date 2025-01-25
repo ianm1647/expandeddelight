@@ -13,9 +13,18 @@ import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 public class CuttingRecipes {
 
     public static void register(RecipeOutput output) {
+        cuttingBlocks(output);
         crushingMaterials(output);
         cuttingFoods(output);
         cuttingFlowers(output);
+    }
+
+    private static void cuttingBlocks(RecipeOutput output) {
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(EDItems.CINNAMON_TRAPDOOR.get()), Ingredient.of(ItemTags.AXES), EDItems.CINNAMON_PLANKS.get()).save(output);
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(EDItems.CINNAMON_DOOR.get()), Ingredient.of(ItemTags.AXES), EDItems.CINNAMON_PLANKS.get()).save(output);
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(EDItems.CINNAMON_HANGING_SIGN.get()), Ingredient.of(ItemTags.AXES), EDItems.CINNAMON_PLANKS.get()).save(output);
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(EDItems.CINNAMON_SIGN.get()), Ingredient.of(ItemTags.AXES), EDItems.CINNAMON_PLANKS.get()).save(output);
+
     }
 
     private static void crushingMaterials(RecipeOutput output) {

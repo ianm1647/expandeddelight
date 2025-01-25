@@ -2,6 +2,8 @@ package ianm1647.expandeddelight.data.recipe;
 
 import ianm1647.expandeddelight.common.registry.EDItems;
 import ianm1647.expandeddelight.common.tag.EDCommonTags;
+import ianm1647.expandeddelight.common.tag.EDTags;
+import net.minecraft.advancements.critereon.EnterBlockTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -29,6 +31,22 @@ public class CraftingRecipes {
     }
 
     private static void recipesBlocks(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EDItems.CINNAMON_WOOD.get(), 3).pattern("ii").pattern("ii").define('i', EDItems.CINNAMON_LOG.get()).group("bark").unlockedBy("has_log", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_LOG.get())).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EDItems.CINNAMON_PLANKS.get(), 4).requires(EDTags.CINNAMON_LOGS).group("wooden_planks").unlockedBy("has_log", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_LOG.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EDItems.CINNAMON_STAIRS.get(), 4).pattern("i  ").pattern("ii ").pattern("iii").define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_stairs").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EDItems.CINNAMON_SLAB.get(), 6).pattern("iii").define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_slab").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EDItems.CINNAMON_FENCE.get(), 3).pattern("isi").pattern("isi").define('s', Tags.Items.RODS_WOODEN).define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_fence").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EDItems.CINNAMON_FENCE_GATE.get()).pattern("sis").pattern("sis").define('s', Tags.Items.RODS_WOODEN).define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_fence_gate").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EDItems.CINNAMON_DOOR.get(), 3).pattern("ii").pattern("ii").pattern("ii").define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_door").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EDItems.CINNAMON_TRAPDOOR.get(), 2).pattern("iii").pattern("iii").define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_trapdoor").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EDItems.CINNAMON_PRESSURE_PLATE.get()).pattern("ii").define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_pressure_plate").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, EDItems.CINNAMON_BUTTON.get()).requires(EDItems.CINNAMON_PLANKS.get()).group("wooden_button").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EDItems.CINNAMON_SIGN.get(), 3).pattern("iii").pattern("iii").pattern(" s ").define('s', Tags.Items.RODS_WOODEN).define('i', EDItems.CINNAMON_PLANKS.get()).group("wooden_sign").unlockedBy("has_planks", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_PLANKS.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EDItems.CINNAMON_HANGING_SIGN.get(), 6).pattern("s s").pattern("iii").pattern("iii").define('s', Tags.Items.CHAINS).define('i', EDItems.CINNAMON_STRIPPED_LOG.get()).group("hanging_sign").unlockedBy("has_stripped_logs", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_STRIPPED_LOG.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, EDItems.CINNAMON_BOAT.get()).pattern("i i").pattern("iii").define('i', EDItems.CINNAMON_PLANKS.get()).group("boat").unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER)).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, EDItems.CINNAMON_CHEST_BOAT.get()).requires(EDItems.CINNAMON_BOAT.get()).requires(Tags.Items.CHESTS_WOODEN).group("chest_boat").unlockedBy("has_boat", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_BOAT.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EDItems.CINNAMON_CABINET.get()).pattern("iii").pattern("t t").pattern("iii").define('t', EDItems.CINNAMON_TRAPDOOR.get()).define('i', EDItems.CINNAMON_PLANKS.get()).group("fd_cabinet").unlockedBy("has_cinnamon_trapdoor", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON_TRAPDOOR.get())).save(output);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EDItems.JUICER.get()).pattern("iii").pattern(" b ").pattern("iii").define('i', Tags.Items.INGOTS_IRON).define('b', Blocks.BARREL).unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT)).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EDItems.CASK.get()).pattern("iwi").pattern("bBb").pattern("iwi").define('i', Tags.Items.INGOTS_IRON).define('b', Blocks.BARREL).define('w', ItemTags.PLANKS).define('B', Items.BUCKET).unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT)).save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EDItems.ASPARAGUS_CRATE.get()).requires(EDItems.ASPARAGUS.get(), 9).unlockedBy("has_asparagus", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.ASPARAGUS.get())).save(output);
@@ -63,6 +81,7 @@ public class CraftingRecipes {
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.CHOCOLATE_COOKIE.get(), 8).pattern("cwc").define('c', Items.COCOA_BEANS).define('w', CommonTags.CROPS_GRAIN).unlockedBy("has_cocoa", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COCOA_BEANS)).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.SUGAR_COOKIE.get(), 8).pattern("cwc").define('w', Items.SUGAR).define('c', Tags.Items.CROPS_WHEAT).unlockedBy("has_sugar", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SUGAR)).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.SNICKERDOODLE.get(), 8).pattern("cwc").define('w', EDItems.CINNAMON.get()).define('c', Tags.Items.CROPS_WHEAT).unlockedBy("has_cinnamon", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON.get())).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EDItems.CRANBERRY_GOAT_CHESE_TOAST.get(), 2).requires(Items.BREAD).requires(EDItems.GOAT_CHEESE_SLICE.get()).requires(EDItems.CRANBERRIES.get()).unlockedBy("has_cranberries", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CRANBERRIES.get())).save(output);
 
         //fd overrides
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.WHEAT_DOUGH.get(), 3).requires(Items.WATER_BUCKET).requires(Items.WHEAT).requires(Items.WHEAT).requires(Items.WHEAT).requires(EDItems.SALT.get()).unlockedBy("has_wheat", InventoryChangeTrigger.TriggerInstance.hasItems(Items.WHEAT)).group("fd_wheat_dough").save(output.withConditions(new ItemExistsCondition("farmersdelight", "wheat_dough")), ResourceLocation.fromNamespaceAndPath("farmersdelight", "wheat_dough_from_water"));
@@ -72,6 +91,10 @@ public class CraftingRecipes {
     public static void recipesFoodBlocks(RecipeOutput output) {
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.CRANBERRY_COBBLER.get(), 1).pattern("#e#").pattern("aaa").pattern("xOx").define('#', Items.WHEAT).define('e', Tags.Items.EGGS).define('a', EDItems.CRANBERRIES.get()).define('x', Items.SUGAR).define('O', ModItems.PIE_CRUST.get()).unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get())).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.CRANBERRY_COBBLER.get(), 1).pattern("##").pattern("##").define('#', EDItems.CRANBERRY_COBBLER_SLICE.get()).unlockedBy("has_cranberry_cobbler_slice", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CRANBERRY_COBBLER_SLICE.get())).save(output, ResourceLocation.fromNamespaceAndPath("expandeddelight", "cranberry_cobbler_from_slices"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.HONEYED_GOAT_CHEESE_TART.get(), 1).pattern("ccc").pattern("ehe").pattern("mOm").define('c', EDItems.GOAT_CHEESE_SLICE.get()).define('h', Items.HONEY_BOTTLE).define('e', Tags.Items.EGGS).define('m', CommonTags.FOODS_MILK).define('O', ModItems.PIE_CRUST.get()).unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get())).save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.HONEYED_GOAT_CHEESE_TART.get(), 1).pattern("##").pattern("##").define('#', EDItems.HONEYED_GOAT_CHEESE_TART_SLICE.get()).unlockedBy("has_honeyed_goat_cheese_tart_slice", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.HONEYED_GOAT_CHEESE_TART_SLICE.get())).save(output, ResourceLocation.fromNamespaceAndPath("expandeddelight", "honeyed_goat_cheese_tart_from_slices"));
+
+
     }
 
     private static void recipesCraftedMeals(RecipeOutput output) {
