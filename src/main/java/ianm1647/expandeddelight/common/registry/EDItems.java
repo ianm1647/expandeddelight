@@ -305,13 +305,13 @@ public class EDItems {
 
     public static Item.Properties drinkItem(int nutrition, float saturation, Holder<MobEffect> effect) {
         return (new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.GLASS_BOTTLE)
                 .effect(() -> new MobEffectInstance(effect, 200, 0), 1.0f).build()));
     }
 
     public static Item.Properties jellyItem(int nutrition, float saturation, Holder<MobEffect> effect) {
         return (new Item.Properties().craftRemainder(GLASS_JAR.get()).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(GLASS_JAR.get())
                         .effect(() -> new MobEffectInstance(effect, 400, 0), 1.0f).build()));
     }
 
@@ -322,19 +322,19 @@ public class EDItems {
 
     public static Item.Properties stewItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.BOWL)
                         .effect(() -> new MobEffectInstance(ModEffects.COMFORT, 2400, 0), 1.0f).build());
     }
 
     public static Item.Properties saladItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.BOWL)
                 .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f).build());
     }
 
     public static Item.Properties mealItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.BOWL)
                         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1.0f).build());
     }
 
