@@ -29,6 +29,7 @@ public class EDDataGenerators {
         PackOutput output = generator.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         ExistingFileHelper helper = event.getExistingFileHelper();
+
         EDBlockTags blockTags = new EDBlockTags(output, lookupProvider, helper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new EDItemTags(output, lookupProvider, blockTags.contentsGetter(), helper));

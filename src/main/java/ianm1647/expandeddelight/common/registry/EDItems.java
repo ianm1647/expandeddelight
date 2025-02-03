@@ -15,6 +15,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.item.DrinkableItem;
 import vectorwing.farmersdelight.common.item.MilkBottleItem;
 import vectorwing.farmersdelight.common.registry.ModEffects;
@@ -273,19 +274,19 @@ public class EDItems {
         GLOW_BERRY_JELLY = registerWithTab("glow_berry_jelly", () -> new JellyItem(jellyItem(3, 0.6f, MobEffects.NIGHT_VISION), true));
         CRANBERRY_JELLY = registerWithTab("cranberry_jelly", () -> new JellyItem(jellyItem(3, 0.6f, MobEffects.ABSORPTION), true));
 
-        PEANUT_SALAD = registerWithTab("peanut_salad", () -> new Item(saladItem(6, 0.6f)));
-        SWEET_POTATO_SALAD = registerWithTab("sweet_potato_salad", () -> new Item(saladItem(6, 0.4f)));
+        PEANUT_SALAD = registerWithTab("peanut_salad", () -> new ConsumableItem(saladItem(6, 0.6f)));
+        SWEET_POTATO_SALAD = registerWithTab("sweet_potato_salad", () -> new ConsumableItem(saladItem(6, 0.4f)));
 
-        ASPARAGUS_SOUP = registerWithTab("asparagus_soup", () -> new Item(stewItem(10, 0.8f)));
-        ASPARAGUS_SOUP_CREAMY = registerWithTab("asparagus_soup_creamy", () -> new Item(stewItem(11, 0.9f)));
-        PEANUT_HONEY_SOUP = registerWithTab("peanut_honey_soup", () -> new Item(stewItem(10, 0.8f)));
-        MAC_AND_CHEESE = registerWithTab("mac_and_cheese", () -> new Item(stewItem(12, 0.8f)));
+        ASPARAGUS_SOUP = registerWithTab("asparagus_soup", () -> new ConsumableItem(stewItem(10, 0.8f)));
+        ASPARAGUS_SOUP_CREAMY = registerWithTab("asparagus_soup_creamy", () -> new ConsumableItem(stewItem(11, 0.9f)));
+        PEANUT_HONEY_SOUP = registerWithTab("peanut_honey_soup", () -> new ConsumableItem(stewItem(10, 0.8f)));
+        MAC_AND_CHEESE = registerWithTab("mac_and_cheese", () -> new ConsumableItem(stewItem(12, 0.8f)));
 
-        ASPARAGUS_BACON_MEAL = registerWithTab("asparagus_and_bacon_cheesy", () -> new Item(mealItem(10, 0.8f)));
-        ASPARAGUS_MUSHROOM_PASTA = registerWithTab("asparagus_mushroom_pasta", () -> new Item(mealItem(12, 0.9f)));
-        PEPERONATA = registerWithTab("peperonata", () -> new Item(mealItem(12, 0.9f)));
-        CRANBERRY_CHICKEN = registerWithTab("cranberry_chicken", () -> new Item(mealItem(10, 0.8f)));
-        SWEET_POTATO_CASSEROLE = registerWithTab("sweet_potato_casserole", () -> new Item(mealItem(11, 0.8f)));
+        ASPARAGUS_BACON_MEAL = registerWithTab("asparagus_and_bacon_cheesy", () -> new ConsumableItem(mealItem(10, 0.8f)));
+        ASPARAGUS_MUSHROOM_PASTA = registerWithTab("asparagus_mushroom_pasta", () -> new ConsumableItem(mealItem(12, 0.9f)));
+        PEPERONATA = registerWithTab("peperonata", () -> new ConsumableItem(mealItem(12, 0.9f)));
+        CRANBERRY_CHICKEN = registerWithTab("cranberry_chicken", () -> new ConsumableItem(mealItem(10, 0.8f)));
+        SWEET_POTATO_CASSEROLE = registerWithTab("sweet_potato_casserole", () -> new ConsumableItem(mealItem(11, 0.8f)));
 
     }
 
@@ -305,13 +306,13 @@ public class EDItems {
 
     public static Item.Properties drinkItem(int nutrition, float saturation, Holder<MobEffect> effect) {
         return (new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.GLASS_BOTTLE)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
                 .effect(() -> new MobEffectInstance(effect, 200, 0), 1.0f).build()));
     }
 
     public static Item.Properties jellyItem(int nutrition, float saturation, Holder<MobEffect> effect) {
         return (new Item.Properties().craftRemainder(GLASS_JAR.get()).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(GLASS_JAR.get())
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
                         .effect(() -> new MobEffectInstance(effect, 400, 0), 1.0f).build()));
     }
 
@@ -322,19 +323,19 @@ public class EDItems {
 
     public static Item.Properties stewItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.BOWL)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
                         .effect(() -> new MobEffectInstance(ModEffects.COMFORT, 2400, 0), 1.0f).build());
     }
 
     public static Item.Properties saladItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.BOWL)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
                 .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f).build());
     }
 
     public static Item.Properties mealItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
-                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).usingConvertsTo(Items.BOWL)
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
                         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1.0f).build());
     }
 

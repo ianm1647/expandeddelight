@@ -81,6 +81,7 @@ public class CraftingRecipes {
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.CHOCOLATE_COOKIE.get(), 8).pattern("cwc").define('c', Items.COCOA_BEANS).define('w', CommonTags.CROPS_GRAIN).unlockedBy("has_cocoa", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COCOA_BEANS)).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.SUGAR_COOKIE.get(), 8).pattern("cwc").define('w', Items.SUGAR).define('c', Tags.Items.CROPS_WHEAT).unlockedBy("has_sugar", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SUGAR)).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EDItems.SNICKERDOODLE.get(), 8).pattern("cwc").define('w', EDItems.CINNAMON.get()).define('c', Tags.Items.CROPS_WHEAT).unlockedBy("has_cinnamon", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CINNAMON.get())).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EDItems.GOAT_MILK_BOTTLE.get(), 4).requires(EDItems.GOAT_MILK_BUCKET.get()).requires(Items.GLASS_BOTTLE, 4).unlockedBy("has_goat_milk", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.GOAT_MILK_BUCKET.get())).save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EDItems.CRANBERRY_GOAT_CHESE_TOAST.get(), 2).requires(Items.BREAD).requires(EDItems.GOAT_CHEESE_SLICE.get()).requires(EDItems.CRANBERRIES.get()).unlockedBy("has_cranberries", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CRANBERRIES.get())).save(output);
 
         //fd overrides
