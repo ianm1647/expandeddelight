@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-19T12:09:05.4821526	Loot Tables
+// 1.21.1	2025-03-26T15:31:44.5787157	Loot Tables
 a0315387789e75ab177b7a3f807d706e6438781a data/expandeddelight/loot_table/blocks/asparagus_crate.json
 32ba282966cb717b2af5a8f7638daf2b42da4c99 data/expandeddelight/loot_table/blocks/cask.json
 36ba7f26cf1d0b49e1526eab805c8539feb8ef64 data/expandeddelight/loot_table/blocks/cheese_cask.json
@@ -7,7 +7,7 @@ a0315387789e75ab177b7a3f807d706e6438781a data/expandeddelight/loot_table/blocks/
 7ca8f34d5d2833e788800ca25886da97878c09a4 data/expandeddelight/loot_table/blocks/cinnamon_cabinet.json
 f86766dd2740fd6130a45f996335cc528c86aa54 data/expandeddelight/loot_table/blocks/cinnamon_ceiling_hanging_sign.json
 70799f86fb5e627a6827522b944f2d08a90c62ec data/expandeddelight/loot_table/blocks/cinnamon_door.json
-1d05522d63c911850dc0ecef873f077957870428 data/expandeddelight/loot_table/blocks/cinnamon_leaves.json
+08b57246dbb7d68493f28365a4967733243e081c data/expandeddelight/loot_table/blocks/cinnamon_leaves.json
 34330fc1b91131e26a1403434f2747cc5d2c9904 data/expandeddelight/loot_table/blocks/cinnamon_log.json
 4e3a62233e00236d470eb5d75fceee0f0fc62b9d data/expandeddelight/loot_table/blocks/cinnamon_planks.json
 a819dcb5b5eb71f754e6edebd3087a1f0176cc91 data/expandeddelight/loot_table/blocks/cinnamon_sapling.json

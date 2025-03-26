@@ -31,7 +31,6 @@ public class ExpandedDelight
         EDEntityTypes.ENTITIES.register(modEventBus);
 
         EDTreePlacers.FOLIAGE_PLACERS.register(modEventBus);
-        //EDWoodTypes.register();
         NeoForge.EVENT_BUS.register(this);
     }
 

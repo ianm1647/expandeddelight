@@ -88,8 +88,8 @@ public class EDItems {
     public static Supplier<Item> CHILI_PEPPER_SEEDS;
     public static Supplier<Item> PEANUT;
 
-    public static Supplier<Item> LEMON;
-    public static Supplier<Item> LEMON_SEEDS;
+    public static Supplier<Item> ANCIENT_FRUIT;
+    public static Supplier<Item> ANCIENT_SEEDS;
     public static Supplier<Item> CRANBERRIES;
     public static Supplier<Item> CRANBERRY_PLANT;
 
@@ -231,6 +231,7 @@ public class EDItems {
         CHILI_PEPPER = registerWithTab("chili_pepper", () -> new Item(foodItem(2, 0.1f)));
         PEANUT = registerWithTab("peanut", () -> new BlockItem(EDBlocks.PEANUT_CROP.get(), foodItem(1, 0f)));
         CRANBERRIES = registerWithTab("cranberries", () -> new LilypadCropItem(EDBlocks.CRANBERRY_PLANT.get(), foodItem(2, 0.5f)));
+        //ANCIENT_SEEDS = registerWithTab("ancient_seeds", () -> new Item(basicItem()));
 
         BAKED_SWEET_POTATO = registerWithTab("baked_sweet_potato", () -> new Item(foodItem(2, 0.4f)));
 

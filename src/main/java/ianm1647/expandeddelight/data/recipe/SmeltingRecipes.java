@@ -10,9 +10,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
 public class SmeltingRecipes {
-    public SmeltingRecipes() {
-    }
-
     public static void register(RecipeOutput output) {
         foodSmeltingRecipes("baked_sweet_potato", EDItems.SWEET_POTATO.get(), EDItems.BAKED_SWEET_POTATO.get(), 0.35f, output);
 

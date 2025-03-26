@@ -54,7 +54,7 @@ public class KubeJSExpandedDelight implements KubeJSPlugin {
     public void registerRecipeSchemas(RecipeSchemaRegistry event) {
         event.register(ResourceLocation.fromNamespaceAndPath("expandeddelight", "juicing"), JuicingRecipe.SCHEMA);
 
-        event.register(ResourceLocation.fromNamespaceAndPath("farmersdelight", "cooking"), CookingRecipe.SCHEMA);
+        //event.register(ResourceLocation.fromNamespaceAndPath("farmersdelight", "cooking"), CookingRecipe.SCHEMA);
         //event.register(ResourceLocation.fromNamespaceAndPath("farmersdelight", "cutting"), CuttingRecipe.SCHEMA);
 
     }

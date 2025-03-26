@@ -1,6 +1,7 @@
 {
   "replace": false,
   "entries": [
+    "expandeddelight:add_loot_sniffer_digging",
     "expandeddelight:add_loot_village_plains_house",
     "expandeddelight:add_loot_village_desert_house",
     "expandeddelight:add_loot_village_taiga_house",

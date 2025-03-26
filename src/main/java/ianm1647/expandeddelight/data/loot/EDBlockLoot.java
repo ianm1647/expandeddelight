@@ -25,6 +25,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class EDBlockLoot extends BlockLootSubProvider {
+    protected static final float[] CINNAMON_SAPLING_CHANCES = new float[]{0.15f, 0.25f, 0.35F, 0.45F};
     private final Set<Block> generatedLootTables = new HashSet();
 
     public EDBlockLoot(HolderLookup.Provider holder) {
@@ -35,7 +36,7 @@ public class EDBlockLoot extends BlockLootSubProvider {
 
         this.dropSelf(EDBlocks.CINNAMON_SAPLING.get());
         this.add(EDBlocks.CINNAMON_LEAVES.get(), block ->
-                createLeavesDrops(block, EDBlocks.CINNAMON_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, EDBlocks.CINNAMON_SAPLING.get(), CINNAMON_SAPLING_CHANCES));
         this.dropSelf(EDBlocks.CINNAMON_LOG.get());
         this.dropSelf(EDBlocks.CINNAMON_WOOD.get());
         this.dropSelf(EDBlocks.CINNAMON_STRIPPED_LOG.get());
