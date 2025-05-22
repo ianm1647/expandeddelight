@@ -1,7 +1,7 @@
 {
   "neoforge:conditions": [
     {
-      "type": "neoforge:never"
+      "type": "neoforge:false"
     }
   ]
 }
