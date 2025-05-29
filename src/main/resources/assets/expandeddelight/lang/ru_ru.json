@@ -137,8 +137,11 @@
   "expandeddelight.jei.info.wild_sweet_potato": "Сладкий картофель обычно встречается в джунглях как дикорастущее растение.",
   "expandeddelight.jei.info.wild_chili_pepper": "Перец чили обычно встречается в виде дикорастущего растения в пустынях.",
   "expandeddelight.jei.info.wild_peanuts": "Арахис обычно встречается в саваннах как дикорастущее растение.",
-  "expandeddelight.jei.info.cranberries": "Клюкву обычно можно встретить как дикорастущее растение в болотных биомах.",
-  "expandeddelight.jei.info.salt_ore": "Соляную руду обычно можно найти под землей, особенно в океанических биомах.",
+  "expandeddelight.jei.info.cranberries": "Клюкву обычно можно встретить как дикорастущее растение на болотах.",
+  "expandeddelight.jei.info.salt_ore": "Соляную руду обычно можно найти под землёй, особенно в океанах.",
 
-  "farmersdelight.tooltip.goat_milk_bottle": "Снимает 1 эффект"
+  "farmersdelight.tooltip.goat_milk_bottle": "Снимает 1 эффект",
+
+  "tag.item.expandeddelight.cinnamon_logs": "Коричниковые брёвна",
+  "tag.item.expandeddelight.crushing_tools": "Инструменты-измельчители"
 }
