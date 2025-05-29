@@ -5,24 +5,24 @@
   "item.expandeddelight.asparagus_soup_creamy": "Сливочный суп из спаржи",
   "item.expandeddelight.asparagus_and_bacon_cheesy": "Спаржа с сыром и беконом",
   "item.expandeddelight.asparagus_mushroom_pasta": "Паста со спаржей и грибами",
-	
+
   "item.expandeddelight.sweet_potato": "Сладкий картофель",
   "item.expandeddelight.baked_sweet_potato": "Запечённый сладкий картофель",
   "item.expandeddelight.sweet_potato_salad": "Салат из сладкого картофеля",
   "item.expandeddelight.sweet_potato_casserole": "Запеканка из сладкого картофеля",
-	
+
   "item.expandeddelight.chili_pepper": "Перец чили",
   "item.expandeddelight.chili_pepper_seeds": "Семена перца чили",
   "item.expandeddelight.peperonata": "Пепероната",
-	
+
   "item.expandeddelight.peanut": "Арахис",
   "item.expandeddelight.peanut_butter": "Арахисовое масло",
-  "item.expandeddelight.peanut_butter_sandwich": "Бутерброд с арахисовым маслом",
-  "item.expandeddelight.peanut_butter_honey_sandwich": "Бутерброд с арахисовым маслом и мёдом",
+  "item.expandeddelight.peanut_butter_sandwich": "Сэндвич с арахисовым маслом",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Сэндвич с арахисовым маслом и мёдом",
   "item.expandeddelight.peanut_salad": "Арахисовый салат",
   "item.expandeddelight.peanut_honey_soup": "Медово-арахисовый суп",
-  "item.expandeddelight.sweet_berry_jelly_sandwich": "Сэндвич с арахисовым маслом и сладким ягодным желе",
-  "item.expandeddelight.glow_berry_jelly_sandwich": "Сэндвич с арахисовым маслом и светящимся ягодным желе",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Сэндвич с арахисовым маслом и желе из сладких ягод",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Сэндвич с арахисовым маслом и желе из светящихся ягод",
 
   "item.expandeddelight.cranberries": "Клюква",
   "item.expandeddelight.cranberry_chicken": "Курица с клюквой",
@@ -30,7 +30,7 @@
 
   "item.expandeddelight.lemon": "Лимон",
 
-  "item.expandeddelight.crushing_mallet": "Дробильная киянка",	
+  "item.expandeddelight.crushing_mallet": "Дробильная киянка",
   "item.expandeddelight.glass_jar": "Стеклянная банка",
   "item.expandeddelight.cinnamon_stick": "Палочка корицы",
   "item.expandeddelight.cinnamon": "Корица",
@@ -39,68 +39,88 @@
 
   "item.expandeddelight.goat_milk_bucket": "Ведро козьего молока",
   "item.expandeddelight.goat_milk_bottle": "Бутылочка козьего молока",
-	
+
   "item.expandeddelight.cheese_wheel": "Сырный круг",
   "item.expandeddelight.goat_cheese_slice": "Ломтик козьего сыра",
-  "item.expandeddelight.cheese_sandwich": "Бутерброд с сыром",
+  "item.expandeddelight.cheese_sandwich": "Сэндвич с сыром",
   "item.expandeddelight.grilled_cheese": "Сыр на гриле",
   "item.expandeddelight.cranberry_goat_cheese_toast": "Тост с козьим сыром и клюквой",
   "item.expandeddelight.honeyed_goat_cheese_tart_slice": "Ломтик пирога с козьим сыром в меду",
-  
+
   "item.expandeddelight.mac_and_cheese": "Макароны с сыром",
-  "item.expandeddelight.sweet_roll": "Сладкий рулет",
-  "item.expandeddelight.berry_sweet_roll": "Ягодный сладкий рулет",
-  "item.expandeddelight.glow_berry_sweet_roll": "Сладкий рулет с светящимися ягодами",
+  "item.expandeddelight.sweet_roll": "Сладкий рулет с корицей",
+  "item.expandeddelight.berry_sweet_roll": "Сладкий рулет с корицей и сладкими ягодами",
+  "item.expandeddelight.glow_berry_sweet_roll": "Сладкий рулет с корицей и светящимися ягодами",
   "item.expandeddelight.cinnamon_rice": "Рис с корицей",
   "item.expandeddelight.cinnamon_apples": "Яблоки с корицей",
   "item.expandeddelight.chocolate_cookie": "Шоколадное печенье",
   "item.expandeddelight.sugar_cookie": "Сахарное печенье",
   "item.expandeddelight.snickerdoodle": "Хихикающий каракуль",
-	
+
   "item.expandeddelight.apple_juice": "Яблочный сок",
-  "item.expandeddelight.sweet_berry_juice": "Сладкий ягодный сок",
-  "item.expandeddelight.glow_berry_juice": "Светящийся ягодный сок",
+  "item.expandeddelight.sweet_berry_juice": "Сок из сладких ягод",
+  "item.expandeddelight.glow_berry_juice": "Сок из светящихся ягод",
   "item.expandeddelight.cranberry_juice": "Клюквенный сок",
-	
-  "item.expandeddelight.sweet_berry_jelly": "Сладкое ягодное желе",
-  "item.expandeddelight.glow_berry_jelly": "Светящееся ягодное желе",
+
+  "item.expandeddelight.sweet_berry_jelly": "Желе из сладких ягод",
+  "item.expandeddelight.glow_berry_jelly": "Желе из светящихся ягод",
   "item.expandeddelight.cranberry_jelly": "Клюквенное желе",
-	
-  "item.expandeddelight.juicer_item": "Соковыжималка",
-	
+
+  "item.expandeddelight.cinnamon_boat": "Коричниковая лодка",
+  "item.expandeddelight.cinnamon_chest_boat": "Коричниковая грузовая лодка",
+
+  "block.expandeddelight.cinnamon_sapling": "Саженец коричника",
+  "block.expandeddelight.cinnamon_leaves": "Коричниковиковые листья",
+  "block.expandeddelight.cinnamon_log": "Коричниковое бревно",
+  "block.expandeddelight.stripped_cinnamon_log": "Обтёсанное коричное бревно",
+  "block.expandeddelight.cinnamon_wood": "Коричник",
+  "block.expandeddelight.stripped_cinnamon_wood": "Обтёсанная коричниковая древесина",
+  "block.expandeddelight.cinnamon_planks": "Коричниковые доски",
+  "block.expandeddelight.cinnamon_stairs": "Коричниковые ступеньки",
+  "block.expandeddelight.cinnamon_slab": "Коричниковая плита",
+  "block.expandeddelight.cinnamon_fence": "Коричниковый забор",
+  "block.expandeddelight.cinnamon_fence_gate": "Коричниковая калитка",
+  "block.expandeddelight.cinnamon_door": "Коричниковая дверь",
+  "block.expandeddelight.cinnamon_trapdoor": "Коричниковый люк",
+  "block.expandeddelight.cinnamon_pressure_plate": "Коричниковая нажимная плита",
+  "block.expandeddelight.cinnamon_button": "Коричниковая кнопка",
+  "block.expandeddelight.cinnamon_sign": "Коричниковая табличка",
+  "block.expandeddelight.cinnamon_ceiling_hanging_sign": "Коричников подвесная табличка",
+  "block.expandeddelight.cinnamon_cabinet": "Коричниковая кладовая",
+
   "block.expandeddelight.asparagus_crate": "Ящик со спаржей",
   "block.expandeddelight.wild_asparagus": "Дикая спаржа",
   "block.expandeddelight.asparagus_crop": "Спаржа",
-	
+
   "block.expandeddelight.sweet_potato_crate": "Ящик со сладким картофелем",
   "block.expandeddelight.wild_sweet_potatoes": "Дикий сладкий картофель",
   "block.expandeddelight.sweet_potatoes_crop": "Сладкий картофель",
-	
+
   "block.expandeddelight.chili_pepper_crate": "Ящик с перцем чили",
   "block.expandeddelight.wild_chili_pepper": "Дикий перец чили",
   "block.expandeddelight.chili_pepper_crop": "Перец чили",
-	
+
   "block.expandeddelight.wild_peanuts": "Дикий арахис",
   "block.expandeddelight.peanut_crop": "Арахис",
 
   "block.expandeddelight.cranberry_plant": "Клюква",
   "block.expandeddelight.cranberry_bag": "Мешок с клюквой",
   "block.expandeddelight.cranberry_cobbler": "Клюквенный коблер",
-  
+
   "block.expandeddelight.salt_ore": "Соляная руда",
-  "block.expandeddelight.deepslate_salt_ore": "Глубинносланцевая соляная руда",
+  "block.expandeddelight.deepslate_salt_ore": "Соленосный глубинный сланец",
 
   "block.expandeddelight.cheese_wheel": "Сырный круг",
   "block.expandeddelight.goat_cheese_wheel": "Козий сырный круг",
   "block.expandeddelight.honeyed_goat_cheese_tart": "Пирог с козьим сыром в меду",
-	
+
   "block.expandeddelight.juicer": "Соковыжималка",
   "block.expandeddelight.cask": "Бочка",
   "block.expandeddelight.milk_cask": "Бочка с молоком",
   "block.expandeddelight.goat_milk_cask": "Бочка с козьим молоком",
   "block.expandeddelight.cheese_cask": "Бочка с сыром",
   "block.expandeddelight.goat_cheese_cask": "Бочка с козьим сыром",
-	
+
   "container.expandeddelight.juicer": "Соковыжималка",
 
   "expandeddelight.container.juicer": "Соковыжималка",
@@ -110,9 +130,9 @@
   "expandeddelight.jei.cheese_fermenting.light": "Процесс ускоряется под воздействием темноты",
   "expandeddelight.jei.cheese_fermenting.fluid": "Процесс ускоряется посредством добавления воды",
   "expandeddelight.jei.cheese_fermenting.accelerators": "Процесс ускоряется посредством добавления активаторов (см. ниже)",
-	
+
   "itemGroup.expandeddelight": "Расширенный Восторг",
-	
+
   "expandeddelight.jei.info.wild_asparagus": "Спаржу обычно можно встретить как дикорастущее растение на равнинах.",
   "expandeddelight.jei.info.wild_sweet_potato": "Сладкий картофель обычно встречается в джунглях как дикорастущее растение.",
   "expandeddelight.jei.info.wild_chili_pepper": "Перец чили обычно встречается в виде дикорастущего растения в пустынях.",
