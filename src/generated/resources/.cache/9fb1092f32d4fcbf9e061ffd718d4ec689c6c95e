@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-25T22:09:10.1817067	Recipes
+// 1.21.1	2025-07-18T15:59:18.9867731	Recipes
 0a8dcc23714701ca806558032c3523e673682366 data/expandeddelight/advancement/recipes/building_blocks/asparagus_crate.json
 40501c79cbd53ca7416d63ba8f7b071d308ab221 data/expandeddelight/advancement/recipes/building_blocks/chili_pepper_crate.json
 088e97af8b967474ae4c31bc99ef065d11158689 data/expandeddelight/advancement/recipes/building_blocks/cinnamon_planks.json
@@ -38,6 +38,7 @@ c1c02a8cd30b01ce147c083c9edeab482d05afc4 data/expandeddelight/advancement/recipe
 1fa9b9c5ff10dfa7dc78ae5ae4ba924b84e8d809 data/expandeddelight/advancement/recipes/food/chili_pepper.json
 1c3738301a7e3afbca5c112955f6fa406807dfc2 data/expandeddelight/advancement/recipes/food/chili_pepper_seeds.json
 47cca6b7b2f5255124a82d2252e142724a2c69c4 data/expandeddelight/advancement/recipes/food/chocolate_cookie.json
+8c1b1e2ee73797ce26279f3d54b2a5396b2ac902 data/expandeddelight/advancement/recipes/food/cranberries.json
 6d4ecf8c00c80db0d99e78bea611d3f707cf73e1 data/expandeddelight/advancement/recipes/food/cranberry_cobbler.json
 859925c96e132ade52f16bd974aa614fb2abdafb data/expandeddelight/advancement/recipes/food/cranberry_cobbler_from_slices.json
 31dbe5b2cd698427927104484b8390d9edce0892 data/expandeddelight/advancement/recipes/food/cranberry_goat_cheese_toast.json
@@ -117,6 +118,7 @@ fd97a62a2e971a4a8cda4b9208b11ab648b30e79 data/expandeddelight/recipe/cooking/pea
 13af264dd9ccf4e675852a84ba2567f34f86d4e8 data/expandeddelight/recipe/cooking/peperonata.json
 5bcab34327e930a7bed9f76f15ee82dc3b2bd48f data/expandeddelight/recipe/cooking/sweet_berry_jelly.json
 e6eb62d7fea2932f5100d3bce51aee5d1fd7bb1e data/expandeddelight/recipe/cooking/sweet_potato_casserole.json
+2692729a1987b0cc5651990a181dc879afa3b0c9 data/expandeddelight/recipe/cranberries.json
 3313a1a580e33bddfd4c3d8b8978a97c91adf2b8 data/expandeddelight/recipe/cranberry_bag.json
 61ba13e0410b446e066150431373fde78de0791a data/expandeddelight/recipe/cranberry_cobbler.json
 dab926fe15ad0a2980497d1ed235679adc59985b data/expandeddelight/recipe/cranberry_cobbler_from_slices.json

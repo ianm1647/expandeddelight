@@ -121,11 +121,6 @@ dependencies {
     compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
 
     runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
-
-    //KubeJS
-    implementation "dev.architectury:architectury-neoforge:$architectury_version"
-    implementation "dev.latvian.mods:kubejs-neoforge:$kubejs_version"
-    implementation "dev.latvian.mods:rhino:$rhino_version"
 }
 
 tasks.withType(ProcessResources).configureEach {

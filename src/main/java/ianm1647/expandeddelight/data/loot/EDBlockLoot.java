@@ -42,6 +42,13 @@ public class EDBlockLoot extends BlockLootSubProvider {
         this.dropSelf(EDBlocks.CINNAMON_STRIPPED_LOG.get());
         this.dropSelf(EDBlocks.CINNAMON_STRIPPED_WOOD.get());
         this.dropSelf(EDBlocks.CINNAMON_PLANKS.get());
+        this.dropSelf(EDBlocks.CINNAMON_SLAB.get());
+        this.dropSelf(EDBlocks.CINNAMON_STAIRS.get());
+        this.dropSelf(EDBlocks.CINNAMON_BUTTON.get());
+        this.dropSelf(EDBlocks.CINNAMON_PRESSURE_PLATE.get());
+        this.dropSelf(EDBlocks.CINNAMON_TRAPDOOR.get());
+        this.dropSelf(EDBlocks.CINNAMON_FENCE_GATE.get());
+        this.dropSelf(EDBlocks.CINNAMON_FENCE.get());
         this.add(EDBlocks.CINNAMON_DOOR.get(), block ->
                 createDoorTable(EDBlocks.CINNAMON_DOOR.get()));
         this.dropSelf(EDBlocks.CINNAMON_SIGN.get());

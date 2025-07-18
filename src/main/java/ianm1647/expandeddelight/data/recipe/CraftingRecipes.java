@@ -67,6 +67,7 @@ public class CraftingRecipes {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EDItems.ASPARAGUS.get(), 9).requires(EDItems.ASPARAGUS_CRATE.get()).unlockedBy("has_asparagus", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.ASPARAGUS.get())).save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EDItems.SWEET_POTATO.get(), 9).requires(EDItems.SWEET_POTATO_CRATE.get()).unlockedBy("has_sweet_potato", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.SWEET_POTATO.get())).save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EDItems.CHILI_PEPPER.get(), 9).requires(EDItems.CHILI_PEPPER_CRATE.get()).unlockedBy("has_chili_pepper", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CHILI_PEPPER.get())).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EDItems.CRANBERRIES.get(), 9).requires(EDItems.CRANBERRY_BAG.get()).unlockedBy("has_cranberries", InventoryChangeTrigger.TriggerInstance.hasItems(EDItems.CRANBERRIES.get())).save(output);
     }
 
     private static void recipesFoodstuffs(RecipeOutput output) {
