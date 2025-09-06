@@ -1,6 +1,5 @@
 package ianm1647.expandeddelight.common.world.tree;
 
-import com.mojang.serialization.MapCodec;
 import ianm1647.expandeddelight.ExpandedDelight;
 import ianm1647.expandeddelight.common.world.tree.placer.CinnamonFoliagePlacer;
 import net.minecraft.core.registries.Registries;

@@ -58,10 +58,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
-@EventBusSubscriber(
-        modid = "expandeddelight",
-        bus = EventBusSubscriber.Bus.MOD
-)
+@EventBusSubscriber(modid = "expandeddelight")
 public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider, Nameable, RecipeCraftingHolder {
    public static final int MEAL_DISPLAY_SLOT = 2;
    public static final int CONTAINER_SLOT = 3;

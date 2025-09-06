@@ -1,7 +1,6 @@
 package ianm1647.expandeddelight.data;
 
 import ianm1647.expandeddelight.ExpandedDelight;
-import ianm1647.expandeddelight.common.registry.EDBlocks;
 import ianm1647.expandeddelight.common.registry.EDItems;
 import ianm1647.expandeddelight.common.tag.EDCompatTags;
 import ianm1647.expandeddelight.common.tag.EDCommonTags;

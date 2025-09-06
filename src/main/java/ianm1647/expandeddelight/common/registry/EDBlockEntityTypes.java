@@ -7,13 +7,8 @@ import ianm1647.expandeddelight.common.block.entity.CinnamonSignBlockEntity;
 import ianm1647.expandeddelight.common.block.entity.JuicerBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
-import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import vectorwing.farmersdelight.common.block.entity.CabinetBlockEntity;
-
 import java.util.function.Supplier;
 
 public class EDBlockEntityTypes {

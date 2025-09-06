@@ -1,10 +1,8 @@
 package ianm1647.expandeddelight.common.block;
 
 import ianm1647.expandeddelight.common.registry.EDBlockEntityTypes;
-import ianm1647.expandeddelight.common.registry.EDWoodTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
