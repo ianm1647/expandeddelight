@@ -6,14 +6,14 @@
       "item": "minecraft:bread"
     },
     {
-      "tag": "c:foods/goat_cheese"
+      "item": "expandeddelight:peanut_butter"
     },
     {
-      "item": "expandeddelight:cranberries"
+      "tag": "c:jams/cranberry"
     }
   ],
   "result": {
-    "count": 2,
-    "id": "expandeddelight:cranberry_goat_cheese_toast"
+    "count": 1,
+    "id": "expandeddelight:cranberry_jelly_sandwich"
   }
 }

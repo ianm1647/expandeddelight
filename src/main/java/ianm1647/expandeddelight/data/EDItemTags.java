@@ -9,6 +9,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -120,7 +121,7 @@ public class EDItemTags extends ItemTagsProvider {
                 .addTag(EDCommonTags.CROPS_ASPARAGUS)
                 .addTag(EDCommonTags.CROPS_SWEET_POTATO)
                 .addTag(EDCommonTags.CROPS_CHILI_PEPPER)
-                .addTag(EDCommonTags.CROPS_PEANUT);
+                .addOptionalTag(EDCommonTags.CROPS_PEANUT);
         tag(Tags.Items.FOODS_VEGETABLE)
                 .addTag(EDCommonTags.FOODS_ASPARAGUS)
                 .addTag(EDCommonTags.FOODS_SWEET_POTATO)
@@ -141,7 +142,8 @@ public class EDItemTags extends ItemTagsProvider {
                 .add(EDItems.ASPARAGUS_SOUP_CREAMY.get())
                 .add(EDItems.PEANUT_HONEY_SOUP.get());
         tag(Tags.Items.FOODS)
-                .addTag(EDCommonTags.FOODS_CHEESE);
+                .addTag(EDCommonTags.FOODS_CHEESE)
+                .addTag(EDCommonTags.FOODS_GOAT_CHEESE);
         tag(CommonTags.FOODS_MILK)
                 .add(EDItems.GOAT_MILK_BUCKET.get())
                 .add(EDItems.GOAT_MILK_BOTTLE.get());
@@ -168,8 +170,10 @@ public class EDItemTags extends ItemTagsProvider {
         tag(EDCommonTags.FOODS_CHILI_PEPPER).add(EDItems.CHILI_PEPPER.get());
         tag(EDCommonTags.FOODS_PEANUT).add(EDItems.PEANUT.get());
         tag(EDCommonTags.FOODS_CHEESE)
-                .add(EDItems.CHEESE_SLICE.get())
-                .add(EDItems.GOAT_CHEESE_SLICE.get());
+                .add(EDItems.CHEESE_SLICE.get());
+        tag(EDCommonTags.FOODS_GOAT_CHEESE)
+                .add(EDItems.GOAT_CHEESE_SLICE.get())
+                .addOptional(ResourceLocation.fromNamespaceAndPath("hearthandharvest", "goat_cheese_slice"));
         //jams
         tag(EDCommonTags.JAMS)
                 .addTag(EDCommonTags.JAMS_SWEET_BERRY)

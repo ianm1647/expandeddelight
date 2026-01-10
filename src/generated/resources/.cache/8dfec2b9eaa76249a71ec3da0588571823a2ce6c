@@ -1,7 +1,7 @@
-// 1.21.1	2025-01-21T09:06:52.9946358	Tags for minecraft:item mod id expandeddelight
+// 1.21.1	2026-01-08T13:28:10.7013862	Tags for minecraft:item mod id expandeddelight
 3cfadf858af79670e6413422b8f9f7c99c4ba5fd data/create/tags/item/upright_on_belt.json
 545a625d7cf11d828bb427fc9e76c1c18cf92b9c data/c/tags/item/buckets/milk.json
-b0eacdca334bf2c56e3ea37fef8f16ad0bf671f1 data/c/tags/item/crops.json
+f050c37a84078f6b5aa3a606fb18f3df9c1ea39a data/c/tags/item/crops.json
 b6e52a91f4b06d6d921ba01a6b1024ef099cc633 data/c/tags/item/crops/asparagus.json
 b0802a51a625e7337bf3b5a9703eb55bd7834f1f data/c/tags/item/crops/chili_pepper.json
 cc6b86f01b1d6bee2556136278dd512670608af9 data/c/tags/item/crops/peanut.json
@@ -10,13 +10,14 @@ fdce82bbc140ce440bdac3b4438973961b7e28be data/c/tags/item/dusts.json
 978ed0942d544d17f1b2eecda8f64448ca9ef7a7 data/c/tags/item/dusts/cinnamon.json
 1fc9ab180361cdc3dd9d5b1329d05c5426cd3bbb data/c/tags/item/dusts/salt.json
 94ff459af88b8f07bd1b3b191f869c5b86b3a5f3 data/c/tags/item/fence_gates/wooden.json
-aaca30890b4d9d8f0ef485494720ccb2fc0ff8c7 data/c/tags/item/foods.json
+21b97ba053bd0dba559f43124b31d52963e58958 data/c/tags/item/foods.json
 b6e52a91f4b06d6d921ba01a6b1024ef099cc633 data/c/tags/item/foods/asparagus.json
 ed1593d201fa80eb49b1bee6e21cfd5d026e8eb3 data/c/tags/item/foods/berry.json
-a2615108569897ddc5aa09455a310f3fc53500da data/c/tags/item/foods/cheese.json
+5e6810d5988b5e677ac8a9fb6035e050185ca50b data/c/tags/item/foods/cheese.json
 b0802a51a625e7337bf3b5a9703eb55bd7834f1f data/c/tags/item/foods/chili_pepper.json
 e54d1d5ee9822e9965fc016ceed33ed0a73149da data/c/tags/item/foods/cookie.json
 0d00187fe9a9da658fed1480a3fd02a59648ba1d data/c/tags/item/foods/edible_when_placed.json
+6ffeb22c7443a6d770630a706c9c337391840abc data/c/tags/item/foods/goat_cheese.json
 0e798369a8f283b919553fef3cd4c4169ddedbe0 data/c/tags/item/foods/milk.json
 cc6b86f01b1d6bee2556136278dd512670608af9 data/c/tags/item/foods/peanut.json
 b89de63ef6b5fd40741b9237863e6a863365f6c5 data/c/tags/item/foods/soup.json

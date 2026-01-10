@@ -6,7 +6,7 @@
       "item": "farmersdelight:pie_crust"
     },
     "c": {
-      "item": "expandeddelight:goat_cheese_slice"
+      "tag": "c:foods/goat_cheese"
     },
     "e": {
       "tag": "c:eggs"

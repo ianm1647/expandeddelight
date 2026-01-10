@@ -27,6 +27,7 @@ public class EDCommonTags {
     public static final TagKey<Item> FOODS_CHILI_PEPPER = itemTag("foods/chili_pepper");
     public static final TagKey<Item> FOODS_PEANUT = itemTag("foods/peanut");
     public static final TagKey<Item> FOODS_CHEESE = itemTag("foods/cheese");
+    public static final TagKey<Item> FOODS_GOAT_CHEESE = itemTag("foods/goat_cheese");
 
     //jams
     public static final TagKey<Item> JAMS = itemTag("jams");

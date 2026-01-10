@@ -2,6 +2,7 @@ package ianm1647.expandeddelight;
 
 import ianm1647.expandeddelight.common.registry.*;
 import ianm1647.expandeddelight.common.world.tree.EDTreePlacers;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -34,7 +35,9 @@ public class ExpandedDelight
         NeoForge.EVENT_BUS.register(this);
     }
 
-
+    public static ResourceLocation loc(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)

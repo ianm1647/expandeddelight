@@ -3,17 +3,20 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:bread"
+      "tag": "c:foods/leafy_green"
     },
     {
       "tag": "c:foods/goat_cheese"
     },
     {
-      "item": "expandeddelight:cranberries"
+      "tag": "c:crops/beetroot"
+    },
+    {
+      "item": "minecraft:bowl"
     }
   ],
   "result": {
-    "count": 2,
-    "id": "expandeddelight:cranberry_goat_cheese_toast"
+    "count": 1,
+    "id": "expandeddelight:goat_cheese_beetroot_salad"
   }
 }

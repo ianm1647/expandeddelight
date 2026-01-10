@@ -6,10 +6,13 @@ import ianm1647.expandeddelight.common.registry.EDItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.codehaus.plexus.util.Expand;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 public class EDItemModels extends ItemModelProvider {
     public EDItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -23,6 +26,15 @@ public class EDItemModels extends ItemModelProvider {
     }
 
     protected void registerItemModels() {
+        EDItems.ITEMS.getEntries().forEach((item) -> {
+            String name = item.getId().getPath();
+            if (item.get() instanceof Item && !(item.get() instanceof BlockItem)) {
+                if (!name.contains("mallet")) {
+                    this.basicItem(ExpandedDelight.loc(name));
+                }
+            }
+        });
+
         basicItem(EDItems.CINNAMON_DOOR.get());
         basicItem(EDItems.CINNAMON_SIGN.get());
         basicItem(EDItems.CINNAMON_HANGING_SIGN.get());
@@ -39,80 +51,15 @@ public class EDItemModels extends ItemModelProvider {
         itemBlockItem(EDBlocks.CRANBERRY_PLANT.get(), EDItems.CRANBERRIES.get());
 
         handheldItem(EDItems.CRUSHING_MALLET.get());
-        basicItem(EDItems.GLASS_JAR.get());
-
-        basicItem(EDItems.CINNAMON_STICK.get());
-        basicItem(EDItems.CINNAMON.get());
-        basicItem(EDItems.SALT_ROCK.get());
-        basicItem(EDItems.SALT.get());
-
-        basicItem(EDItems.GOAT_MILK_BUCKET.get());
-        basicItem(EDItems.GOAT_MILK_BOTTLE.get());
 
         basicItem(EDItems.ASPARAGUS_SEEDS.get());
-        basicItem(EDItems.ASPARAGUS.get());
         basicItem(EDItems.SWEET_POTATO.get());
         basicItem(EDItems.CHILI_PEPPER_SEEDS.get());
-        basicItem(EDItems.CHILI_PEPPER.get());
         basicItem(EDItems.PEANUT.get());
-        basicItem(EDItems.CRANBERRIES.get());
-
-        basicItem(EDItems.BAKED_SWEET_POTATO.get());
-
         basicItem(EDItems.CHEESE_WHEEL.get());
-        basicItem(EDItems.CHEESE_SLICE.get());
         basicItem(EDItems.GOAT_CHEESE_WHEEL.get());
-        basicItem(EDItems.GOAT_CHEESE_SLICE.get());
-
-        basicItem(EDItems.CHEESE_SANDWICH.get());
-        basicItem(EDItems.GRILLED_CHEESE.get());
-        basicItem(EDItems.CRANBERRY_GOAT_CHESE_TOAST.get());
-
-        basicItem(EDItems.PEANUT_BUTTER.get());
-        basicItem(EDItems.PEANUT_BUTTER_SANDWICH.get());
-        basicItem(EDItems.PEANUT_BUTTER_HONEY_SANDWICH.get());
-        basicItem(EDItems.SWEET_BERRY_JELLY_SANDWICH.get());
-        basicItem(EDItems.GLOW_BERRY_JELLY_SANDWICH.get());
-
-        basicItem(EDItems.SWEET_ROLL.get());
-        basicItem(EDItems.BERRY_SWEET_ROLL.get());
-        basicItem(EDItems.GLOW_BERRY_SWEET_ROLL.get());
-
         basicItem(EDItems.CRANBERRY_COBBLER.get());
-        basicItem(EDItems.CRANBERRY_COBBLER_SLICE.get());
         basicItem(EDItems.HONEYED_GOAT_CHEESE_TART.get());
-        basicItem(EDItems.HONEYED_GOAT_CHEESE_TART_SLICE.get());
-
-        basicItem(EDItems.CHOCOLATE_COOKIE.get());
-        basicItem(EDItems.SUGAR_COOKIE.get());
-        basicItem(EDItems.SNICKERDOODLE.get());
-
-        basicItem(EDItems.CINNAMON_RICE.get());
-        basicItem(EDItems.CINNAMON_APPLES.get());
-
-        basicItem(EDItems.APPLE_JUICE.get());
-        basicItem(EDItems.SWEET_BERRY_JUICE.get());
-        basicItem(EDItems.GLOW_BERRY_JUICE.get());
-        basicItem(EDItems.CRANBERRY_JUICE.get());
-
-        basicItem(EDItems.SWEET_BERRY_JELLY.get());
-        basicItem(EDItems.GLOW_BERRY_JELLY.get());
-        basicItem(EDItems.CRANBERRY_JELLY.get());
-
-        basicItem(EDItems.PEANUT_SALAD.get());
-        basicItem(EDItems.SWEET_POTATO_SALAD.get());
-
-        basicItem(EDItems.ASPARAGUS_SOUP.get());
-        basicItem(EDItems.ASPARAGUS_SOUP_CREAMY.get());
-        basicItem(EDItems.PEANUT_HONEY_SOUP.get());
-        basicItem(EDItems.MAC_AND_CHEESE.get());
-
-        basicItem(EDItems.ASPARAGUS_BACON_MEAL.get());
-        basicItem(EDItems.ASPARAGUS_MUSHROOM_PASTA.get());
-        basicItem(EDItems.PEPERONATA.get());
-        basicItem(EDItems.CRANBERRY_CHICKEN.get());
-        basicItem(EDItems.SWEET_POTATO_CASSEROLE.get());
-
     }
 
     protected void registerBlockItemModels() {

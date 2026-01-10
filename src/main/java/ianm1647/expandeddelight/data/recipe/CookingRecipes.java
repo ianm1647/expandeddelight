@@ -8,6 +8,7 @@ import net.neoforged.neoforge.common.Tags;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.CommonTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 
 public class CookingRecipes {
@@ -34,6 +35,8 @@ public class CookingRecipes {
         CookingPotRecipeBuilder.cookingPotRecipe(EDItems.ASPARAGUS_BACON_MEAL.get(), 1, 200, 1.2F, Items.BOWL).addIngredient(CommonTags.FOODS_RAW_BACON).addIngredient(EDCommonTags.CROPS_ASPARAGUS).addIngredient(CommonTags.CROPS_ONION).addIngredient(EDCommonTags.FOODS_CHEESE).unlockedByItems("has_asparagus", EDItems.ASPARAGUS.get()).setRecipeBookTab(CookingPotRecipeBookTab.MEALS).save(output);
         CookingPotRecipeBuilder.cookingPotRecipe(EDItems.MAC_AND_CHEESE.get(), 1, 200, 1.0F, Items.BOWL).addIngredient(CommonTags.FOODS_MILK).addIngredient(EDCommonTags.FOODS_CHEESE).addIngredient(CommonTags.FOODS_PASTA).addIngredient(EDCommonTags.DUSTS_SALT).unlockedByItems("has_cheese", EDItems.CHEESE_SLICE.get()).setRecipeBookTab(CookingPotRecipeBookTab.MEALS).save(output);
         CookingPotRecipeBuilder.cookingPotRecipe(EDItems.ASPARAGUS_MUSHROOM_PASTA.get(), 1, 200, 1.3F, Items.BOWL).addIngredient(CommonTags.FOODS_PASTA).addIngredient(EDCommonTags.CROPS_ASPARAGUS).addIngredient(CommonTags.CROPS_ONION).addIngredient(Items.BROWN_MUSHROOM).unlockedByItems("has_asparagus", EDItems.ASPARAGUS.get()).setRecipeBookTab(CookingPotRecipeBookTab.MEALS).save(output);
+        CookingPotRecipeBuilder.cookingPotRecipe(EDItems.ASPARAGUS_FRITTATA.get(), 1, 200, 1.2F, Items.BOWL).addIngredient(Tags.Items.EGGS).addIngredient(Tags.Items.EGGS).addIngredient(EDCommonTags.CROPS_ASPARAGUS).addIngredient(EDCommonTags.FOODS_CHEESE).addIngredient(EDCommonTags.DUSTS_SALT).unlockedByItems("has_asparagus", EDItems.ASPARAGUS.get()).setRecipeBookTab(CookingPotRecipeBookTab.MEALS).save(output);
+        CookingPotRecipeBuilder.cookingPotRecipe(EDItems.CHILI_PEPPER_SALMON.get(), 1, 200, 1.3F, Items.BOWL).addIngredient(CommonTags.FOODS_COOKED_SALMON).addIngredient(EDCommonTags.CROPS_CHILI_PEPPER).addIngredient(CommonTags.CROPS_RICE).addIngredient(CommonTags.CROPS_ONION).unlockedByItems("has_chili_pepper", EDItems.CHILI_PEPPER.get()).setRecipeBookTab(CookingPotRecipeBookTab.MEALS).save(output);
         CookingPotRecipeBuilder.cookingPotRecipe(EDItems.CRANBERRY_CHICKEN.get(), 1, 200, 0.9F, Items.BOWL).addIngredient(EDItems.CRANBERRIES.get()).addIngredient(CommonTags.FOODS_COOKED_CHICKEN).addIngredient(CommonTags.CROPS_ONION).unlockedByItems("has_cranberries", EDItems.CRANBERRIES.get()).setRecipeBookTab(CookingPotRecipeBookTab.MEALS).save(output);
         CookingPotRecipeBuilder.cookingPotRecipe(EDItems.SWEET_POTATO_CASSEROLE.get(), 1, 200, 0.9F, Items.BOWL).addIngredient(EDItems.SWEET_POTATO.get()).addIngredient(CommonTags.FOODS_MILK).addIngredient(Tags.Items.EGGS).addIngredient(Items.SUGAR).unlockedByItems("has_sweet_potato", EDItems.SWEET_POTATO.get()).setRecipeBookTab(CookingPotRecipeBookTab.MEALS).save(output);
 

@@ -92,6 +92,8 @@ public class EDItems {
     public static Supplier<Item> ANCIENT_SEEDS;
     public static Supplier<Item> CRANBERRIES;
     public static Supplier<Item> CRANBERRY_PLANT;
+    public static Supplier<Item> LEMON;
+    public static Supplier<Item> LEMON_SEEDS;
 
     public static Supplier<Item> CHEESE_WHEEL;
     public static Supplier<Item> GOAT_CHEESE_WHEEL;
@@ -145,8 +147,6 @@ public class EDItems {
     public static Supplier<Item> LEMON_MERINGUE_PIE;
     public static Supplier<Item> LEMON_MERINGUE_PIE_SLICE;
 
-    public static Supplier<Item> ASPARAGUS_FRITTATA;
-
     public static Supplier<Item> PEANUT_SALAD;
     public static Supplier<Item> SWEET_POTATO_SALAD;
     public static Supplier<Item> GOAT_CHEESE_BEETROOT_SALAD;
@@ -160,6 +160,7 @@ public class EDItems {
     public static Supplier<Item> MAC_AND_CHEESE;
     public static Supplier<Item> ASPARAGUS_BACON_MEAL;
     public static Supplier<Item> ASPARAGUS_MUSHROOM_PASTA;
+    public static Supplier<Item> ASPARAGUS_FRITTATA;
     public static Supplier<Item> PEPERONATA;
     public static Supplier<Item> CHILI_PEPPER_SALMON;
     public static Supplier<Item> SWEET_POTATO_CASSEROLE;
@@ -231,28 +232,28 @@ public class EDItems {
         CHILI_PEPPER = registerWithTab("chili_pepper", () -> new Item(foodItem(2, 0.1f)));
         PEANUT = registerWithTab("peanut", () -> new BlockItem(EDBlocks.PEANUT_CROP.get(), foodItem(1, 0f)));
         CRANBERRIES = registerWithTab("cranberries", () -> new LilypadCropItem(EDBlocks.CRANBERRY_PLANT.get(), foodItem(2, 0.5f)));
-        //ANCIENT_SEEDS = registerWithTab("ancient_seeds", () -> new Item(basicItem()));
 
-        BAKED_SWEET_POTATO = registerWithTab("baked_sweet_potato", () -> new Item(foodItem(2, 0.4f)));
+        BAKED_SWEET_POTATO = registerWithTab("baked_sweet_potato", () -> new Item(foodItem(6, 0.4f)));
 
         CHEESE_WHEEL = registerWithTab("cheese_wheel", () -> new BlockItem(EDBlocks.CHEESE_WHEEL.get(), basicItem()));
         CHEESE_SLICE = registerWithTab("cheese_slice", () -> new Item(foodItem(2, 0.2f)));
         GOAT_CHEESE_WHEEL = registerWithTab("goat_cheese_wheel", () -> new BlockItem(EDBlocks.GOAT_CHEESE_WHEEL.get(), basicItem()));
         GOAT_CHEESE_SLICE = registerWithTab("goat_cheese_slice", () -> new Item(foodItem(2, 0.2f)));
 
-        CHEESE_SANDWICH = registerWithTab("cheese_sandwich", () -> new Item(foodItem(3, 0.3f)));
-        GRILLED_CHEESE = registerWithTab("grilled_cheese", () -> new Item(foodItem(5, 0.5f)));
+        CHEESE_SANDWICH = registerWithTab("cheese_sandwich", () -> new Item(foodItem(5, 0.3f)));
+        GRILLED_CHEESE = registerWithTab("grilled_cheese", () -> new Item(foodItem(8, 0.5f)));
         CRANBERRY_GOAT_CHESE_TOAST = registerWithTab("cranberry_goat_cheese_toast", () -> new Item(foodItem(4, 0.6f)));
 
         PEANUT_BUTTER = registerWithTab("peanut_butter", () -> new Item(foodItem(2, 0.3f).craftRemainder(Items.BOWL)));
-        PEANUT_BUTTER_SANDWICH = registerWithTab("peanut_butter_sandwich", () -> new Item(foodItem(4, 0.4f)));
-        PEANUT_BUTTER_HONEY_SANDWICH = registerWithTab("peanut_butter_honey_sandwich", () -> new Item(foodItem(5, 0.5f)));
-        SWEET_BERRY_JELLY_SANDWICH = registerWithTab("sweet_berry_jelly_sandwich", () -> new Item(foodItem(6, 0.5f)));
-        GLOW_BERRY_JELLY_SANDWICH = registerWithTab("glow_berry_jelly_sandwich", () -> new Item(foodItem(6, 0.5f)));
+        PEANUT_BUTTER_SANDWICH = registerWithTab("peanut_butter_sandwich", () -> new Item(foodItem(6, 0.4f)));
+        PEANUT_BUTTER_HONEY_SANDWICH = registerWithTab("peanut_butter_honey_sandwich", () -> new Item(foodItem(7, 0.5f)));
+        SWEET_BERRY_JELLY_SANDWICH = registerWithTab("sweet_berry_jelly_sandwich", () -> new Item(foodItem(7, 0.5f)));
+        GLOW_BERRY_JELLY_SANDWICH = registerWithTab("glow_berry_jelly_sandwich", () -> new Item(foodItem(7, 0.5f)));
+        CRANBERRY_JELLY_SANDWICH = registerWithTab("cranberry_jelly_sandwich", () -> new Item(foodItem(7, 0.6f)));
 
-        SWEET_ROLL = registerWithTab("sweet_roll", () -> new Item(foodItem(4, 0.3f)));
-        BERRY_SWEET_ROLL = registerWithTab("berry_sweet_roll", () -> new Item(foodItem(5, 0.5f)));
-        GLOW_BERRY_SWEET_ROLL = registerWithTab("glow_berry_sweet_roll", () -> new Item(foodItem(5, 0.5f)));
+        SWEET_ROLL = registerWithTab("sweet_roll", () -> new Item(foodItem(5, 0.3f)));
+        BERRY_SWEET_ROLL = registerWithTab("berry_sweet_roll", () -> new Item(foodItem(6, 0.5f)));
+        GLOW_BERRY_SWEET_ROLL = registerWithTab("glow_berry_sweet_roll", () -> new Item(foodItem(6, 0.5f)));
 
         CRANBERRY_COBBLER = registerWithTab("cranberry_cobbler", () -> new BlockItem(EDBlocks.CRANBERRY_COBBLER.get(), basicItem()));
         CRANBERRY_COBBLER_SLICE = registerWithTab("cranberry_cobbler_slice", () -> new Item(pieSliceItem(3, 0.3f)));
@@ -260,7 +261,7 @@ public class EDItems {
         HONEYED_GOAT_CHEESE_TART_SLICE = registerWithTab("honeyed_goat_cheese_tart_slice", () -> new Item(pieSliceItem(4, 0.5f)));
 
         CHOCOLATE_COOKIE = registerWithTab("chocolate_cookie", () -> new Item(foodItem(2, 0.3f)));
-        SUGAR_COOKIE = registerWithTab("sugar_cookie", () -> new Item(foodItem(1, 0.3f)));
+        SUGAR_COOKIE = registerWithTab("sugar_cookie", () -> new Item(foodItem(2, 0.3f)));
         SNICKERDOODLE = registerWithTab("snickerdoodle", () -> new Item(foodItem(2, 0.4f)));
 
         CINNAMON_RICE = registerWithTab("cinnamon_rice", () -> new Item(foodItem(7, 0.5f).craftRemainder(Items.BOWL)));
@@ -275,8 +276,9 @@ public class EDItems {
         GLOW_BERRY_JELLY = registerWithTab("glow_berry_jelly", () -> new JellyItem(jellyItem(3, 0.6f, MobEffects.NIGHT_VISION), true));
         CRANBERRY_JELLY = registerWithTab("cranberry_jelly", () -> new JellyItem(jellyItem(3, 0.6f, MobEffects.ABSORPTION), true));
 
-        PEANUT_SALAD = registerWithTab("peanut_salad", () -> new ConsumableItem(saladItem(6, 0.6f)));
-        SWEET_POTATO_SALAD = registerWithTab("sweet_potato_salad", () -> new ConsumableItem(saladItem(6, 0.4f)));
+        PEANUT_SALAD = registerWithTab("peanut_salad", () -> new ConsumableItem(saladItem(8, 0.6f)));
+        SWEET_POTATO_SALAD = registerWithTab("sweet_potato_salad", () -> new ConsumableItem(saladItem(8, 0.4f)));
+        GOAT_CHEESE_BEETROOT_SALAD = registerWithTab("goat_cheese_beetroot_salad", () -> new ConsumableItem(saladItem(7, 0.3f)));
 
         ASPARAGUS_SOUP = registerWithTab("asparagus_soup", () -> new ConsumableItem(stewItem(10, 0.8f)));
         ASPARAGUS_SOUP_CREAMY = registerWithTab("asparagus_soup_creamy", () -> new ConsumableItem(stewItem(11, 0.9f)));
@@ -285,7 +287,9 @@ public class EDItems {
 
         ASPARAGUS_BACON_MEAL = registerWithTab("asparagus_and_bacon_cheesy", () -> new ConsumableItem(mealItem(10, 0.8f)));
         ASPARAGUS_MUSHROOM_PASTA = registerWithTab("asparagus_mushroom_pasta", () -> new ConsumableItem(mealItem(12, 0.9f)));
+        ASPARAGUS_FRITTATA = registerWithTab("asparagus_frittata", () -> new ConsumableItem(mealItem(11, 0.8f)));
         PEPERONATA = registerWithTab("peperonata", () -> new ConsumableItem(mealItem(12, 0.9f)));
+        CHILI_PEPPER_SALMON = registerWithTab("chili_pepper_salmon", () -> new ConsumableItem(mealItem(13, 1.0f)));
         CRANBERRY_CHICKEN = registerWithTab("cranberry_chicken", () -> new ConsumableItem(mealItem(10, 0.8f)));
         SWEET_POTATO_CASSEROLE = registerWithTab("sweet_potato_casserole", () -> new ConsumableItem(mealItem(11, 0.8f)));
 

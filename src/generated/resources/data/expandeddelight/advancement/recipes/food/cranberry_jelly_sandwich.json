@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_jelly": {
+      "conditions": {
+        "items": [
+          {
+            "items": "expandeddelight:cranberry_jelly"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "expandeddelight:cranberry_jelly_sandwich"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_jelly"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "expandeddelight:cranberry_jelly_sandwich"
+    ]
+  }
+}
