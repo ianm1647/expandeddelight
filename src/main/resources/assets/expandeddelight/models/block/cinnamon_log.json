@@ -2,7 +2,7 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "side": "expandeddelight:block/cinnamon_log",
-    "bottom": "farmersdelight:block/cinnamon_log_bottom",
+    "bottom": "expandeddelight:block/cinnamon_log_top",
     "top": "expandeddelight:block/cinnamon_log_top"
   }
 }

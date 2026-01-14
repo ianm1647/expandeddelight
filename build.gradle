@@ -49,13 +49,10 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation("vectorwing:FarmersDelight:${project.delight_version}") {
+	modImplementation("vectorwing:FarmersDelight-Refabricated:${project.delight_version}") {
 		exclude(group: "net.fabricmc")
 	}
 	modImplementation include("dev.draylar.omega-config:omega-config-base:${project.omega_version}")
-	include(modImplementation("com.github.Chocohead:Fabric-ASM:${fabric_asm_version}")) {
-		exclude (group: "net.fabricmc.fabric-api")
-	}
 
 	modImplementation("curse.maven:frights-delight-927591:5262828")
 
