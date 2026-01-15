@@ -5,24 +5,32 @@ import ianm1647.expandeddelight.common.block.JuicerBlock;
 import ianm1647.expandeddelight.common.block.entity.container.JuicerMenu;
 import ianm1647.expandeddelight.common.block.entity.inventory.JuicerItemHandler;
 import ianm1647.expandeddelight.common.crafting.JuicerRecipe;
-import ianm1647.expandeddelight.common.registry.EDDataComponents;
 import ianm1647.expandeddelight.common.registry.EDBlockEntityTypes;
+import ianm1647.expandeddelight.common.registry.EDDataComponents;
 import ianm1647.expandeddelight.common.registry.EDItems;
 import ianm1647.expandeddelight.common.registry.EDRecipeTypes;
+import it.unimi.dsi.fastutil.ints.IntImmutableList;
+import it.unimi.dsi.fastutil.ints.IntList;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectIterator;
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponentMap;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Component.Serializer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Nameable;
@@ -34,6 +42,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.RecipeCraftingHolder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -41,32 +50,33 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.common.block.entity.CookingPotBlockEntity;
 import vectorwing.farmersdelight.common.block.entity.SyncedBlockEntity;
+import vectorwing.farmersdelight.common.crafting.CookingPotRecipe;
 import vectorwing.farmersdelight.common.item.component.ItemStackWrapper;
 import vectorwing.farmersdelight.common.registry.ModDataComponents;
 import vectorwing.farmersdelight.common.utility.ItemUtils;
+import vectorwing.farmersdelight.refabricated.inventory.ItemHandler;
+import vectorwing.farmersdelight.refabricated.inventory.ItemStackHandler;
+import vectorwing.farmersdelight.refabricated.inventory.RecipeWrapper;
 
-import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.IntStream;
 
-@EventBusSubscriber(modid = "expandeddelight")
-public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider, Nameable, RecipeCraftingHolder {
+public class JuicerBlockEntity extends SyncedBlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, Nameable, RecipeCraftingHolder {
    public static final int MEAL_DISPLAY_SLOT = 2;
    public static final int CONTAINER_SLOT = 3;
    public static final int OUTPUT_SLOT = 4;
    public static final int INVENTORY_SIZE = 5;
+   public static final Map<Item, Item> INGREDIENT_REMAINDER_OVERRIDES;
    private final ItemStackHandler inventory = this.createHandler();
-   private final IItemHandler inputHandler;
-   private final IItemHandler outputHandler;
+   private final ItemHandler inputHandler;
+   private final ItemHandler outputHandler;
    public int juiceTime;
    private int juiceTimeTotal;
    private ItemStack containerStack;
@@ -85,25 +95,24 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
       this.quickCheck = RecipeManager.createCheck((RecipeType) EDRecipeTypes.JUICING.get());
    }
 
-   @SubscribeEvent
-   public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-      event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EDBlockEntityTypes.JUICER.get(), (be, context) -> context == Direction.UP ? be.inputHandler: be.outputHandler);
+   public static void init() {
+      ItemStorage.SIDED.registerForBlockEntity(JuicerBlockEntity::getStorage, EDBlockEntityTypes.JUICER.get());
    }
 
    public static ItemStack getDrinkFromItem(ItemStack juicerStack) {
-      return !juicerStack.is(EDItems.JUICER.get()) ? ItemStack.EMPTY : juicerStack.getOrDefault(EDDataComponents.DRINK, ItemStackWrapper.EMPTY).getStack();
+      return !juicerStack.is(EDItems.JUICER.get()) ? ItemStack.EMPTY : juicerStack.getOrDefault(EDDataComponents.DRINK.get(), ItemStackWrapper.EMPTY).getStack();
    }
 
    public static void takeServingFromItem(ItemStack juicerStack) {
       if (juicerStack.is(EDItems.JUICER.get())) {
-         ItemStack drinkStack = juicerStack.getOrDefault(EDDataComponents.DRINK, ItemStackWrapper.EMPTY).getStack();
+         ItemStack drinkStack = juicerStack.getOrDefault(EDDataComponents.DRINK.get(), ItemStackWrapper.EMPTY).getStack();
          drinkStack.shrink(1);
-         juicerStack.set(EDDataComponents.DRINK, new ItemStackWrapper(drinkStack));
+         juicerStack.set(EDDataComponents.DRINK.get(), new ItemStackWrapper(drinkStack));
       }
    }
 
    public static ItemStack getContainerFromItem(ItemStack juicerStack) {
-      return !juicerStack.is((Item) EDItems.JUICER.get()) ? ItemStack.EMPTY : (juicerStack.getOrDefault(ModDataComponents.CONTAINER.get(), ItemStackWrapper.EMPTY)).getStack();
+      return !juicerStack.is(EDItems.JUICER.get()) ? ItemStack.EMPTY : (juicerStack.getOrDefault(ModDataComponents.CONTAINER.get(), ItemStackWrapper.EMPTY)).getStack();
    }
 
    public void loadAdditional(CompoundTag compound, HolderLookup.Provider registries) {
@@ -183,7 +192,7 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
          if (recipe.isPresent() && juicer.canJuice((recipe.get()).value())) {
             didInventoryChange = juicer.processJuicing(recipe.get(), juicer);
          } else {
-            juicer.juiceTime = 0;
+            juicer.juiceTime = Mth.clamp(juicer.juiceTime - 2, 0, juicer.juiceTimeTotal);
          }
       } else if (juicer.juiceTime > 0) {
          juicer.juiceTime = Mth.clamp(juicer.juiceTime - 2, 0, juicer.juiceTimeTotal);
@@ -219,7 +228,7 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
 
    public ItemStack getContainer() {
       ItemStack mealStack = this.getDrink();
-      return !mealStack.isEmpty() && !this.containerStack.isEmpty() ? this.containerStack : mealStack.getCraftingRemainingItem();
+      return !mealStack.isEmpty() && !this.containerStack.isEmpty() ? this.containerStack : mealStack.getRecipeRemainder();
    }
 
    private boolean hasInput() {
@@ -277,8 +286,8 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
 
             for(int i = 0; i < 2; ++i) {
                ItemStack slotStack = this.inventory.getStackInSlot(i);
-               if (slotStack.hasCraftingRemainingItem()) {
-                  this.ejectIngredientRemainder(slotStack.getCraftingRemainingItem());
+               if (!slotStack.getRecipeRemainder().isEmpty()) {
+                  this.ejectIngredientRemainder(slotStack.getRecipeRemainder());
                }
                if (!slotStack.isEmpty()) {
                   slotStack.shrink(1);
@@ -404,7 +413,7 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
    }
 
    private boolean doesDrinkHaveContainer(ItemStack stack) {
-      return !this.containerStack.isEmpty() || stack.hasCraftingRemainingItem();
+      return !this.containerStack.isEmpty() || !stack.getRecipeRemainder().isEmpty();
    }
 
    public boolean isContainerValid(ItemStack containerItem) {
@@ -432,6 +441,10 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
       return new JuicerMenu(id, player, this, this.juicerData);
    }
 
+   public @NotNull Storage<ItemVariant> getStorage(@Nullable Direction side) {
+      return side != null && !side.equals(Direction.UP) ? this.outputHandler : this.inputHandler;
+   }
+
    public void setRemoved() {
       super.setRemoved();
    }
@@ -440,18 +453,18 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
       return this.writeItems(new CompoundTag(), registries);
    }
 
-   protected void applyImplicitComponents(BlockEntity.DataComponentInput componentInput) {
+   protected void applyImplicitComponents(DataComponentInput componentInput) {
       super.applyImplicitComponents(componentInput);
       this.customName = componentInput.get(DataComponents.CUSTOM_NAME);
-      this.getInventory().setStackInSlot(2, componentInput.getOrDefault(EDDataComponents.DRINK, ItemStackWrapper.EMPTY).getStack());
-      this.containerStack = componentInput.getOrDefault(ModDataComponents.CONTAINER, ItemStackWrapper.EMPTY).getStack();
+      this.getInventory().setStackInSlot(2, componentInput.getOrDefault(EDDataComponents.DRINK.get(), ItemStackWrapper.EMPTY).getStack());
+      this.containerStack = componentInput.getOrDefault(ModDataComponents.CONTAINER.get(), ItemStackWrapper.EMPTY).getStack();
    }
 
    protected void collectImplicitComponents(DataComponentMap.Builder components) {
       super.collectImplicitComponents(components);
       components.set(DataComponents.CUSTOM_NAME, this.customName);
-      components.set(EDDataComponents.DRINK, new ItemStackWrapper(this.getDrink()));
-      components.set(ModDataComponents.CONTAINER, new ItemStackWrapper(this.getContainer()));
+      components.set(EDDataComponents.DRINK.get(), new ItemStackWrapper(this.getDrink()));
+      components.set(ModDataComponents.CONTAINER.get(), new ItemStackWrapper(this.getContainer()));
    }
 
    public void removeComponentsFromTag(CompoundTag tag) {
@@ -461,9 +474,17 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
    }
 
    private ItemStackHandler createHandler() {
-      return new ItemStackHandler(9) {
+      return new ItemStackHandler(5) {
+         protected int getStackLimit(int slot, ItemStack stack) {
+            return slot == 2 ? Math.max(64, stack.getMaxStackSize()) : super.getStackLimit(slot, stack);
+         }
+
          protected void onContentsChanged(int slot) {
             JuicerBlockEntity.this.inventoryChanged();
+         }
+
+         public IntList getInputSlotIndexes() {
+            return IntImmutableList.of(IntStream.range(0, 1).toArray());
          }
       };
    }
@@ -493,5 +514,13 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements MenuProvider
             return 2;
          }
       };
+   }
+
+   public BlockPos getScreenOpeningData(ServerPlayer player) {
+      return this.getBlockPos();
+   }
+
+   static {
+      INGREDIENT_REMAINDER_OVERRIDES = Map.ofEntries(Map.entry(Items.POTION, Items.GLASS_BOTTLE), Map.entry(Items.SPLASH_POTION, Items.GLASS_BOTTLE), Map.entry(Items.LINGERING_POTION, Items.GLASS_BOTTLE), Map.entry(Items.EXPERIENCE_BOTTLE, Items.GLASS_BOTTLE));
    }
 }

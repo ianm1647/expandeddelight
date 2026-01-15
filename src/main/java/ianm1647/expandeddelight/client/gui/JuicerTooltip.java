@@ -20,7 +20,7 @@ public class JuicerTooltip implements ClientTooltipComponent {
     private final int textSpacing;
     private final ItemStack drinkStack;
 
-    public JuicerTooltip(JuicerTooltip.JuicerTooltipComponent tooltip) {
+    public JuicerTooltip(JuicerTooltipComponent tooltip) {
         Objects.requireNonNull(Minecraft.getInstance().font);
         this.textSpacing = 9 + 1;
         this.drinkStack = tooltip.drinkStack;

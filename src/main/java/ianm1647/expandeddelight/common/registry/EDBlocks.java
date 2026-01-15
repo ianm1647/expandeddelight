@@ -1,23 +1,19 @@
 package ianm1647.expandeddelight.common.registry;
 
-import ianm1647.expandeddelight.ExpandedDelight;
 import ianm1647.expandeddelight.common.block.*;
+import ianm1647.expandeddelight.common.utility.RegUtils;
 import ianm1647.expandeddelight.common.world.tree.EDTreeGrowers;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 import java.util.function.Supplier;
 
 public class EDBlocks {
-
-    public static final DeferredRegister<Block> BLOCKS;
 
     public static Supplier<Block> CINNAMON_SAPLING;
     public static Supplier<Block> CINNAMON_LEAVES;
@@ -72,97 +68,97 @@ public class EDBlocks {
     public static Supplier<Block> CRANBERRY_COBBLER;
     public static Supplier<Block> HONEYED_GOAT_CHEESE_TART;
 
-    static {
-        BLOCKS = DeferredRegister.create(Registries.BLOCK, ExpandedDelight.MODID);
+    public EDBlocks() {}
 
-        CINNAMON_SAPLING = BLOCKS.register("cinnamon_sapling",
+    public static void register() {
+        CINNAMON_SAPLING = RegUtils.regBlock("cinnamon_sapling",
                 () -> new SaplingBlock(EDTreeGrowers.CINNAMON, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
-        CINNAMON_LEAVES = BLOCKS.register("cinnamon_leaves",
+        CINNAMON_LEAVES = RegUtils.regBlock("cinnamon_leaves",
                 () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
-        CINNAMON_LOG = BLOCKS.register("cinnamon_log",
+        CINNAMON_LOG = RegUtils.regBlock("cinnamon_log",
                 () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
-        CINNAMON_WOOD = BLOCKS.register("cinnamon_wood",
+        CINNAMON_WOOD = RegUtils.regBlock("cinnamon_wood",
                 () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
-        CINNAMON_STRIPPED_LOG = BLOCKS.register("stripped_cinnamon_log",
+        CINNAMON_STRIPPED_LOG = RegUtils.regBlock("stripped_cinnamon_log",
                 () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
-        CINNAMON_STRIPPED_WOOD = BLOCKS.register("stripped_cinnamon_wood",
+        CINNAMON_STRIPPED_WOOD = RegUtils.regBlock("stripped_cinnamon_wood",
                 () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
-        CINNAMON_PLANKS = BLOCKS.register("cinnamon_planks",
+        CINNAMON_PLANKS = RegUtils.regBlock("cinnamon_planks",
                 () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
-        CINNAMON_STAIRS = BLOCKS.register("cinnamon_stairs",
+        CINNAMON_STAIRS = RegUtils.regBlock("cinnamon_stairs",
                 () -> new StairBlock(CINNAMON_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
-        CINNAMON_SLAB = BLOCKS.register("cinnamon_slab",
+        CINNAMON_SLAB = RegUtils.regBlock("cinnamon_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)));
-        CINNAMON_FENCE = BLOCKS.register("cinnamon_fence",
+        CINNAMON_FENCE = RegUtils.regBlock("cinnamon_fence",
                 () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
-        CINNAMON_FENCE_GATE = BLOCKS.register("cinnamon_fence_gate",
+        CINNAMON_FENCE_GATE = RegUtils.regBlock("cinnamon_fence_gate",
                 () -> new FenceGateBlock(EDWoodTypes.CINNAMON, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE)));
-        CINNAMON_DOOR = BLOCKS.register("cinnamon_door",
+        CINNAMON_DOOR = RegUtils.regBlock("cinnamon_door",
                 () -> new DoorBlock(EDWoodTypes.CINNAMON.setType(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
-        CINNAMON_TRAPDOOR = BLOCKS.register("cinnamon_trapdoor",
+        CINNAMON_TRAPDOOR = RegUtils.regBlock("cinnamon_trapdoor",
                 () -> new TrapDoorBlock(EDWoodTypes.CINNAMON.setType(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR)));
-        CINNAMON_PRESSURE_PLATE = BLOCKS.register("cinnamon_pressure_plate",
+        CINNAMON_PRESSURE_PLATE = RegUtils.regBlock("cinnamon_pressure_plate",
                 () -> new PressurePlateBlock(EDWoodTypes.CINNAMON.setType(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
-        CINNAMON_BUTTON = BLOCKS.register("cinnamon_button",
+        CINNAMON_BUTTON = RegUtils.regBlock("cinnamon_button",
                 () -> new ButtonBlock(EDWoodTypes.CINNAMON.setType(), 30, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)));
-        CINNAMON_SIGN = BLOCKS.register("cinnamon_sign", CinnamonStandingSignBlock::new);
-        CINNAMON_WALL_SIGN = BLOCKS.register("cinnamon_wall_sign", CinnamonWallSignBlock::new);
-        CINNAMON_CEILING_HANGING_SIGN = BLOCKS.register("cinnamon_ceiling_hanging_sign", CinnamonCeilingHangingSignBlock::new);
-        CINNAMON_WALL_HANGING_SIGN = BLOCKS.register("cinnamon_wall_hanging_sign", CinnamonWallHangingSignBlock::new);
-        CINNAMON_CABINET = BLOCKS.register("cinnamon_cabinet", CinnamonCabinetBlock::new);
+        CINNAMON_SIGN = RegUtils.regBlock("cinnamon_sign", CinnamonStandingSignBlock::new);
+        CINNAMON_WALL_SIGN = RegUtils.regBlock("cinnamon_wall_sign", CinnamonWallSignBlock::new);
+        CINNAMON_CEILING_HANGING_SIGN = RegUtils.regBlock("cinnamon_ceiling_hanging_sign", CinnamonCeilingHangingSignBlock::new);
+        CINNAMON_WALL_HANGING_SIGN = RegUtils.regBlock("cinnamon_wall_hanging_sign", CinnamonWallHangingSignBlock::new);
+        CINNAMON_CABINET = RegUtils.regBlock("cinnamon_cabinet", CinnamonCabinetBlock::new);
 
-        JUICER = BLOCKS.register("juicer",
+        JUICER = RegUtils.regBlock("juicer",
                 () -> new JuicerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(0.5F, 1.0F).sound(SoundType.BAMBOO_WOOD)));
-        CASK = BLOCKS.register("cask",
+        CASK = RegUtils.regBlock("cask",
                     () -> new CaskBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F, 1.0F).sound(SoundType.CHERRY_WOOD)));
-        MILK_CASK = BLOCKS.register("milk_cask",
+        MILK_CASK = RegUtils.regBlock("milk_cask",
                     () -> new MilkCaskBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F, 1.0F).sound(SoundType.CHERRY_WOOD)));
-        CHEESE_CASK = BLOCKS.register("cheese_cask",
+        CHEESE_CASK = RegUtils.regBlock("cheese_cask",
                     () -> new CheeseCaskBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F, 1.0F).sound(SoundType.CHERRY_WOOD)));
-        GOAT_MILK_CASK = BLOCKS.register("goat_milk_cask",
+        GOAT_MILK_CASK = RegUtils.regBlock("goat_milk_cask",
                 () -> new MilkCaskBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F, 1.0F).sound(SoundType.CHERRY_WOOD)));
-        GOAT_CHEESE_CASK = BLOCKS.register("goat_cheese_cask",
+        GOAT_CHEESE_CASK = RegUtils.regBlock("goat_cheese_cask",
                 () -> new CheeseCaskBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F, 1.0F).sound(SoundType.CHERRY_WOOD)));
-        CHEESE_WHEEL = BLOCKS.register("cheese_wheel",
+        CHEESE_WHEEL = RegUtils.regBlock("cheese_wheel",
                     () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), EDItems.CHEESE_SLICE));
-        GOAT_CHEESE_WHEEL = BLOCKS.register("goat_cheese_wheel",
+        GOAT_CHEESE_WHEEL = RegUtils.regBlock("goat_cheese_wheel",
                 () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), EDItems.GOAT_CHEESE_SLICE));
 
-        ASPARAGUS_CRATE = BLOCKS.register("asparagus_crate",
-                () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0f, 3.0f).sound(SoundType.WOOD)));
-        SWEET_POTATO_CRATE = BLOCKS.register("sweet_potato_crate",
-                () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0f, 3.0f).sound(SoundType.WOOD)));
-        CHILI_PEPPER_CRATE = BLOCKS.register("chili_pepper_crate",
-                () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0f, 3.0f).sound(SoundType.WOOD)));
-        CRANBERRY_BAG = BLOCKS.register("cranberry_bag",
-                () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
+        ASPARAGUS_CRATE = RegUtils.regBlock("asparagus_crate",
+                () -> new CrateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+        SWEET_POTATO_CRATE = RegUtils.regBlock("sweet_potato_crate",
+                () -> new CrateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+        CHILI_PEPPER_CRATE = RegUtils.regBlock("chili_pepper_crate",
+                () -> new CrateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+        CRANBERRY_BAG = RegUtils.regBlock("cranberry_bag",
+                () -> new CrateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
 
-        WILD_ASPARAGUS  = BLOCKS.register("wild_asparagus",
-                () -> new WildCropBlock(MobEffects.ABSORPTION, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
-        WILD_SWEET_POTATO  = BLOCKS.register("wild_sweet_potato",
-                () -> new WildCropBlock(MobEffects.OOZING, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
-        WILD_CHILI_PEPPER  = BLOCKS.register("wild_chili_pepper",
-                () -> new WildCropBlock(MobEffects.CONFUSION, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
-        WILD_PEANUTS  = BLOCKS.register("wild_peanuts",
-                () -> new WildCropBlock(MobEffects.DAMAGE_RESISTANCE, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+        WILD_ASPARAGUS  = RegUtils.regBlock("wild_asparagus",
+                () -> new EDWildCropBlock(MobEffects.ABSORPTION, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+        WILD_SWEET_POTATO  = RegUtils.regBlock("wild_sweet_potato",
+                () -> new EDWildCropBlock(MobEffects.OOZING, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+        WILD_CHILI_PEPPER  = RegUtils.regBlock("wild_chili_pepper",
+                () -> new EDWildCropBlock(MobEffects.CONFUSION, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+        WILD_PEANUTS  = RegUtils.regBlock("wild_peanuts",
+                () -> new EDWildCropBlock(MobEffects.DAMAGE_RESISTANCE, 6, BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
 
-        SALT_ORE = BLOCKS.register("salt_ore",
+        SALT_ORE = RegUtils.regBlock("salt_ore",
                 () -> new DropExperienceBlock(UniformInt.of(0, 2), BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                         .strength(3.0f, 3.0f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
-        DEEPSLATE_SALT_ORE = BLOCKS.register("deepslate_salt_ore",
+        DEEPSLATE_SALT_ORE = RegUtils.regBlock("deepslate_salt_ore",
                 () -> new DropExperienceBlock(UniformInt.of(0, 2), BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                         .strength(4.5f, 3.0f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
 
-        CRANBERRY_PLANT = BLOCKS.register("cranberry_plant",
+        CRANBERRY_PLANT = RegUtils.regBlock("cranberry_plant",
                 () -> new CranberryPlantBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LILY_PAD).mapColor(MapColor.PLANT).sound(SoundType.LILY_PAD)));
-        CRANBERRY_COBBLER = BLOCKS.register("cranberry_cobbler",
+        CRANBERRY_COBBLER = RegUtils.regBlock("cranberry_cobbler",
                 () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), EDItems.CRANBERRY_COBBLER_SLICE));
-        HONEYED_GOAT_CHEESE_TART = BLOCKS.register("honeyed_goat_cheese_tart",
+        HONEYED_GOAT_CHEESE_TART = RegUtils.regBlock("honeyed_goat_cheese_tart",
                 () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), EDItems.HONEYED_GOAT_CHEESE_TART_SLICE));
 
-        ASPARAGUS_CROP = BLOCKS.register("asparagus_crop", EDCropBlock::new);
-        SWEET_POTATO_CROP = BLOCKS.register("sweet_potato_crop", EDCropBlock::new);
-        CHILI_PEPPER_CROP = BLOCKS.register("chili_pepper_crop", EDCropBlock::new);
-        PEANUT_CROP = BLOCKS.register("peanut_crop", EDCropBlock::new);
+        ASPARAGUS_CROP = RegUtils.regBlock("asparagus_crop", EDCropBlock::new);
+        SWEET_POTATO_CROP = RegUtils.regBlock("sweet_potato_crop", EDCropBlock::new);
+        CHILI_PEPPER_CROP = RegUtils.regBlock("chili_pepper_crop", EDCropBlock::new);
+        PEANUT_CROP = RegUtils.regBlock("peanut_crop", EDCropBlock::new);
     }
 }

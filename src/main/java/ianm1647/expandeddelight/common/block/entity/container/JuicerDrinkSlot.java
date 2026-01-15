@@ -2,14 +2,13 @@ package ianm1647.expandeddelight.common.block.entity.container;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
+import org.jetbrains.annotations.NotNullByDefault;
+import vectorwing.farmersdelight.refabricated.inventory.ItemHandler;
+import vectorwing.farmersdelight.refabricated.inventory.ItemHandlerSlot;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@ParametersAreNonnullByDefault
-public class JuicerDrinkSlot extends SlotItemHandler {
-    public JuicerDrinkSlot(IItemHandler inventoryIn, int index, int xPosition, int yPosition) {
+@NotNullByDefault
+public class JuicerDrinkSlot extends ItemHandlerSlot {
+    public JuicerDrinkSlot(ItemHandler inventoryIn, int index, int xPosition, int yPosition) {
         super(inventoryIn, index, xPosition, yPosition);
     }
 

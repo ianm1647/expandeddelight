@@ -21,7 +21,6 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -32,7 +31,6 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.common.CommonHooks;
 
 public class CranberryPlantBlock extends BushBlock implements BonemealableBlock {
     public static final MapCodec<CranberryPlantBlock> CODEC = simpleCodec(CranberryPlantBlock::new);
@@ -44,7 +42,7 @@ public class CranberryPlantBlock extends BushBlock implements BonemealableBlock 
         return CODEC;
     }
 
-    public CranberryPlantBlock(BlockBehaviour.Properties properties) {
+    public CranberryPlantBlock(Properties properties) {
         super(properties.noCollission().instabreak().randomTicks());
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
     }
@@ -70,11 +68,10 @@ public class CranberryPlantBlock extends BushBlock implements BonemealableBlock 
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         int i = state.getValue(AGE);
-        if (i < 3 && level.getRawBrightness(pos.above(), 0) >= 9 && CommonHooks.canCropGrow(level, pos, state, random.nextInt(5) == 0)) {
-            BlockState blockstate = state.setValue(AGE, Integer.valueOf(i + 1));
-            level.setBlock(pos, blockstate, 2);
-            CommonHooks.fireCropGrowPost(level, pos, state);
-            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockstate));
+        if (i < 3 && random.nextInt(5) == 0 && level.getRawBrightness(pos.above(), 0) >= 9) {
+            BlockState blockState = state.setValue(AGE, i + 1);
+            level.setBlock(pos, blockState, 2);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockState));
         }
     }
 

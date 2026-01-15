@@ -10,7 +10,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -20,7 +19,7 @@ import java.util.Iterator;
 public class MilkCaskBlock extends Block {
     public static IntegerProperty FERMENTING = IntegerProperty.create("cheese_fermenting", 0, 7);
 
-    public MilkCaskBlock(BlockBehaviour.Properties properties) {
+    public MilkCaskBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(super.defaultBlockState().setValue(FERMENTING, 0));
     }

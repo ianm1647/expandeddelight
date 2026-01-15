@@ -5,14 +5,13 @@ import ianm1647.expandeddelight.common.block.entity.JuicerBlockEntity;
 import ianm1647.expandeddelight.common.registry.EDBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -22,10 +21,11 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
@@ -33,28 +33,26 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.utility.MathUtils;
+import vectorwing.farmersdelight.refabricated.inventory.ItemStackHandler;
 
-import javax.annotation.Nullable;
 import java.util.Optional;
 
+import static net.minecraft.sounds.SoundEvents.BOTTLE_FILL;
+
 public class JuicerBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
+    public static final MapCodec<JuicerBlock> CODEC = simpleCodec(JuicerBlock::new);
     public static final DirectionProperty FACING;
     public static final BooleanProperty WATERLOGGED;
     public static final VoxelShape SHAPE_NORTH;
     private static final VoxelShape SHAPE_SOUTH;
     private static final VoxelShape SHAPE_EAST;
     private static final VoxelShape SHAPE_WEST;
-    public static final MapCodec<JuicerBlock> CODEC = simpleCodec(JuicerBlock::new);
 
-    public JuicerBlock() {
-        super(Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD));
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
-    }
-
-    public JuicerBlock(BlockBehaviour.Properties properties) {
+    public JuicerBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
     }
 
     @Override
@@ -72,9 +70,9 @@ public class JuicerBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
                     if (!player.getInventory().add(servingStack)) {
                         player.drop(servingStack, false);
                     }
-                    level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    level.playSound(null, pos, BOTTLE_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
                 } else {
-                    player.openMenu(juicerBlockEntity, pos);
+                    player.openMenu(juicerBlockEntity);
                 }
             }
             return ItemInteractionResult.SUCCESS;

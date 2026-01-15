@@ -1,17 +1,14 @@
 package ianm1647.expandeddelight.common.registry;
 
-import ianm1647.expandeddelight.ExpandedDelight;
 import ianm1647.expandeddelight.common.crafting.JuicerRecipe;
-import net.minecraft.core.registries.Registries;
+import ianm1647.expandeddelight.common.utility.RegUtils;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
 public class EDRecipeTypes {
-    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES;
-    public static final Supplier<RecipeType<JuicerRecipe>> JUICING;
+    public static Supplier<RecipeType<JuicerRecipe>> JUICING;
 
     public EDRecipeTypes() {
     }
@@ -24,8 +21,7 @@ public class EDRecipeTypes {
         };
     }
 
-    static {
-        RECIPE_TYPES = DeferredRegister.create(Registries.RECIPE_TYPE, ExpandedDelight.MODID);
-        JUICING = RECIPE_TYPES.register("juicing", () -> registerRecipeType("juicing"));
+    public static void register() {
+        JUICING = RegUtils.regRecipe("juicing", () -> registerRecipeType("juicing"));
     }
 }

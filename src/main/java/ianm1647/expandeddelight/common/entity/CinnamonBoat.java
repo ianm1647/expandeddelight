@@ -66,7 +66,7 @@ public class CinnamonBoat extends Boat {
 
         private final String name;
         private final Block planks;
-        public static final StringRepresentable.EnumCodec<Type> CODEC = StringRepresentable.fromEnum(Type::values);
+        public static final EnumCodec<Type> CODEC = StringRepresentable.fromEnum(Type::values);
         private static final IntFunction<Type> BY_ID = ByIdMap.continuous(Enum::ordinal, values(), ByIdMap.OutOfBoundsStrategy.ZERO);
 
         Type( String name, Block planks) {

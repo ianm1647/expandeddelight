@@ -1,6 +1,7 @@
 package ianm1647.expandeddelight.common.item;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -27,7 +28,7 @@ public class LilypadCropItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
-        FoodProperties foodproperties = itemstack.getFoodProperties(player);
+        FoodProperties foodproperties = itemstack.getComponents().get(DataComponents.FOOD);
         BlockHitResult hitresult = getPlayerPOVHitResult(level, player, ClipContext.Fluid.WATER);
         BlockPos pos = hitresult.getBlockPos();
         if (foodproperties != null && !level.getBlockState(pos).getFluidState().isSource()) {

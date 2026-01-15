@@ -12,4 +12,6 @@ public class EDWoodTypes {
         CINNAMON_SET = BlockSetType.register(new BlockSetType(ExpandedDelight.MODID + ":cinnamon"));
         CINNAMON = WoodType.register(new WoodType(ExpandedDelight.MODID + ":cinnamon", CINNAMON_SET));
     }
+
+    public static void bootstrap() {}
 }

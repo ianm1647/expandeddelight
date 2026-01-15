@@ -7,18 +7,24 @@ import ianm1647.expandeddelight.client.recipebook.JuicerRecipeBookTab;
 import ianm1647.expandeddelight.common.registry.EDItems;
 import ianm1647.expandeddelight.common.registry.EDRecipeSerializers;
 import ianm1647.expandeddelight.common.registry.EDRecipeTypes;
+import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import net.neoforged.neoforge.common.util.RecipeMatcher;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.refabricated.inventory.RecipeWrapper;
 
-import javax.annotation.Nullable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
 
 public class JuicerRecipe implements Recipe<RecipeWrapper> {
    public static final int INPUT_SLOTS = 2;
@@ -38,8 +44,8 @@ public class JuicerRecipe implements Recipe<RecipeWrapper> {
       this.output = output;
       if (!container.isEmpty()) {
          this.container = container;
-      } else if (!output.getCraftingRemainingItem().isEmpty()) {
-         this.container = output.getCraftingRemainingItem();
+      } else if (!output.getRecipeRemainder().isEmpty()) {
+         this.container = output.getRecipeRemainder();
       } else {
          this.container = ItemStack.EMPTY;
       }
@@ -86,18 +92,7 @@ public class JuicerRecipe implements Recipe<RecipeWrapper> {
    }
 
    public boolean matches(RecipeWrapper inv, Level level) {
-      List<ItemStack> inputs = new ArrayList();
-      int i = 0;
-
-      for(int j = 0; j < 2; ++j) {
-         ItemStack itemstack = inv.getItem(j);
-         if (!itemstack.isEmpty()) {
-            ++i;
-            inputs.add(itemstack);
-         }
-      }
-
-      return i == this.inputItems.size() && RecipeMatcher.findMatches(inputs, this.inputItems) != null;
+      return inv.ingredientAmount() == this.inputItems.size() && inv.stackedContents().canCraft(this, (IntList)null);
    }
 
    public boolean canCraftInDimensions(int width, int height) {
@@ -153,14 +148,14 @@ public class JuicerRecipe implements Recipe<RecipeWrapper> {
    public static class Serializer implements RecipeSerializer<JuicerRecipe> {
       private static final MapCodec<JuicerRecipe> CODEC = RecordCodecBuilder.mapCodec((inst) -> inst.group(Codec.STRING.optionalFieldOf("group", "").forGetter(JuicerRecipe::getGroup),
               JuicerRecipeBookTab.CODEC.optionalFieldOf("recipe_book_tab").xmap((optional) -> optional.orElse(JuicerRecipeBookTab.MISC), Optional::of).forGetter(JuicerRecipe::getRecipeBookTab),
-              Ingredient.LIST_CODEC_NONEMPTY.fieldOf("ingredients").xmap((ingredients) -> {
+              Ingredient.CODEC_NONEMPTY.listOf().fieldOf("ingredients").xmap((ingredients) -> {
          NonNullList<Ingredient> nonNullList = NonNullList.create();
          nonNullList.addAll(ingredients);
          return nonNullList;
       }, (ingredients) -> ingredients).forGetter(JuicerRecipe::getIngredients), ItemStack.STRICT_CODEC.fieldOf("result").forGetter((r) -> r.output),
               ItemStack.STRICT_CODEC.optionalFieldOf("container", ItemStack.EMPTY).forGetter(JuicerRecipe::getContainerOverride), Codec.FLOAT.optionalFieldOf("experience", 0.0F)
                       .forGetter(JuicerRecipe::getExperience), Codec.INT.optionalFieldOf("juicingtime", 200).forGetter(JuicerRecipe::getJuiceTime)).apply(inst, JuicerRecipe::new));
-      public static final StreamCodec<RegistryFriendlyByteBuf, JuicerRecipe> STREAM_CODEC = StreamCodec.of(JuicerRecipe.Serializer::toNetwork, JuicerRecipe.Serializer::fromNetwork);
+      public static final StreamCodec<RegistryFriendlyByteBuf, JuicerRecipe> STREAM_CODEC = StreamCodec.of(Serializer::toNetwork, Serializer::fromNetwork);
 
       public Serializer() {
       }

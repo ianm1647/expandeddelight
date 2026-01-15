@@ -15,20 +15,17 @@ public class EDTags {
     public static final TagKey<Item> CINNAMON_LOGS = modItemTag("cinnamon_logs");
     public static final TagKey<Item> CRUSHING_TOOLS = modItemTag("crushing_tools");
     public static final TagKey<Item> GOAT_CHEESES = modItemTag("goat_cheeses");
+    public static final TagKey<Item> VALID_JUICER_CONTAINERS = modItemTag("valid_juicer_containers");
 
     public static final TagKey<Block> MILK_ACTIVATORS = modBlockTag("milk_activators");
     public static final TagKey<Block> CINNAMON_LOGS_BLOCK = modBlockTag("cinnamon_logs");
 
     private static TagKey<Item> modItemTag(String path) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ExpandedDelight.MODID, path));
+        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ExpandedDelight.MODID, path));
     }
 
     private static TagKey<Block> modBlockTag(String path) {
-        return BlockTags.create(ResourceLocation.fromNamespaceAndPath(ExpandedDelight.MODID, path));
-    }
-
-    private static TagKey<EntityType<?>> modEntityTag(String path) {
-        return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(ExpandedDelight.MODID, path));
+        return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(ExpandedDelight.MODID, path));
     }
 
 }

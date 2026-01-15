@@ -3,19 +3,18 @@ package ianm1647.expandeddelight.common.block.entity.container;
 import ianm1647.expandeddelight.common.block.entity.JuicerBlockEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.NotNullByDefault;
+import vectorwing.farmersdelight.refabricated.inventory.ItemHandler;
+import vectorwing.farmersdelight.refabricated.inventory.ItemHandlerSlot;
 
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@ParametersAreNonnullByDefault
-public class JuicerResultSlot extends SlotItemHandler {
+@NotNullByDefault
+public class JuicerResultSlot extends ItemHandlerSlot {
     public final JuicerBlockEntity tileEntity;
     private final Player player;
     private int removeCount;
 
-    public JuicerResultSlot(Player player, JuicerBlockEntity tile, IItemHandler inventoryIn, int index, int xPosition, int yPosition) {
+    public JuicerResultSlot(Player player, JuicerBlockEntity tile, ItemHandler inventoryIn, int index, int xPosition, int yPosition) {
         super(inventoryIn, index, xPosition, yPosition);
         this.tileEntity = tile;
         this.player = player;
@@ -25,7 +24,7 @@ public class JuicerResultSlot extends SlotItemHandler {
         return false;
     }
 
-    @Nonnull
+    @NotNull
     public ItemStack remove(int amount) {
         if (this.hasItem()) {
             this.removeCount += Math.min(amount, this.getItem().getCount());

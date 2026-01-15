@@ -1,31 +1,29 @@
 package ianm1647.expandeddelight.common.registry;
 
 import com.google.common.collect.Sets;
-import ianm1647.expandeddelight.ExpandedDelight;
 import ianm1647.expandeddelight.common.entity.CinnamonBoat;
 import ianm1647.expandeddelight.common.item.CinnamonBoatItem;
 import ianm1647.expandeddelight.common.item.JellyItem;
 import ianm1647.expandeddelight.common.item.JuicerItem;
 import ianm1647.expandeddelight.common.item.LilypadCropItem;
+import ianm1647.expandeddelight.common.utility.RegUtils;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.item.DrinkableItem;
 import vectorwing.farmersdelight.common.item.MilkBottleItem;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class EDItems {
-
-    public static final DeferredRegister<Item> ITEMS;
     public static LinkedHashSet<Supplier<Item>> CREATIVE_TAB_ITEMS;
 
     public static Supplier<Item> CINNAMON_SAPLING;
@@ -167,9 +165,9 @@ public class EDItems {
     public static Supplier<Item> CRANBERRY_CHICKEN;
     public static Supplier<Item> GOAT_CHEESE_RATATOUILLE;
 
+    public EDItems() {}
 
-    static {
-        ITEMS = DeferredRegister.create(Registries.ITEM, ExpandedDelight.MODID);
+    public static void register() {
         CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 
         CINNAMON_SAPLING = registerWithTab("cinnamon_sapling", () -> new BlockItem(EDBlocks.CINNAMON_SAPLING.get(), basicItem()));
@@ -195,10 +193,10 @@ public class EDItems {
 
         JUICER = registerWithTab("juicer", () -> new JuicerItem(EDBlocks.JUICER.get(), basicItem()));
         CASK = registerWithTab("cask", () -> new BlockItem(EDBlocks.CASK.get(), basicItem()));
-        MILK_CASK = ITEMS.register("milk_cask", () -> new BlockItem(EDBlocks.MILK_CASK.get(), basicItem()));
-        CHEESE_CASK = ITEMS.register("cheese_cask", () -> new BlockItem(EDBlocks.CHEESE_CASK.get(), basicItem()));
-        GOAT_MILK_CASK = ITEMS.register("goat_milk_cask", () -> new BlockItem(EDBlocks.GOAT_MILK_CASK.get(), basicItem()));
-        GOAT_CHEESE_CASK = ITEMS.register("goat_cheese_cask", () -> new BlockItem(EDBlocks.GOAT_CHEESE_CASK.get(), basicItem()));
+        MILK_CASK = registerWithoutTab("milk_cask", () -> new BlockItem(EDBlocks.MILK_CASK.get(), basicItem()));
+        CHEESE_CASK = registerWithoutTab("cheese_cask", () -> new BlockItem(EDBlocks.CHEESE_CASK.get(), basicItem()));
+        GOAT_MILK_CASK = registerWithoutTab("goat_milk_cask", () -> new BlockItem(EDBlocks.GOAT_MILK_CASK.get(), basicItem()));
+        GOAT_CHEESE_CASK = registerWithoutTab("goat_cheese_cask", () -> new BlockItem(EDBlocks.GOAT_CHEESE_CASK.get(), basicItem()));
 
         ASPARAGUS_CRATE = registerWithTab("asparagus_crate", () -> new BlockItem(EDBlocks.ASPARAGUS_CRATE.get(), basicItem()));
         SWEET_POTATO_CRATE = registerWithTab("sweet_potato_crate", () -> new BlockItem(EDBlocks.SWEET_POTATO_CRATE.get(), basicItem()));
@@ -209,7 +207,7 @@ public class EDItems {
         WILD_SWEET_POTATO = registerWithTab("wild_sweet_potato", () -> new BlockItem(EDBlocks.WILD_SWEET_POTATO.get(), basicItem()));
         WILD_CHILI_PEPPER = registerWithTab("wild_chili_pepper", () -> new BlockItem(EDBlocks.WILD_CHILI_PEPPER.get(), basicItem()));
         WILD_PEANUTS = registerWithTab("wild_peanuts", () -> new BlockItem(EDBlocks.WILD_PEANUTS.get(), basicItem()));
-        CRANBERRY_PLANT = ITEMS.register("cranberry_plant", () -> new BlockItem(EDBlocks.CRANBERRY_PLANT.get(), basicItem()));
+        CRANBERRY_PLANT = registerWithoutTab("cranberry_plant", () -> new BlockItem(EDBlocks.CRANBERRY_PLANT.get(), basicItem()));
 
         SALT_ORE = registerWithTab("salt_ore", () -> new BlockItem(EDBlocks.SALT_ORE.get(), basicItem()));
         DEEPSLATE_SALT_ORE = registerWithTab("deepslate_salt_ore", () -> new BlockItem(EDBlocks.DEEPSLATE_SALT_ORE.get(), basicItem()));
@@ -296,9 +294,13 @@ public class EDItems {
     }
 
     public static Supplier<Item> registerWithTab(String name, Supplier<Item> supplier) {
-        Supplier<Item> block = ITEMS.register(name, supplier);
-        CREATIVE_TAB_ITEMS.add(block);
-        return block;
+        Supplier<Item> item = RegUtils.regItem(name, supplier);
+        ItemGroupEvents.modifyEntriesEvent(EDTabs.ED_TAB_KEY).register(entries -> entries.accept(item.get()));
+        return item;
+    }
+
+    public static Supplier<Item> registerWithoutTab(String name, Supplier<Item> supplier) {
+        return RegUtils.regItem(name, supplier);
     }
 
     public static Item.Properties basicItem() {
@@ -312,36 +314,36 @@ public class EDItems {
     public static Item.Properties drinkItem(int nutrition, float saturation, Holder<MobEffect> effect) {
         return (new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)
                 .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
-                .effect(() -> new MobEffectInstance(effect, 200, 0), 1.0f).build()));
+                .effect(new MobEffectInstance(effect, 200, 0), 1.0f).build()));
     }
 
     public static Item.Properties jellyItem(int nutrition, float saturation, Holder<MobEffect> effect) {
         return (new Item.Properties().craftRemainder(GLASS_JAR.get()).stacksTo(16)
                 .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
-                        .effect(() -> new MobEffectInstance(effect, 400, 0), 1.0f).build()));
+                        .effect(new MobEffectInstance(effect, 400, 0), 1.0f).build()));
     }
 
     public static Item.Properties pieSliceItem(int nutrition, float saturation) {
         return (new Item.Properties()).food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).fast()
-                        .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1.0f).build());
+                        .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1.0f).build());
     }
 
     public static Item.Properties stewItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
                 .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
-                        .effect(() -> new MobEffectInstance(ModEffects.COMFORT, 2400, 0), 1.0f).build());
+                        .effect(new MobEffectInstance(ModEffects.COMFORT, 2400, 0), 1.0f).build());
     }
 
     public static Item.Properties saladItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
                 .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
-                .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f).build());
+                .effect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f).build());
     }
 
     public static Item.Properties mealItem(int nutrition, float saturation) {
         return (new Item.Properties()).craftRemainder(Items.BOWL).stacksTo(16)
                 .food(new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation)
-                        .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1.0f).build());
+                        .effect(new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1.0f).build());
     }
 
 }

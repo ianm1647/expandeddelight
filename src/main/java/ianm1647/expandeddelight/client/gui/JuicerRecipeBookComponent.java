@@ -11,8 +11,8 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nonnull;
 import java.util.List;
 
 public class JuicerRecipeBookComponent extends RecipeBookComponent {
@@ -30,7 +30,7 @@ public class JuicerRecipeBookComponent extends RecipeBookComponent {
         this.setVisible(false);
     }
 
-    @Nonnull
+    @NotNull
     protected Component getRecipeFilterName() {
         return Component.translatable("expandeddelight.container.recipe_book.juiceable");
     }

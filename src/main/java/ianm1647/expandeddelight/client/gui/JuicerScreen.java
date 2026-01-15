@@ -1,9 +1,9 @@
 package ianm1647.expandeddelight.client.gui;
 
-import ianm1647.expandeddelight.ExpandedDelight;
-import ianm1647.expandeddelight.EDConfig;
-import ianm1647.expandeddelight.common.block.entity.container.JuicerMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
+import ianm1647.expandeddelight.EDConfig;
+import ianm1647.expandeddelight.ExpandedDelight;
+import ianm1647.expandeddelight.common.block.entity.container.JuicerMenu;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.ImageButton;
@@ -18,14 +18,12 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@ParametersAreNonnullByDefault
 public class JuicerScreen extends AbstractContainerScreen<JuicerMenu> implements RecipeUpdateListener {
     private static final WidgetSprites RECIPE_BUTTON = new WidgetSprites(ResourceLocation.withDefaultNamespace("recipe_book/button"), ResourceLocation.withDefaultNamespace("recipe_book/button_highlighted"));
     private static final ResourceLocation BACKGROUND_TEXTURE = ResourceLocation.fromNamespaceAndPath(ExpandedDelight.MODID, "textures/gui/juicer.png");
@@ -43,16 +41,16 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerMenu> implements
         this.titleLabelX = 35;
         this.recipeBookComponent.init(this.width, this.height, this.minecraft, this.widthTooNarrow, this.menu);
         this.leftPos = this.recipeBookComponent.updateScreenPosition(this.width, this.imageWidth);
-        if (EDConfig.ENABLE_RECIPE_BOOK_JUICER.get()) {
+        //if (EDConfig.ENABLE_RECIPE_BOOK_JUICER.get()) {
             this.addRenderableWidget(new ImageButton(this.leftPos + 8, this.height / 2 - 49, 20, 18, RECIPE_BUTTON, (button) -> {
                 this.recipeBookComponent.toggleVisibility();
                 this.leftPos = this.recipeBookComponent.updateScreenPosition(this.width, this.imageWidth);
                 button.setPosition(this.leftPos + 8, this.height / 2 - 48);
             }));
-        } else {
-            this.recipeBookComponent.hide();
-            this.leftPos = this.recipeBookComponent.updateScreenPosition(this.width, this.imageWidth);
-        }
+        //} else {
+            //this.recipeBookComponent.hide();
+            //this.leftPos = this.recipeBookComponent.updateScreenPosition(this.width, this.imageWidth);
+        //}
 
         this.titleLabelX = (this.imageWidth - this.font.width(this.title)) / 2;
         this.addWidget(this.recipeBookComponent);
@@ -83,7 +81,7 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerMenu> implements
             if (this.hoveredSlot.index == 2) {
                 List<Component> tooltip = new ArrayList();
                 ItemStack drinkStack = this.hoveredSlot.getItem();
-                tooltip.add(((MutableComponent)drinkStack.getItem().getDescription()).withStyle(drinkStack.getRarity().getStyleModifier()));
+                tooltip.add(((MutableComponent)drinkStack.getItem().getDescription()).withStyle(drinkStack.getRarity().color()));
                 ItemStack containerStack = (this.menu).tileEntity.getContainer();
                 String container = !containerStack.isEmpty() ? containerStack.getItem().getDescription().getString() : "";
                 tooltip.add(Component.translatable("farmersdelight.container.cooking_pot.served_on", container).withStyle(ChatFormatting.GRAY));
@@ -95,12 +93,17 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerMenu> implements
 
     }
 
+    protected void renderLabels(GuiGraphics gui, int mouseX, int mouseY) {
+        super.renderLabels(gui, mouseX, mouseY);
+        gui.drawString(this.font, this.playerInventoryTitle, 8, this.imageHeight - 96 + 2, 4210752, false);
+    }
+
     protected void renderBg(GuiGraphics gui, float partialTicks, int mouseX, int mouseY) {
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         if (this.minecraft != null) {
             gui.blit(BACKGROUND_TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
             int l = (this.menu).getJuiceProgressionScaled();
-            gui.blit(BACKGROUND_TEXTURE, this.leftPos + PROGRESS_ARROW.x, this.topPos + PROGRESS_ARROW.y, 176, 0, l + 1, PROGRESS_ARROW.height);
+            gui.blit(BACKGROUND_TEXTURE, this.leftPos + PROGRESS_ARROW.x, this.topPos + PROGRESS_ARROW.y, 176, 15, l + 1, PROGRESS_ARROW.height);
         }
     }
 
@@ -131,7 +134,7 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerMenu> implements
         this.recipeBookComponent.recipesUpdated();
     }
 
-    @Nonnull
+    @NotNull
     public RecipeBookComponent getRecipeBookComponent() {
         return this.recipeBookComponent;
     }

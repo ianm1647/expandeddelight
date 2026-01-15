@@ -1,26 +1,26 @@
 package ianm1647.expandeddelight.common.block.entity.container;
 
+import com.mojang.datafixers.util.Pair;
 import ianm1647.expandeddelight.ExpandedDelight;
 import ianm1647.expandeddelight.common.block.entity.JuicerBlockEntity;
 import ianm1647.expandeddelight.common.crafting.JuicerRecipe;
 import ianm1647.expandeddelight.common.registry.EDBlocks;
 import ianm1647.expandeddelight.common.registry.EDMenuTypes;
-import com.mojang.datafixers.util.Pair;
-import net.minecraft.network.FriendlyByteBuf;
+import ianm1647.expandeddelight.common.tag.EDTags;
+import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import vectorwing.farmersdelight.refabricated.inventory.ItemHandlerSlot;
+import vectorwing.farmersdelight.refabricated.inventory.ItemStackHandler;
+import vectorwing.farmersdelight.refabricated.inventory.RecipeWrapper;
 
 import java.util.Objects;
 
@@ -36,7 +36,7 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
     private final ContainerLevelAccess canInteractWithCallable;
     protected final Level level;
 
-    public JuicerMenu(int windowId, Inventory playerInventory, FriendlyByteBuf data) {
+    public JuicerMenu(int windowId, Inventory playerInventory, BlockPos data) {
         this(windowId, playerInventory, getTileEntity(playerInventory, data), new SimpleContainerData(4));
     }
 
@@ -55,13 +55,13 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
 
         for(int row = 0; row < 2; ++row) {
             for(int column = 0; column < 1; ++column) {
-                this.addSlot(new SlotItemHandler(this.inventory, row * 1 + column, inputStartX + column * borderSlotSize, inputStartY + row * borderSlotSize));
+                this.addSlot(new ItemHandlerSlot(this.inventory, row * 1 + column, inputStartX + column * borderSlotSize, inputStartY + row * borderSlotSize));
             }
         }
 
         this.addSlot(new JuicerDrinkSlot(this.inventory, display, 118, 26));
-        this.addSlot(new SlotItemHandler(this.inventory, bottle, 86, 55) {
-            public Pair<ResourceLocation, ResourceLocation> m_7543_() {
+        this.addSlot(new ItemHandlerSlot(this.inventory, bottle, 86, 55) {
+            public Pair<ResourceLocation, ResourceLocation> getNoItemIcon() {
                 return Pair.of(InventoryMenu.BLOCK_ATLAS, JuicerMenu.EMPTY_CONTAINER_SLOT_BOTTLE);
             }
         });
@@ -81,10 +81,10 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
         this.addDataSlots(juicerDataIn);
     }
 
-    private static JuicerBlockEntity getTileEntity(Inventory playerInventory, FriendlyByteBuf data) {
+    private static JuicerBlockEntity getTileEntity(Inventory playerInventory, BlockPos data) {
         Objects.requireNonNull(playerInventory, "playerInventory cannot be null");
         Objects.requireNonNull(data, "data cannot be null");
-        BlockEntity tileAtPos = playerInventory.player.level().getBlockEntity(data.readBlockPos());
+        BlockEntity tileAtPos = playerInventory.player.level().getBlockEntity(data);
         if (tileAtPos instanceof JuicerBlockEntity) {
             return (JuicerBlockEntity)tileAtPos;
         } else {
@@ -102,45 +102,48 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
         int indexOutput = 4;
         int startPlayerInv = indexOutput + 1;
         int endPlayerInv = startPlayerInv + 36;
-        ItemStack itemstack = ItemStack.EMPTY;
-        Slot slot = (Slot)this.slots.get(index);
+        ItemStack slotStackCopy = ItemStack.EMPTY;
+        Slot slot = this.slots.get(index);
         if (slot.hasItem()) {
-            ItemStack itemstack1 = slot.getItem();
-            itemstack = itemstack1.copy();
+            ItemStack slotStack = slot.getItem();
+            slotStackCopy = slotStack.copy();
             if (index == indexOutput) {
-                if (!this.moveItemStackTo(itemstack1, startPlayerInv, endPlayerInv, true)) {
+                if (!this.moveItemStackTo(slotStack, startPlayerInv, endPlayerInv, true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (index > indexOutput) {
-                if (itemstack1.getItem() == Items.GLASS_BOTTLE && !this.moveItemStackTo(itemstack1, indexContainerInput, indexContainerInput + 1, false)) {
+            } else if (index <= indexOutput) {
+                if (!this.moveItemStackTo(slotStack, startPlayerInv, endPlayerInv, false)) {
+                    return ItemStack.EMPTY;
+                }
+            } else {
+                boolean isValidContainer = slotStack.is(EDTags.VALID_JUICER_CONTAINERS) || slotStack.is(this.tileEntity.getContainer().getItem());
+                if (isValidContainer && !this.moveItemStackTo(slotStack, indexContainerInput, indexContainerInput + 1, false)) {
                     return ItemStack.EMPTY;
                 }
 
-                if (!this.moveItemStackTo(itemstack1, 0, indexMealDisplay, false)) {
+                if (!this.moveItemStackTo(slotStack, 0, indexMealDisplay, false)) {
                     return ItemStack.EMPTY;
                 }
 
-                if (!this.moveItemStackTo(itemstack1, indexContainerInput, indexOutput, false)) {
+                if (!this.moveItemStackTo(slotStack, indexContainerInput, indexOutput, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.moveItemStackTo(itemstack1, startPlayerInv, endPlayerInv, false)) {
-                return ItemStack.EMPTY;
             }
 
-            if (itemstack1.isEmpty()) {
+            if (slotStack.isEmpty()) {
                 slot.set(ItemStack.EMPTY);
             } else {
                 slot.setChanged();
             }
 
-            if (itemstack1.getCount() == itemstack.getCount()) {
+            if (slotStack.getCount() == slotStackCopy.getCount()) {
                 return ItemStack.EMPTY;
             }
 
-            slot.onTake(playerIn, itemstack1);
+            slot.onTake(playerIn, slotStack);
         }
 
-        return itemstack;
+        return slotStackCopy;
     }
 
     public int getJuiceProgressionScaled() {
@@ -150,7 +153,7 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
     }
 
     public void fillCraftSlotsStackedContents(StackedContents helper) {
-        for(int i = 0; i < this.inventory.getSlots(); ++i) {
+        for(int i = 0; i < this.inventory.getSlotCount(); ++i) {
             helper.accountSimpleStack(this.inventory.getStackInSlot(i));
         }
     }
