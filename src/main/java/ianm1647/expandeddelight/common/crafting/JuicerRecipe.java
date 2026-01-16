@@ -7,7 +7,6 @@ import ianm1647.expandeddelight.client.recipebook.JuicerRecipeBookTab;
 import ianm1647.expandeddelight.common.registry.EDItems;
 import ianm1647.expandeddelight.common.registry.EDRecipeSerializers;
 import ianm1647.expandeddelight.common.registry.EDRecipeTypes;
-import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -19,11 +18,11 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
+import vectorwing.farmersdelight.common.crafting.CookingPotRecipe;
 import vectorwing.farmersdelight.refabricated.inventory.RecipeWrapper;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Optional;
 
 public class JuicerRecipe implements Recipe<RecipeWrapper> {
@@ -92,7 +91,7 @@ public class JuicerRecipe implements Recipe<RecipeWrapper> {
    }
 
    public boolean matches(RecipeWrapper inv, Level level) {
-      return inv.ingredientAmount() == this.inputItems.size() && inv.stackedContents().canCraft(this, (IntList)null);
+      return inv.ingredientAmount() == this.inputItems.size() && inv.stackedContents().canCraft(this, null);
    }
 
    public boolean canCraftInDimensions(int width, int height) {
@@ -146,15 +145,18 @@ public class JuicerRecipe implements Recipe<RecipeWrapper> {
    }
 
    public static class Serializer implements RecipeSerializer<JuicerRecipe> {
-      private static final MapCodec<JuicerRecipe> CODEC = RecordCodecBuilder.mapCodec((inst) -> inst.group(Codec.STRING.optionalFieldOf("group", "").forGetter(JuicerRecipe::getGroup),
-              JuicerRecipeBookTab.CODEC.optionalFieldOf("recipe_book_tab").xmap((optional) -> optional.orElse(JuicerRecipeBookTab.MISC), Optional::of).forGetter(JuicerRecipe::getRecipeBookTab),
+      private static final MapCodec<JuicerRecipe> CODEC = RecordCodecBuilder.mapCodec((inst) -> inst.group(
+              Codec.STRING.optionalFieldOf("group", "").forGetter(JuicerRecipe::getGroup),
+              JuicerRecipeBookTab.CODEC.optionalFieldOf("recipe_book_tab", JuicerRecipeBookTab.MISC).forGetter(JuicerRecipe::getRecipeBookTab),
               Ingredient.CODEC_NONEMPTY.listOf().fieldOf("ingredients").xmap((ingredients) -> {
          NonNullList<Ingredient> nonNullList = NonNullList.create();
          nonNullList.addAll(ingredients);
          return nonNullList;
-      }, (ingredients) -> ingredients).forGetter(JuicerRecipe::getIngredients), ItemStack.STRICT_CODEC.fieldOf("result").forGetter((r) -> r.output),
-              ItemStack.STRICT_CODEC.optionalFieldOf("container", ItemStack.EMPTY).forGetter(JuicerRecipe::getContainerOverride), Codec.FLOAT.optionalFieldOf("experience", 0.0F)
-                      .forGetter(JuicerRecipe::getExperience), Codec.INT.optionalFieldOf("juicingtime", 200).forGetter(JuicerRecipe::getJuiceTime)).apply(inst, JuicerRecipe::new));
+      }, (ingredients) -> ingredients).forGetter(JuicerRecipe::getIngredients),
+              ItemStack.STRICT_CODEC.fieldOf("result").forGetter((r) -> r.output),
+              ItemStack.STRICT_CODEC.optionalFieldOf("container", ItemStack.EMPTY).forGetter(JuicerRecipe::getContainerOverride),
+              Codec.FLOAT.optionalFieldOf("experience", 0.0F).forGetter(JuicerRecipe::getExperience),
+              Codec.INT.optionalFieldOf("juicingtime", 200).forGetter(JuicerRecipe::getJuiceTime)).apply(inst, JuicerRecipe::new));
       public static final StreamCodec<RegistryFriendlyByteBuf, JuicerRecipe> STREAM_CODEC = StreamCodec.of(Serializer::toNetwork, Serializer::fromNetwork);
 
       public Serializer() {

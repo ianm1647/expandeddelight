@@ -18,12 +18,8 @@ import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.NonNullList;
+import net.minecraft.core.*;
 import net.minecraft.core.component.DataComponentMap;
-import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -32,7 +28,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Nameable;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Inventory;
@@ -47,14 +42,11 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import vectorwing.farmersdelight.common.block.entity.CookingPotBlockEntity;
 import vectorwing.farmersdelight.common.block.entity.SyncedBlockEntity;
-import vectorwing.farmersdelight.common.crafting.CookingPotRecipe;
 import vectorwing.farmersdelight.common.item.component.ItemStackWrapper;
 import vectorwing.farmersdelight.common.registry.ModDataComponents;
 import vectorwing.farmersdelight.common.utility.ItemUtils;
@@ -252,7 +244,7 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements ExtendedScre
                return true;
             } else if (!ItemStack.isSameItem(storedMealStack, resultStack)) {
                return false;
-            } else if (storedMealStack.getCount() + resultStack.getCount() <= this.inventory.getSlotLimit(2)) {
+            } else if (storedMealStack.getCount() + resultStack.getCount() <= Math.max(64, storedMealStack.getMaxStackSize())) {
                return true;
             } else {
                return storedMealStack.getCount() + resultStack.getCount() <= resultStack.getMaxStackSize();
@@ -267,7 +259,7 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements ExtendedScre
       if (this.level == null) {
          return false;
       } else {
-         ++this.juiceTime;
+         this.juiceTime++;
          this.juiceTimeTotal = (recipe.value()).getJuiceTime();
          if (this.juiceTime < this.juiceTimeTotal) {
             return false;
@@ -288,12 +280,13 @@ public class JuicerBlockEntity extends SyncedBlockEntity implements ExtendedScre
                ItemStack slotStack = this.inventory.getStackInSlot(i);
                if (!slotStack.getRecipeRemainder().isEmpty()) {
                   this.ejectIngredientRemainder(slotStack.getRecipeRemainder());
+               } else if (INGREDIENT_REMAINDER_OVERRIDES.containsKey(slotStack.getItem())) {
+                  this.ejectIngredientRemainder(INGREDIENT_REMAINDER_OVERRIDES.get(slotStack.getItem()).getDefaultInstance());
                }
                if (!slotStack.isEmpty()) {
                   slotStack.shrink(1);
                }
             }
-
             return true;
          }
       }

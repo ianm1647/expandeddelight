@@ -21,13 +21,17 @@ public class ExpandedDelightClient implements ClientModInitializer {
         MenuScreens.register(EDMenuTypes.JUICER.get(), JuicerScreen::new);
         EDNetworking.initClient();
 
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), new Block[]{
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
                 EDBlocks.CINNAMON_SAPLING.get(),
                 EDBlocks.WILD_SWEET_POTATO.get(),
                 EDBlocks.WILD_ASPARAGUS.get(),
                 EDBlocks.WILD_CHILI_PEPPER.get(),
-                EDBlocks.CRANBERRY_PLANT.get()
-        });
+                EDBlocks.WILD_PEANUTS.get(),
+                EDBlocks.CRANBERRY_PLANT.get(),
+                EDBlocks.SWEET_POTATO_CROP.get(),
+                EDBlocks.ASPARAGUS_CROP.get(),
+                EDBlocks.CHILI_PEPPER_CROP.get(),
+                EDBlocks.PEANUT_CROP.get());
 
     }
 }

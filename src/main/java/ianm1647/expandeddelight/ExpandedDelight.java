@@ -1,5 +1,6 @@
 package ianm1647.expandeddelight;
 
+import ianm1647.expandeddelight.common.block.JuicerBlock;
 import ianm1647.expandeddelight.common.block.entity.JuicerBlockEntity;
 import ianm1647.expandeddelight.common.event.EDEvents;
 import ianm1647.expandeddelight.common.registry.*;

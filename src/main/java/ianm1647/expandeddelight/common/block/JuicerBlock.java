@@ -55,6 +55,8 @@ public class JuicerBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
     }
 
+    public static void init() {}
+
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;

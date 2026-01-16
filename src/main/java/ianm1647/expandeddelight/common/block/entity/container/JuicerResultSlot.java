@@ -4,11 +4,9 @@ import ianm1647.expandeddelight.common.block.entity.JuicerBlockEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.NotNullByDefault;
 import vectorwing.farmersdelight.refabricated.inventory.ItemHandler;
 import vectorwing.farmersdelight.refabricated.inventory.ItemHandlerSlot;
 
-@NotNullByDefault
 public class JuicerResultSlot extends ItemHandlerSlot {
     public final JuicerBlockEntity tileEntity;
     private final Player player;

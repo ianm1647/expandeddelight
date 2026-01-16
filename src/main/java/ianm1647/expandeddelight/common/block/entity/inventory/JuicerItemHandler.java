@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.refabricated.inventory.ItemHandler;
+import vectorwing.farmersdelight.refabricated.inventory.ItemStackHandler;
 
 import java.util.Iterator;
 import java.util.List;
@@ -20,10 +21,11 @@ public class JuicerItemHandler implements ItemHandler {
     private static final int SLOTS_INPUT = 2;
     private static final int SLOT_CONTAINER_INPUT = 3;
     private static final int SLOT_MEAL_OUTPUT = 4;
-    private final ItemHandler itemHandler;
+    private static final int INVENTORY_SIZE = 5;
+    private final ItemStackHandler itemHandler;
     private final Direction side;
 
-    public JuicerItemHandler(ItemHandler itemHandler, @Nullable Direction side) {
+    public JuicerItemHandler(ItemStackHandler itemHandler, @Nullable Direction side) {
         this.itemHandler = itemHandler;
         this.side = side;
     }
@@ -103,7 +105,9 @@ public class JuicerItemHandler implements ItemHandler {
     }
 
     public @NotNull Iterator<StorageView<ItemVariant>> iterator() {
-        return this.side != null && !this.side.equals(Direction.UP) ? Stream.of(this.itemHandler.getSlots().get(4)).iterator().next().iterator() : this.itemHandler.getSlots().subList(0, 2).getFirst().iterator();
+        return this.side != null && !this.side.equals(Direction.UP)
+                ? Stream.of(this.itemHandler.getSlots().get(4)).iterator().next().iterator()
+                : this.itemHandler.getSlots().subList(0, 2).getFirst().iterator();
     }
 
     private Iterator<SingleStackStorage> getInsertableSlotsFor(ItemVariant resource) {
