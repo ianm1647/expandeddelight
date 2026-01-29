@@ -11,8 +11,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.codehaus.plexus.util.Expand;
-import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 public class EDItemModels extends ItemModelProvider {
     public EDItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {

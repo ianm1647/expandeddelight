@@ -6,6 +6,7 @@ import ianm1647.expandeddelight.common.crafting.JuicerRecipe;
 import ianm1647.expandeddelight.common.registry.EDBlocks;
 import ianm1647.expandeddelight.common.registry.EDMenuTypes;
 import com.mojang.datafixers.util.Pair;
+import ianm1647.expandeddelight.common.tag.EDTags;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,7 +14,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -103,7 +103,7 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
         int startPlayerInv = indexOutput + 1;
         int endPlayerInv = startPlayerInv + 36;
         ItemStack itemstack = ItemStack.EMPTY;
-        Slot slot = (Slot)this.slots.get(index);
+        Slot slot = this.slots.get(index);
         if (slot.hasItem()) {
             ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
@@ -112,7 +112,8 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
                     return ItemStack.EMPTY;
                 }
             } else if (index > indexOutput) {
-                if (itemstack1.getItem() == Items.GLASS_BOTTLE && !this.moveItemStackTo(itemstack1, indexContainerInput, indexContainerInput + 1, false)) {
+                boolean isValidContainer = itemstack1.is(EDTags.VALID_JUICER_CONTAINERS) || itemstack1.is(this.tileEntity.getContainer().getItem());
+                if (isValidContainer && !this.moveItemStackTo(itemstack1, indexContainerInput, indexContainerInput + 1, false)) {
                     return ItemStack.EMPTY;
                 }
 

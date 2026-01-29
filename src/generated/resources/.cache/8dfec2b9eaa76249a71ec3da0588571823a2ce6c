@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-08T13:28:10.7013862	Tags for minecraft:item mod id expandeddelight
+// 1.21.1	2026-01-15T11:52:28.4326657	Tags for minecraft:item mod id expandeddelight
 3cfadf858af79670e6413422b8f9f7c99c4ba5fd data/create/tags/item/upright_on_belt.json
 545a625d7cf11d828bb427fc9e76c1c18cf92b9c data/c/tags/item/buckets/milk.json
 f050c37a84078f6b5aa3a606fb18f3df9c1ea39a data/c/tags/item/crops.json
@@ -39,6 +39,7 @@ a81e3a6591e7e8ee7372eed939af9c3802433951 data/c/tags/item/juices/apple.json
 b9e5d09d6ecb981dec6b2d1112a4034b1a6b4f0b data/c/tags/item/stripped_woods.json
 28d082b33a9e15411ea214bd5c02ff18b3338325 data/expandeddelight/tags/item/cinnamon_logs.json
 875063c6b4f7b74356051fe97c2299c5e7bc60d0 data/expandeddelight/tags/item/crushing_tools.json
+7f7d5f6cc9b5cfb39d240fc901c4ae2d2037ec14 data/expandeddelight/tags/item/valid_juicer_containers.json
 cc00ef31cea32ca58f2c02fca9becd658f228915 data/farmersdelight/tags/item/cabinets/wooden.json
 e5638a75036292d923290fd56b7aa8fdea8bcce0 data/farmersdelight/tags/item/serving_containers.json
 136291a83968b5dbd6f80f31a1d9b5fb2bcb0dd2 data/farmersdelight/tags/item/wild_crops.json

@@ -11,6 +11,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -42,6 +43,8 @@ public class EDItemTags extends ItemTagsProvider {
                 EDItems.CINNAMON_STRIPPED_WOOD.get());
         tag(EDTags.CRUSHING_TOOLS).add(
                 EDItems.CRUSHING_MALLET.get());
+        tag(EDTags.VALID_JUICER_CONTAINERS).add(
+                Items.GLASS_BOTTLE);
     }
 
     private void registerDelightTags() {

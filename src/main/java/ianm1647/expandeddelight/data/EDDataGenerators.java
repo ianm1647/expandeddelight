@@ -16,8 +16,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @EventBusSubscriber(
-        modid = "expandeddelight",
-        bus = EventBusSubscriber.Bus.MOD
+        modid = "expandeddelight"
 )
 public class EDDataGenerators {
     public EDDataGenerators() {
