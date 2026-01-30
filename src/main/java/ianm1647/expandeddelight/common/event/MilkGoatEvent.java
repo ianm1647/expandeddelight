@@ -29,6 +29,22 @@ public class MilkGoatEvent {
             if (item != null) {
                 Player player = event.getEntity();
                 player.playSound(SoundEvents.GOAT_MILK, 1.0f, 1.0f);
+                player.swing(event.getHand());
+                ItemStack nonNullStack = ItemUtils.createFilledResult(stack, player, item.getDefaultInstance());
+                player.setItemInHand(event.getHand(), nonNullStack);
+                event.setCancellationResult(InteractionResult.sidedSuccess(event.getLevel().isClientSide));
+            }
+        }
+
+        if (stack.is(Items.GLASS_BOTTLE) && event.getTarget() instanceof LivingEntity entity && !entity.isBaby()) {
+            Item item = null;
+            if (entity instanceof Goat) {
+                item = EDItems.GOAT_MILK_BOTTLE.get();
+            }
+            if (item != null) {
+                Player player = event.getEntity();
+                player.playSound(SoundEvents.GOAT_MILK, 1.0f, 1.0f);
+                player.swing(event.getHand());
                 ItemStack nonNullStack = ItemUtils.createFilledResult(stack, player, item.getDefaultInstance());
                 player.setItemInHand(event.getHand(), nonNullStack);
                 event.setCancellationResult(InteractionResult.sidedSuccess(event.getLevel().isClientSide));

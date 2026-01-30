@@ -1,1 +1,1 @@
-ianm1647.expandeddelight.integration.ExpandedDelightKubeJS expandeddelight
+ianm1647.expandeddelight.integration.kubejs.ExpandedDelightKubeJS expandeddelight
