@@ -143,5 +143,8 @@
   "expandeddelight.jei.info.cranberries": "Cranberries can be commonly found as a wild plant in swamp biomes.",
   "expandeddelight.jei.info.salt_ore": "Salt Ore can be commonly found underground specifically in ocean biomes.",
 
-  "farmersdelight.tooltip.goat_milk_bottle": "Clears 1 Effect"
+  "farmersdelight.tooltip.goat_milk_bottle": "Clears 1 Effect",
+  
+  "tag.item.expandeddelight.cinnamon_logs": "Cinnamon Logs",
+  "tag.item.expandeddelight.crushing_tools": "Crushing Tools"
 }
