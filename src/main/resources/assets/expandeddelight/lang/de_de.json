@@ -1,0 +1,89 @@
+{
+  "item.expandeddelight.asparagus": "Spargel",
+  "item.expandeddelight.asparagus_seeds": "Spargelsamen",
+  "item.expandeddelight.asparagus_soup": "Spargelsuppe",
+  "item.expandeddelight.asparagus_soup_creamy": "Cremige Spargelsuppe",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Käsiger Spargel mit Speck",
+
+  "item.expandeddelight.sweet_potato": "Süßkartoffel",
+  "item.expandeddelight.baked_sweet_potato": "Gebackene Süßkartoffel",
+  "item.expandeddelight.sweet_potato_salad": "Süßkartoffelsalat",
+
+  "item.expandeddelight.chili_pepper": "Chilischote",
+  "item.expandeddelight.chili_pepper_seeds": "Chilisamen",
+  "item.expandeddelight.peperonata": "Peperonata",
+
+  "item.expandeddelight.peanut": "Erdnuss",
+  "item.expandeddelight.peanut_butter": "Erdnussbutter",
+  "item.expandeddelight.peanut_butter_sandwich": "Erdnussbutter-Sandwich",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Erdnussbutter-Honig-Sandwich",
+  "item.expandeddelight.peanut_salad": "Erdnusssalat",
+  "item.expandeddelight.peanut_honey_soup": "Erdnuss-Honig-Suppe",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Erdnussbutter und Süßbeer-Gelee-Sandwich",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Erdnussbutter und Leuchtbeer-Gelee-Sandwich",
+
+  "item.expandeddelight.crushing_mallet": "Schlaghammer",
+  "item.expandeddelight.glass_jar": "Glasgefäß",
+  "item.expandeddelight.cinnamon_stick": "Zimtstange",
+  "item.expandeddelight.cinnamon": "Zimt",
+  "item.expandeddelight.salt_rock": "Salzstein",
+  "item.expandeddelight.salt": "Salz",
+
+  "item.expandeddelight.cheese_slice": "Käsescheibe",
+  "item.expandeddelight.cheese_sandwich": "Käse-Sandwich",
+  "item.expandeddelight.grilled_cheese": "Gegrillter Käse",
+  "item.expandeddelight.mac_and_cheese": "Makkaroni und Käse",
+  "item.expandeddelight.sweet_roll": "Süßes Brötchen",
+  "item.expandeddelight.berry_sweet_roll": "Beeren-Süßbrötchen",
+  "item.expandeddelight.glow_berry_sweet_roll": "Leuchtbeer-Süßbrötchen",
+  "item.expandeddelight.cinnamon_rice": "Zimtreis",
+  "item.expandeddelight.cinnamon_apples": "Zimtäpfel",
+  "item.expandeddelight.chocolate_cookie": "Schokoladenkeks",
+  "item.expandeddelight.sugar_cookie": "Zuckerkeks",
+  "item.expandeddelight.snickerdoodle": "Snickerdoodle",
+
+  "item.expandeddelight.apple_juice": "Apfelsaft",
+  "item.expandeddelight.sweet_berry_juice": "Süßbeerensaft",
+  "item.expandeddelight.glow_berry_juice": "Leuchtbeerensaft",
+
+  "item.expandeddelight.sweet_berry_jelly": "Süßbeer-Gelee",
+  "item.expandeddelight.glow_berry_jelly": "Leuchtbeer-Gelee",
+
+  "item.expandeddelight.juicer_item": "Saftpresse",
+
+  "block.expandeddelight.asparagus_crate": "Spargelkiste",
+  "block.expandeddelight.wild_asparagus": "Wilder Spargel",
+  "block.expandeddelight.asparagus_crop": "Spargel",
+
+  "block.expandeddelight.sweet_potato_crate": "Süßkartoffelkiste",
+  "block.expandeddelight.wild_sweet_potato": "Wilde Süßkartoffeln",
+  "block.expandeddelight.sweet_potato_crop": "Süßkartoffel",
+
+  "block.expandeddelight.chili_pepper_crate": "Chilikiste",
+  "block.expandeddelight.wild_chili_pepper": "Wilde Chilischote",
+  "block.expandeddelight.chili_pepper_crop": "Chilischoten",
+
+  "block.expandeddelight.wild_peanuts": "Wilde Erdnüsse",
+  "block.expandeddelight.peanut_crop": "Erdnüsse",
+
+  "block.expandeddelight.salt_ore": "Salzerz",
+  "block.expandeddelight.deepslate_salt_ore": "Tiefenschiefer-Salzerz",
+
+  "block.expandeddelight.cheese_wheel": "Käserad",
+
+  "block.expandeddelight.juicer": "Saftpresse",
+  "block.expandeddelight.cask": "Fass",
+
+  "container.expandeddelight.juicer": "Saftpresse",
+
+  "expandeddelight.container.juicer": "Saftpresse",
+  "expandeddelight.container.recipe_book.juiceable": "Zeige Saftbares",
+  "expandeddelight.jei.juicing": "Entsaften",
+
+  "itemGroup.expandeddelight": "Expanded Delight",
+
+  "expandeddelight.jei.info.wild_asparagus": "Spargel kann häufig als Wildpflanze in Ebenen gefunden werden.",
+  "expandeddelight.jei.info.wild_sweet_potato": "Süßkartoffeln können häufig als Wildpflanze im Dschungel gefunden werden.",
+  "expandeddelight.jei.info.wild_chili_pepper": "Chilischoten können häufig als Wildpflanze in Wüsten gefunden werden.",
+  "expandeddelight.jei.info.wild_peanuts": "Erdnüsse können häufig als Wildpflanze in Savannen gefunden werden."
+}
