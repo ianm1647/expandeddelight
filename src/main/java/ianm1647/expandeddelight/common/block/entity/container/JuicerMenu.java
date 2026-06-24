@@ -169,7 +169,7 @@ public class JuicerMenu extends RecipeBookMenu<RecipeWrapper, JuicerRecipe> {
     }
 
     public int getResultSlotIndex() {
-        return 3;
+        return 4;
     }
 
     public int getGridWidth() {
