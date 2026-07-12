@@ -136,6 +136,9 @@
 
   "itemGroup.expandeddelight": "Expanded Delight",
 
+  "expandeddelight.advancement.root": "Expanded Delight",
+  "expandeddelight.advancement.root.desc": "Prepare seeds and start cooking!",
+
   "expandeddelight.jei.info.wild_asparagus": "Asparagus can be commonly found as a wild plant in plains biomes.",
   "expandeddelight.jei.info.wild_sweet_potato": "Sweet potatoes can be commonly found as a wild plant in jungle biomes.",
   "expandeddelight.jei.info.wild_chili_pepper": "Chili peppers can be commonly found as a wild plant in desert biomes.",
