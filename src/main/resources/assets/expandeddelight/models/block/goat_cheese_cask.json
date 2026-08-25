@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "side": "expandeddelight:block/cask_side",
-    "bottom": "expandeddelight:block/cask_bottom",
-    "top": "expandeddelight:block/goat_cheese_cask_top"
-  }
-}

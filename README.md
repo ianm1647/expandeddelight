@@ -1,9 +1,25 @@
-<p align="center"><img src="https://media.forgecdn.net/attachments/1067/753/some-logo.png" alt="Logo" width="400"></p>
-<h3 align="center">Mod is still in major development</h3>
-<p align="center">
-If you are interested in testing the mod as I work on it, download the files on the <a href="https://github.com/ianm1647/expandeddelight/actions">Actions</a> page.</p>
 
-<p align="center"> Current features are listed <a href="https://github.com/ianm1647/expandeddelight/issues/1">here</a></p>
+Installation information
+=======
 
-<h4 align="center"> The mod is now available on CurseForge!</p>
-<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/expanded-delight"><img src="https://i.ibb.co/fDHvmnz/logo-4x33v.png" alt="logo-4x33v" border="0"></a></p>
+This template repository can be directly cloned to get you started with a new
+mod. Simply create a new repository cloned from this one, by following the
+instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+
+Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+
+If at any point you are missing libraries in your IDE, or you've run into problems you can
+run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
+{this does not affect your code} and then start the process again.
+
+Mapping Names:
+============
+By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
+in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
+license. For the latest license text, refer to the mapping file itself, or the reference copy here:
+https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+
+Additional Resources: 
+==========
+Community Documentation: https://docs.neoforged.net/  
+NeoForged Discord: https://discord.neoforged.net/

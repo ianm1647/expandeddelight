@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.139'
+    id 'net.neoforged.moddev' version '2.0.144'
     id 'idea'
 }
 
@@ -12,6 +12,12 @@ tasks.named('wrapper', Wrapper).configure {
 version = mod_version
 group = mod_group_id
 
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+    exclude("**/*.bbmodel")
+    exclude("src/generated/**/.cache")
+}
+
 repositories {
     mavenLocal()
     maven {
@@ -21,38 +27,35 @@ repositories {
         }
     }
     maven { url = "https://maven.ryanliptak.com/" }
-    maven { url = "https://api.modrinth.com/maven" }
-
-    //KubeJS
-
+    maven { url = "https://www.cursemaven.com" }
     maven {
-        // saps.dev Maven (KubeJS and Rhino)
         url = "https://maven.saps.dev/minecraft"
         content {
             includeGroup "dev.latvian.mods"
             includeGroup "dev.latvian.apps"
         }
     }
-
     maven {
-        // Shedaniel's maven (Architectury API)
         url = "https://maven.architectury.dev"
         content {
             includeGroup "dev.architectury"
         }
     }
-
-    maven {
-        url 'https://jitpack.io'
-        content {
-            includeGroup "com.github.rtyley"
-            includeGroup "com.github.ianm1647"
-        }
-    }
 }
 
 dependencies {
-    implementation "maven.modrinth:farmers-delight:$delight_version"
+    //compats
+    implementation "curse.maven:hearth-and-harvest-1212197:8590173"
+    implementation "curse.maven:brewin-and-chewin-637808:8309583"
+    implementation "curse.maven:farmers-respite-unofficial-port-1475195:8711341"
+    implementation "curse.maven:collectors-reap-unofficial-port-1661146:8717972"
+    implementation "curse.maven:my-nethers-delight-1003673:8535835"
+    implementation "curse.maven:neapolitan-382016:7119475"
+    implementation "curse.maven:blueprint-382216:8397829"
+    implementation "curse.maven:windsweptmod-636321:8726892"
+    implementation "curse.maven:windswept-delights-1372501:8544123"
+
+    implementation "curse.maven:farmers-delight-398521:$delight_version"
 
     compileOnly "squeek.appleskin:appleskin-neoforge:$appleskin_version:api"
     runtimeOnly "squeek.appleskin:appleskin-neoforge:$appleskin_version"
@@ -75,7 +78,6 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
     version = project.neo_version
-
     parchment {
         mappingsVersion = project.parchment_mappings_version
         minecraftVersion = project.parchment_minecraft_version
@@ -84,7 +86,6 @@ neoForge {
     runs {
         client {
             client()
-
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
@@ -116,8 +117,6 @@ neoForge {
         }
     }
 }
-
-sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 configurations {
     runtimeClasspath.extendsFrom localRuntime

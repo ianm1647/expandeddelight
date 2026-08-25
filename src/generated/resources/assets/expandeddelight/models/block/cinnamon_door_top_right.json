@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "expandeddelight:block/cinnamon_door_bottom",
-    "top": "expandeddelight:block/cinnamon_door_top"
-  }
-}
