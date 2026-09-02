@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:cobblestone"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  s",
+    " S ",
+    "s  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:crushing_mallet"
+  }
+}

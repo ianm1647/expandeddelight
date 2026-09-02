@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#c:is_jungle",
+  "features": "expandeddelight:cinnamon_tree",
+  "step": "vegetal_decoration"
+}

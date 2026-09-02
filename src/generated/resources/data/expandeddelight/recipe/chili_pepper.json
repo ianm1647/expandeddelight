@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "expandeddelight:chili_pepper_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "expandeddelight:chili_pepper"
+  }
+}

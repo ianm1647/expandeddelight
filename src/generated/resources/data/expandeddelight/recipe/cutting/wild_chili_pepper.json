@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "expandeddelight:wild_chili_pepper"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 1,
+        "id": "expandeddelight:chili_pepper"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "count": 1,
+        "id": "expandeddelight:chili_pepper_seeds"
+      }
+    },
+    {
+      "chance": 0.25,
+      "item": {
+        "count": 2,
+        "id": "minecraft:white_dye"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

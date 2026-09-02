@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_asparagus": {
+      "conditions": {
+        "items": [
+          {
+            "items": "expandeddelight:asparagus"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "expandeddelight:cooking/asparagus_soup_creamy"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_asparagus"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "expandeddelight:cooking/asparagus_soup_creamy"
+    ]
+  }
+}

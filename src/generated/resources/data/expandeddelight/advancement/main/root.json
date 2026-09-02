@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "seeds": {
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/block/mud_bricks.png",
+    "description": {
+      "translate": "expandeddelight.advancement.root.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "expandeddelight:juicer"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "expandeddelight.advancement.root"
+    }
+  },
+  "requirements": [
+    [
+      "seeds"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

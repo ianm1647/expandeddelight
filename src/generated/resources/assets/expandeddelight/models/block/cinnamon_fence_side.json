@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "expandeddelight:block/cinnamon_planks"
+  }
+}

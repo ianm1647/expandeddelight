@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "bark",
+  "key": {
+    "i": {
+      "item": "expandeddelight:cinnamon_log"
+    }
+  },
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "result": {
+    "count": 3,
+    "id": "expandeddelight:cinnamon_wood"
+  }
+}

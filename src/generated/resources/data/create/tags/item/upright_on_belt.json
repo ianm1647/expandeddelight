@@ -1,0 +1,13 @@
+{
+  "values": [
+    "expandeddelight:apple_juice",
+    "expandeddelight:sweet_berry_juice",
+    "expandeddelight:glow_berry_juice",
+    "expandeddelight:cranberry_juice",
+    "expandeddelight:cranberry_cobbler",
+    {
+      "id": "expandeddelight:honeyed_goat_cheese_tart",
+      "required": false
+    }
+  ]
+}

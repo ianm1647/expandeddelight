@@ -1,0 +1,9 @@
+{
+  "values": [
+    "expandeddelight:cranberry_cobbler",
+    {
+      "id": "expandeddelight:honeyed_goat_cheese_tart",
+      "required": false
+    }
+  ]
+}

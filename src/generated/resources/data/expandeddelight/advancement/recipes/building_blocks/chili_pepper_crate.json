@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chili_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "expandeddelight:chili_pepper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "expandeddelight:chili_pepper_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chili_pepper"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "expandeddelight:chili_pepper_crate"
+    ]
+  }
+}

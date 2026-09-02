@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#c:is_swamp",
+  "features": "expandeddelight:patch_cranberries",
+  "step": "vegetal_decoration"
+}

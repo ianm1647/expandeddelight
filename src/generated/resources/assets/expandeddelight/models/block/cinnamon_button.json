@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "expandeddelight:block/cinnamon_planks"
+  }
+}

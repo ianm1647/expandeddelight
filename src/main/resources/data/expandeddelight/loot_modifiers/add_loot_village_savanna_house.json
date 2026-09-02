@@ -1,0 +1,11 @@
+{
+  "type": "farmersdelight:add_loot_table",
+  "conditions":
+  [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_savanna_house"
+    }
+  ],
+  "lootTable": "expandeddelight:chests/village_savanna_house"
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    },
+    {
+      "item": "expandeddelight:cranberries"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:cranberry_bag"
+  }
+}

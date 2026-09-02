@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "expandeddelight:block/cinnamon_slab"
+    },
+    "type=double": {
+      "model": "expandeddelight:block/cinnamon_planks"
+    },
+    "type=top": {
+      "model": "expandeddelight:block/cinnamon_slab_top"
+    }
+  }
+}

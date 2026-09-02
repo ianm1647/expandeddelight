@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "expandeddelight:block/crate_bottom",
+    "side": "expandeddelight:block/asparagus_crate_side",
+    "top": "expandeddelight:block/asparagus_crate_top"
+  }
+}

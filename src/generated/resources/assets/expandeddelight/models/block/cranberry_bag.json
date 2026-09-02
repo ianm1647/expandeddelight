@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "expandeddelight:block/bag_bottom",
+    "east": "expandeddelight:block/bag_side",
+    "north": "expandeddelight:block/bag_side_tied",
+    "particle": "expandeddelight:block/cranberry_bag_top",
+    "south": "expandeddelight:block/bag_side_tied",
+    "up": "expandeddelight:block/cranberry_bag_top",
+    "west": "expandeddelight:block/bag_side"
+  }
+}

@@ -45,15 +45,33 @@ repositories {
 
 dependencies {
     //compats
+
+    implementation "curse.maven:trail-tales-delight-1198527:8584143"
+    implementation "curse.maven:pineapple-delight-687974:8633977"
+    implementation "curse.maven:cultural-delights-574622:8126191"
+    implementation "curse.maven:crabbers-delight-892827:8006190"
     implementation "curse.maven:hearth-and-harvest-1212197:8590173"
     implementation "curse.maven:brewin-and-chewin-637808:8309583"
     implementation "curse.maven:farmers-respite-unofficial-port-1475195:8711341"
     implementation "curse.maven:collectors-reap-unofficial-port-1661146:8717972"
     implementation "curse.maven:my-nethers-delight-1003673:8535835"
-    implementation "curse.maven:neapolitan-382016:7119475"
-    implementation "curse.maven:blueprint-382216:8397829"
+
+    implementation "curse.maven:lodestone-616457:7264731"
+    implementation "curse.maven:miners-delight-plus-689630:8011049"
+
     implementation "curse.maven:windsweptmod-636321:8726892"
     implementation "curse.maven:windswept-delights-1372501:8544123"
+
+    implementation "curse.maven:runiclib-880879:8188562"
+    implementation "curse.maven:dungeons-delight-1258923:8041434"
+
+    implementation "curse.maven:blueprint-382216:8397829"
+    implementation "curse.maven:gallery-1173553:8159692"
+    implementation "curse.maven:neapolitan-382016:7119475"
+
+    implementation "curse.maven:terrablender-neoforge-940057:6054947"
+    implementation "curse.maven:natures-spirit-1044992:6962784"
+    implementation "curse.maven:natures-delight-1082132:8344818"
 
     implementation "curse.maven:farmers-delight-398521:$delight_version"
 
@@ -64,10 +82,6 @@ dependencies {
     compileOnly "mezz.jei:jei-$minecraft_version-neoforge-api:$jei_version"
 
     runtimeOnly "mezz.jei:jei-$minecraft_version-neoforge:$jei_version"
-
-    api "dev.latvian.mods:kubejs-neoforge:$kubejs_version"
-    implementation "dev.latvian.mods:rhino:$rhino_version"
-    implementation "dev.architectury:architectury-neoforge:$architectury_version"
 }
 
 base {
@@ -82,6 +96,8 @@ neoForge {
         mappingsVersion = project.parchment_mappings_version
         minecraftVersion = project.parchment_minecraft_version
     }
+
+    accessTransformers = project.files('src/main/resources/META-INF/accesstransformer.cfg')
 
     runs {
         client {

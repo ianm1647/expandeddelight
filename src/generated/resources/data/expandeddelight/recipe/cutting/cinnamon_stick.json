@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "expandeddelight:cinnamon_stick"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "expandeddelight:cinnamon"
+      }
+    },
+    {
+      "chance": 0.15,
+      "item": {
+        "count": 1,
+        "id": "expandeddelight:cinnamon"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "expandeddelight:crushing_tools"
+  }
+}

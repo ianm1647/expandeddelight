@@ -1,0 +1,43 @@
+{
+  "values": {
+    "expandeddelight:asparagus": {
+      "chance": 0.65
+    },
+    "expandeddelight:asparagus_seeds": {
+      "chance": 0.65
+    },
+    "expandeddelight:baked_sweet_potato": {
+      "chance": 0.65
+    },
+    "expandeddelight:chili_pepper": {
+      "chance": 0.65
+    },
+    "expandeddelight:chili_pepper_seeds": {
+      "chance": 0.65
+    },
+    "expandeddelight:chocolate_cookie": {
+      "chance": 0.65
+    },
+    "expandeddelight:cranberries": {
+      "chance": 0.65
+    },
+    "expandeddelight:snickerdoodle": {
+      "chance": 0.65
+    },
+    "expandeddelight:sugar_cookie": {
+      "chance": 0.65
+    },
+    "expandeddelight:sweet_potato": {
+      "chance": 0.65
+    },
+    "expandeddelight:wild_asparagus": {
+      "chance": 0.65
+    },
+    "expandeddelight:wild_chili_pepper": {
+      "chance": 0.65
+    },
+    "expandeddelight:wild_sweet_potato": {
+      "chance": 0.65
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "hearthandharvest:cheddar_cheese_slice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:goat_cheese_slice",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "tag": "c:crops/wheat"
+    },
+    "w": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "cwc"
+  ],
+  "result": {
+    "count": 8,
+    "id": "expandeddelight:sugar_cookie"
+  }
+}

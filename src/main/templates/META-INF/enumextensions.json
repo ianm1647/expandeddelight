@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "enum": "net/minecraft/world/inventory/RecipeBookType",
+      "name": "EXPANDEDDELIGHT_JUICING",
+      "constructor": "()V",
+      "parameters": []
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "EXPANDEDDELIGHT_JUICING_SEARCH",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "ianm1647/expandeddelight/common/EnumParameters",
+        "field": "PROXY_JUICING_SEARCH"
+      }
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "EXPANDEDDELIGHT_JUICING_DRINKS",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "ianm1647/expandeddelight/common/EnumParameters",
+        "field": "PROXY_JUICING_DRINKS"
+      }
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "EXPANDEDDELIGHT_JUICING_MISC",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "ianm1647/expandeddelight/common/EnumParameters",
+        "field": "PROXY_JUICING_MISC"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.3,
+  "ingredients": [
+    {
+      "tag": "c:foods/pasta"
+    },
+    {
+      "tag": "c:crops/asparagus"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:asparagus_mushroom_pasta"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "farmersdelight:block/pie_slice1",
+  "textures": {
+    "particle": "farmersdelight:block/pie_bottom",
+    "bottom": "farmersdelight:block/pie_bottom",
+    "inner": "expandeddelight:block/cranberry_cobbler_inner",
+    "side": "farmersdelight:block/pie_side",
+    "top": "expandeddelight:block/cranberry_cobbler_top"
+  }
+}

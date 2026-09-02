@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_pressure_plate",
+  "key": {
+    "i": {
+      "item": "expandeddelight:cinnamon_planks"
+    }
+  },
+  "pattern": [
+    "ii"
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:cinnamon_pressure_plate"
+  }
+}

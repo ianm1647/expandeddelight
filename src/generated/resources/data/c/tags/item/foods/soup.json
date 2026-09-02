@@ -1,0 +1,10 @@
+{
+  "values": [
+    "expandeddelight:asparagus_soup",
+    "expandeddelight:asparagus_soup_creamy",
+    {
+      "id": "expandeddelight:peanut_honey_soup",
+      "required": false
+    }
+  ]
+}
