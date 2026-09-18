@@ -1,0 +1,144 @@
+{
+  "item.expandeddelight.asparagus": "Қасқыржем",
+  "item.expandeddelight.asparagus_seeds": "Қасқыржем тұқымы",
+  "item.expandeddelight.asparagus_soup": "Қасқыржем сорпасы",
+  "item.expandeddelight.asparagus_soup_creamy": "Кілегей қасқыржем сорпасы",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Ірімшікті қасқыржем пен бекон",
+  "item.expandeddelight.asparagus_mushroom_pasta": "Қасқыржем пен саңырауқұлақты кеспе",
+
+  "item.expandeddelight.sweet_potato": "Тәтті картоп",
+  "item.expandeddelight.baked_sweet_potato": "Піскен тәтті картоп",
+  "item.expandeddelight.sweet_potato_salad": "Тәтті картоп салаты",
+  "item.expandeddelight.sweet_potato_casserole": "Тәтті картоп пісірмесі",
+
+  "item.expandeddelight.chili_pepper": "Чили бұрышы",
+  "item.expandeddelight.chili_pepper_seeds": "Чили бұрышы тұқымы",
+  "item.expandeddelight.peperonata": "Пепероната",
+
+  "item.expandeddelight.peanut": "Жержаңғақ",
+  "item.expandeddelight.peanut_butter": "Жержаңғақ майы",
+  "item.expandeddelight.peanut_butter_sandwich": "Жержаңғақ майлы сэндвич",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Жержаңғақ майы мен балды сэндвич",
+  "item.expandeddelight.peanut_salad": "Жержаңғақ салаты",
+  "item.expandeddelight.peanut_honey_soup": "Балды жержаңғақ сорпасы",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Жержаңғақ майы мен тәтті жидектісэндвич",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Жержаңғақ майы мен жарқырауық жидекті сэндвич",
+
+  "item.expandeddelight.cranberries": "Мүкжидек",
+  "item.expandeddelight.cranberry_chicken": "Мүкжидекті тауық",
+  "item.expandeddelight.cranberry_cobbler_slice": "Мүкжидек қаусырма тілімі",
+
+  "item.expandeddelight.lemon": "Лимон",
+
+  "item.expandeddelight.crushing_mallet": "Ұсатқыш балға",
+  "item.expandeddelight.glass_jar": "Шыны құты",
+  "item.expandeddelight.cinnamon_stick": "Даршын таяқғы",
+  "item.expandeddelight.cinnamon": "Даршын",
+  "item.expandeddelight.salt_rock": "Тұз тасы",
+  "item.expandeddelight.salt": "Тұз",
+
+  "item.expandeddelight.goat_milk_bucket": "Ешкі сүті шелегі",
+  "item.expandeddelight.goat_milk_bottle": "Ешкі сүті бөтелкесі",
+
+  "item.expandeddelight.cheese_slice": "Ірімшік тілімі",
+  "item.expandeddelight.goat_cheese_slice": "Ешкі ірімшігі тілімі",
+  "item.expandeddelight.cheese_sandwich": "Ірімшікті сэндвич",
+  "item.expandeddelight.grilled_cheese": "Қуырылған ірімшік",
+  "item.expandeddelight.cranberry_goat_cheese_toast": "Мүкжидекті ешкі ірімшігі тост",
+  "item.expandeddelight.honeyed_goat_cheese_tart_slice": "Балды ешкі ірімшігі кіш тілімі",
+
+  "item.expandeddelight.mac_and_cheese": "Ірімшікті макарон",
+  "item.expandeddelight.sweet_roll": "Тәтті орама",
+  "item.expandeddelight.berry_sweet_roll": "Жидекті тәтті орама",
+  "item.expandeddelight.glow_berry_sweet_roll": "Жарқырауық жидекті тәтті орама",
+  "item.expandeddelight.cinnamon_rice": "Даршынды күріш",
+  "item.expandeddelight.cinnamon_apples": "Даршынды алма",
+  "item.expandeddelight.chocolate_cookie": "Шоколадты піспенан",
+  "item.expandeddelight.sugar_cookie": "Қантты піспенан",
+  "item.expandeddelight.snickerdoodle": "Сникердудл",
+
+  "item.expandeddelight.apple_juice": "Алма шырыны",
+  "item.expandeddelight.sweet_berry_juice": "Тәтті жидек шырыны",
+  "item.expandeddelight.glow_berry_juice": "Жарқырауық жидек шырыны",
+  "item.expandeddelight.cranberry_juice": "Мүкжидек шырыны",
+
+  "item.expandeddelight.sweet_berry_jelly": "Тәтті жидек желесі",
+  "item.expandeddelight.glow_berry_jelly": "Жарқырауық жидек желесі",
+  "item.expandeddelight.cranberry_jelly": "Мүкжидек желесі",
+
+  "item.expandeddelight.cinnamon_boat": "Даршын қайығы",
+  "item.expandeddelight.cinnamon_chest_boat": "Сандықты даршын қайығы",
+
+  "block.expandeddelight.cinnamon_sapling": "Даршын көшеті",
+  "block.expandeddelight.cinnamon_leaves": "Даршын жапырағы",
+  "block.expandeddelight.cinnamon_log": "Даршын діңгегі",
+  "block.expandeddelight.stripped_cinnamon_log": "Жоналған даршын діңгегі",
+  "block.expandeddelight.cinnamon_wood": "Даршын ағашы",
+  "block.expandeddelight.stripped_cinnamon_wood": "Жоналған даршын ағашы",
+  "block.expandeddelight.cinnamon_planks": "Даршын тақтайы",
+  "block.expandeddelight.cinnamon_stairs": "Даршын тепкішегі",
+  "block.expandeddelight.cinnamon_slab": "Даршын тақта",
+  "block.expandeddelight.cinnamon_fence": "Даршын шарбақ",
+  "block.expandeddelight.cinnamon_fence_gate": "Даршын қақпа",
+  "block.expandeddelight.cinnamon_door": "Даршын есігі",
+  "block.expandeddelight.cinnamon_trapdoor": "Даршын қақпақ",
+  "block.expandeddelight.cinnamon_pressure_plate": "Даршын басқыш",
+  "block.expandeddelight.cinnamon_button": "Даршын батырмасы",
+  "block.expandeddelight.cinnamon_sign": "Даршын маңдайшасы",
+  "block.expandeddelight.cinnamon_ceiling_hanging_sign": "Аспалы даршын маңдайшасы",
+  "block.expandeddelight.cinnamon_cabinet": "Даршын шкафы",
+
+  "block.expandeddelight.asparagus_crate": "Қасқыржем жәшігі",
+  "block.expandeddelight.wild_asparagus": "Жабайы қасқыржем",
+  "block.expandeddelight.asparagus_crop": "Қасқыржем",
+
+  "block.expandeddelight.sweet_potato_crate": "Тәтті картоп жәшігі",
+  "block.expandeddelight.wild_sweet_potato": "Жабайы тәтті картоп",
+  "block.expandeddelight.sweet_potato_crop": "Тәтті картоп",
+
+  "block.expandeddelight.chili_pepper_crate": "Чили бұрышы жәшігі",
+  "block.expandeddelight.wild_chili_pepper": "Жабайы чили бұрышы",
+  "block.expandeddelight.chili_pepper_crop": "Чили бұрышы",
+
+  "block.expandeddelight.wild_peanuts": "Жабайы жержаңғақ",
+  "block.expandeddelight.peanut_crop": "Жержаңғақ",
+
+  "block.expandeddelight.cranberry_plant": "Мүкжидек",
+  "block.expandeddelight.cranberry_bag": "Мүкжидек қабы",
+  "block.expandeddelight.cranberry_cobbler": "Мүкжидек қаусырмасы",
+
+  "block.expandeddelight.salt_ore": "Тұз кені",
+  "block.expandeddelight.deepslate_salt_ore": "Тереңтас тұз кені",
+
+  "block.expandeddelight.cheese_wheel": "Ірімшік шеңбері",
+  "block.expandeddelight.goat_cheese_wheel": "Ешкі ірімшігі шеңбері",
+  "block.expandeddelight.honeyed_goat_cheese_tart": "Балды ешкі ірімшігі кіш",
+
+  "block.expandeddelight.juicer": "Шырын сығатын",
+  "block.expandeddelight.cask": "Бөшке",
+  "block.expandeddelight.milk_cask": "Сүт бөшкесі",
+  "block.expandeddelight.goat_milk_cask": "Ешкі сүті бөшкесі",
+  "block.expandeddelight.cheese_cask": "Ірімшік бөшкесі",
+  "block.expandeddelight.goat_cheese_cask": "Ешкі ірімшігі бөшкесі",
+
+  "container.expandeddelight.juicer": "Шырын сығатын",
+
+  "expandeddelight.container.juicer": "Шырын сығатын",
+  "expandeddelight.container.recipe_book.juiceable": "Шырын сығуға болатындар",
+  "expandeddelight.jei.juicing": "Шырын сығу",
+  "expandeddelight.jei.cheese_fermenting": "Ірімшік ашыту",
+  "expandeddelight.jei.cheese_fermenting.light": "Қараңғылықта жеделдетіледі",
+  "expandeddelight.jei.cheese_fermenting.fluid": "Жанындағы су жеделдетеді",
+  "expandeddelight.jei.cheese_fermenting.accelerators": "Белсендіргіш қолдану жеделдетеді (төменде қара)",
+
+  "itemGroup.expandeddelight": "Үлкен қуаныш",
+
+  "expandeddelight.jei.info.wild_asparagus": "Қасқыржемді жазықтарда жабайы өсімдік түрінде жиі табуға болады.",
+  "expandeddelight.jei.info.wild_sweet_potato": "Тәтті картопты джунглиде жабайы өсімдік түрінде жиі табуға болады.",
+  "expandeddelight.jei.info.wild_chili_pepper": "Чили бұрышын шөлде жабайы өсімдік түрінде жиі табуға болады.",
+  "expandeddelight.jei.info.wild_peanuts": "Жержаңғақты саваннада жабайы өсімдік түрінде жиі табуға болады.",
+  "expandeddelight.jei.info.cranberries": "Мүкжидекті батпақта жабайы өсімдік түрінде жиі табуға болады.",
+  "expandeddelight.jei.info.salt_ore": "Тұз кенін жер астында мұхит биомдарында жиі табуға болады.",
+
+  "farmersdelight.tooltip.goat_milk_bottle": "1 әсерді тазартады"
+}
