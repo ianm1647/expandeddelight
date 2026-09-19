@@ -1,0 +1,147 @@
+{
+  "item.expandeddelight.asparagus": "Спаржа",
+  "item.expandeddelight.asparagus_seeds": "Насіння спаржі",
+  "item.expandeddelight.asparagus_soup": "Спаржевий суп",
+  "item.expandeddelight.asparagus_soup_creamy": "Крем-суп зі спаржею",
+  "item.expandeddelight.asparagus_and_bacon_cheesy": "Спаржа з беконом під сиром",
+  "item.expandeddelight.asparagus_mushroom_pasta": "Паста зі спаржею та грибами",
+  "item.expandeddelight.asparagus_frittata": "Фритата зі спаржею",
+
+  "item.expandeddelight.sweet_potato": "Батат",
+  "item.expandeddelight.baked_sweet_potato": "Запечений батат",
+  "item.expandeddelight.sweet_potato_salad": "Салат із бататом",
+  "item.expandeddelight.sweet_potato_casserole": "Запіканка з батату",
+
+  "item.expandeddelight.chili_pepper": "Перець чилі",
+  "item.expandeddelight.chili_pepper_seeds": "Насіння перцю чилі",
+  "item.expandeddelight.peperonata": "Пепероната",
+  "item.expandeddelight.chili_pepper_salmon": "Лосось із чилі",
+
+  "item.expandeddelight.peanut": "Арахіс",
+  "item.expandeddelight.peanut_butter": "Арахісова паста",
+  "item.expandeddelight.peanut_butter_sandwich": "Сендвіч з арахісовою пастою",
+  "item.expandeddelight.peanut_butter_honey_sandwich": "Сендвіч з арахісовою пастою та медом",
+  "item.expandeddelight.peanut_salad": "Салат з арахісом",
+  "item.expandeddelight.peanut_honey_soup": "Медово-арахісовий суп",
+  "item.expandeddelight.sweet_berry_jelly_sandwich": "Сендвіч з арахісовою пастою та желе із солодких ягід",
+  "item.expandeddelight.glow_berry_jelly_sandwich": "Сендвіч з арахісовою пастою та желе зі світних ягід",
+
+  "item.expandeddelight.cranberries": "Журавлина",
+  "item.expandeddelight.cranberry_chicken": "Курка з журавлиною",
+  "item.expandeddelight.cranberry_cobbler_slice": "Шматок журавлинного коблера",
+
+  "item.expandeddelight.lemon": "Лимон",
+
+  "item.expandeddelight.crushing_mallet": "Молоток для подрібнення",
+  "item.expandeddelight.glass_jar": "Скляна банка",
+  "item.expandeddelight.cinnamon_stick": "Паличка кориці",
+  "item.expandeddelight.cinnamon": "Кориця",
+  "item.expandeddelight.salt_rock": "Кам'яна сіль",
+  "item.expandeddelight.salt": "Сіль",
+
+  "item.expandeddelight.goat_milk_bucket": "Відро козячого молока",
+  "item.expandeddelight.goat_milk_bottle": "Пляшечка козячого молока",
+
+  "item.expandeddelight.cheese_slice": "Скибочка сиру",
+  "item.expandeddelight.goat_cheese_slice": "Скибочка козячого сиру",
+  "item.expandeddelight.cheese_sandwich": "Сендвіч із сиром",
+  "item.expandeddelight.grilled_cheese": "Смажений сир",
+  "item.expandeddelight.cranberry_goat_cheese_toast": "Тост із журавлиною та козячим сиром",
+  "item.expandeddelight.honeyed_goat_cheese_tart_slice": "Шматок тарта з медовим козячим сиром",
+  "item.expandeddelight.goat_cheese_beetroot_salad": "Салат із буряком та козячим сиром",
+
+  "item.expandeddelight.mac_and_cheese": "Мак-енд-чіз",
+  "item.expandeddelight.sweet_roll": "Солодкий рулет",
+  "item.expandeddelight.berry_sweet_roll": "Ягідний солодкий рулет",
+  "item.expandeddelight.glow_berry_sweet_roll": "Солодкий рулет зі світними ягодами",
+  "item.expandeddelight.cinnamon_rice": "Рис із корицею",
+  "item.expandeddelight.cinnamon_apples": "Яблука з корицею",
+  "item.expandeddelight.chocolate_cookie": "Шоколадне печиво",
+  "item.expandeddelight.sugar_cookie": "Цукрове печиво",
+  "item.expandeddelight.snickerdoodle": "Снікердудл",
+
+  "item.expandeddelight.apple_juice": "Яблучний сік",
+  "item.expandeddelight.sweet_berry_juice": "Сік із солодких ягід",
+  "item.expandeddelight.glow_berry_juice": "Сік зі світних ягід",
+  "item.expandeddelight.cranberry_juice": "Журавлинний сік",
+
+  "item.expandeddelight.sweet_berry_jelly": "Желе із солодких ягід",
+  "item.expandeddelight.glow_berry_jelly": "Желе зі світних ягід",
+  "item.expandeddelight.cranberry_jelly": "Журавлинне желе",
+
+  "item.expandeddelight.cinnamon_boat": "Корицевий човен",
+  "item.expandeddelight.cinnamon_chest_boat": "Корицевий човен зі скринею",
+
+  "block.expandeddelight.cinnamon_sapling": "Саджанець кориці",
+  "block.expandeddelight.cinnamon_leaves": "Листя кориці",
+  "block.expandeddelight.cinnamon_log": "Корицева колода",
+  "block.expandeddelight.stripped_cinnamon_log": "Обтесана корицева колода",
+  "block.expandeddelight.cinnamon_wood": "Корицеве дерево",
+  "block.expandeddelight.stripped_cinnamon_wood": "Обтесане корицеве дерево",
+  "block.expandeddelight.cinnamon_planks": "Корицеві дошки",
+  "block.expandeddelight.cinnamon_stairs": "Корицеві сходи",
+  "block.expandeddelight.cinnamon_slab": "Корицева плита",
+  "block.expandeddelight.cinnamon_fence": "Корицевий паркан",
+  "block.expandeddelight.cinnamon_fence_gate": "Корицеві ворота",
+  "block.expandeddelight.cinnamon_door": "Корицеві двері",
+  "block.expandeddelight.cinnamon_trapdoor": "Корицевий люк",
+  "block.expandeddelight.cinnamon_pressure_plate": "Корицева натискна плита",
+  "block.expandeddelight.cinnamon_button": "Корицева кнопка",
+  "block.expandeddelight.cinnamon_sign": "Корицева табличка",
+  "block.expandeddelight.cinnamon_ceiling_hanging_sign": "Корицева підвісна табличка",
+  "block.expandeddelight.cinnamon_cabinet": "Корицева шафка",
+
+  "block.expandeddelight.asparagus_crate": "Ящик спаржі",
+  "block.expandeddelight.wild_asparagus": "Дика спаржа",
+  "block.expandeddelight.asparagus_crop": "Спаржа",
+
+  "block.expandeddelight.sweet_potato_crate": "Ящик батату",
+  "block.expandeddelight.wild_sweet_potato": "Дикий батат",
+  "block.expandeddelight.sweet_potato_crop": "Батат",
+
+  "block.expandeddelight.chili_pepper_crate": "Ящик перцю чилі",
+  "block.expandeddelight.wild_chili_pepper": "Дикий перець чилі",
+  "block.expandeddelight.chili_pepper_crop": "Перець чилі",
+
+  "block.expandeddelight.wild_peanuts": "Дикий арахіс",
+  "block.expandeddelight.peanut_crop": "Арахіс",
+
+  "block.expandeddelight.cranberry_plant": "Журавлина",
+  "block.expandeddelight.cranberry_bag": "Мішок журавлини",
+  "block.expandeddelight.cranberry_cobbler": "Журавлинний коблер",
+
+  "block.expandeddelight.salt_ore": "Соляна руда",
+  "block.expandeddelight.deepslate_salt_ore": "Глибинна соляна руда",
+
+  "block.expandeddelight.cheese_wheel": "Головка сиру",
+  "block.expandeddelight.goat_cheese_wheel": "Головка козячого сиру",
+  "block.expandeddelight.honeyed_goat_cheese_tart": "Тарт із медовим козячим сиром",
+
+  "block.expandeddelight.juicer": "Соковижималка",
+  "block.expandeddelight.cask": "Діжка",
+  "block.expandeddelight.milk_cask": "Діжка з молоком",
+  "block.expandeddelight.goat_milk_cask": "Діжка з козячим молоком",
+  "block.expandeddelight.cheese_cask": "Діжка з сиром",
+  "block.expandeddelight.goat_cheese_cask": "Діжка з козячим сиром",
+
+  "container.expandeddelight.juicer": "Соковижималка",
+
+  "expandeddelight.container.juicer": "Соковижималка",
+  "expandeddelight.container.recipe_book.juiceable": "Показує те, з чого можна вичавити сік",
+  "expandeddelight.jei.juicing": "Вичавлювання соку",
+  "expandeddelight.jei.cheese_fermenting": "Ферментація сиру",
+  "expandeddelight.jei.cheese_fermenting.light": "Пришвидшується в темряві",
+  "expandeddelight.jei.cheese_fermenting.fluid": "Пришвидшується від води поруч",
+  "expandeddelight.jei.cheese_fermenting.accelerators": "Пришвидшується від активаторів поруч (див. нижче)",
+
+  "itemGroup.expandeddelight": "Expanded Delight",
+
+  "expandeddelight.jei.info.wild_asparagus": "Спаржу можна часто знайти як дику рослину в біомах рівнин.",
+  "expandeddelight.jei.info.wild_sweet_potato": "Батат можна часто знайти як дику рослину в біомах джунглів.",
+  "expandeddelight.jei.info.wild_chili_pepper": "Перець чилі можна часто знайти як дику рослину в біомах пустелі.",
+  "expandeddelight.jei.info.wild_peanuts": "Арахіс можна часто знайти як дику рослину в біомах савани.",
+  "expandeddelight.jei.info.cranberries": "Журавлину можна часто знайти як дику рослину в біомах боліт.",
+  "expandeddelight.jei.info.salt_ore": "Соляну руду можна часто знайти під землею, зокрема в біомах океанів.",
+
+  "farmersdelight.tooltip.goat_milk_bottle": "Знімає 1 ефект"
+}
